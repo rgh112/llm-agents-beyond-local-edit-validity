@@ -1,0 +1,588 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check",
+  "memory_condition": "state_only",
+  "seed": 10,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     zonk\nCurrent:    buds\nPositions:  0123\nMismatches: ^^^^\nPath: fuds \u2192 buds\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {c, d, m, o, p, s}\n  1: {a, e, i, o*}\n  2: {b, g, m, n*, r, s, t, y}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fuds",
+      "structure_after": "buds"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "buds",
+      "structure_after": "bods"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 2 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "n"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 3 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "k"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     zonk\nCurrent:    bods\nPositions:  0123\nMismatches: ^ ^^\nPath: fuds \u2192 buds \u2192 bods\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {c, g, h, m, n, p, r, s, t, y}\n  1: {a, e, i}\n  2: {a, b, g, o, p, s, t, w, y}\n  3: {e, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bods",
+      "structure_after": "bods"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "fuds",
+    "target_word": "zonk",
+    "final_word": "bods",
+    "path": [
+      "fuds",
+      "buds",
+      "bods"
+    ],
+    "path_length": 2,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 23,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 24,
+    "optimal_distance_at_end": 4,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 56805,
+    "completion_tokens": 125,
+    "total_tokens": 56930
+  },
+  "wall_time_s": 72.30947613716125
+}

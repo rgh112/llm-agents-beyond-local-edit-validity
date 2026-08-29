@@ -1,0 +1,377 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 8,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     seed\nCurrent:    sang\nPositions:  0123\nMismatches:  ^^^\nPath: rang \u2192 sang\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, l, p, t, v, y}\n  1: {i, o, u}\n  3: {d*, e, k, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rang",
+      "structure_after": "sang"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     seed\nCurrent:    sing\nPositions:  0123\nMismatches:  ^^^\nPath: rang \u2192 sang \u2192 sing\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {d, k, l, p, r, t, w, z}\n  1: {o, u}\n  3: {e, h, k, s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sang",
+      "structure_after": "sing"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     seed\nCurrent:    sine\nPositions:  0123\nMismatches:  ^^^\nPath: rang \u2192 sang \u2192 sing \u2192 sine\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, k, l, m, n, p, t, v, w}\n  1: {a, e*, o, y}\n  2: {c, d, k, p, r, t, z}\n  3: {h, k, s}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sing",
+      "structure_after": "sine"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     seed\nCurrent:    sine\nPositions:  0123\nMismatches:  ^^^\nPath: rang \u2192 sang \u2192 sing \u2192 sine\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, k, l, m, n, p, t, v, w}\n  1: {a, e*, o, y}\n  2: {c, d, k, p, r, t, z}\n  3: {h, k, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sine",
+      "structure_after": "sine"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     seed\nCurrent:    sine\nPositions:  0123\nMismatches:  ^^^\nPath: rang \u2192 sang \u2192 sing \u2192 sine\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, k, l, m, n, p, t, v, w}\n  1: {a, e*, o, y}\n  2: {c, d, k, p, r, t, z}\n  3: {h, k, s}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sine",
+      "structure_after": "sine"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     seed\nCurrent:    sine\nPositions:  0123\nMismatches:  ^^^\nPath: rang \u2192 sang \u2192 sing \u2192 sine\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, k, l, m, n, p, t, v, w}\n  1: {a, e*, o, y}\n  2: {c, d, k, p, r, t, z}\n  3: {h, k, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sine",
+      "structure_after": "sine"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     seed\nCurrent:    sene\nPositions:  0123\nMismatches:   ^^\nPath: rang \u2192 sang \u2192 sing \u2192 sine \u2192 sene\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {b, d, g, n}\n  1: {a, o, y}\n  2: {m, r}\n  3: {d*, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sine",
+      "structure_after": "sene"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     seed\nCurrent:    sene\nPositions:  0123\nMismatches:   ^^\nPath: rang \u2192 sang \u2192 sing \u2192 sine \u2192 sene\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {b, d, g, n}\n  1: {a, o, y}\n  2: {m, r}\n  3: {d*, t}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sene",
+      "structure_after": "sene"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     seed\nCurrent:    send\nPositions:  0123\nMismatches:   ^ \nPath: rang \u2192 sang \u2192 sing \u2192 sine \u2192 sene \u2192 send\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {b, f, l, m, p, r, t, v, w}\n  1: {a}\n  2: {e*}\n  3: {t}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sene",
+      "structure_after": "send"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     seed\nCurrent:    send\nPositions:  0123\nMismatches:   ^ \nPath: rang \u2192 sang \u2192 sing \u2192 sine \u2192 sene \u2192 send\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {b, f, l, m, p, r, t, v, w}\n  1: {a}\n  2: {e*}\n  3: {t}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "send",
+      "structure_after": "send"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     seed\nCurrent:    send\nPositions:  0123\nMismatches:   ^ \nPath: rang \u2192 sang \u2192 sing \u2192 sine \u2192 sene \u2192 send\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {b, f, l, m, p, r, t, v, w}\n  1: {a}\n  2: {e*}\n  3: {t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "send",
+      "structure_after": "send"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     seed\nCurrent:    send\nPositions:  0123\nMismatches:   ^ \nPath: rang \u2192 sang \u2192 sing \u2192 sine \u2192 sene \u2192 send\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {b, f, l, m, p, r, t, v, w}\n  1: {a}\n  2: {e*}\n  3: {t}",
+      "raw_action": "EDIT 2 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "send",
+      "structure_after": "send"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     seed\nCurrent:    send\nPositions:  0123\nMismatches:   ^ \nPath: rang \u2192 sang \u2192 sing \u2192 sine \u2192 sene \u2192 send\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {b, f, l, m, p, r, t, v, w}\n  1: {a}\n  2: {e*}\n  3: {t}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "send",
+      "structure_after": "send"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     seed\nCurrent:    send\nPositions:  0123\nMismatches:   ^ \nPath: rang \u2192 sang \u2192 sing \u2192 sine \u2192 sene \u2192 send\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {b, f, l, m, p, r, t, v, w}\n  1: {a}\n  2: {e*}\n  3: {t}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "send",
+      "structure_after": "send"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     seed\nCurrent:    send\nPositions:  0123\nMismatches:   ^ \nPath: rang \u2192 sang \u2192 sing \u2192 sine \u2192 sene \u2192 send\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {b, f, l, m, p, r, t, v, w}\n  1: {a}\n  2: {e*}\n  3: {t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "send",
+      "structure_after": "send"
+    },
+    {
+      "t": 16,
+      "observation": "",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 1.0,
+      "info": {
+        "valid": true,
+        "auto_success": true
+      },
+      "structure_before": "send",
+      "structure_after": "seed"
+    }
+  ],
+  "success": true,
+  "terminal_failure": null,
+  "failure_events": [
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "OSCILLATION",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT"
+  ],
+  "final_metrics": {
+    "success": true,
+    "steps_taken": 16,
+    "max_steps": 20,
+    "start_word": "rang",
+    "target_word": "seed",
+    "final_word": "seed",
+    "path": [
+      "rang",
+      "sang",
+      "sing",
+      "sine",
+      "sene",
+      "send",
+      "seed"
+    ],
+    "path_length": 6,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "ILLEGAL_EDIT": 7,
+      "INVALID_WORD": 2,
+      "OSCILLATION": 1
+    },
+    "total_violations": 10,
+    "optimal_distance_at_end": 0,
+    "events": [
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "OSCILLATION",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 21252,
+    "completion_tokens": 80,
+    "total_tokens": 21332
+  },
+  "wall_time_s": 7.964745998382568
+}

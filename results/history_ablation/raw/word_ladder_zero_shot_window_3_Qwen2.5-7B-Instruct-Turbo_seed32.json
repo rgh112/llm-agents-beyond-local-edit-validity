@@ -1,0 +1,177 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "window_3",
+  "seed": 32,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     lost\nCurrent:    acta\nPositions:  0123\nMismatches: ^^^^\nPath: acta\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  1: {n}\n  3: {s}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "acta",
+      "structure_after": "acta"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     lost\nCurrent:    acts\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  1: {i, l, n, r}\n  2: {e}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "acta",
+      "structure_after": "acts"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     lost\nCurrent:    aits\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, k, l*, n, p, s, t, w, z}\n  1: {l, n, r}\n  2: {d, l, m, n, r}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "acts",
+      "structure_after": "aits"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     lost\nCurrent:    lits\nPositions:  0123\nMismatches:  ^^^\nPath: acta \u2192 acts \u2192 aits \u2192 lits\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, k, n, p, s, t, w, z}\n  1: {a, e, o*}\n  2: {b, d, e, n, p}\n  3: {e, u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "aits",
+      "structure_after": "lits"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     lost\nCurrent:    lots\nPositions:  0123\nMismatches:   ^^\nPath: acta \u2192 acts \u2192 aits \u2192 lits \u2192 lots\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, m, o, p, r, s, t, w}\n  1: {a, e}\n  2: {b, g, o, p, s*, w}\n  3: {a, h, i}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lits",
+      "structure_after": "lots"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     lost\nCurrent:    loss\nPositions:  0123\nMismatches:    ^\nPath: acta \u2192 acts \u2192 aits \u2192 lits \u2192 lots \u2192 loss\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, j, k, m, t}\n  1: {a, e}\n  2: {b, g, o, p, w}\n  3: {e, t*}",
+      "raw_action": "EDIT 2 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lots",
+      "structure_after": "loss"
+    },
+    {
+      "t": 7,
+      "observation": "",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 1.0,
+      "info": {
+        "valid": true,
+        "auto_success": true
+      },
+      "structure_before": "loss",
+      "structure_after": "lost"
+    }
+  ],
+  "success": true,
+  "terminal_failure": null,
+  "failure_events": [
+    "INVALID_WORD"
+  ],
+  "final_metrics": {
+    "success": true,
+    "steps_taken": 7,
+    "max_steps": 30,
+    "start_word": "acta",
+    "target_word": "lost",
+    "final_word": "lost",
+    "path": [
+      "acta",
+      "acts",
+      "aits",
+      "lits",
+      "lots",
+      "loss",
+      "lost"
+    ],
+    "path_length": 6,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "INVALID_WORD": 1
+    },
+    "total_violations": 1,
+    "optimal_distance_at_end": 0,
+    "events": [
+      "INVALID_WORD"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 6565,
+    "completion_tokens": 35,
+    "total_tokens": 6600
+  },
+  "wall_time_s": 3.3754241466522217
+}

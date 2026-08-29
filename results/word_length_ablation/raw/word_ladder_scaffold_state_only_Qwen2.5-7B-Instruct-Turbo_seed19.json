@@ -1,0 +1,592 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 19,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "kanas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 0 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 1 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 4 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 2 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 2 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 2 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 2 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 2 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 2 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     worts\nCurrent:    katas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 katas\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  2: {k, p, v}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "katas",
+      "structure_after": "katas"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "kanas",
+    "target_word": "worts",
+    "final_word": "katas",
+    "path": [
+      "kanas",
+      "katas"
+    ],
+    "path_length": 1,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 15,
+      "ILLEGAL_EDIT": 9,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 25,
+    "optimal_distance_at_end": 6,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 71961,
+    "completion_tokens": 125,
+    "total_tokens": 72086
+  },
+  "wall_time_s": 21.70006036758423
+}

@@ -1,0 +1,550 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 19,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     worts\nCurrent:    manas\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 manas\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {n}\n  1: {i, o*, y}\n  2: {m, y}\n  3: {e, o, u}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "kanas",
+      "structure_after": "manas"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     worts\nCurrent:    monas\nPositions:  01234\nMismatches: ^ ^^ \nPath: kanas \u2192 manas \u2192 monas\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {d, n}\n  1: {i, y}\n  2: {l, r*, x}\n  3: {k, o}\n  4: {d}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "manas",
+      "structure_after": "monas"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     worts\nCurrent:    moras\nPositions:  01234\nMismatches: ^  ^ \nPath: kanas \u2192 manas \u2192 monas \u2192 moras\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {b, h, s, t}\n  1: {u}\n  2: {l, x}\n  3: {e, n, t*}\n  4: {e, l, y}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "monas",
+      "structure_after": "moras"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     worts\nCurrent:    boras\nPositions:  01234\nMismatches: ^  ^ \nPath: kanas \u2192 manas \u2192 monas \u2192 moras \u2192 boras\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {h, s, t}\n  1: {u}\n  2: {l, t}\n  3: {e, t*}\n  4: {l, x}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "moras",
+      "structure_after": "boras"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     worts\nCurrent:    toras\nPositions:  01234\nMismatches: ^  ^ \nPath: kanas \u2192 manas \u2192 monas \u2192 moras \u2192 boras \u2192 toras\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {h, s}\n  2: {g, l}\n  3: {c, e, o, t*, u}\n  4: {h}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "boras",
+      "structure_after": "toras"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     worts\nCurrent:    toros\nPositions:  01234\nMismatches: ^  ^ \nPath: kanas \u2192 manas \u2192 monas \u2192 ... \u2192 toras \u2192 toros\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {p, y}\n  3: {c, e, t*, u}\n  4: {t}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "toras",
+      "structure_after": "toros"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     worts\nCurrent:    taros\nPositions:  01234\nMismatches: ^^ ^ \nPath: kanas \u2192 manas \u2192 monas \u2192 ... \u2192 toros \u2192 taros\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {f, s}\n  1: {i, y}\n  2: {c}\n  3: {e, n, p, t*}\n  4: {c, k, t}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "toros",
+      "structure_after": "taros"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     worts\nCurrent:    faros\nPositions:  01234\nMismatches: ^^ ^ \nPath: kanas \u2192 manas \u2192 monas \u2192 ... \u2192 taros \u2192 faros\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {s}\n  2: {d, n}\n  3: {d, e, l, m, t*}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "taros",
+      "structure_after": "faros"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     worts\nCurrent:    fados\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 manas \u2192 monas \u2192 ... \u2192 faros \u2192 fados\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {d}\n  1: {i}\n  2: {n}\n  3: {e}",
+      "raw_action": "EDIT 2 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "faros",
+      "structure_after": "fados"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     worts\nCurrent:    dados\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 manas \u2192 monas \u2192 ... \u2192 fados \u2192 dados\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  1: {i, o*}\n  2: {g, t}\n  3: {a}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fados",
+      "structure_after": "dados"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     worts\nCurrent:    didos\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 manas \u2192 monas \u2192 ... \u2192 dados \u2192 didos\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {e, f, l}\n  1: {o*}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dados",
+      "structure_after": "didos"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     worts\nCurrent:    eidos\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 manas \u2192 monas \u2192 ... \u2192 didos \u2192 eidos\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {f, l}",
+      "raw_action": "EDIT 0 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "didos",
+      "structure_after": "eidos"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     worts\nCurrent:    fidos\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 manas \u2192 monas \u2192 ... \u2192 eidos \u2192 fidos\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {l}\n  2: {l, n}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "eidos",
+      "structure_after": "fidos"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     worts\nCurrent:    lidos\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 manas \u2192 monas \u2192 ... \u2192 fidos \u2192 lidos\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  2: {m, n}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fidos",
+      "structure_after": "lidos"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     worts\nCurrent:    limos\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 manas \u2192 monas \u2192 ... \u2192 lidos \u2192 limos\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  2: {n}\n  3: {a, b, e, n, p}",
+      "raw_action": "EDIT 2 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lidos",
+      "structure_after": "limos"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     worts\nCurrent:    limos\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 manas \u2192 monas \u2192 ... \u2192 lidos \u2192 limos\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  2: {n}\n  3: {a, b, e, n, p}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "limos",
+      "structure_after": "limos"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     worts\nCurrent:    limos\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 manas \u2192 monas \u2192 ... \u2192 lidos \u2192 limos\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  2: {n}\n  3: {a, b, e, n, p}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "limos",
+      "structure_after": "limos"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     worts\nCurrent:    limos\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 manas \u2192 monas \u2192 ... \u2192 lidos \u2192 limos\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  2: {n}\n  3: {a, b, e, n, p}",
+      "raw_action": "EDIT 3 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "limos",
+      "structure_after": "limos"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     worts\nCurrent:    limos\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 manas \u2192 monas \u2192 ... \u2192 lidos \u2192 limos\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  2: {n}\n  3: {a, b, e, n, p}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "limos",
+      "structure_after": "limos"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     worts\nCurrent:    limos\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 manas \u2192 monas \u2192 ... \u2192 lidos \u2192 limos\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  2: {n}\n  3: {a, b, e, n, p}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "limos",
+      "structure_after": "limos"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     worts\nCurrent:    limos\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 manas \u2192 monas \u2192 ... \u2192 lidos \u2192 limos\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  2: {n}\n  3: {a, b, e, n, p}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "limos",
+      "structure_after": "limos"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     worts\nCurrent:    limos\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 manas \u2192 monas \u2192 ... \u2192 lidos \u2192 limos\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  2: {n}\n  3: {a, b, e, n, p}",
+      "raw_action": "EDIT 3 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "limos",
+      "structure_after": "limos"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     worts\nCurrent:    limos\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 manas \u2192 monas \u2192 ... \u2192 lidos \u2192 limos\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  2: {n}\n  3: {a, b, e, n, p}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "limos",
+      "structure_after": "limos"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     worts\nCurrent:    limos\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 manas \u2192 monas \u2192 ... \u2192 lidos \u2192 limos\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  2: {n}\n  3: {a, b, e, n, p}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "limos",
+      "structure_after": "limos"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     worts\nCurrent:    limos\nPositions:  01234\nMismatches: ^^^^ \nPath: kanas \u2192 manas \u2192 monas \u2192 ... \u2192 lidos \u2192 limos\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  2: {n}\n  3: {a, b, e, n, p}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "limos",
+      "structure_after": "limos"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "kanas",
+    "target_word": "worts",
+    "final_word": "limos",
+    "path": [
+      "kanas",
+      "manas",
+      "monas",
+      "moras",
+      "boras",
+      "toras",
+      "toros",
+      "taros",
+      "faros",
+      "fados",
+      "dados",
+      "didos",
+      "eidos",
+      "fidos",
+      "lidos",
+      "limos"
+    ],
+    "path_length": 15,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "ILLEGAL_EDIT": 1,
+      "INVALID_WORD": 9,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 11,
+    "optimal_distance_at_end": 6,
+    "events": [
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 44712,
+    "completion_tokens": 125,
+    "total_tokens": 44837
+  },
+  "wall_time_s": 16.15360999107361
+}

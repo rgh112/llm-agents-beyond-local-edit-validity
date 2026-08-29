@@ -1,0 +1,663 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 0,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     weer\nCurrent:    olds\nPositions:  0123\nMismatches: ^^^^\nPath: elds \u2192 olds\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  1: {d, u}\n  2: {e*}\n  3: {y}",
+      "raw_action": "EDIT 0 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "elds",
+      "structure_after": "olds"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     weer\nCurrent:    odds\nPositions:  0123\nMismatches: ^^^^\nPath: elds \u2192 olds \u2192 odds\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  0: {a}\n  1: {u}\n  2: {e*}",
+      "raw_action": "EDIT 1 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "olds",
+      "structure_after": "odds"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     weer\nCurrent:    adds\nPositions:  0123\nMismatches: ^^^^\nPath: elds \u2192 olds \u2192 odds \u2192 adds\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  1: {i, n}\n  2: {o}",
+      "raw_action": "EDIT 0 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "odds",
+      "structure_after": "adds"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     weer\nCurrent:    aids\nPositions:  0123\nMismatches: ^^^^\nPath: elds \u2192 olds \u2192 odds \u2192 adds \u2192 aids\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  0: {b, f, g, k, l, m, r, y}\n  1: {n}\n  2: {l, m, n, r, t}\n  3: {e}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "adds",
+      "structure_after": "aids"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     weer\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: elds \u2192 olds \u2192 odds \u2192 adds \u2192 aids \u2192 ails\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {m, n, r, t}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "aids",
+      "structure_after": "ails"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     weer\nCurrent:    awls\nPositions:  0123\nMismatches: ^^^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 ails \u2192 awls\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {o}\n  1: {a, l}\n  2: {e*, n}",
+      "raw_action": "EDIT 1 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "w"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ails",
+      "structure_after": "awls"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     weer\nCurrent:    owls\nPositions:  0123\nMismatches: ^^^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 awls \u2192 owls\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  1: {i}\n  2: {e*, n}",
+      "raw_action": "EDIT 0 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "awls",
+      "structure_after": "owls"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     weer\nCurrent:    oils\nPositions:  0123\nMismatches: ^^^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 owls \u2192 oils\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {f, m, n, t}\n  3: {y}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "owls",
+      "structure_after": "oils"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     weer\nCurrent:    oils\nPositions:  0123\nMismatches: ^^^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 owls \u2192 oils\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {f, m, n, t}\n  3: {y}",
+      "raw_action": "EDIT 0 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "oils",
+      "structure_after": "oils"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     weer\nCurrent:    oily\nPositions:  0123\nMismatches: ^^^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 oils \u2192 oily\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {l, p, w*}\n  1: {n}",
+      "raw_action": "EDIT 3 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "y"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "oils",
+      "structure_after": "oily"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     weer\nCurrent:    wily\nPositions:  0123\nMismatches:  ^^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 oily \u2192 wily\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {l, p}\n  1: {a}\n  2: {n, r}\n  3: {d, e, l, t}",
+      "raw_action": "EDIT 0 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "w"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "oily",
+      "structure_after": "wily"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     weer\nCurrent:    waly\nPositions:  0123\nMismatches:  ^^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 wily \u2192 waly\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {p}\n  2: {d, n, r, v, x}\n  3: {e, k, l}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "wily",
+      "structure_after": "waly"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     weer\nCurrent:    wary\nPositions:  0123\nMismatches:  ^^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 waly \u2192 wary\nSteps used: 13/30  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {n, v}\n  1: {i}\n  2: {d, n, v, x}\n  3: {d, e, k, m, n, p, s, t}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "waly",
+      "structure_after": "wary"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     weer\nCurrent:    ware\nPositions:  0123\nMismatches:  ^^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 wary \u2192 ware\nSteps used: 14/30  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, h, m, p, r, t, y}\n  1: {e*, i, o}\n  2: {d, g, k, l, m, n, v}\n  3: {d, k, m, n, p, s, t}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "wary",
+      "structure_after": "ware"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     weer\nCurrent:    ware\nPositions:  0123\nMismatches:  ^^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 wary \u2192 ware\nSteps used: 15/30  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, h, m, p, r, t, y}\n  1: {e*, i, o}\n  2: {d, g, k, l, m, n, v}\n  3: {d, k, m, n, p, s, t}",
+      "raw_action": "EDIT 0 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ware",
+      "structure_after": "ware"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     weer\nCurrent:    were\nPositions:  0123\nMismatches:   ^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 ware \u2192 were\nSteps used: 16/30  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {c, d, f, h, m, s}\n  1: {i, o}\n  3: {t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ware",
+      "structure_after": "were"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     weer\nCurrent:    were\nPositions:  0123\nMismatches:   ^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 ware \u2192 were\nSteps used: 17/30  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {c, d, f, h, m, s}\n  1: {i, o}\n  3: {t}",
+      "raw_action": "EDIT 1 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "were",
+      "structure_after": "were"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     weer\nCurrent:    were\nPositions:  0123\nMismatches:   ^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 ware \u2192 were\nSteps used: 18/30  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {c, d, f, h, m, s}\n  1: {i, o}\n  3: {t}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "were",
+      "structure_after": "were"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     weer\nCurrent:    were\nPositions:  0123\nMismatches:   ^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 ware \u2192 were\nSteps used: 19/30  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {c, d, f, h, m, s}\n  1: {i, o}\n  3: {t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "were",
+      "structure_after": "were"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     weer\nCurrent:    were\nPositions:  0123\nMismatches:   ^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 ware \u2192 were\nSteps used: 20/30  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {c, d, f, h, m, s}\n  1: {i, o}\n  3: {t}",
+      "raw_action": "EDIT 3 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "were",
+      "structure_after": "were"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     weer\nCurrent:    were\nPositions:  0123\nMismatches:   ^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 ware \u2192 were\nSteps used: 21/30  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {c, d, f, h, m, s}\n  1: {i, o}\n  3: {t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "were",
+      "structure_after": "were"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     weer\nCurrent:    were\nPositions:  0123\nMismatches:   ^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 ware \u2192 were\nSteps used: 22/30  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {c, d, f, h, m, s}\n  1: {i, o}\n  3: {t}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "were",
+      "structure_after": "were"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     weer\nCurrent:    were\nPositions:  0123\nMismatches:   ^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 ware \u2192 were\nSteps used: 23/30  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {c, d, f, h, m, s}\n  1: {i, o}\n  3: {t}",
+      "raw_action": "EDIT 1 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "were",
+      "structure_after": "were"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     weer\nCurrent:    were\nPositions:  0123\nMismatches:   ^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 ware \u2192 were\nSteps used: 24/30  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {c, d, f, h, m, s}\n  1: {i, o}\n  3: {t}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "were",
+      "structure_after": "were"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     weer\nCurrent:    were\nPositions:  0123\nMismatches:   ^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 ware \u2192 were\nSteps used: 25/30  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {c, d, f, h, m, s}\n  1: {i, o}\n  3: {t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "were",
+      "structure_after": "were"
+    },
+    {
+      "t": 26,
+      "observation": "Target:     weer\nCurrent:    were\nPositions:  0123\nMismatches:   ^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 ware \u2192 were\nSteps used: 26/30  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {c, d, f, h, m, s}\n  1: {i, o}\n  3: {t}",
+      "raw_action": "EDIT 3 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "were",
+      "structure_after": "were"
+    },
+    {
+      "t": 27,
+      "observation": "Target:     weer\nCurrent:    were\nPositions:  0123\nMismatches:   ^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 ware \u2192 were\nSteps used: 27/30  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {c, d, f, h, m, s}\n  1: {i, o}\n  3: {t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "were",
+      "structure_after": "were"
+    },
+    {
+      "t": 28,
+      "observation": "Target:     weer\nCurrent:    were\nPositions:  0123\nMismatches:   ^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 ware \u2192 were\nSteps used: 28/30  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {c, d, f, h, m, s}\n  1: {i, o}\n  3: {t}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "were",
+      "structure_after": "were"
+    },
+    {
+      "t": 29,
+      "observation": "Target:     weer\nCurrent:    were\nPositions:  0123\nMismatches:   ^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 ware \u2192 were\nSteps used: 29/30  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {c, d, f, h, m, s}\n  1: {i, o}\n  3: {t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "were",
+      "structure_after": "were"
+    },
+    {
+      "t": 30,
+      "observation": "Target:     weer\nCurrent:    were\nPositions:  0123\nMismatches:   ^^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 ware \u2192 were\nSteps used: 30/30  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {c, d, f, h, m, s}\n  1: {i, o}\n  3: {t}",
+      "raw_action": "EDIT 3 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "were",
+      "structure_after": "were"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 30,
+    "max_steps": 30,
+    "start_word": "elds",
+    "target_word": "weer",
+    "final_word": "were",
+    "path": [
+      "elds",
+      "olds",
+      "odds",
+      "adds",
+      "aids",
+      "ails",
+      "awls",
+      "owls",
+      "oils",
+      "oily",
+      "wily",
+      "waly",
+      "wary",
+      "ware",
+      "were"
+    ],
+    "path_length": 14,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "INVALID_WORD": 6,
+      "ILLEGAL_EDIT": 10,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 17,
+    "optimal_distance_at_end": 3,
+    "events": [
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 112416,
+    "completion_tokens": 150,
+    "total_tokens": 112566
+  },
+  "wall_time_s": 56.09500312805176
+}

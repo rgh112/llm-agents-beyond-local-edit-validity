@@ -1,0 +1,443 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "few_shot_strategy",
+  "memory_condition": "state_only",
+  "seed": 34,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     pily\nCurrent:    pods\nPositions:  0123\nMismatches:  ^^^\nPath: cods \u2192 pods\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, g, h, m, n, r, s, t, y}\n  1: {a, e, u}\n  2: {i, l*, m, n, p, t, w}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cods",
+      "structure_after": "pods"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     pily\nCurrent:    pods\nPositions:  0123\nMismatches:  ^^^\nPath: cods \u2192 pods\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, g, h, m, n, r, s, t, y}\n  1: {a, e, u}\n  2: {i, l*, m, n, p, t, w}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pods",
+      "structure_after": "pods"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     pily\nCurrent:    pols\nPositions:  0123\nMismatches:  ^ ^\nPath: cods \u2192 pods \u2192 pols\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {c, d, h, m, s}\n  1: {a, u}\n  2: {i, m, n, p, t, w}\n  3: {e, l, o, y*}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pods",
+      "structure_after": "pols"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     pily\nCurrent:    pols\nPositions:  0123\nMismatches:  ^ ^\nPath: cods \u2192 pods \u2192 pols\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {c, d, h, m, s}\n  1: {a, u}\n  2: {i, m, n, p, t, w}\n  3: {e, l, o, y*}",
+      "raw_action": "EDIT 3 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pols",
+      "structure_after": "pols"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     pily\nCurrent:    cols\nPositions:  0123\nMismatches: ^^ ^\nPath: cods \u2192 pods \u2192 pols \u2192 cols\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {d, h, m, s}\n  1: {e}\n  2: {b, g, n, o, p, s, t, w, y}\n  3: {a, d, e, t, y*}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pols",
+      "structure_after": "cols"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     pily\nCurrent:    cels\nPositions:  0123\nMismatches: ^^ ^\nPath: cods \u2192 pods \u2192 pols \u2192 cols \u2192 cels\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {b, d, e, g, m, s, t}\n  2: {e, p, s}\n  3: {l, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cols",
+      "structure_after": "cels"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     pily\nCurrent:    cels\nPositions:  0123\nMismatches: ^^ ^\nPath: cods \u2192 pods \u2192 pols \u2192 cols \u2192 cels\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {b, d, e, g, m, s, t}\n  2: {e, p, s}\n  3: {l, t}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cels",
+      "structure_after": "cels"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     pily\nCurrent:    cels\nPositions:  0123\nMismatches: ^^ ^\nPath: cods \u2192 pods \u2192 pols \u2192 cols \u2192 cels\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {b, d, e, g, m, s, t}\n  2: {e, p, s}\n  3: {l, t}",
+      "raw_action": "EDIT 3 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cels",
+      "structure_after": "cels"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     pily\nCurrent:    bels\nPositions:  0123\nMismatches: ^^ ^\nPath: cods \u2192 pods \u2192 pols \u2192 cols \u2192 cels \u2192 bels\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {d, e, g, m, s, t}\n  1: {a}\n  2: {d, e, g, n, t, y}\n  3: {l, t}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cels",
+      "structure_after": "bels"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     pily\nCurrent:    bals\nPositions:  0123\nMismatches: ^^ ^\nPath: cods \u2192 pods \u2192 pols \u2192 ... \u2192 bels \u2192 bals\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {a, d, g, p*, s}\n  2: {a, d, g, m, n, p, r, s, t, y}\n  3: {d, e, k, l, m}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bels",
+      "structure_after": "bals"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     pily\nCurrent:    pals\nPositions:  0123\nMismatches:  ^ ^\nPath: cods \u2192 pods \u2192 pols \u2192 ... \u2192 bals \u2192 pals\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {a, d, g, s}\n  1: {u}\n  2: {c, d, m, n, p, r, s, t, w, y}\n  3: {e, l, m, p, y*}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bals",
+      "structure_after": "pals"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     pily\nCurrent:    pacs\nPositions:  0123\nMismatches:  ^^^\nPath: cods \u2192 pods \u2192 pols \u2192 ... \u2192 pals \u2192 pacs\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {l, m, s, v}\n  1: {e, i*}\n  2: {d, m, n, p, r, s, t, w, y}\n  3: {a, e, k, t}",
+      "raw_action": "EDIT 2 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pals",
+      "structure_after": "pacs"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     pily\nCurrent:    pics\nPositions:  0123\nMismatches:   ^^\nPath: cods \u2192 pods \u2192 pols \u2192 ... \u2192 pacs \u2192 pics\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {s, t}\n  1: {e}\n  2: {a, e, g, n, p, s, t}\n  3: {a, e, k}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pacs",
+      "structure_after": "pics"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     pily\nCurrent:    sics\nPositions:  0123\nMismatches: ^ ^^\nPath: cods \u2192 pods \u2192 pols \u2192 ... \u2192 pics \u2192 sics\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {t}\n  1: {a, e}\n  2: {b, m, n, p, r, t}\n  3: {e, k}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pics",
+      "structure_after": "sics"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     pily\nCurrent:    sacs\nPositions:  0123\nMismatches: ^^^^\nPath: cods \u2192 pods \u2192 pols \u2192 ... \u2192 sics \u2192 sacs\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {l, m, v}\n  1: {e}\n  2: {b, g, l*, n, p, s, w, y}\n  3: {k}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sics",
+      "structure_after": "sacs"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     pily\nCurrent:    lacs\nPositions:  0123\nMismatches: ^^^^\nPath: cods \u2192 pods \u2192 pols \u2192 ... \u2192 sacs \u2192 lacs\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {m, v}\n  2: {b, d, g, m, p, r, s, t, v, w, y}\n  3: {e, k, y*}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sacs",
+      "structure_after": "lacs"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     pily\nCurrent:    lads\nPositions:  0123\nMismatches: ^^^^\nPath: cods \u2192 pods \u2192 pols \u2192 ... \u2192 lacs \u2192 lads\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, m, p*, r, t, w}\n  1: {i*}\n  2: {b, g, m, p, r, s, t, v, w, y}\n  3: {e, y*}",
+      "raw_action": "EDIT 2 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lacs",
+      "structure_after": "lads"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     pily\nCurrent:    lids\nPositions:  0123\nMismatches: ^ ^^\nPath: cods \u2192 pods \u2192 pols \u2192 ... \u2192 lads \u2192 lids\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {a, b, f, g, k, m, r, y}\n  2: {b, e, n, p, t}\n  3: {o}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lads",
+      "structure_after": "lids"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     pily\nCurrent:    lids\nPositions:  0123\nMismatches: ^ ^^\nPath: cods \u2192 pods \u2192 pols \u2192 ... \u2192 lads \u2192 lids\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {a, b, f, g, k, m, r, y}\n  2: {b, e, n, p, t}\n  3: {o}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lids",
+      "structure_after": "lids"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     pily\nCurrent:    lids\nPositions:  0123\nMismatches: ^ ^^\nPath: cods \u2192 pods \u2192 pols \u2192 ... \u2192 lads \u2192 lids\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {a, b, f, g, k, m, r, y}\n  2: {b, e, n, p, t}\n  3: {o}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lids",
+      "structure_after": "lids"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "cods",
+    "target_word": "pily",
+    "final_word": "lids",
+    "path": [
+      "cods",
+      "pods",
+      "pols",
+      "cols",
+      "cels",
+      "bels",
+      "bals",
+      "pals",
+      "pacs",
+      "pics",
+      "sics",
+      "sacs",
+      "lacs",
+      "lads",
+      "lids"
+    ],
+    "path_length": 14,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 4,
+      "ILLEGAL_EDIT": 2,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 7,
+    "optimal_distance_at_end": 4,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 36808,
+    "completion_tokens": 100,
+    "total_tokens": 36908
+  },
+  "wall_time_s": 10.837015867233276
+}

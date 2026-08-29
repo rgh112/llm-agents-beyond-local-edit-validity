@@ -1,0 +1,482 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 25,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     sever\nCurrent:    saned\nPositions:  01234\nMismatches:  ^^ ^\nPath: caned \u2192 saned\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, m, p, v, w}\n  2: {b, t, v*, w}\n  4: {r*, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "caned",
+      "structure_after": "saned"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     sever\nCurrent:    saned\nPositions:  01234\nMismatches:  ^^ ^\nPath: caned \u2192 saned\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, m, p, v, w}\n  2: {b, t, v*, w}\n  4: {r*, s}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saned",
+      "structure_after": "saned"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     sever\nCurrent:    saned\nPositions:  01234\nMismatches:  ^^ ^\nPath: caned \u2192 saned\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {b, m, p, v, w}\n  2: {b, t, v*, w}\n  4: {r*, s}",
+      "raw_action": "EDIT 4 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saned",
+      "structure_after": "saned"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     sever\nCurrent:    saned\nPositions:  01234\nMismatches:  ^^ ^\nPath: caned \u2192 saned\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, m, p, v, w}\n  2: {b, t, v*, w}\n  4: {r*, s}",
+      "raw_action": "EDIT 1 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saned",
+      "structure_after": "saned"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     sever\nCurrent:    saned\nPositions:  01234\nMismatches:  ^^ ^\nPath: caned \u2192 saned\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {b, m, p, v, w}\n  2: {b, t, v*, w}\n  4: {r*, s}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saned",
+      "structure_after": "saned"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     sever\nCurrent:    saned\nPositions:  01234\nMismatches:  ^^ ^\nPath: caned \u2192 saned\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {b, m, p, v, w}\n  2: {b, t, v*, w}\n  4: {r*, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saned",
+      "structure_after": "saned"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     sever\nCurrent:    saned\nPositions:  01234\nMismatches:  ^^ ^\nPath: caned \u2192 saned\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {b, m, p, v, w}\n  2: {b, t, v*, w}\n  4: {r*, s}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saned",
+      "structure_after": "saned"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     sever\nCurrent:    saned\nPositions:  01234\nMismatches:  ^^ ^\nPath: caned \u2192 saned\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {b, m, p, v, w}\n  2: {b, t, v*, w}\n  4: {r*, s}",
+      "raw_action": "EDIT 4 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saned",
+      "structure_after": "saned"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     sever\nCurrent:    saned\nPositions:  01234\nMismatches:  ^^ ^\nPath: caned \u2192 saned\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {b, m, p, v, w}\n  2: {b, t, v*, w}\n  4: {r*, s}",
+      "raw_action": "EDIT 1 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saned",
+      "structure_after": "saned"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     sever\nCurrent:    saned\nPositions:  01234\nMismatches:  ^^ ^\nPath: caned \u2192 saned\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {b, m, p, v, w}\n  2: {b, t, v*, w}\n  4: {r*, s}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saned",
+      "structure_after": "saned"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     sever\nCurrent:    saned\nPositions:  01234\nMismatches:  ^^ ^\nPath: caned \u2192 saned\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {b, m, p, v, w}\n  2: {b, t, v*, w}\n  4: {r*, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saned",
+      "structure_after": "saned"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     sever\nCurrent:    saned\nPositions:  01234\nMismatches:  ^^ ^\nPath: caned \u2192 saned\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {b, m, p, v, w}\n  2: {b, t, v*, w}\n  4: {r*, s}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saned",
+      "structure_after": "saned"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     sever\nCurrent:    saned\nPositions:  01234\nMismatches:  ^^ ^\nPath: caned \u2192 saned\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {b, m, p, v, w}\n  2: {b, t, v*, w}\n  4: {r*, s}",
+      "raw_action": "EDIT 4 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saned",
+      "structure_after": "saned"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     sever\nCurrent:    saned\nPositions:  01234\nMismatches:  ^^ ^\nPath: caned \u2192 saned\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {b, m, p, v, w}\n  2: {b, t, v*, w}\n  4: {r*, s}",
+      "raw_action": "EDIT 1 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saned",
+      "structure_after": "saned"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     sever\nCurrent:    saned\nPositions:  01234\nMismatches:  ^^ ^\nPath: caned \u2192 saned\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {b, m, p, v, w}\n  2: {b, t, v*, w}\n  4: {r*, s}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saned",
+      "structure_after": "saned"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     sever\nCurrent:    saned\nPositions:  01234\nMismatches:  ^^ ^\nPath: caned \u2192 saned\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {b, m, p, v, w}\n  2: {b, t, v*, w}\n  4: {r*, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saned",
+      "structure_after": "saned"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     sever\nCurrent:    saned\nPositions:  01234\nMismatches:  ^^ ^\nPath: caned \u2192 saned\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {b, m, p, v, w}\n  2: {b, t, v*, w}\n  4: {r*, s}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saned",
+      "structure_after": "saned"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     sever\nCurrent:    saned\nPositions:  01234\nMismatches:  ^^ ^\nPath: caned \u2192 saned\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {b, m, p, v, w}\n  2: {b, t, v*, w}\n  4: {r*, s}",
+      "raw_action": "EDIT 4 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saned",
+      "structure_after": "saned"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     sever\nCurrent:    saned\nPositions:  01234\nMismatches:  ^^ ^\nPath: caned \u2192 saned\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {b, m, p, v, w}\n  2: {b, t, v*, w}\n  4: {r*, s}",
+      "raw_action": "EDIT 1 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saned",
+      "structure_after": "saned"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     sever\nCurrent:    saned\nPositions:  01234\nMismatches:  ^^ ^\nPath: caned \u2192 saned\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {b, m, p, v, w}\n  2: {b, t, v*, w}\n  4: {r*, s}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saned",
+      "structure_after": "saned"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "caned",
+    "target_word": "sever",
+    "final_word": "saned",
+    "path": [
+      "caned",
+      "saned"
+    ],
+    "path_length": 1,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 16,
+      "ILLEGAL_EDIT": 3,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 20,
+    "optimal_distance_at_end": 3,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 52106,
+    "completion_tokens": 100,
+    "total_tokens": 52206
+  },
+  "wall_time_s": 11.642611026763916
+}

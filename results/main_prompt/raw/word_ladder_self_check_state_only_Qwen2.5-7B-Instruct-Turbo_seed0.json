@@ -1,0 +1,636 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check",
+  "memory_condition": "state_only",
+  "seed": 0,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     weer\nCurrent:    olds\nPositions:  0123\nMismatches: ^^^^\nPath: elds \u2192 olds\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  1: {d, u}\n  2: {e*}\n  3: {y}",
+      "raw_action": "EDIT 0 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "elds",
+      "structure_after": "olds"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     weer\nCurrent:    odds\nPositions:  0123\nMismatches: ^^^^\nPath: elds \u2192 olds \u2192 odds\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  0: {a}\n  1: {u}\n  2: {e*}",
+      "raw_action": "EDIT 1 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "olds",
+      "structure_after": "odds"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     weer\nCurrent:    odes\nPositions:  0123\nMismatches: ^^ ^\nPath: elds \u2192 olds \u2192 odds \u2192 odes\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  0: {i}\n  1: {b, k, l, n, p, r, s, w, x, y}\n  3: {a}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "odds",
+      "structure_after": "odes"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     weer\nCurrent:    ides\nPositions:  0123\nMismatches: ^^ ^\nPath: elds \u2192 olds \u2192 odds \u2192 odes \u2192 ides\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  1: {c, r}\n  3: {a, m}",
+      "raw_action": "EDIT 0 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "odes",
+      "structure_after": "ides"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     weer\nCurrent:    ires\nPositions:  0123\nMismatches: ^^ ^\nPath: elds \u2192 olds \u2192 odds \u2192 odes \u2192 ides \u2192 ires\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {a, o}\n  1: {c}\n  2: {i, k}\n  3: {d}",
+      "raw_action": "EDIT 1 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ides",
+      "structure_after": "ires"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     weer\nCurrent:    ares\nPositions:  0123\nMismatches: ^^ ^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 ires \u2192 ares\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {o}\n  1: {c, g, l, n, p, t, v, w, x, y}\n  2: {b, c, f, k, m, t}\n  3: {a}",
+      "raw_action": "EDIT 0 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ires",
+      "structure_after": "ares"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     weer\nCurrent:    awes\nPositions:  0123\nMismatches: ^^ ^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 ares \u2192 awes\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {e, o}\n  1: {c, g, l, n, p, t, v, x, y}\n  2: {l, n}\n  3: {d, e}",
+      "raw_action": "EDIT 1 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "w"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ares",
+      "structure_after": "awes"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     weer\nCurrent:    ewes\nPositions:  0123\nMismatches: ^^ ^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 awes \u2192 ewes\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {o}\n  1: {k, m, s, v, x, y}\n  3: {r*}",
+      "raw_action": "EDIT 0 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "awes",
+      "structure_after": "ewes"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     weer\nCurrent:    eses\nPositions:  0123\nMismatches: ^^ ^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 ewes \u2192 eses\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {o, u}\n  1: {k, m, v, x, y}",
+      "raw_action": "EDIT 1 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ewes",
+      "structure_after": "eses"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     weer\nCurrent:    uses\nPositions:  0123\nMismatches: ^^ ^\nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 eses \u2192 uses\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {o}\n  1: {k}\n  3: {d, r*}",
+      "raw_action": "EDIT 0 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "eses",
+      "structure_after": "uses"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     weer\nCurrent:    user\nPositions:  0123\nMismatches: ^^  \nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 uses \u2192 user\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  3: {d}",
+      "raw_action": "EDIT 3 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "uses",
+      "structure_after": "user"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     weer\nCurrent:    user\nPositions:  0123\nMismatches: ^^  \nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 uses \u2192 user\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  3: {d}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "user",
+      "structure_after": "user"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     weer\nCurrent:    user\nPositions:  0123\nMismatches: ^^  \nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 uses \u2192 user\nSteps used: 13/30  (remaining: 17)\n\nEditable positions and valid replacements:\n  3: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "user",
+      "structure_after": "user"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     weer\nCurrent:    user\nPositions:  0123\nMismatches: ^^  \nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 uses \u2192 user\nSteps used: 14/30  (remaining: 16)\n\nEditable positions and valid replacements:\n  3: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "user",
+      "structure_after": "user"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     weer\nCurrent:    user\nPositions:  0123\nMismatches: ^^  \nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 uses \u2192 user\nSteps used: 15/30  (remaining: 15)\n\nEditable positions and valid replacements:\n  3: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "user",
+      "structure_after": "user"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     weer\nCurrent:    user\nPositions:  0123\nMismatches: ^^  \nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 uses \u2192 user\nSteps used: 16/30  (remaining: 14)\n\nEditable positions and valid replacements:\n  3: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "user",
+      "structure_after": "user"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     weer\nCurrent:    user\nPositions:  0123\nMismatches: ^^  \nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 uses \u2192 user\nSteps used: 17/30  (remaining: 13)\n\nEditable positions and valid replacements:\n  3: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "user",
+      "structure_after": "user"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     weer\nCurrent:    user\nPositions:  0123\nMismatches: ^^  \nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 uses \u2192 user\nSteps used: 18/30  (remaining: 12)\n\nEditable positions and valid replacements:\n  3: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "user",
+      "structure_after": "user"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     weer\nCurrent:    user\nPositions:  0123\nMismatches: ^^  \nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 uses \u2192 user\nSteps used: 19/30  (remaining: 11)\n\nEditable positions and valid replacements:\n  3: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "user",
+      "structure_after": "user"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     weer\nCurrent:    user\nPositions:  0123\nMismatches: ^^  \nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 uses \u2192 user\nSteps used: 20/30  (remaining: 10)\n\nEditable positions and valid replacements:\n  3: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "user",
+      "structure_after": "user"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     weer\nCurrent:    user\nPositions:  0123\nMismatches: ^^  \nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 uses \u2192 user\nSteps used: 21/30  (remaining: 9)\n\nEditable positions and valid replacements:\n  3: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "user",
+      "structure_after": "user"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     weer\nCurrent:    user\nPositions:  0123\nMismatches: ^^  \nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 uses \u2192 user\nSteps used: 22/30  (remaining: 8)\n\nEditable positions and valid replacements:\n  3: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "user",
+      "structure_after": "user"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     weer\nCurrent:    user\nPositions:  0123\nMismatches: ^^  \nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 uses \u2192 user\nSteps used: 23/30  (remaining: 7)\n\nEditable positions and valid replacements:\n  3: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "user",
+      "structure_after": "user"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     weer\nCurrent:    user\nPositions:  0123\nMismatches: ^^  \nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 uses \u2192 user\nSteps used: 24/30  (remaining: 6)\n\nEditable positions and valid replacements:\n  3: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "user",
+      "structure_after": "user"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     weer\nCurrent:    user\nPositions:  0123\nMismatches: ^^  \nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 uses \u2192 user\nSteps used: 25/30  (remaining: 5)\n\nEditable positions and valid replacements:\n  3: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "user",
+      "structure_after": "user"
+    },
+    {
+      "t": 26,
+      "observation": "Target:     weer\nCurrent:    user\nPositions:  0123\nMismatches: ^^  \nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 uses \u2192 user\nSteps used: 26/30  (remaining: 4)\n\nEditable positions and valid replacements:\n  3: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "user",
+      "structure_after": "user"
+    },
+    {
+      "t": 27,
+      "observation": "Target:     weer\nCurrent:    user\nPositions:  0123\nMismatches: ^^  \nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 uses \u2192 user\nSteps used: 27/30  (remaining: 3)\n\nEditable positions and valid replacements:\n  3: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "user",
+      "structure_after": "user"
+    },
+    {
+      "t": 28,
+      "observation": "Target:     weer\nCurrent:    user\nPositions:  0123\nMismatches: ^^  \nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 uses \u2192 user\nSteps used: 28/30  (remaining: 2)\n\nEditable positions and valid replacements:\n  3: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "user",
+      "structure_after": "user"
+    },
+    {
+      "t": 29,
+      "observation": "Target:     weer\nCurrent:    user\nPositions:  0123\nMismatches: ^^  \nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 uses \u2192 user\nSteps used: 29/30  (remaining: 1)\n\nEditable positions and valid replacements:\n  3: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "user",
+      "structure_after": "user"
+    },
+    {
+      "t": 30,
+      "observation": "Target:     weer\nCurrent:    user\nPositions:  0123\nMismatches: ^^  \nPath: elds \u2192 olds \u2192 odds \u2192 ... \u2192 uses \u2192 user\nSteps used: 30/30  (remaining: 0)\n\nEditable positions and valid replacements:\n  3: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "user",
+      "structure_after": "user"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "PREMATURE_FINALIZE",
+  "failure_events": [
+    "INVALID_WORD",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 30,
+    "max_steps": 30,
+    "start_word": "elds",
+    "target_word": "weer",
+    "final_word": "user",
+    "path": [
+      "elds",
+      "olds",
+      "odds",
+      "odes",
+      "ides",
+      "ires",
+      "ares",
+      "awes",
+      "ewes",
+      "eses",
+      "uses",
+      "user"
+    ],
+    "path_length": 11,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "INVALID_WORD": 1,
+      "PREMATURE_FINALIZE": 18,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 20,
+    "optimal_distance_at_end": 6,
+    "events": [
+      "INVALID_WORD",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 59891,
+    "completion_tokens": 114,
+    "total_tokens": 60005
+  },
+  "wall_time_s": 73.36252284049988
+}

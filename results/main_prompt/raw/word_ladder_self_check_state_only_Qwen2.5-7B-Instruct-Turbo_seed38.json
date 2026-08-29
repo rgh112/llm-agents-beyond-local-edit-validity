@@ -1,0 +1,586 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check",
+  "memory_condition": "state_only",
+  "seed": 38,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     pump\nCurrent:    pays\nPositions:  0123\nMismatches:  ^^^\nPath: kays \u2192 pays\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, h, j, l, m, n, r, s, w, y}\n  2: {c, d, l, m*, n, p, r, s, t, w}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "kays",
+      "structure_after": "pays"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     pump\nCurrent:    paps\nPositions:  0123\nMismatches:  ^^^\nPath: kays \u2192 pays \u2192 paps\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {b, c, d, g, h, l, m, n, r, s, t, w, y, z}\n  1: {e, i, o, u*}\n  2: {c, d, l, m*, n, r, s, t, w}\n  3: {a}",
+      "raw_action": "EDIT 2 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pays",
+      "structure_after": "paps"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "paps",
+      "structure_after": "pups"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 0 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 0 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 0 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 0 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 0 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 0 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     pump\nCurrent:    pups\nPositions:  0123\nMismatches:   ^^\nPath: kays \u2192 pays \u2192 paps \u2192 pups\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {c, d, s, t, y}\n  1: {e, i, o}\n  2: {b, d, g, l, n, r, s, t}\n  3: {a}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pups",
+      "structure_after": "pups"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "kays",
+    "target_word": "pump",
+    "final_word": "pups",
+    "path": [
+      "kays",
+      "pays",
+      "paps",
+      "pups"
+    ],
+    "path_length": 3,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 21,
+      "ILLEGAL_EDIT": 1,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 23,
+    "optimal_distance_at_end": 3,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 53715,
+    "completion_tokens": 125,
+    "total_tokens": 53840
+  },
+  "wall_time_s": 13.29420781135559
+}

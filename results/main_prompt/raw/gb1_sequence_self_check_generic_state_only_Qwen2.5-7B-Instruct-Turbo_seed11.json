@@ -1,0 +1,95 @@
+{
+  "env_name": "gb1_sequence",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check_generic",
+  "memory_condition": "state_only",
+  "seed": 11,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Step 2/6  |  Budget remaining: 5\n\nCurrent sequence: V39=V  D40=Y  G41=G  V54=C\nWild-type:        V39=V D40=D G41=G V54=V\n\nEstimated fitness: 4.00  (target: >= 5.0)\n  [Based on single-site measurements \u2014 may not reflect true combinatorial fitness]\nStability: stable\n\nAvailable mutations (est. single-site effect, stability):\n  Position 0 (V39, current=V): {L(+0.62, neutral), I(+0.25, neutral), F(-0.58, mild risk), W(-1.07, mild risk)}\n  Position 1 (D40, current=Y): {W(+2.78, mild risk), H(+1.93, neutral), A(+1.41, neutral), D(-0.05, neutral)}\n  Position 2 (G41, current=G): {A(-0.79, destabilizing), F(-0.90, destabilizing), C(-0.96, destabilizing), L(-1.06, destabilizing)}\n  Position 3 (V54, current=C): {A(+0.34, stabilizing), V(+0.07, neutral), F(-0.07, mild risk), G(-0.68, stabilizing)}\n\nEdit history:\n  Step 1: pos 1: D->Y  stability: stable",
+      "raw_action": "EDIT 1 Y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "amino_acid": "Y"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "VDGC",
+      "structure_after": "VYGC"
+    },
+    {
+      "t": 2,
+      "observation": "Step 3/6  |  Budget remaining: 4\n\nCurrent sequence: V39=L  D40=Y  G41=G  V54=C\nWild-type:        V39=V D40=D G41=G V54=V\n\nEstimated fitness: 5.12  (target: >= 5.0)\n  [Based on single-site measurements \u2014 may not reflect true combinatorial fitness]\nStability: stable\n\nAvailable mutations (est. single-site effect, stability):\n  Position 0 (V39, current=L): {I(+0.42, neutral), V(-0.18, neutral), F(-0.59, mild risk), W(-0.91, mild risk)}\n  Position 1 (D40, current=Y): {W(+2.90, mild risk), H(+2.12, neutral), A(+1.31, neutral), D(-0.04, neutral)}\n  Position 2 (G41, current=G): {A(-0.82, destabilizing), L(-0.94, destabilizing), C(-0.95, destabilizing), F(-0.98, destabilizing)}\n  Position 3 (V54, current=C): {A(+0.43, stabilizing), V(+0.11, neutral), F(-0.12, mild risk), G(-0.75, stabilizing)}\n\nEdit history:\n  Step 1: pos 1: D->Y  stability: stable\n  Step 2: pos 0: V->L  stability: stable",
+      "raw_action": "EDIT 0 L",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "amino_acid": "L"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "VYGC",
+      "structure_after": "LYGC"
+    },
+    {
+      "t": 3,
+      "observation": "",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true,
+        "success": false,
+        "true_fitness": 4.3356,
+        "estimated_fitness": 4.9956,
+        "estimation_error": 0.66,
+        "stability": 0.9,
+        "fitness_ok": false,
+        "stability_ok": true,
+        "variant": "LYGC",
+        "edits_made": 2,
+        "positions_edited": 2
+      },
+      "structure_before": "LYGC",
+      "structure_after": "LYGC"
+    }
+  ],
+  "success": false,
+  "terminal_failure": null,
+  "failure_events": [],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 3,
+    "max_steps": 6,
+    "true_fitness": 4.3356,
+    "estimated_fitness": 4.9956,
+    "stability": 0.9,
+    "variant": "LYGC",
+    "edits_made": 2,
+    "positions_edited": 2,
+    "violations_by_type": {},
+    "total_violations": 0,
+    "events": []
+  },
+  "token_usage": {
+    "prompt_tokens": 3171,
+    "completion_tokens": 13,
+    "total_tokens": 3184
+  },
+  "wall_time_s": 1.5043320655822754
+}

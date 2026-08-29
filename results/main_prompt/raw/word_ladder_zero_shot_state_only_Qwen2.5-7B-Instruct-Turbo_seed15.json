@@ -1,0 +1,691 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 15,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     slot\nCurrent:    lace\nPositions:  0123\nMismatches: ^^^^\nPath: mace \u2192 lace\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  0: {d, f, p, r, t}\n  1: {i, u}\n  2: {d, k, m, n, s, t, v, z}\n  3: {k, s, y}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mace",
+      "structure_after": "lace"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     slot\nCurrent:    lace\nPositions:  0123\nMismatches: ^^^^\nPath: mace \u2192 lace\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  0: {d, f, p, r, t}\n  1: {i, u}\n  2: {d, k, m, n, s, t, v, z}\n  3: {k, s, y}",
+      "raw_action": "EDIT 1 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lace",
+      "structure_after": "lace"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     slot\nCurrent:    lace\nPositions:  0123\nMismatches: ^^^^\nPath: mace \u2192 lace\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  0: {d, f, p, r, t}\n  1: {i, u}\n  2: {d, k, m, n, s, t, v, z}\n  3: {k, s, y}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lace",
+      "structure_after": "lace"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     slot\nCurrent:    lace\nPositions:  0123\nMismatches: ^^^^\nPath: mace \u2192 lace\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  0: {d, f, p, r, t}\n  1: {i, u}\n  2: {d, k, m, n, s, t, v, z}\n  3: {k, s, y}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lace",
+      "structure_after": "lace"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     slot\nCurrent:    lace\nPositions:  0123\nMismatches: ^^^^\nPath: mace \u2192 lace\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {d, f, p, r, t}\n  1: {i, u}\n  2: {d, k, m, n, s, t, v, z}\n  3: {k, s, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lace",
+      "structure_after": "lace"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     slot\nCurrent:    late\nPositions:  0123\nMismatches: ^^^^\nPath: mace \u2192 lace \u2192 late\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, h, m, p, r, s*, t}\n  1: {i, u}\n  2: {d, k, m, n, s, v, z}\n  3: {h, i, s}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lace",
+      "structure_after": "late"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     slot\nCurrent:    late\nPositions:  0123\nMismatches: ^^^^\nPath: mace \u2192 lace \u2192 late\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, h, m, p, r, s*, t}\n  1: {i, u}\n  2: {d, k, m, n, s, v, z}\n  3: {h, i, s}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "late",
+      "structure_after": "late"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     slot\nCurrent:    sate\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 late \u2192 sate\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, h, m, p, r, t}\n  1: {i}\n  2: {b, d, f, g, k, l, m, n, v}\n  3: {i}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "late",
+      "structure_after": "sate"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     slot\nCurrent:    sate\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 late \u2192 sate\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, h, m, p, r, t}\n  1: {i}\n  2: {b, d, f, g, k, l, m, n, v}\n  3: {i}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sate",
+      "structure_after": "sate"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     slot\nCurrent:    sate\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 late \u2192 sate\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, h, m, p, r, t}\n  1: {i}\n  2: {b, d, f, g, k, l, m, n, v}\n  3: {i}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sate",
+      "structure_after": "sate"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     slot\nCurrent:    sate\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 late \u2192 sate\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, h, m, p, r, t}\n  1: {i}\n  2: {b, d, f, g, k, l, m, n, v}\n  3: {i}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sate",
+      "structure_after": "sate"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     slot\nCurrent:    sate\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 late \u2192 sate\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, h, m, p, r, t}\n  1: {i}\n  2: {b, d, f, g, k, l, m, n, v}\n  3: {i}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sate",
+      "structure_after": "sate"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     slot\nCurrent:    sate\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 late \u2192 sate\nSteps used: 13/30  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, h, m, p, r, t}\n  1: {i}\n  2: {b, d, f, g, k, l, m, n, v}\n  3: {i}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sate",
+      "structure_after": "sate"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     slot\nCurrent:    sale\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 late \u2192 sate \u2192 sale\nSteps used: 14/30  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, d, g, h, k, m, p, r, t, v, w}\n  1: {o}\n  2: {b, d, f, g, k, m, n, v}\n  3: {l, p, s, t*}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sate",
+      "structure_after": "sale"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     slot\nCurrent:    salt\nPositions:  0123\nMismatches:  ^^ \nPath: mace \u2192 lace \u2192 late \u2192 sate \u2192 sale \u2192 salt\nSteps used: 15/30  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {h, m}\n  1: {i}\n  3: {l, p, s}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sale",
+      "structure_after": "salt"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     slot\nCurrent:    salt\nPositions:  0123\nMismatches:  ^^ \nPath: mace \u2192 lace \u2192 late \u2192 sate \u2192 sale \u2192 salt\nSteps used: 16/30  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {h, m}\n  1: {i}\n  3: {l, p, s}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "salt",
+      "structure_after": "salt"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     slot\nCurrent:    salt\nPositions:  0123\nMismatches:  ^^ \nPath: mace \u2192 lace \u2192 late \u2192 sate \u2192 sale \u2192 salt\nSteps used: 17/30  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {h, m}\n  1: {i}\n  3: {l, p, s}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "salt",
+      "structure_after": "salt"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     slot\nCurrent:    salt\nPositions:  0123\nMismatches:  ^^ \nPath: mace \u2192 lace \u2192 late \u2192 sate \u2192 sale \u2192 salt\nSteps used: 18/30  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {h, m}\n  1: {i}\n  3: {l, p, s}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "salt",
+      "structure_after": "salt"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     slot\nCurrent:    salt\nPositions:  0123\nMismatches:  ^^ \nPath: mace \u2192 lace \u2192 late \u2192 sate \u2192 sale \u2192 salt\nSteps used: 19/30  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {h, m}\n  1: {i}\n  3: {l, p, s}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "salt",
+      "structure_after": "salt"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     slot\nCurrent:    salt\nPositions:  0123\nMismatches:  ^^ \nPath: mace \u2192 lace \u2192 late \u2192 sate \u2192 sale \u2192 salt\nSteps used: 20/30  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {h, m}\n  1: {i}\n  3: {l, p, s}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "salt",
+      "structure_after": "salt"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     slot\nCurrent:    salt\nPositions:  0123\nMismatches:  ^^ \nPath: mace \u2192 lace \u2192 late \u2192 sate \u2192 sale \u2192 salt\nSteps used: 21/30  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {h, m}\n  1: {i}\n  3: {l, p, s}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "salt",
+      "structure_after": "salt"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     slot\nCurrent:    salt\nPositions:  0123\nMismatches:  ^^ \nPath: mace \u2192 lace \u2192 late \u2192 sate \u2192 sale \u2192 salt\nSteps used: 22/30  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {h, m}\n  1: {i}\n  3: {l, p, s}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "salt",
+      "structure_after": "salt"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     slot\nCurrent:    salt\nPositions:  0123\nMismatches:  ^^ \nPath: mace \u2192 lace \u2192 late \u2192 sate \u2192 sale \u2192 salt\nSteps used: 23/30  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {h, m}\n  1: {i}\n  3: {l, p, s}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "salt",
+      "structure_after": "salt"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     slot\nCurrent:    salt\nPositions:  0123\nMismatches:  ^^ \nPath: mace \u2192 lace \u2192 late \u2192 sate \u2192 sale \u2192 salt\nSteps used: 24/30  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {h, m}\n  1: {i}\n  3: {l, p, s}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "salt",
+      "structure_after": "salt"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     slot\nCurrent:    salt\nPositions:  0123\nMismatches:  ^^ \nPath: mace \u2192 lace \u2192 late \u2192 sate \u2192 sale \u2192 salt\nSteps used: 25/30  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {h, m}\n  1: {i}\n  3: {l, p, s}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "salt",
+      "structure_after": "salt"
+    },
+    {
+      "t": 26,
+      "observation": "Target:     slot\nCurrent:    salt\nPositions:  0123\nMismatches:  ^^ \nPath: mace \u2192 lace \u2192 late \u2192 sate \u2192 sale \u2192 salt\nSteps used: 26/30  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {h, m}\n  1: {i}\n  3: {l, p, s}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "salt",
+      "structure_after": "salt"
+    },
+    {
+      "t": 27,
+      "observation": "Target:     slot\nCurrent:    salt\nPositions:  0123\nMismatches:  ^^ \nPath: mace \u2192 lace \u2192 late \u2192 sate \u2192 sale \u2192 salt\nSteps used: 27/30  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {h, m}\n  1: {i}\n  3: {l, p, s}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "salt",
+      "structure_after": "salt"
+    },
+    {
+      "t": 28,
+      "observation": "Target:     slot\nCurrent:    salt\nPositions:  0123\nMismatches:  ^^ \nPath: mace \u2192 lace \u2192 late \u2192 sate \u2192 sale \u2192 salt\nSteps used: 28/30  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {h, m}\n  1: {i}\n  3: {l, p, s}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "salt",
+      "structure_after": "salt"
+    },
+    {
+      "t": 29,
+      "observation": "Target:     slot\nCurrent:    salt\nPositions:  0123\nMismatches:  ^^ \nPath: mace \u2192 lace \u2192 late \u2192 sate \u2192 sale \u2192 salt\nSteps used: 29/30  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {h, m}\n  1: {i}\n  3: {l, p, s}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "salt",
+      "structure_after": "salt"
+    },
+    {
+      "t": 30,
+      "observation": "Target:     slot\nCurrent:    salt\nPositions:  0123\nMismatches:  ^^ \nPath: mace \u2192 lace \u2192 late \u2192 sate \u2192 sale \u2192 salt\nSteps used: 30/30  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {h, m}\n  1: {i}\n  3: {l, p, s}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "salt",
+      "structure_after": "salt"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "OSCILLATION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "OSCILLATION",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 30,
+    "max_steps": 30,
+    "start_word": "mace",
+    "target_word": "slot",
+    "final_word": "salt",
+    "path": [
+      "mace",
+      "lace",
+      "late",
+      "sate",
+      "sale",
+      "salt"
+    ],
+    "path_length": 5,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "INVALID_WORD": 18,
+      "ILLEGAL_EDIT": 6,
+      "OSCILLATION": 1,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 26,
+    "optimal_distance_at_end": 5,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "OSCILLATION",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 68204,
+    "completion_tokens": 150,
+    "total_tokens": 68354
+  },
+  "wall_time_s": 30.763384103775024
+}

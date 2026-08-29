@@ -1,0 +1,228 @@
+{
+  "config": {
+    "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "memory": "state_only",
+    "prompt_conditions": [
+      "zero_shot",
+      "few_shot_format",
+      "few_shot_strategy",
+      "scaffold",
+      "self_check_generic",
+      "self_check"
+    ],
+    "fitness_target": 5.0,
+    "note": "Re-run with final FINALIZE precheck (stability-only gate)"
+  },
+  "results": [
+    {
+      "env": "gb1_sequence",
+      "prompt": "zero_shot",
+      "memory": "state_only",
+      "SR": 0.22,
+      "n_success": 11,
+      "n_total": 50,
+      "avg_steps": 3.9,
+      "terminal_failures": {
+        "LOCAL_OPTIMUM_TRAP": 21
+      },
+      "all_events": {
+        "LOCAL_OPTIMUM_TRAP": 21
+      },
+      "surface_failure_count": 0,
+      "structural_failure_count": 21,
+      "avg_finalize_step": 3.9,
+      "avg_first_failure": 2.7,
+      "prompt_metadata": {
+        "family": "zero_shot",
+        "strategy_bearing": false,
+        "task_specific": false,
+        "uses_examples": false
+      }
+    },
+    {
+      "env": "gb1_sequence",
+      "prompt": "few_shot_format",
+      "memory": "state_only",
+      "SR": 0.2,
+      "n_success": 10,
+      "n_total": 50,
+      "avg_steps": 3.8,
+      "terminal_failures": {
+        "LOCAL_OPTIMUM_TRAP": 24
+      },
+      "all_events": {
+        "LOCAL_OPTIMUM_TRAP": 25,
+        "INVALID_VALUE": 1
+      },
+      "surface_failure_count": 1,
+      "structural_failure_count": 25,
+      "avg_finalize_step": 3.8,
+      "avg_first_failure": 2.5,
+      "prompt_metadata": {
+        "family": "few_shot",
+        "strategy_bearing": false,
+        "task_specific": false,
+        "uses_examples": true
+      }
+    },
+    {
+      "env": "gb1_sequence",
+      "prompt": "few_shot_strategy",
+      "memory": "state_only",
+      "SR": 0.24,
+      "n_success": 12,
+      "n_total": 50,
+      "avg_steps": 4.0,
+      "terminal_failures": {
+        "LOCAL_OPTIMUM_TRAP": 10
+      },
+      "all_events": {
+        "LOCAL_OPTIMUM_TRAP": 10
+      },
+      "surface_failure_count": 0,
+      "structural_failure_count": 10,
+      "avg_finalize_step": 4.0,
+      "avg_first_failure": 2.5,
+      "prompt_metadata": {
+        "family": "few_shot",
+        "strategy_bearing": true,
+        "task_specific": true,
+        "uses_examples": true
+      }
+    },
+    {
+      "env": "gb1_sequence",
+      "prompt": "scaffold",
+      "memory": "state_only",
+      "SR": 0.12,
+      "n_success": 6,
+      "n_total": 50,
+      "avg_steps": 4.2,
+      "terminal_failures": {
+        "LOCAL_OPTIMUM_TRAP": 17,
+        "INVALID_VALUE": 4,
+        "OSCILLATION": 1
+      },
+      "all_events": {
+        "LOCAL_OPTIMUM_TRAP": 18,
+        "INVALID_VALUE": 6,
+        "MALFORMED_ACTION": 3,
+        "OSCILLATION": 1
+      },
+      "surface_failure_count": 9,
+      "structural_failure_count": 19,
+      "avg_finalize_step": 4.2,
+      "avg_first_failure": 2.9,
+      "prompt_metadata": {
+        "family": "scaffold",
+        "strategy_bearing": false,
+        "task_specific": true,
+        "uses_examples": false
+      }
+    },
+    {
+      "env": "gb1_sequence",
+      "prompt": "self_check_generic",
+      "memory": "state_only",
+      "SR": 0.26,
+      "n_success": 13,
+      "n_total": 50,
+      "avg_steps": 3.9,
+      "terminal_failures": {
+        "LOCAL_OPTIMUM_TRAP": 22
+      },
+      "all_events": {
+        "LOCAL_OPTIMUM_TRAP": 23
+      },
+      "surface_failure_count": 0,
+      "structural_failure_count": 23,
+      "avg_finalize_step": 3.9,
+      "avg_first_failure": 2.7,
+      "prompt_metadata": {
+        "family": "self_check",
+        "strategy_bearing": false,
+        "task_specific": false,
+        "uses_examples": false
+      }
+    },
+    {
+      "env": "gb1_sequence",
+      "prompt": "self_check",
+      "memory": "state_only",
+      "SR": 0.38,
+      "n_success": 19,
+      "n_total": 50,
+      "avg_steps": 4.0,
+      "terminal_failures": {
+        "LOCAL_OPTIMUM_TRAP": 20
+      },
+      "all_events": {
+        "LOCAL_OPTIMUM_TRAP": 22
+      },
+      "surface_failure_count": 0,
+      "structural_failure_count": 22,
+      "avg_finalize_step": 4.0,
+      "avg_first_failure": 2.9,
+      "prompt_metadata": {
+        "family": "self_check",
+        "strategy_bearing": true,
+        "task_specific": true,
+        "uses_examples": false
+      }
+    }
+  ],
+  "total_episodes": 300,
+  "wall_time_s": 608.6290318965912
+}

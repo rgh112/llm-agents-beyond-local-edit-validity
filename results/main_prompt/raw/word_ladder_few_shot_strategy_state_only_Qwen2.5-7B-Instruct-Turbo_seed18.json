@@ -1,0 +1,200 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "few_shot_strategy",
+  "memory_condition": "state_only",
+  "seed": 18,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     reed\nCurrent:    derm\nPositions:  0123\nMismatches: ^ ^^\nPath: berm \u2192 derm\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {g, h, p, t}\n  1: {o}\n  2: {e*}\n  3: {e}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "berm",
+      "structure_after": "derm"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     reed\nCurrent:    deem\nPositions:  0123\nMismatches: ^  ^\nPath: berm \u2192 derm \u2192 deem\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {n, s, t}\n  3: {d*, p, r, s, t}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "derm",
+      "structure_after": "deem"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     reed\nCurrent:    neem\nPositions:  0123\nMismatches: ^  ^\nPath: berm \u2192 derm \u2192 deem \u2192 neem\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {s, t}\n  2: {u}\n  3: {d*, p}",
+      "raw_action": "EDIT 0 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "deem",
+      "structure_after": "neem"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     reed\nCurrent:    need\nPositions:  0123\nMismatches: ^   \nPath: berm \u2192 derm \u2192 deem \u2192 neem \u2192 need\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, j, m, p, r*, s, t, w}\n  2: {r}\n  3: {p}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "neem",
+      "structure_after": "need"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     reed\nCurrent:    deed\nPositions:  0123\nMismatches: ^   \nPath: berm \u2192 derm \u2192 deem \u2192 neem \u2192 need \u2192 deed\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {f, g, h, j, m, p, r*, s, t, w}\n  1: {i, y}\n  2: {a}\n  3: {p, r, s, t}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "need",
+      "structure_after": "deed"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     reed\nCurrent:    deed\nPositions:  0123\nMismatches: ^   \nPath: berm \u2192 derm \u2192 deem \u2192 neem \u2192 need \u2192 deed\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {f, g, h, j, m, p, r*, s, t, w}\n  1: {i, y}\n  2: {a}\n  3: {p, r, s, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "deed",
+      "structure_after": "deed"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     reed\nCurrent:    deed\nPositions:  0123\nMismatches: ^   \nPath: berm \u2192 derm \u2192 deem \u2192 neem \u2192 need \u2192 deed\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {f, g, h, j, m, p, r*, s, t, w}\n  1: {i, y}\n  2: {a}\n  3: {p, r, s, t}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "deed",
+      "structure_after": "deed"
+    },
+    {
+      "t": 8,
+      "observation": "",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 1.0,
+      "info": {
+        "valid": true,
+        "auto_success": true
+      },
+      "structure_before": "deed",
+      "structure_after": "reed"
+    }
+  ],
+  "success": true,
+  "terminal_failure": null,
+  "failure_events": [
+    "ILLEGAL_EDIT",
+    "INVALID_WORD"
+  ],
+  "final_metrics": {
+    "success": true,
+    "steps_taken": 8,
+    "max_steps": 20,
+    "start_word": "berm",
+    "target_word": "reed",
+    "final_word": "reed",
+    "path": [
+      "berm",
+      "derm",
+      "deem",
+      "neem",
+      "need",
+      "deed",
+      "reed"
+    ],
+    "path_length": 6,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "ILLEGAL_EDIT": 1,
+      "INVALID_WORD": 1
+    },
+    "total_violations": 2,
+    "optimal_distance_at_end": 0,
+    "events": [
+      "ILLEGAL_EDIT",
+      "INVALID_WORD"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 7387,
+    "completion_tokens": 40,
+    "total_tokens": 7427
+  },
+  "wall_time_s": 4.077436208724976
+}

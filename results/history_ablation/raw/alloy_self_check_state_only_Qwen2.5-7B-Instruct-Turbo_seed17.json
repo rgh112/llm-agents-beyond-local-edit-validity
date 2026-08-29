@@ -1,0 +1,125 @@
+{
+  "env_name": "alloy",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check",
+  "memory_condition": "state_only",
+  "seed": 17,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Step 2/8  |  Budget remaining: 7  |  Phase: coarse\n\nComposition (at.%):  Fe: 22.0%  Ni: 20.0%  Cr: 23.0%  Co: 9.0%  Mn: 17.0%  Mo: 9.0%\n\nPerformance estimates:\n  UTS:     ~3069 MPa   (target: >= 2000)\n  Density:  8.14 g/cm^3 (target: <= 8.2) [near limit]\n  Path efficiency: efficient\n\nPhase: coarse  |  Allowed deltas: {10, 15}\nValid edits available: 40\n\nRecent moves:\n  Step 1: Ni+10%, Fe-10%  (UTS: 1604->3093, density: 8.04->8.14)\n\nElements: Fe, Ni, Cr, Co, Mn, Mo\nDensity reference: Fe=7.87, Ni=8.9, Cr=7.2, Co=8.9, Mn=7.4, Mo=10.2\nElement limits: Fe:[0-40%], Ni:[0-35%], Cr:[0-40%], Co:[0-35%], Mn:[0-35%], Mo:[0-30%]",
+      "raw_action": "EDIT Ni Fe 10",
+      "parsed_action": {
+        "type": "edit",
+        "inc_element": "Ni",
+        "dec_element": "Fe",
+        "delta": 10
+      },
+      "valid": true,
+      "events": [
+        "OBJECTIVE_TRADEOFF_FAILURE"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "Fe: 32.0%  Ni: 10.0%  Cr: 23.0%  Co: 9.0%  Mn: 17.0%  Mo: 9.0%",
+      "structure_after": "Fe: 22.0%  Ni: 20.0%  Cr: 23.0%  Co: 9.0%  Mn: 17.0%  Mo: 9.0%"
+    },
+    {
+      "t": 2,
+      "observation": "",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 1.0,
+      "info": {
+        "valid": true,
+        "success": true,
+        "true_uts": 3093.1254479144395,
+        "true_density": 8.1444,
+        "effective_uts_target": 2000.0,
+        "uts_met": true,
+        "density_met": true,
+        "recovery_cost": 0.0,
+        "recovery_cost_ok": true,
+        "max_density_seen": 8.1444,
+        "density_overshoot": 0,
+        "final_composition": {
+          "Fe": 22,
+          "Ni": 20,
+          "Cr": 23,
+          "Co": 9,
+          "Mn": 17,
+          "Mo": 9
+        }
+      },
+      "structure_before": "Fe: 22.0%  Ni: 20.0%  Cr: 23.0%  Co: 9.0%  Mn: 17.0%  Mo: 9.0%",
+      "structure_after": "Fe: 22.0%  Ni: 20.0%  Cr: 23.0%  Co: 9.0%  Mn: 17.0%  Mo: 9.0%"
+    }
+  ],
+  "success": true,
+  "terminal_failure": null,
+  "failure_events": [
+    "OBJECTIVE_TRADEOFF_FAILURE"
+  ],
+  "final_metrics": {
+    "success": true,
+    "steps_taken": 2,
+    "max_steps": 8,
+    "final_composition": {
+      "Fe": 22,
+      "Ni": 20,
+      "Cr": 23,
+      "Co": 9,
+      "Mn": 17,
+      "Mo": 9
+    },
+    "final_uts": 3093.1254479144395,
+    "final_density": 8.1444,
+    "uts_met": true,
+    "density_met": true,
+    "recovery_cost": 0.0,
+    "recovery_cost_ok": true,
+    "bad_moves_count": 0,
+    "violations_by_type": {
+      "OBJECTIVE_TRADEOFF_FAILURE": 1
+    },
+    "total_violations": 1,
+    "composition_trajectory": [
+      {
+        "Fe": 32,
+        "Ni": 10,
+        "Cr": 23,
+        "Co": 9,
+        "Mn": 17,
+        "Mo": 9
+      },
+      {
+        "Fe": 22,
+        "Ni": 20,
+        "Cr": 23,
+        "Co": 9,
+        "Mn": 17,
+        "Mo": 9
+      }
+    ],
+    "density_trajectory": [
+      8.0414,
+      8.1444
+    ],
+    "events": [
+      "OBJECTIVE_TRADEOFF_FAILURE"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 1615,
+    "completion_tokens": 10,
+    "total_tokens": 1625
+  },
+  "wall_time_s": 1.1222078800201416
+}

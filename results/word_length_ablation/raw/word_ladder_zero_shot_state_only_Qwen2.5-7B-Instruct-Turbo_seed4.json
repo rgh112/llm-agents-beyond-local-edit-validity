@@ -1,0 +1,311 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 4,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     softa\nCurrent:    sural\nPositions:  01234\nMismatches:  ^^^^\nPath: mural \u2192 sural\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  0: {a, d, j, r}\n  1: {e}\n  4: {h, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mural",
+      "structure_after": "sural"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     softa\nCurrent:    seral\nPositions:  01234\nMismatches:  ^^^^\nPath: mural \u2192 sural \u2192 seral\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  0: {f}\n  2: {p, t}\n  4: {c, i}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sural",
+      "structure_after": "seral"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     softa\nCurrent:    feral\nPositions:  01234\nMismatches: ^^^^^\nPath: mural \u2192 sural \u2192 seral \u2192 feral\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  2: {c, t}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "seral",
+      "structure_after": "feral"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     softa\nCurrent:    fetal\nPositions:  01234\nMismatches: ^^^^^\nPath: mural \u2192 sural \u2192 seral \u2192 feral \u2192 fetal\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  0: {m, p, s*}\n  1: {a}\n  2: {c}\n  4: {s}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "feral",
+      "structure_after": "fetal"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     softa\nCurrent:    fatal\nPositions:  01234\nMismatches: ^^^^^\nPath: mural \u2192 sural \u2192 seral \u2192 feral \u2192 fetal \u2192 fatal\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {n, r}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fetal",
+      "structure_after": "fatal"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     softa\nCurrent:    natal\nPositions:  01234\nMismatches: ^^^^^\nPath: mural \u2192 sural \u2192 seral \u2192 ... \u2192 fatal \u2192 natal\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {r}\n  1: {o*}\n  2: {s, v}",
+      "raw_action": "EDIT 0 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fatal",
+      "structure_after": "natal"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     softa\nCurrent:    notal\nPositions:  01234\nMismatches: ^ ^^^\nPath: mural \u2192 sural \u2192 seral \u2192 ... \u2192 natal \u2192 notal\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {d, t}\n  2: {d, p}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "natal",
+      "structure_after": "notal"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     softa\nCurrent:    dotal\nPositions:  01234\nMismatches: ^ ^^^\nPath: mural \u2192 sural \u2192 seral \u2192 ... \u2192 notal \u2192 dotal\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {t}\n  2: {m}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "notal",
+      "structure_after": "dotal"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     softa\nCurrent:    total\nPositions:  01234\nMismatches: ^ ^^^\nPath: mural \u2192 sural \u2192 seral \u2192 ... \u2192 dotal \u2192 total\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  2: {n}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dotal",
+      "structure_after": "total"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     softa\nCurrent:    tonal\nPositions:  01234\nMismatches: ^ ^^^\nPath: mural \u2192 sural \u2192 seral \u2192 ... \u2192 total \u2192 tonal\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {z}",
+      "raw_action": "EDIT 2 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "total",
+      "structure_after": "tonal"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     softa\nCurrent:    zonal\nPositions:  01234\nMismatches: ^ ^^^\nPath: mural \u2192 sural \u2192 seral \u2192 ... \u2192 tonal \u2192 zonal\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  2: {e}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tonal",
+      "structure_after": "zonal"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     softa\nCurrent:    zoeal\nPositions:  01234\nMismatches: ^ ^^^\nPath: mural \u2192 sural \u2192 seral \u2192 ... \u2192 zonal \u2192 zoeal\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  4: {e, s}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "zonal",
+      "structure_after": "zoeal"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     softa\nCurrent:    zoeae\nPositions:  01234\nMismatches: ^ ^^^\nPath: mural \u2192 sural \u2192 seral \u2192 ... \u2192 zoeal \u2192 zoeae\nSteps used: 13/30  (remaining: 17)\n\nEditable positions and valid replacements:\n  4: {s}",
+      "raw_action": "EDIT 4 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "zoeal",
+      "structure_after": "zoeae"
+    },
+    {
+      "t": 14,
+      "observation": "",
+      "raw_action": "EDIT 4 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [
+        "LOCAL_OPTIMUM_TRAP"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true,
+        "dead_end": true
+      },
+      "structure_before": "zoeae",
+      "structure_after": "zoeas"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "LOCAL_OPTIMUM_TRAP",
+  "failure_events": [
+    "LOCAL_OPTIMUM_TRAP"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 14,
+    "max_steps": 30,
+    "start_word": "mural",
+    "target_word": "softa",
+    "final_word": "zoeas",
+    "path": [
+      "mural",
+      "sural",
+      "seral",
+      "feral",
+      "fetal",
+      "fatal",
+      "natal",
+      "notal",
+      "dotal",
+      "total",
+      "tonal",
+      "zonal",
+      "zoeal",
+      "zoeae",
+      "zoeas"
+    ],
+    "path_length": 14,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "LOCAL_OPTIMUM_TRAP": 1
+    },
+    "total_violations": 1,
+    "optimal_distance_at_end": 12,
+    "events": [
+      "LOCAL_OPTIMUM_TRAP"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 13649,
+    "completion_tokens": 70,
+    "total_tokens": 13719
+  },
+  "wall_time_s": 6.718487024307251
+}

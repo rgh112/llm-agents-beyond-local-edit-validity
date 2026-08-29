@@ -1,0 +1,334 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 2,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     dukes\nCurrent:    corms\nPositions:  01234\nMismatches: ^^^^ \nPath: dorms \u2192 corms\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {f, n, w}\n  3: {d, e*, k, n, p}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dorms",
+      "structure_after": "corms"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     dukes\nCurrent:    cords\nPositions:  01234\nMismatches: ^^^^ \nPath: dorms \u2192 corms \u2192 cords\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {f, l, s, w}\n  1: {a, u*}\n  2: {e, l}\n  3: {e*, k, n, p}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "corms",
+      "structure_after": "cords"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     dukes\nCurrent:    cards\nPositions:  01234\nMismatches: ^^^^ \nPath: dorms \u2192 corms \u2192 cords \u2192 cards\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {b, f, h, l, n, p, s, w, y}\n  1: {u*}\n  2: {i}\n  3: {b, e*, k, l, n, p, r, t}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cords",
+      "structure_after": "cards"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     dukes\nCurrent:    caids\nPositions:  01234\nMismatches: ^^^^ \nPath: dorms \u2192 corms \u2192 cords \u2192 cards \u2192 caids\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {m, q, r, s}\n  3: {n}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cards",
+      "structure_after": "caids"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     dukes\nCurrent:    maids\nPositions:  01234\nMismatches: ^^^^ \nPath: dorms \u2192 corms \u2192 cords \u2192 cards \u2192 caids \u2192 maids\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {q, r, s}\n  2: {u}\n  3: {l, m, n, r}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "caids",
+      "structure_after": "maids"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     dukes\nCurrent:    maids\nPositions:  01234\nMismatches: ^^^^ \nPath: dorms \u2192 corms \u2192 cords \u2192 cards \u2192 caids \u2192 maids\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {q, r, s}\n  2: {u}\n  3: {l, m, n, r}",
+      "raw_action": "EDIT 3 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "maids",
+      "structure_after": "maids"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     dukes\nCurrent:    qaids\nPositions:  01234\nMismatches: ^^^^ \nPath: dorms \u2192 corms \u2192 cords \u2192 ... \u2192 maids \u2192 qaids\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {r, s}\n  1: {u*}",
+      "raw_action": "EDIT 0 q",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "q"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "maids",
+      "structure_after": "qaids"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     dukes\nCurrent:    quids\nPositions:  01234\nMismatches: ^ ^^ \nPath: dorms \u2192 corms \u2192 cords \u2192 ... \u2192 qaids \u2192 quids\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {g}\n  2: {a, o}\n  3: {n, p, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "qaids",
+      "structure_after": "quids"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     dukes\nCurrent:    guids\nPositions:  01234\nMismatches: ^ ^^ \nPath: dorms \u2192 corms \u2192 cords \u2192 ... \u2192 quids \u2192 guids\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  1: {r}\n  4: {e}",
+      "raw_action": "EDIT 0 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "quids",
+      "structure_after": "guids"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     dukes\nCurrent:    grids\nPositions:  01234\nMismatches: ^^^^ \nPath: dorms \u2192 corms \u2192 cords \u2192 ... \u2192 guids \u2192 grids\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {i}\n  2: {a}\n  3: {g, n, p, t}\n  4: {e}",
+      "raw_action": "EDIT 1 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "guids",
+      "structure_after": "grids"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     dukes\nCurrent:    irids\nPositions:  01234\nMismatches: ^^^^ \nPath: dorms \u2192 corms \u2192 cords \u2192 ... \u2192 grids \u2192 irids\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  1: {m}",
+      "raw_action": "EDIT 0 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "grids",
+      "structure_after": "irids"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     dukes\nCurrent:    imids\nPositions:  01234\nMismatches: ^^^^ \nPath: dorms \u2192 corms \u2192 cords \u2192 ... \u2192 irids \u2192 imids\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {a}\n  4: {e, o}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "irids",
+      "structure_after": "imids"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     dukes\nCurrent:    amids\nPositions:  01234\nMismatches: ^^^^ \nPath: dorms \u2192 corms \u2192 cords \u2192 ... \u2192 imids \u2192 amids\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  1: {c}\n  3: {a, e*, n, r, s}\n  4: {e, o}",
+      "raw_action": "EDIT 0 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "imids",
+      "structure_after": "amids"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     dukes\nCurrent:    acids\nPositions:  01234\nMismatches: ^^^^ \nPath: dorms \u2192 corms \u2192 cords \u2192 ... \u2192 amids \u2192 acids\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  4: {y}",
+      "raw_action": "EDIT 1 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "amids",
+      "structure_after": "acids"
+    },
+    {
+      "t": 15,
+      "observation": "",
+      "raw_action": "EDIT 4 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "y"
+      },
+      "valid": true,
+      "events": [
+        "LOCAL_OPTIMUM_TRAP"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true,
+        "dead_end": true
+      },
+      "structure_before": "acids",
+      "structure_after": "acidy"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "LOCAL_OPTIMUM_TRAP",
+  "failure_events": [
+    "INVALID_WORD",
+    "LOCAL_OPTIMUM_TRAP"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 15,
+    "max_steps": 20,
+    "start_word": "dorms",
+    "target_word": "dukes",
+    "final_word": "acidy",
+    "path": [
+      "dorms",
+      "corms",
+      "cords",
+      "cards",
+      "caids",
+      "maids",
+      "qaids",
+      "quids",
+      "guids",
+      "grids",
+      "irids",
+      "imids",
+      "amids",
+      "acids",
+      "acidy"
+    ],
+    "path_length": 14,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 1,
+      "LOCAL_OPTIMUM_TRAP": 1
+    },
+    "total_violations": 2,
+    "optimal_distance_at_end": 9,
+    "events": [
+      "INVALID_WORD",
+      "LOCAL_OPTIMUM_TRAP"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 17107,
+    "completion_tokens": 75,
+    "total_tokens": 17182
+  },
+  "wall_time_s": 7.107479810714722
+}

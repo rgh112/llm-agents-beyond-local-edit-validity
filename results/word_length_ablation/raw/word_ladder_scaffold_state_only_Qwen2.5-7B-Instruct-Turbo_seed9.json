@@ -1,0 +1,235 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 9,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     crump\nCurrent:    clung\nPositions:  01234\nMismatches:  ^ ^^\nPath: clang \u2192 clung\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {f, s}\n  2: {i}\n  4: {k}",
+      "raw_action": "EDIT 2 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "clang",
+      "structure_after": "clung"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     crump\nCurrent:    flung\nPositions:  01234\nMismatches: ^^ ^^\nPath: clang \u2192 clung \u2192 flung\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {s}\n  2: {i, o}\n  4: {k}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "clung",
+      "structure_after": "flung"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     crump\nCurrent:    fling\nPositions:  01234\nMismatches: ^^^^^\nPath: clang \u2192 clung \u2192 flung \u2192 fling\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {c*, s}\n  2: {o}\n  4: {t}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "flung",
+      "structure_after": "fling"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     crump\nCurrent:    cling\nPositions:  01234\nMismatches:  ^^^^\nPath: clang \u2192 clung \u2192 flung \u2192 fling \u2192 cling\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {s}\n  1: {u}\n  4: {e, k}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fling",
+      "structure_after": "cling"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     crump\nCurrent:    cuing\nPositions:  01234\nMismatches:  ^^^^\nPath: clang \u2192 clung \u2192 flung \u2192 fling \u2192 cling \u2192 cuing\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {r, s}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cling",
+      "structure_after": "cuing"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     crump\nCurrent:    ruing\nPositions:  01234\nMismatches: ^^^^^\nPath: clang \u2192 clung \u2192 flung \u2192 ... \u2192 cuing \u2192 ruing\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {s}\n  4: {s}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cuing",
+      "structure_after": "ruing"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     crump\nCurrent:    ruins\nPositions:  01234\nMismatches: ^^^^^\nPath: clang \u2192 clung \u2192 flung \u2192 ... \u2192 ruing \u2192 ruins\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {q}\n  1: {a, e}",
+      "raw_action": "EDIT 4 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ruing",
+      "structure_after": "ruins"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     crump\nCurrent:    quins\nPositions:  01234\nMismatches: ^^^^^\nPath: clang \u2192 clung \u2192 flung \u2192 ... \u2192 ruins \u2192 quins\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  3: {d, p, t}\n  4: {t}",
+      "raw_action": "EDIT 0 q",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "q"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ruins",
+      "structure_after": "quins"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     crump\nCurrent:    quips\nPositions:  01234\nMismatches: ^^^^^\nPath: clang \u2192 clung \u2192 flung \u2192 ... \u2192 quins \u2192 quips\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  3: {d, t}\n  4: {u}",
+      "raw_action": "EDIT 3 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "quins",
+      "structure_after": "quips"
+    },
+    {
+      "t": 10,
+      "observation": "",
+      "raw_action": "EDIT 4 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [
+        "LOCAL_OPTIMUM_TRAP"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true,
+        "dead_end": true
+      },
+      "structure_before": "quips",
+      "structure_after": "quipu"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "LOCAL_OPTIMUM_TRAP",
+  "failure_events": [
+    "LOCAL_OPTIMUM_TRAP"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 10,
+    "max_steps": 25,
+    "start_word": "clang",
+    "target_word": "crump",
+    "final_word": "quipu",
+    "path": [
+      "clang",
+      "clung",
+      "flung",
+      "fling",
+      "cling",
+      "cuing",
+      "ruing",
+      "ruins",
+      "quins",
+      "quips",
+      "quipu"
+    ],
+    "path_length": 10,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "LOCAL_OPTIMUM_TRAP": 1
+    },
+    "total_violations": 1,
+    "optimal_distance_at_end": 9,
+    "events": [
+      "LOCAL_OPTIMUM_TRAP"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 13758,
+    "completion_tokens": 50,
+    "total_tokens": 13808
+  },
+  "wall_time_s": 4.737229108810425
+}

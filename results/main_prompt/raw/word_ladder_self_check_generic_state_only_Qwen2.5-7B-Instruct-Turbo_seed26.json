@@ -1,0 +1,369 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check_generic",
+  "memory_condition": "state_only",
+  "seed": 26,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     mump\nCurrent:    mugs\nPositions:  0123\nMismatches:   ^^\nPath: bugs \u2192 mugs\nSteps used: 1/15  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {d, f, h, j, l, p, r, t, v}\n  1: {a, i, o}\n  2: {d, m*, n, s, t}\n  3: {g}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bugs",
+      "structure_after": "mugs"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     mump\nCurrent:    mags\nPositions:  0123\nMismatches:  ^^^\nPath: bugs \u2192 mugs \u2192 mags\nSteps used: 2/15  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, j, l, n, r, s, t, w, z}\n  1: {i, o}\n  2: {c, d, e, n, p, r, s, t, w, y}\n  3: {e, i}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mugs",
+      "structure_after": "mags"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     mump\nCurrent:    mags\nPositions:  0123\nMismatches:  ^^^\nPath: bugs \u2192 mugs \u2192 mags\nSteps used: 3/15  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, j, l, n, r, s, t, w, z}\n  1: {i, o}\n  2: {c, d, e, n, p, r, s, t, w, y}\n  3: {e, i}",
+      "raw_action": "EDIT 2 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mags",
+      "structure_after": "mags"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     mump\nCurrent:    mags\nPositions:  0123\nMismatches:  ^^^\nPath: bugs \u2192 mugs \u2192 mags\nSteps used: 4/15  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, j, l, n, r, s, t, w, z}\n  1: {i, o}\n  2: {c, d, e, n, p, r, s, t, w, y}\n  3: {e, i}",
+      "raw_action": "EDIT 3 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mags",
+      "structure_after": "mags"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     mump\nCurrent:    mags\nPositions:  0123\nMismatches:  ^^^\nPath: bugs \u2192 mugs \u2192 mags\nSteps used: 5/15  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, j, l, n, r, s, t, w, z}\n  1: {i, o}\n  2: {c, d, e, n, p, r, s, t, w, y}\n  3: {e, i}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mags",
+      "structure_after": "mags"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     mump\nCurrent:    mags\nPositions:  0123\nMismatches:  ^^^\nPath: bugs \u2192 mugs \u2192 mags\nSteps used: 6/15  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, j, l, n, r, s, t, w, z}\n  1: {i, o}\n  2: {c, d, e, n, p, r, s, t, w, y}\n  3: {e, i}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mags",
+      "structure_after": "mags"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     mump\nCurrent:    mags\nPositions:  0123\nMismatches:  ^^^\nPath: bugs \u2192 mugs \u2192 mags\nSteps used: 7/15  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, j, l, n, r, s, t, w, z}\n  1: {i, o}\n  2: {c, d, e, n, p, r, s, t, w, y}\n  3: {e, i}",
+      "raw_action": "EDIT 1 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mags",
+      "structure_after": "mags"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     mump\nCurrent:    mags\nPositions:  0123\nMismatches:  ^^^\nPath: bugs \u2192 mugs \u2192 mags\nSteps used: 8/15  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, j, l, n, r, s, t, w, z}\n  1: {i, o}\n  2: {c, d, e, n, p, r, s, t, w, y}\n  3: {e, i}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mags",
+      "structure_after": "mags"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     mump\nCurrent:    mags\nPositions:  0123\nMismatches:  ^^^\nPath: bugs \u2192 mugs \u2192 mags\nSteps used: 9/15  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, j, l, n, r, s, t, w, z}\n  1: {i, o}\n  2: {c, d, e, n, p, r, s, t, w, y}\n  3: {e, i}",
+      "raw_action": "EDIT 3 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mags",
+      "structure_after": "mags"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     mump\nCurrent:    mags\nPositions:  0123\nMismatches:  ^^^\nPath: bugs \u2192 mugs \u2192 mags\nSteps used: 10/15  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, j, l, n, r, s, t, w, z}\n  1: {i, o}\n  2: {c, d, e, n, p, r, s, t, w, y}\n  3: {e, i}",
+      "raw_action": "EDIT 3 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mags",
+      "structure_after": "mags"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     mump\nCurrent:    mags\nPositions:  0123\nMismatches:  ^^^\nPath: bugs \u2192 mugs \u2192 mags\nSteps used: 11/15  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, j, l, n, r, s, t, w, z}\n  1: {i, o}\n  2: {c, d, e, n, p, r, s, t, w, y}\n  3: {e, i}",
+      "raw_action": "EDIT 3 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mags",
+      "structure_after": "mags"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     mump\nCurrent:    mags\nPositions:  0123\nMismatches:  ^^^\nPath: bugs \u2192 mugs \u2192 mags\nSteps used: 12/15  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, j, l, n, r, s, t, w, z}\n  1: {i, o}\n  2: {c, d, e, n, p, r, s, t, w, y}\n  3: {e, i}",
+      "raw_action": "EDIT 3 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mags",
+      "structure_after": "mags"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     mump\nCurrent:    mags\nPositions:  0123\nMismatches:  ^^^\nPath: bugs \u2192 mugs \u2192 mags\nSteps used: 13/15  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, j, l, n, r, s, t, w, z}\n  1: {i, o}\n  2: {c, d, e, n, p, r, s, t, w, y}\n  3: {e, i}",
+      "raw_action": "EDIT 3 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mags",
+      "structure_after": "mags"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     mump\nCurrent:    mags\nPositions:  0123\nMismatches:  ^^^\nPath: bugs \u2192 mugs \u2192 mags\nSteps used: 14/15  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, j, l, n, r, s, t, w, z}\n  1: {i, o}\n  2: {c, d, e, n, p, r, s, t, w, y}\n  3: {e, i}",
+      "raw_action": "EDIT 3 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mags",
+      "structure_after": "mags"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     mump\nCurrent:    mags\nPositions:  0123\nMismatches:  ^^^\nPath: bugs \u2192 mugs \u2192 mags\nSteps used: 15/15  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, j, l, n, r, s, t, w, z}\n  1: {i, o}\n  2: {c, d, e, n, p, r, s, t, w, y}\n  3: {e, i}",
+      "raw_action": "EDIT 3 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mags",
+      "structure_after": "mags"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "OSCILLATION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "OSCILLATION",
+    "OSCILLATION",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 15,
+    "max_steps": 15,
+    "start_word": "bugs",
+    "target_word": "mump",
+    "final_word": "mags",
+    "path": [
+      "bugs",
+      "mugs",
+      "mags"
+    ],
+    "path_length": 2,
+    "optimal_length": 3,
+    "violations_by_type": {
+      "INVALID_WORD": 11,
+      "OSCILLATION": 2,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 14,
+    "optimal_distance_at_end": 3,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "OSCILLATION",
+      "OSCILLATION",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 22198,
+    "completion_tokens": 75,
+    "total_tokens": 22273
+  },
+  "wall_time_s": 11.450876951217651
+}

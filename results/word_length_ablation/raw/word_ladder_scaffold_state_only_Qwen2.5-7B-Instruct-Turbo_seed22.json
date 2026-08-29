@@ -1,0 +1,595 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 22,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 4 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 4 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 4 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 4 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 4 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 4 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     lilts\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^ \nPath: cages\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {g, m, p, r, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "cages",
+    "target_word": "lilts",
+    "final_word": "cages",
+    "path": [
+      "cages"
+    ],
+    "path_length": 0,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 24,
+      "ILLEGAL_EDIT": 1,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 26,
+    "optimal_distance_at_end": 5,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 83436,
+    "completion_tokens": 125,
+    "total_tokens": 83561
+  },
+  "wall_time_s": 15.740433692932129
+}

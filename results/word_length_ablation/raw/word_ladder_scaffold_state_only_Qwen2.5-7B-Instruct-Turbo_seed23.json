@@ -1,0 +1,140 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 23,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     gelts\nCurrent:    chess\nPositions:  01234\nMismatches: ^^^^ \nPath: chefs \u2192 chess\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  1: {r}\n  3: {w}\n  4: {t}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "chefs",
+      "structure_after": "chess"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     gelts\nCurrent:    chest\nPositions:  01234\nMismatches: ^^^^^\nPath: chefs \u2192 chess \u2192 chest\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  1: {r}\n  3: {a, r}",
+      "raw_action": "EDIT 4 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "chess",
+      "structure_after": "chest"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     gelts\nCurrent:    crest\nPositions:  01234\nMismatches: ^^^^^\nPath: chefs \u2192 chess \u2192 chest \u2192 crest\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  0: {d, p, w}\n  2: {u}\n  3: {p}\n  4: {s*}",
+      "raw_action": "EDIT 1 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "chest",
+      "structure_after": "crest"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     gelts\nCurrent:    drest\nPositions:  01234\nMismatches: ^^^^^\nPath: chefs \u2192 chess \u2192 chest \u2192 crest \u2192 drest\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  0: {p, w}\n  1: {o}\n  4: {s*}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "crest",
+      "structure_after": "drest"
+    },
+    {
+      "t": 5,
+      "observation": "",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [
+        "LOCAL_OPTIMUM_TRAP"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true,
+        "dead_end": true
+      },
+      "structure_before": "drest",
+      "structure_after": "doest"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "LOCAL_OPTIMUM_TRAP",
+  "failure_events": [
+    "LOCAL_OPTIMUM_TRAP"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 5,
+    "max_steps": 30,
+    "start_word": "chefs",
+    "target_word": "gelts",
+    "final_word": "doest",
+    "path": [
+      "chefs",
+      "chess",
+      "chest",
+      "crest",
+      "drest",
+      "doest"
+    ],
+    "path_length": 5,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "LOCAL_OPTIMUM_TRAP": 1
+    },
+    "total_violations": 1,
+    "optimal_distance_at_end": 9,
+    "events": [
+      "LOCAL_OPTIMUM_TRAP"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 3988,
+    "completion_tokens": 25,
+    "total_tokens": 4013
+  },
+  "wall_time_s": 2.7455852031707764
+}

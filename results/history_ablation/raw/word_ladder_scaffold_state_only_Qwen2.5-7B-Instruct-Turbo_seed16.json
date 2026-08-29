@@ -1,0 +1,162 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 16,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     time\nCurrent:    tote\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote\nSteps used: 1/15  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {d, m, n, r, v}\n  1: {a}\n  2: {k, l, m*, n, p, r}\n  3: {s}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cote",
+      "structure_after": "tote"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     time\nCurrent:    tote\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote\nSteps used: 2/15  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {d, m, n, r, v}\n  1: {a}\n  2: {k, l, m*, n, p, r}\n  3: {s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tote",
+      "structure_after": "tote"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     time\nCurrent:    tore\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote \u2192 tore\nSteps used: 3/15  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, k, l, m, p, s, w, y}\n  1: {a, i*, y}\n  2: {k, l, m*, n, p}\n  3: {a, c, i, n, o, r, s, t, y}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tote",
+      "structure_after": "tore"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     time\nCurrent:    tore\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote \u2192 tore\nSteps used: 4/15  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, k, l, m, p, s, w, y}\n  1: {a, i*, y}\n  2: {k, l, m*, n, p}\n  3: {a, c, i, n, o, r, s, t, y}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tore",
+      "structure_after": "tore"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     time\nCurrent:    tire\nPositions:  0123\nMismatches:   ^ \nPath: cote \u2192 tote \u2192 tore \u2192 tire\nSteps used: 5/15  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {c, d, f, h, l, m, s, w}\n  1: {a, y}\n  2: {d, k, l, m*, n}\n  3: {l, o}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tore",
+      "structure_after": "tire"
+    },
+    {
+      "t": 6,
+      "observation": "",
+      "raw_action": "EDIT 2 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 1.0,
+      "info": {
+        "valid": true,
+        "auto_success": true
+      },
+      "structure_before": "tire",
+      "structure_after": "time"
+    }
+  ],
+  "success": true,
+  "terminal_failure": null,
+  "failure_events": [
+    "INVALID_WORD",
+    "ILLEGAL_EDIT"
+  ],
+  "final_metrics": {
+    "success": true,
+    "steps_taken": 6,
+    "max_steps": 15,
+    "start_word": "cote",
+    "target_word": "time",
+    "final_word": "time",
+    "path": [
+      "cote",
+      "tote",
+      "tore",
+      "tire",
+      "time"
+    ],
+    "path_length": 4,
+    "optimal_length": 3,
+    "violations_by_type": {
+      "INVALID_WORD": 1,
+      "ILLEGAL_EDIT": 1
+    },
+    "total_violations": 2,
+    "optimal_distance_at_end": 0,
+    "events": [
+      "INVALID_WORD",
+      "ILLEGAL_EDIT"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 6167,
+    "completion_tokens": 30,
+    "total_tokens": 6197
+  },
+  "wall_time_s": 2.9316911697387695
+}

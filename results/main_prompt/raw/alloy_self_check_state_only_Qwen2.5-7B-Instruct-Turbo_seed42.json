@@ -1,0 +1,280 @@
+{
+  "env_name": "alloy",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check",
+  "memory_condition": "state_only",
+  "seed": 42,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Step 2/8  |  Budget remaining: 7  |  Phase: coarse\n\nComposition (at.%):  Fe: 15.0%  Ni: 22.0%  Cr: 23.0%  Co: 12.0%  Mn: 12.0%  Mo: 16.0%\n\nPerformance estimates:\n  UTS:     ~2488 MPa   (target: >= 2000)\n  Density:  8.38 g/cm^3 (target: <= 8.2) [ABOVE limit]\n  Path efficiency: efficient\n\nPhase: coarse  |  Allowed deltas: {10, 15}\nValid edits available: 44\n\nRecent moves:\n  Step 1: Ni+10%, Fe-10%  (UTS: 1651->2498, density: 8.28->8.38)\n\nElements: Fe, Ni, Cr, Co, Mn, Mo\nDensity reference: Fe=7.87, Ni=8.9, Cr=7.2, Co=8.9, Mn=7.4, Mo=10.2\nElement limits: Fe:[0-40%], Ni:[0-35%], Cr:[0-40%], Co:[0-35%], Mn:[0-35%], Mo:[0-30%]",
+      "raw_action": "EDIT Ni Fe 10",
+      "parsed_action": {
+        "type": "edit",
+        "inc_element": "Ni",
+        "dec_element": "Fe",
+        "delta": 10
+      },
+      "valid": true,
+      "events": [
+        "OBJECTIVE_TRADEOFF_FAILURE",
+        "LOCAL_OPTIMUM_TRAP"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "Fe: 25.0%  Ni: 12.0%  Cr: 23.0%  Co: 12.0%  Mn: 12.0%  Mo: 16.0%",
+      "structure_after": "Fe: 15.0%  Ni: 22.0%  Cr: 23.0%  Co: 12.0%  Mn: 12.0%  Mo: 16.0%"
+    },
+    {
+      "t": 2,
+      "observation": "Step 3/8  |  Budget remaining: 6  |  Phase: coarse\n\nComposition (at.%):  Fe: 5.0%  Ni: 22.0%  Cr: 33.0%  Co: 12.0%  Mn: 12.0%  Mo: 16.0%\n\nPerformance estimates:\n  UTS:     ~2205 MPa   (target: >= 2000)\n  Density:  8.32 g/cm^3 (target: <= 8.2) [ABOVE limit]\n  Path efficiency: significant drift \u2014 past moves may limit final feasibility\n\nPhase: coarse  |  Allowed deltas: {10, 15}\nValid edits available: 30\n\nRecent moves:\n  Step 1: Ni+10%, Fe-10%  (UTS: 1651->2498, density: 8.28->8.38)\n  Step 2: Cr+10%, Fe-10%  (UTS: 2498->2231, density: 8.38->8.32)\n\nElements: Fe, Ni, Cr, Co, Mn, Mo\nDensity reference: Fe=7.87, Ni=8.9, Cr=7.2, Co=8.9, Mn=7.4, Mo=10.2\nElement limits: Fe:[0-40%], Ni:[0-35%], Cr:[0-40%], Co:[0-35%], Mn:[0-35%], Mo:[0-30%]",
+      "raw_action": "EDIT Cr Fe 10",
+      "parsed_action": {
+        "type": "edit",
+        "inc_element": "Cr",
+        "dec_element": "Fe",
+        "delta": 10
+      },
+      "valid": true,
+      "events": [
+        "OBJECTIVE_TRADEOFF_FAILURE"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "Fe: 15.0%  Ni: 22.0%  Cr: 23.0%  Co: 12.0%  Mn: 12.0%  Mo: 16.0%",
+      "structure_after": "Fe: 5.0%  Ni: 22.0%  Cr: 33.0%  Co: 12.0%  Mn: 12.0%  Mo: 16.0%"
+    },
+    {
+      "t": 3,
+      "observation": "Step 4/8  |  Budget remaining: 5  |  Phase: coarse\n\nComposition (at.%):  Fe: 5.0%  Ni: 22.0%  Cr: 33.0%  Co: 12.0%  Mn: 12.0%  Mo: 16.0%\n\nPerformance estimates:\n  UTS:     ~2254 MPa   (target: >= 2000)\n  Density:  8.32 g/cm^3 (target: <= 8.2) [ABOVE limit]\n  Path efficiency: significant drift \u2014 past moves may limit final feasibility\n\nPhase: coarse  |  Allowed deltas: {10, 15}\nValid edits available: 30\n\nRecent moves:\n  Step 1: Ni+10%, Fe-10%  (UTS: 1651->2498, density: 8.28->8.38)\n  Step 2: Cr+10%, Fe-10%  (UTS: 2498->2231, density: 8.38->8.32)\n\nElements: Fe, Ni, Cr, Co, Mn, Mo\nDensity reference: Fe=7.87, Ni=8.9, Cr=7.2, Co=8.9, Mn=7.4, Mo=10.2\nElement limits: Fe:[0-40%], Ni:[0-35%], Cr:[0-40%], Co:[0-35%], Mn:[0-35%], Mo:[0-30%]",
+      "raw_action": "EDIT Mo Fe 10",
+      "parsed_action": {
+        "type": "edit",
+        "inc_element": "Mo",
+        "dec_element": "Fe",
+        "delta": 10
+      },
+      "valid": false,
+      "events": [
+        "HARD_CONSTRAINT_VIOLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "Fe: 5.0%  Ni: 22.0%  Cr: 33.0%  Co: 12.0%  Mn: 12.0%  Mo: 16.0%",
+      "structure_after": "Fe: 5.0%  Ni: 22.0%  Cr: 33.0%  Co: 12.0%  Mn: 12.0%  Mo: 16.0%"
+    },
+    {
+      "t": 4,
+      "observation": "Step 5/8  |  Budget remaining: 4  |  Phase: fine\n\nComposition (at.%):  Fe: 5.0%  Ni: 22.0%  Cr: 33.0%  Co: 12.0%  Mn: 12.0%  Mo: 16.0%\n\nPerformance estimates:\n  UTS:     ~2265 MPa   (target: >= 2000)\n  Density:  8.32 g/cm^3 (target: <= 8.2) [ABOVE limit]\n  Path efficiency: significant drift \u2014 past moves may limit final feasibility\n\nPhase: fine  |  Allowed deltas: {2, 5}\nValid edits available: 60\n\nRecent moves:\n  Step 1: Ni+10%, Fe-10%  (UTS: 1651->2498, density: 8.28->8.38)\n  Step 2: Cr+10%, Fe-10%  (UTS: 2498->2231, density: 8.38->8.32)\n\nElements: Fe, Ni, Cr, Co, Mn, Mo\nDensity reference: Fe=7.87, Ni=8.9, Cr=7.2, Co=8.9, Mn=7.4, Mo=10.2\nElement limits: Fe:[0-40%], Ni:[0-35%], Cr:[0-40%], Co:[0-35%], Mn:[0-35%], Mo:[0-30%]",
+      "raw_action": "EDIT Cr Fe 10",
+      "parsed_action": {
+        "type": "edit",
+        "inc_element": "Cr",
+        "dec_element": "Fe",
+        "delta": 10
+      },
+      "valid": false,
+      "events": [
+        "HARD_CONSTRAINT_VIOLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "Fe: 5.0%  Ni: 22.0%  Cr: 33.0%  Co: 12.0%  Mn: 12.0%  Mo: 16.0%",
+      "structure_after": "Fe: 5.0%  Ni: 22.0%  Cr: 33.0%  Co: 12.0%  Mn: 12.0%  Mo: 16.0%"
+    },
+    {
+      "t": 5,
+      "observation": "Step 6/8  |  Budget remaining: 3  |  Phase: fine\n\nComposition (at.%):  Fe: 0.0%  Ni: 22.0%  Cr: 33.0%  Co: 12.0%  Mn: 12.0%  Mo: 21.0%\n\nPerformance estimates:\n  UTS:     ~2273 MPa   (target: >= 2000)\n  Density:  8.43 g/cm^3 (target: <= 8.2) [ABOVE limit]\n  Path efficiency: significant drift \u2014 past moves may limit final feasibility\n\nPhase: fine  |  Allowed deltas: {2, 5}\nValid edits available: 50\n\nRecent moves:\n  Step 1: Ni+10%, Fe-10%  (UTS: 1651->2498, density: 8.28->8.38)\n  Step 2: Cr+10%, Fe-10%  (UTS: 2498->2231, density: 8.38->8.32)\n  Step 5: Mo+5%, Fe-5%  (UTS: 2231->2299, density: 8.32->8.43)\n\nElements: Fe, Ni, Cr, Co, Mn, Mo\nDensity reference: Fe=7.87, Ni=8.9, Cr=7.2, Co=8.9, Mn=7.4, Mo=10.2\nElement limits: Fe:[0-40%], Ni:[0-35%], Cr:[0-40%], Co:[0-35%], Mn:[0-35%], Mo:[0-30%]",
+      "raw_action": "EDIT Mo Fe 5",
+      "parsed_action": {
+        "type": "edit",
+        "inc_element": "Mo",
+        "dec_element": "Fe",
+        "delta": 5
+      },
+      "valid": true,
+      "events": [
+        "OBJECTIVE_TRADEOFF_FAILURE",
+        "LOCAL_OPTIMUM_TRAP"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "Fe: 5.0%  Ni: 22.0%  Cr: 33.0%  Co: 12.0%  Mn: 12.0%  Mo: 16.0%",
+      "structure_after": "Fe: 0.0%  Ni: 22.0%  Cr: 33.0%  Co: 12.0%  Mn: 12.0%  Mo: 21.0%"
+    },
+    {
+      "t": 6,
+      "observation": "Step 7/8  |  Budget remaining: 2  |  Phase: fine\n\nComposition (at.%):  Fe: 0.0%  Ni: 22.0%  Cr: 33.0%  Co: 12.0%  Mn: 12.0%  Mo: 21.0%\n\nPerformance estimates:\n  UTS:     ~2270 MPa   (target: >= 2000)\n  Density:  8.43 g/cm^3 (target: <= 8.2) [ABOVE limit]\n  Path efficiency: significant drift \u2014 past moves may limit final feasibility\n\nPhase: fine  |  Allowed deltas: {2, 5}\nValid edits available: 50\n\nRecent moves:\n  Step 1: Ni+10%, Fe-10%  (UTS: 1651->2498, density: 8.28->8.38)\n  Step 2: Cr+10%, Fe-10%  (UTS: 2498->2231, density: 8.38->8.32)\n  Step 5: Mo+5%, Fe-5%  (UTS: 2231->2299, density: 8.32->8.43)\n\nElements: Fe, Ni, Cr, Co, Mn, Mo\nDensity reference: Fe=7.87, Ni=8.9, Cr=7.2, Co=8.9, Mn=7.4, Mo=10.2\nElement limits: Fe:[0-40%], Ni:[0-35%], Cr:[0-40%], Co:[0-35%], Mn:[0-35%], Mo:[0-30%]",
+      "raw_action": "EDIT Mn Fe 5",
+      "parsed_action": {
+        "type": "edit",
+        "inc_element": "Mn",
+        "dec_element": "Fe",
+        "delta": 5
+      },
+      "valid": false,
+      "events": [
+        "HARD_CONSTRAINT_VIOLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "Fe: 0.0%  Ni: 22.0%  Cr: 33.0%  Co: 12.0%  Mn: 12.0%  Mo: 21.0%",
+      "structure_after": "Fe: 0.0%  Ni: 22.0%  Cr: 33.0%  Co: 12.0%  Mn: 12.0%  Mo: 21.0%"
+    },
+    {
+      "t": 7,
+      "observation": "Step 8/8  |  Budget remaining: 1  |  Phase: fine\n\nComposition (at.%):  Fe: 0.0%  Ni: 22.0%  Cr: 33.0%  Co: 12.0%  Mn: 12.0%  Mo: 21.0%\n\nPerformance estimates:\n  UTS:     ~2297 MPa   (target: >= 2000)\n  Density:  8.43 g/cm^3 (target: <= 8.2) [ABOVE limit]\n  Path efficiency: significant drift \u2014 past moves may limit final feasibility\n\nPhase: fine  |  Allowed deltas: {2, 5}\nValid edits available: 50\n\nRecent moves:\n  Step 1: Ni+10%, Fe-10%  (UTS: 1651->2498, density: 8.28->8.38)\n  Step 2: Cr+10%, Fe-10%  (UTS: 2498->2231, density: 8.38->8.32)\n  Step 5: Mo+5%, Fe-5%  (UTS: 2231->2299, density: 8.32->8.43)\n\nElements: Fe, Ni, Cr, Co, Mn, Mo\nDensity reference: Fe=7.87, Ni=8.9, Cr=7.2, Co=8.9, Mn=7.4, Mo=10.2\nElement limits: Fe:[0-40%], Ni:[0-35%], Cr:[0-40%], Co:[0-35%], Mn:[0-35%], Mo:[0-30%]",
+      "raw_action": "EDIT Co Fe 5",
+      "parsed_action": {
+        "type": "edit",
+        "inc_element": "Co",
+        "dec_element": "Fe",
+        "delta": 5
+      },
+      "valid": false,
+      "events": [
+        "HARD_CONSTRAINT_VIOLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "Fe: 0.0%  Ni: 22.0%  Cr: 33.0%  Co: 12.0%  Mn: 12.0%  Mo: 21.0%",
+      "structure_after": "Fe: 0.0%  Ni: 22.0%  Cr: 33.0%  Co: 12.0%  Mn: 12.0%  Mo: 21.0%"
+    },
+    {
+      "t": 8,
+      "observation": "Step 9/8  |  Budget remaining: 0  |  Phase: fine\n\nComposition (at.%):  Fe: 0.0%  Ni: 22.0%  Cr: 33.0%  Co: 12.0%  Mn: 12.0%  Mo: 21.0%\n\nPerformance estimates:\n  UTS:     ~2278 MPa   (target: >= 2000)\n  Density:  8.43 g/cm^3 (target: <= 8.2) [ABOVE limit]\n  Path efficiency: significant drift \u2014 past moves may limit final feasibility\n\nPhase: fine  |  Allowed deltas: {2, 5}\nValid edits available: 50\n\nRecent moves:\n  Step 1: Ni+10%, Fe-10%  (UTS: 1651->2498, density: 8.28->8.38)\n  Step 2: Cr+10%, Fe-10%  (UTS: 2498->2231, density: 8.38->8.32)\n  Step 5: Mo+5%, Fe-5%  (UTS: 2231->2299, density: 8.32->8.43)\n\nElements: Fe, Ni, Cr, Co, Mn, Mo\nDensity reference: Fe=7.87, Ni=8.9, Cr=7.2, Co=8.9, Mn=7.4, Mo=10.2\nElement limits: Fe:[0-40%], Ni:[0-35%], Cr:[0-40%], Co:[0-35%], Mn:[0-35%], Mo:[0-30%]",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "Fe: 0.0%  Ni: 22.0%  Cr: 33.0%  Co: 12.0%  Mn: 12.0%  Mo: 21.0%",
+      "structure_after": "Fe: 0.0%  Ni: 22.0%  Cr: 33.0%  Co: 12.0%  Mn: 12.0%  Mo: 21.0%"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "OBJECTIVE_TRADEOFF_FAILURE",
+  "failure_events": [
+    "OBJECTIVE_TRADEOFF_FAILURE",
+    "LOCAL_OPTIMUM_TRAP",
+    "OBJECTIVE_TRADEOFF_FAILURE",
+    "HARD_CONSTRAINT_VIOLATION",
+    "HARD_CONSTRAINT_VIOLATION",
+    "OBJECTIVE_TRADEOFF_FAILURE",
+    "LOCAL_OPTIMUM_TRAP",
+    "HARD_CONSTRAINT_VIOLATION",
+    "HARD_CONSTRAINT_VIOLATION",
+    "PREMATURE_FINALIZE",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 8,
+    "max_steps": 8,
+    "final_composition": {
+      "Fe": 0,
+      "Ni": 22,
+      "Cr": 33,
+      "Co": 12,
+      "Mn": 12,
+      "Mo": 21
+    },
+    "final_uts": 2298.6579830063747,
+    "final_density": 8.431999999999999,
+    "uts_met": true,
+    "density_met": false,
+    "recovery_cost": 3.552268785903566,
+    "recovery_cost_ok": true,
+    "bad_moves_count": 2,
+    "violations_by_type": {
+      "OBJECTIVE_TRADEOFF_FAILURE": 3,
+      "LOCAL_OPTIMUM_TRAP": 2,
+      "HARD_CONSTRAINT_VIOLATION": 4,
+      "PREMATURE_FINALIZE": 1,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 11,
+    "composition_trajectory": [
+      {
+        "Fe": 25,
+        "Ni": 12,
+        "Cr": 23,
+        "Co": 12,
+        "Mn": 12,
+        "Mo": 16
+      },
+      {
+        "Fe": 15,
+        "Ni": 22,
+        "Cr": 23,
+        "Co": 12,
+        "Mn": 12,
+        "Mo": 16
+      },
+      {
+        "Fe": 5,
+        "Ni": 22,
+        "Cr": 33,
+        "Co": 12,
+        "Mn": 12,
+        "Mo": 16
+      },
+      {
+        "Fe": 0,
+        "Ni": 22,
+        "Cr": 33,
+        "Co": 12,
+        "Mn": 12,
+        "Mo": 21
+      }
+    ],
+    "density_trajectory": [
+      8.279499999999999,
+      8.3825,
+      8.3155,
+      8.431999999999999
+    ],
+    "events": [
+      "OBJECTIVE_TRADEOFF_FAILURE",
+      "LOCAL_OPTIMUM_TRAP",
+      "OBJECTIVE_TRADEOFF_FAILURE",
+      "HARD_CONSTRAINT_VIOLATION",
+      "HARD_CONSTRAINT_VIOLATION",
+      "OBJECTIVE_TRADEOFF_FAILURE",
+      "LOCAL_OPTIMUM_TRAP",
+      "HARD_CONSTRAINT_VIOLATION",
+      "HARD_CONSTRAINT_VIOLATION",
+      "PREMATURE_FINALIZE",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 16145,
+    "completion_tokens": 49,
+    "total_tokens": 16194
+  },
+  "wall_time_s": 12.943984031677246
+}

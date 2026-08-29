@@ -1,0 +1,697 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "window_1",
+  "seed": 15,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     slot\nCurrent:    lace\nPositions:  0123\nMismatches: ^^^^\nPath: mace \u2192 lace\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  0: {d, f, p, r, t}\n  1: {i, u}\n  2: {d, k, m, n, s, t, v, z}\n  3: {k, s, y}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mace",
+      "structure_after": "lace"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     slot\nCurrent:    lace\nPositions:  0123\nMismatches: ^^^^\nPath: mace \u2192 lace\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  0: {d, f, p, r, t}\n  1: {i, u}\n  2: {d, k, m, n, s, t, v, z}\n  3: {k, s, y}",
+      "raw_action": "EDIT 1 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lace",
+      "structure_after": "lace"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     slot\nCurrent:    lice\nPositions:  0123\nMismatches: ^^^^\nPath: mace \u2192 lace \u2192 lice\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, s*, v}\n  1: {u}\n  2: {f, k, m, n, r, t, v}\n  3: {h, k}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lace",
+      "structure_after": "lice"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 1 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 13/30  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 14/30  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 15/30  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 16/30  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 17/30  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 18/30  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 19/30  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 20/30  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 21/30  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 22/30  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 23/30  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 24/30  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 25/30  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 26,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 26/30  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 27,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 27/30  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 28,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 28/30  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 29,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 29/30  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    },
+    {
+      "t": 30,
+      "observation": "Target:     slot\nCurrent:    sice\nPositions:  0123\nMismatches:  ^^^\nPath: mace \u2192 lace \u2192 lice \u2192 sice\nSteps used: 30/30  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {b, d, f, m, n, p, r, v}\n  1: {y}\n  2: {d, k, n, p, r, t, z}\n  3: {k, s}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sice",
+      "structure_after": "sice"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "OSCILLATION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "OSCILLATION",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "OSCILLATION",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 30,
+    "max_steps": 30,
+    "start_word": "mace",
+    "target_word": "slot",
+    "final_word": "sice",
+    "path": [
+      "mace",
+      "lace",
+      "lice",
+      "sice"
+    ],
+    "path_length": 3,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "INVALID_WORD": 22,
+      "ILLEGAL_EDIT": 3,
+      "OSCILLATION": 2,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 28,
+    "optimal_distance_at_end": 5,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "OSCILLATION",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "OSCILLATION",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 94724,
+    "completion_tokens": 150,
+    "total_tokens": 94874
+  },
+  "wall_time_s": 17.482413053512573
+}

@@ -1,0 +1,693 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "window_3",
+  "seed": 2,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 0 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 0 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 1 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 2 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     vive\nCurrent:    ions\nPositions:  0123\nMismatches: ^^^^\nPath: inns \u2192 ions\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {c, d, e, f, h, m, p, s, t, w}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "inns",
+      "structure_after": "ions"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     vive\nCurrent:    cons\nPositions:  0123\nMismatches: ^^^^\nPath: inns \u2192 ions \u2192 cons\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {d, e, f, h, m, p, s, t, w}\n  1: {a}\n  2: {b, d, g, l, o, p, s, t, w, y}\n  3: {e*, i, k, n, y}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ions",
+      "structure_after": "cons"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     vive\nCurrent:    cons\nPositions:  0123\nMismatches: ^^^^\nPath: inns \u2192 ions \u2192 cons\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {d, e, f, h, m, p, s, t, w}\n  1: {a}\n  2: {b, d, g, l, o, p, s, t, w, y}\n  3: {e*, i, k, n, y}",
+      "raw_action": "EDIT 1 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cons",
+      "structure_after": "cons"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     vive\nCurrent:    cons\nPositions:  0123\nMismatches: ^^^^\nPath: inns \u2192 ions \u2192 cons\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {d, e, f, h, m, p, s, t, w}\n  1: {a}\n  2: {b, d, g, l, o, p, s, t, w, y}\n  3: {e*, i, k, n, y}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cons",
+      "structure_after": "cons"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     vive\nCurrent:    cons\nPositions:  0123\nMismatches: ^^^^\nPath: inns \u2192 ions \u2192 cons\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {d, e, f, h, m, p, s, t, w}\n  1: {a}\n  2: {b, d, g, l, o, p, s, t, w, y}\n  3: {e*, i, k, n, y}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cons",
+      "structure_after": "cons"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     vive\nCurrent:    cone\nPositions:  0123\nMismatches: ^^^ \nPath: inns \u2192 ions \u2192 cons \u2192 cone\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {b, d, g, h, l, n, p, s, t, z}\n  1: {a, i*}\n  2: {d, k, l, m, p, r, t, v*}\n  3: {i, k, n, y}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cons",
+      "structure_after": "cone"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     vive\nCurrent:    cone\nPositions:  0123\nMismatches: ^^^ \nPath: inns \u2192 ions \u2192 cons \u2192 cone\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, d, g, h, l, n, p, s, t, z}\n  1: {a, i*}\n  2: {d, k, l, m, p, r, t, v*}\n  3: {i, k, n, y}",
+      "raw_action": "EDIT 1 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cone",
+      "structure_after": "cone"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     vive\nCurrent:    cove\nPositions:  0123\nMismatches: ^^  \nPath: inns \u2192 ions \u2192 cons \u2192 cone \u2192 cove\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r, w}\n  1: {a}\n  2: {d, k, l, m, p, r, t}",
+      "raw_action": "EDIT 2 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "v"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cone",
+      "structure_after": "cove"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     vive\nCurrent:    cove\nPositions:  0123\nMismatches: ^^  \nPath: inns \u2192 ions \u2192 cons \u2192 cone \u2192 cove\nSteps used: 13/30  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r, w}\n  1: {a}\n  2: {d, k, l, m, p, r, t}",
+      "raw_action": "EDIT 0 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cove",
+      "structure_after": "cove"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     vive\nCurrent:    cove\nPositions:  0123\nMismatches: ^^  \nPath: inns \u2192 ions \u2192 cons \u2192 cone \u2192 cove\nSteps used: 14/30  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r, w}\n  1: {a}\n  2: {d, k, l, m, p, r, t}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cove",
+      "structure_after": "cove"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     vive\nCurrent:    cove\nPositions:  0123\nMismatches: ^^  \nPath: inns \u2192 ions \u2192 cons \u2192 cone \u2192 cove\nSteps used: 15/30  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r, w}\n  1: {a}\n  2: {d, k, l, m, p, r, t}",
+      "raw_action": "EDIT 2 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cove",
+      "structure_after": "cove"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     vive\nCurrent:    cove\nPositions:  0123\nMismatches: ^^  \nPath: inns \u2192 ions \u2192 cons \u2192 cone \u2192 cove\nSteps used: 16/30  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r, w}\n  1: {a}\n  2: {d, k, l, m, p, r, t}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cove",
+      "structure_after": "cove"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     vive\nCurrent:    cove\nPositions:  0123\nMismatches: ^^  \nPath: inns \u2192 ions \u2192 cons \u2192 cone \u2192 cove\nSteps used: 17/30  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r, w}\n  1: {a}\n  2: {d, k, l, m, p, r, t}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cove",
+      "structure_after": "cove"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     vive\nCurrent:    cove\nPositions:  0123\nMismatches: ^^  \nPath: inns \u2192 ions \u2192 cons \u2192 cone \u2192 cove\nSteps used: 18/30  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r, w}\n  1: {a}\n  2: {d, k, l, m, p, r, t}",
+      "raw_action": "EDIT 0 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cove",
+      "structure_after": "cove"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     vive\nCurrent:    cove\nPositions:  0123\nMismatches: ^^  \nPath: inns \u2192 ions \u2192 cons \u2192 cone \u2192 cove\nSteps used: 19/30  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r, w}\n  1: {a}\n  2: {d, k, l, m, p, r, t}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cove",
+      "structure_after": "cove"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     vive\nCurrent:    cove\nPositions:  0123\nMismatches: ^^  \nPath: inns \u2192 ions \u2192 cons \u2192 cone \u2192 cove\nSteps used: 20/30  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r, w}\n  1: {a}\n  2: {d, k, l, m, p, r, t}",
+      "raw_action": "EDIT 2 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cove",
+      "structure_after": "cove"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     vive\nCurrent:    cove\nPositions:  0123\nMismatches: ^^  \nPath: inns \u2192 ions \u2192 cons \u2192 cone \u2192 cove\nSteps used: 21/30  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r, w}\n  1: {a}\n  2: {d, k, l, m, p, r, t}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cove",
+      "structure_after": "cove"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     vive\nCurrent:    cove\nPositions:  0123\nMismatches: ^^  \nPath: inns \u2192 ions \u2192 cons \u2192 cone \u2192 cove\nSteps used: 22/30  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r, w}\n  1: {a}\n  2: {d, k, l, m, p, r, t}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cove",
+      "structure_after": "cove"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     vive\nCurrent:    cove\nPositions:  0123\nMismatches: ^^  \nPath: inns \u2192 ions \u2192 cons \u2192 cone \u2192 cove\nSteps used: 23/30  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r, w}\n  1: {a}\n  2: {d, k, l, m, p, r, t}",
+      "raw_action": "EDIT 0 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cove",
+      "structure_after": "cove"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     vive\nCurrent:    cove\nPositions:  0123\nMismatches: ^^  \nPath: inns \u2192 ions \u2192 cons \u2192 cone \u2192 cove\nSteps used: 24/30  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r, w}\n  1: {a}\n  2: {d, k, l, m, p, r, t}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cove",
+      "structure_after": "cove"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     vive\nCurrent:    cove\nPositions:  0123\nMismatches: ^^  \nPath: inns \u2192 ions \u2192 cons \u2192 cone \u2192 cove\nSteps used: 25/30  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r, w}\n  1: {a}\n  2: {d, k, l, m, p, r, t}",
+      "raw_action": "EDIT 2 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cove",
+      "structure_after": "cove"
+    },
+    {
+      "t": 26,
+      "observation": "Target:     vive\nCurrent:    cove\nPositions:  0123\nMismatches: ^^  \nPath: inns \u2192 ions \u2192 cons \u2192 cone \u2192 cove\nSteps used: 26/30  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r, w}\n  1: {a}\n  2: {d, k, l, m, p, r, t}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cove",
+      "structure_after": "cove"
+    },
+    {
+      "t": 27,
+      "observation": "Target:     vive\nCurrent:    cove\nPositions:  0123\nMismatches: ^^  \nPath: inns \u2192 ions \u2192 cons \u2192 cone \u2192 cove\nSteps used: 27/30  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r, w}\n  1: {a}\n  2: {d, k, l, m, p, r, t}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cove",
+      "structure_after": "cove"
+    },
+    {
+      "t": 28,
+      "observation": "Target:     vive\nCurrent:    cove\nPositions:  0123\nMismatches: ^^  \nPath: inns \u2192 ions \u2192 cons \u2192 cone \u2192 cove\nSteps used: 28/30  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r, w}\n  1: {a}\n  2: {d, k, l, m, p, r, t}",
+      "raw_action": "EDIT 0 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cove",
+      "structure_after": "cove"
+    },
+    {
+      "t": 29,
+      "observation": "Target:     vive\nCurrent:    cove\nPositions:  0123\nMismatches: ^^  \nPath: inns \u2192 ions \u2192 cons \u2192 cone \u2192 cove\nSteps used: 29/30  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r, w}\n  1: {a}\n  2: {d, k, l, m, p, r, t}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cove",
+      "structure_after": "cove"
+    },
+    {
+      "t": 30,
+      "observation": "Target:     vive\nCurrent:    cove\nPositions:  0123\nMismatches: ^^  \nPath: inns \u2192 ions \u2192 cons \u2192 cone \u2192 cove\nSteps used: 30/30  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r, w}\n  1: {a}\n  2: {d, k, l, m, p, r, t}",
+      "raw_action": "EDIT 2 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cove",
+      "structure_after": "cove"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 30,
+    "max_steps": 30,
+    "start_word": "inns",
+    "target_word": "vive",
+    "final_word": "cove",
+    "path": [
+      "inns",
+      "ions",
+      "cons",
+      "cone",
+      "cove"
+    ],
+    "path_length": 4,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "INVALID_WORD": 19,
+      "ILLEGAL_EDIT": 7,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 27,
+    "optimal_distance_at_end": 3,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 177848,
+    "completion_tokens": 150,
+    "total_tokens": 177998
+  },
+  "wall_time_s": 20.789199113845825
+}

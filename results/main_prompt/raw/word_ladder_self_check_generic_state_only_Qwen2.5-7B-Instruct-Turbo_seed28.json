@@ -1,0 +1,466 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check_generic",
+  "memory_condition": "state_only",
+  "seed": 28,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     tzar\nCurrent:    beet\nPositions:  0123\nMismatches: ^^^^\nPath: feet \u2192 beet\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {d, k, l, m, w}\n  1: {l}\n  2: {a*, l, n, s}\n  3: {f, n, p, r*, s}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "feet",
+      "structure_after": "beet"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     tzar\nCurrent:    blet\nPositions:  0123\nMismatches: ^^^^\nPath: feet \u2192 beet \u2192 blet\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  2: {a*, o}\n  3: {b, d, w}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "beet",
+      "structure_after": "blet"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     tzar\nCurrent:    blat\nPositions:  0123\nMismatches: ^^ ^\nPath: feet \u2192 beet \u2192 blet \u2192 blat\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {f, p, s}\n  1: {e, o, r}\n  2: {o}\n  3: {b, e, h, m, w}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "blet",
+      "structure_after": "blat"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     tzar\nCurrent:    flat\nPositions:  0123\nMismatches: ^^ ^\nPath: feet \u2192 beet \u2192 blet \u2192 blat \u2192 flat\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {p, s}\n  1: {e, i, r}\n  2: {i}\n  3: {b, g, k, m, n, p, w, x, y}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "blat",
+      "structure_after": "flat"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     tzar\nCurrent:    fiat\nPositions:  0123\nMismatches: ^^ ^\nPath: feet \u2192 beet \u2192 blet \u2192 blat \u2192 flat \u2192 fiat\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  1: {e, r}\n  2: {s, x}\n  3: {r*}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "flat",
+      "structure_after": "fiat"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     tzar\nCurrent:    frat\nPositions:  0123\nMismatches: ^^ ^\nPath: feet \u2192 beet \u2192 blet \u2192 ... \u2192 fiat \u2192 frat\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {b, d, g, p}\n  1: {e}\n  2: {e, i}\n  3: {e, g, p, y}",
+      "raw_action": "EDIT 1 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fiat",
+      "structure_after": "frat"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     tzar\nCurrent:    frat\nPositions:  0123\nMismatches: ^^ ^\nPath: feet \u2192 beet \u2192 blet \u2192 ... \u2192 fiat \u2192 frat\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {b, d, g, p}\n  1: {e}\n  2: {e, i}\n  3: {e, g, p, y}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "frat",
+      "structure_after": "frat"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     tzar\nCurrent:    frat\nPositions:  0123\nMismatches: ^^ ^\nPath: feet \u2192 beet \u2192 blet \u2192 ... \u2192 fiat \u2192 frat\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {b, d, g, p}\n  1: {e}\n  2: {e, i}\n  3: {e, g, p, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "frat",
+      "structure_after": "frat"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     tzar\nCurrent:    frat\nPositions:  0123\nMismatches: ^^ ^\nPath: feet \u2192 beet \u2192 blet \u2192 ... \u2192 fiat \u2192 frat\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {b, d, g, p}\n  1: {e}\n  2: {e, i}\n  3: {e, g, p, y}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "frat",
+      "structure_after": "frat"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     tzar\nCurrent:    frat\nPositions:  0123\nMismatches: ^^ ^\nPath: feet \u2192 beet \u2192 blet \u2192 ... \u2192 fiat \u2192 frat\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {b, d, g, p}\n  1: {e}\n  2: {e, i}\n  3: {e, g, p, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "frat",
+      "structure_after": "frat"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     tzar\nCurrent:    frat\nPositions:  0123\nMismatches: ^^ ^\nPath: feet \u2192 beet \u2192 blet \u2192 ... \u2192 fiat \u2192 frat\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {b, d, g, p}\n  1: {e}\n  2: {e, i}\n  3: {e, g, p, y}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "frat",
+      "structure_after": "frat"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     tzar\nCurrent:    frat\nPositions:  0123\nMismatches: ^^ ^\nPath: feet \u2192 beet \u2192 blet \u2192 ... \u2192 fiat \u2192 frat\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {b, d, g, p}\n  1: {e}\n  2: {e, i}\n  3: {e, g, p, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "frat",
+      "structure_after": "frat"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     tzar\nCurrent:    frat\nPositions:  0123\nMismatches: ^^ ^\nPath: feet \u2192 beet \u2192 blet \u2192 ... \u2192 fiat \u2192 frat\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {b, d, g, p}\n  1: {e}\n  2: {e, i}\n  3: {e, g, p, y}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "frat",
+      "structure_after": "frat"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     tzar\nCurrent:    frat\nPositions:  0123\nMismatches: ^^ ^\nPath: feet \u2192 beet \u2192 blet \u2192 ... \u2192 fiat \u2192 frat\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {b, d, g, p}\n  1: {e}\n  2: {e, i}\n  3: {e, g, p, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "frat",
+      "structure_after": "frat"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     tzar\nCurrent:    frat\nPositions:  0123\nMismatches: ^^ ^\nPath: feet \u2192 beet \u2192 blet \u2192 ... \u2192 fiat \u2192 frat\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {b, d, g, p}\n  1: {e}\n  2: {e, i}\n  3: {e, g, p, y}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "frat",
+      "structure_after": "frat"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     tzar\nCurrent:    frat\nPositions:  0123\nMismatches: ^^ ^\nPath: feet \u2192 beet \u2192 blet \u2192 ... \u2192 fiat \u2192 frat\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {b, d, g, p}\n  1: {e}\n  2: {e, i}\n  3: {e, g, p, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "frat",
+      "structure_after": "frat"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     tzar\nCurrent:    frat\nPositions:  0123\nMismatches: ^^ ^\nPath: feet \u2192 beet \u2192 blet \u2192 ... \u2192 fiat \u2192 frat\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {b, d, g, p}\n  1: {e}\n  2: {e, i}\n  3: {e, g, p, y}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "frat",
+      "structure_after": "frat"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     tzar\nCurrent:    frat\nPositions:  0123\nMismatches: ^^ ^\nPath: feet \u2192 beet \u2192 blet \u2192 ... \u2192 fiat \u2192 frat\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {b, d, g, p}\n  1: {e}\n  2: {e, i}\n  3: {e, g, p, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "frat",
+      "structure_after": "frat"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     tzar\nCurrent:    frat\nPositions:  0123\nMismatches: ^^ ^\nPath: feet \u2192 beet \u2192 blet \u2192 ... \u2192 fiat \u2192 frat\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {b, d, g, p}\n  1: {e}\n  2: {e, i}\n  3: {e, g, p, y}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "frat",
+      "structure_after": "frat"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     tzar\nCurrent:    frat\nPositions:  0123\nMismatches: ^^ ^\nPath: feet \u2192 beet \u2192 blet \u2192 ... \u2192 fiat \u2192 frat\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {b, d, g, p}\n  1: {e}\n  2: {e, i}\n  3: {e, g, p, y}",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "frat",
+      "structure_after": "frat"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "feet",
+    "target_word": "tzar",
+    "final_word": "frat",
+    "path": [
+      "feet",
+      "beet",
+      "blet",
+      "blat",
+      "flat",
+      "fiat",
+      "frat"
+    ],
+    "path_length": 6,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 14,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 15,
+    "optimal_distance_at_end": 4,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 31757,
+    "completion_tokens": 100,
+    "total_tokens": 31857
+  },
+  "wall_time_s": 10.053352117538452
+}

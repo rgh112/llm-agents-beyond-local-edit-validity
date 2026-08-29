@@ -1,0 +1,49 @@
+{
+  "results": [
+    {
+      "condition": "zero_shot",
+      "SR": 0.16666666666666666,
+      "n_success": 5,
+      "n_total": 30,
+      "terminal_failures": {
+        "HARD_CONSTRAINT_VIOLATION": 1,
+        "OBJECTIVE_TRADEOFF_FAILURE": 21,
+        "LOCAL_OPTIMUM_TRAP": 3
+      }
+    },
+    {
+      "condition": "few_shot_format",
+      "SR": 0.13333333333333333,
+      "n_success": 4,
+      "n_total": 30,
+      "terminal_failures": {
+        "HARD_CONSTRAINT_VIOLATION": 3,
+        "OBJECTIVE_TRADEOFF_FAILURE": 20,
+        "LOCAL_OPTIMUM_TRAP": 3
+      }
+    },
+    {
+      "condition": "few_shot_strategy_A",
+      "SR": 0.03333333333333333,
+      "n_success": 1,
+      "n_total": 30,
+      "terminal_failures": {
+        "HARD_CONSTRAINT_VIOLATION": 2,
+        "OBJECTIVE_TRADEOFF_FAILURE": 24,
+        "LOCAL_OPTIMUM_TRAP": 3
+      }
+    },
+    {
+      "condition": "few_shot_strategy_B",
+      "SR": 0.2,
+      "n_success": 6,
+      "n_total": 30,
+      "terminal_failures": {
+        "HARD_CONSTRAINT_VIOLATION": 6,
+        "LOCAL_OPTIMUM_TRAP": 4,
+        "OBJECTIVE_TRADEOFF_FAILURE": 14
+      }
+    }
+  ],
+  "wall_time_s": 520.9408349990845
+}

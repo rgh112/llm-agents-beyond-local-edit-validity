@@ -1,0 +1,680 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 10,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     label\nCurrent:    dinks\nPositions:  01234\nMismatches: ^^^^^\nPath: ginks \u2192 dinks\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  0: {f, j, k, l*, m, o, p, r, s, w}\n  1: {u}\n  2: {c, r, s}\n  3: {e*, g, t}\n  4: {y}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ginks",
+      "structure_after": "dinks"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     label\nCurrent:    dunks\nPositions:  01234\nMismatches: ^^^^^\nPath: ginks \u2192 dinks \u2192 dunks\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  0: {b, f, g, h, j, l*, p}\n  2: {c, s}\n  3: {e*, g, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dinks",
+      "structure_after": "dunks"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     label\nCurrent:    dunks\nPositions:  01234\nMismatches: ^^^^^\nPath: ginks \u2192 dinks \u2192 dunks\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  0: {b, f, g, h, j, l*, p}\n  2: {c, s}\n  3: {e*, g, t}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dunks",
+      "structure_after": "dunks"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     label\nCurrent:    dunks\nPositions:  01234\nMismatches: ^^^^^\nPath: ginks \u2192 dinks \u2192 dunks\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  0: {b, f, g, h, j, l*, p}\n  2: {c, s}\n  3: {e*, g, t}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dunks",
+      "structure_after": "dunks"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     label\nCurrent:    bunks\nPositions:  01234\nMismatches: ^^^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 bunks\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {f, g, h, j, l*, p}\n  1: {a*, o}\n  2: {c, l, s}\n  3: {d, g, n, t}\n  4: {o}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dunks",
+      "structure_after": "bunks"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     label\nCurrent:    banks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 bunks \u2192 banks\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {h, r, t, y}\n  1: {o}\n  2: {c, l, r, s}\n  3: {d, e*, g, n}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bunks",
+      "structure_after": "banks"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     label\nCurrent:    hanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 bunks \u2192 banks \u2192 hanks\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {r, t, y}\n  1: {o, u}\n  2: {c, i, r, w}\n  3: {d, g, t}\n  4: {y}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "banks",
+      "structure_after": "hanks"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     label\nCurrent:    ranks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 hanks \u2192 ranks\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {t, y}\n  1: {i}\n  2: {c}\n  3: {d, i, t}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hanks",
+      "structure_after": "ranks"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     label\nCurrent:    tanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 ranks \u2192 tanks\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {y}\n  2: {c, l, s}\n  3: {g}\n  4: {a}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ranks",
+      "structure_after": "tanks"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     label\nCurrent:    yanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 tanks \u2192 yanks\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 0 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "y"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tanks",
+      "structure_after": "yanks"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     label\nCurrent:    yanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 tanks \u2192 yanks\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "yanks",
+      "structure_after": "yanks"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     label\nCurrent:    yanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 tanks \u2192 yanks\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "yanks",
+      "structure_after": "yanks"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     label\nCurrent:    yanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 tanks \u2192 yanks\nSteps used: 13/30  (remaining: 17)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "yanks",
+      "structure_after": "yanks"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     label\nCurrent:    yanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 tanks \u2192 yanks\nSteps used: 14/30  (remaining: 16)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 3 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "b"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "yanks",
+      "structure_after": "yanks"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     label\nCurrent:    yanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 tanks \u2192 yanks\nSteps used: 15/30  (remaining: 15)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "yanks",
+      "structure_after": "yanks"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     label\nCurrent:    yanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 tanks \u2192 yanks\nSteps used: 16/30  (remaining: 14)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "yanks",
+      "structure_after": "yanks"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     label\nCurrent:    yanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 tanks \u2192 yanks\nSteps used: 17/30  (remaining: 13)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 3 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "yanks",
+      "structure_after": "yanks"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     label\nCurrent:    yanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 tanks \u2192 yanks\nSteps used: 18/30  (remaining: 12)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 2 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "b"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "yanks",
+      "structure_after": "yanks"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     label\nCurrent:    yanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 tanks \u2192 yanks\nSteps used: 19/30  (remaining: 11)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "yanks",
+      "structure_after": "yanks"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     label\nCurrent:    yanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 tanks \u2192 yanks\nSteps used: 20/30  (remaining: 10)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "yanks",
+      "structure_after": "yanks"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     label\nCurrent:    yanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 tanks \u2192 yanks\nSteps used: 21/30  (remaining: 9)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "yanks",
+      "structure_after": "yanks"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     label\nCurrent:    yanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 tanks \u2192 yanks\nSteps used: 22/30  (remaining: 8)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "yanks",
+      "structure_after": "yanks"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     label\nCurrent:    yanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 tanks \u2192 yanks\nSteps used: 23/30  (remaining: 7)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 3 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "b"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "yanks",
+      "structure_after": "yanks"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     label\nCurrent:    yanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 tanks \u2192 yanks\nSteps used: 24/30  (remaining: 6)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "yanks",
+      "structure_after": "yanks"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     label\nCurrent:    yanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 tanks \u2192 yanks\nSteps used: 25/30  (remaining: 5)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "yanks",
+      "structure_after": "yanks"
+    },
+    {
+      "t": 26,
+      "observation": "Target:     label\nCurrent:    yanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 tanks \u2192 yanks\nSteps used: 26/30  (remaining: 4)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "yanks",
+      "structure_after": "yanks"
+    },
+    {
+      "t": 27,
+      "observation": "Target:     label\nCurrent:    yanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 tanks \u2192 yanks\nSteps used: 27/30  (remaining: 3)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 3 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "yanks",
+      "structure_after": "yanks"
+    },
+    {
+      "t": 28,
+      "observation": "Target:     label\nCurrent:    yanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 tanks \u2192 yanks\nSteps used: 28/30  (remaining: 2)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "yanks",
+      "structure_after": "yanks"
+    },
+    {
+      "t": 29,
+      "observation": "Target:     label\nCurrent:    yanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 tanks \u2192 yanks\nSteps used: 29/30  (remaining: 1)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 3 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "b"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "yanks",
+      "structure_after": "yanks"
+    },
+    {
+      "t": 30,
+      "observation": "Target:     label\nCurrent:    yanks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 dinks \u2192 dunks \u2192 ... \u2192 tanks \u2192 yanks\nSteps used: 30/30  (remaining: 0)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "yanks",
+      "structure_after": "yanks"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 30,
+    "max_steps": 30,
+    "start_word": "ginks",
+    "target_word": "label",
+    "final_word": "yanks",
+    "path": [
+      "ginks",
+      "dinks",
+      "dunks",
+      "bunks",
+      "banks",
+      "hanks",
+      "ranks",
+      "tanks",
+      "yanks"
+    ],
+    "path_length": 8,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "INVALID_WORD": 22,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 23,
+    "optimal_distance_at_end": 5,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 60796,
+    "completion_tokens": 150,
+    "total_tokens": 60946
+  },
+  "wall_time_s": 16.849839210510254
+}

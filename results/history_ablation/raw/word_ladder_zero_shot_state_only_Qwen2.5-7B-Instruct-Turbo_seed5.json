@@ -1,0 +1,235 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 5,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     hoys\nCurrent:    doms\nPositions:  0123\nMismatches: ^ ^ \nPath: dams \u2192 doms\nSteps used: 1/15  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {m, n, p, r, t}\n  1: {i}\n  2: {c, e, g, l, n, r, s, t, w}\n  3: {e}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dams",
+      "structure_after": "doms"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     hoys\nCurrent:    moms\nPositions:  0123\nMismatches: ^ ^ \nPath: dams \u2192 doms \u2192 moms\nSteps used: 2/15  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {n, p, r, t}\n  1: {e, u}\n  2: {a, b, c, d, g, l, n, o, p, r, s, t, w}\n  3: {e, i}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "doms",
+      "structure_after": "moms"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     hoys\nCurrent:    mems\nPositions:  0123\nMismatches: ^^^ \nPath: dams \u2192 doms \u2192 moms \u2192 mems\nSteps used: 3/15  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {f, g, h*, r}\n  1: {u}\n  2: {l, s, w}\n  3: {o}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "moms",
+      "structure_after": "mems"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     hoys\nCurrent:    fems\nPositions:  0123\nMismatches: ^^^ \nPath: dams \u2192 doms \u2192 moms \u2192 mems \u2192 fems\nSteps used: 4/15  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {g, h*, r}\n  2: {d, e, h, n, s, t, u}\n  3: {e}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mems",
+      "structure_after": "fems"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     hoys\nCurrent:    gems\nPositions:  0123\nMismatches: ^^^ \nPath: dams \u2192 doms \u2192 moms \u2192 mems \u2192 fems \u2192 gems\nSteps used: 5/15  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {h*, r}\n  1: {a, u, y}\n  2: {d, e, l, n, t}",
+      "raw_action": "EDIT 0 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fems",
+      "structure_after": "gems"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     hoys\nCurrent:    hems\nPositions:  0123\nMismatches:  ^^ \nPath: dams \u2192 doms \u2192 moms \u2192 ... \u2192 gems \u2192 hems\nSteps used: 6/15  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {r}\n  1: {a, u}\n  2: {h, n, r, t, w}\n  3: {e, p}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gems",
+      "structure_after": "hems"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     hoys\nCurrent:    hams\nPositions:  0123\nMismatches:  ^^ \nPath: dams \u2192 doms \u2192 moms \u2192 ... \u2192 hems \u2192 hams\nSteps used: 7/15  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {b, c, g, j, l, p, r, t, y}\n  1: {u}\n  2: {e, g, h, p, t, w, y*}\n  3: {e}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hems",
+      "structure_after": "hams"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     hoys\nCurrent:    bams\nPositions:  0123\nMismatches: ^^^ \nPath: dams \u2192 doms \u2192 moms \u2192 ... \u2192 hams \u2192 bams\nSteps used: 8/15  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {c, g, j, l, p, r, t, y}\n  1: {u}\n  2: {a, d, g, l, n, p, r, s, t, y*}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hams",
+      "structure_after": "bams"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     hoys\nCurrent:    cams\nPositions:  0123\nMismatches: ^^^ \nPath: dams \u2192 doms \u2192 moms \u2192 ... \u2192 bams \u2192 cams\nSteps used: 9/15  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {g, j, l, p, r, t, y}\n  1: {w}\n  2: {b, d, n, p, r, t, w, y*}\n  3: {e, p}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bams",
+      "structure_after": "cams"
+    },
+    {
+      "t": 10,
+      "observation": "",
+      "raw_action": "EDIT 1 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "w"
+      },
+      "valid": true,
+      "events": [
+        "LOCAL_OPTIMUM_TRAP"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true,
+        "dead_end": true
+      },
+      "structure_before": "cams",
+      "structure_after": "cwms"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "LOCAL_OPTIMUM_TRAP",
+  "failure_events": [
+    "LOCAL_OPTIMUM_TRAP"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 10,
+    "max_steps": 15,
+    "start_word": "dams",
+    "target_word": "hoys",
+    "final_word": "cwms",
+    "path": [
+      "dams",
+      "doms",
+      "moms",
+      "mems",
+      "fems",
+      "gems",
+      "hems",
+      "hams",
+      "bams",
+      "cams",
+      "cwms"
+    ],
+    "path_length": 10,
+    "optimal_length": 3,
+    "violations_by_type": {
+      "LOCAL_OPTIMUM_TRAP": 1
+    },
+    "total_violations": 1,
+    "optimal_distance_at_end": 4,
+    "events": [
+      "LOCAL_OPTIMUM_TRAP"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 9069,
+    "completion_tokens": 50,
+    "total_tokens": 9119
+  },
+  "wall_time_s": 5.025377988815308
+}

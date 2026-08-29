@@ -1,0 +1,476 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "few_shot_format",
+  "memory_condition": "state_only",
+  "seed": 40,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     teds\nCurrent:    fend\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, l, m, p, r, s, t*, v, w}\n  1: {i, u}\n  2: {e, o, u}\n  3: {s*}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fond",
+      "structure_after": "fend"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     teds\nCurrent:    bend\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {l, m, p, r, s, t*, v, w}\n  1: {a, i, o, u}\n  2: {a}\n  3: {e, s*, t}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fend",
+      "structure_after": "bend"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     teds\nCurrent:    bead\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 bead\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r}\n  1: {r}\n  3: {k, m, n, r, t, u}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bend",
+      "structure_after": "bead"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     teds\nCurrent:    bead\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 bead\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r}\n  1: {r}\n  3: {k, m, n, r, t, u}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bead",
+      "structure_after": "bead"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     teds\nCurrent:    bead\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 bead\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r}\n  1: {r}\n  3: {k, m, n, r, t, u}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bead",
+      "structure_after": "bead"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     teds\nCurrent:    bead\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 bead\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r}\n  1: {r}\n  3: {k, m, n, r, t, u}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bead",
+      "structure_after": "bead"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     teds\nCurrent:    bead\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 bead\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r}\n  1: {r}\n  3: {k, m, n, r, t, u}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bead",
+      "structure_after": "bead"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     teds\nCurrent:    bead\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 bead\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r}\n  1: {r}\n  3: {k, m, n, r, t, u}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bead",
+      "structure_after": "bead"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     teds\nCurrent:    bead\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 bead\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r}\n  1: {r}\n  3: {k, m, n, r, t, u}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bead",
+      "structure_after": "bead"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     teds\nCurrent:    bead\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 bead\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r}\n  1: {r}\n  3: {k, m, n, r, t, u}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bead",
+      "structure_after": "bead"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     teds\nCurrent:    bead\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 bead\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r}\n  1: {r}\n  3: {k, m, n, r, t, u}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bead",
+      "structure_after": "bead"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     teds\nCurrent:    bead\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 bead\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r}\n  1: {r}\n  3: {k, m, n, r, t, u}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bead",
+      "structure_after": "bead"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     teds\nCurrent:    bead\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 bead\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r}\n  1: {r}\n  3: {k, m, n, r, t, u}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bead",
+      "structure_after": "bead"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     teds\nCurrent:    bead\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 bead\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r}\n  1: {r}\n  3: {k, m, n, r, t, u}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bead",
+      "structure_after": "bead"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     teds\nCurrent:    bead\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 bead\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r}\n  1: {r}\n  3: {k, m, n, r, t, u}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bead",
+      "structure_after": "bead"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     teds\nCurrent:    bead\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 bead\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r}\n  1: {r}\n  3: {k, m, n, r, t, u}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bead",
+      "structure_after": "bead"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     teds\nCurrent:    bead\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 bead\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r}\n  1: {r}\n  3: {k, m, n, r, t, u}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bead",
+      "structure_after": "bead"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     teds\nCurrent:    bead\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 bead\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r}\n  1: {r}\n  3: {k, m, n, r, t, u}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bead",
+      "structure_after": "bead"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     teds\nCurrent:    bead\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 bead\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r}\n  1: {r}\n  3: {k, m, n, r, t, u}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bead",
+      "structure_after": "bead"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     teds\nCurrent:    bead\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 bead\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, r}\n  1: {r}\n  3: {k, m, n, r, t, u}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bead",
+      "structure_after": "bead"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "fond",
+    "target_word": "teds",
+    "final_word": "bead",
+    "path": [
+      "fond",
+      "fend",
+      "bend",
+      "bead"
+    ],
+    "path_length": 3,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 12,
+      "ILLEGAL_EDIT": 5,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 18,
+    "optimal_distance_at_end": 4,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 31426,
+    "completion_tokens": 100,
+    "total_tokens": 31526
+  },
+  "wall_time_s": 56.03268504142761
+}

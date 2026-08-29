@@ -1,0 +1,475 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check",
+  "memory_condition": "state_only",
+  "seed": 13,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     yarn\nCurrent:    bore\nPositions:  0123\nMismatches: ^^ ^\nPath: bone \u2192 bore\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {c, d, f, g, k, l, m, p, s, t, w, y*}\n  1: {a*, y}\n  2: {d, l}\n  3: {a, n*, t}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bone",
+      "structure_after": "bore"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     yarn\nCurrent:    bore\nPositions:  0123\nMismatches: ^^ ^\nPath: bone \u2192 bore\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {c, d, f, g, k, l, m, p, s, t, w, y*}\n  1: {a*, y}\n  2: {d, l}\n  3: {a, n*, t}",
+      "raw_action": "EDIT 3 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bore",
+      "structure_after": "bore"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     yarn\nCurrent:    bare\nPositions:  0123\nMismatches: ^  ^\nPath: bone \u2192 bore \u2192 bare\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {c, d, f, h, m, p, r, t, w, y*}\n  1: {y}\n  2: {b, d, k, l, n, s, t}\n  3: {b, d, f, k, m, n*, s}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bore",
+      "structure_after": "bare"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     yarn\nCurrent:    care\nPositions:  0123\nMismatches: ^  ^\nPath: bone \u2192 bore \u2192 bare \u2192 care\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {d, f, h, m, p, r, t, w, y*}\n  1: {e, i, o, u}\n  2: {d, f, g, k, m, n, p, s, t, v}\n  3: {b, d, k, l, n*, p, r, s, t}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bare",
+      "structure_after": "care"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     yarn\nCurrent:    care\nPositions:  0123\nMismatches: ^  ^\nPath: bone \u2192 bore \u2192 bare \u2192 care\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {d, f, h, m, p, r, t, w, y*}\n  1: {e, i, o, u}\n  2: {d, f, g, k, m, n, p, s, t, v}\n  3: {b, d, k, l, n*, p, r, s, t}",
+      "raw_action": "EDIT 1 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "care",
+      "structure_after": "care"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     yarn\nCurrent:    care\nPositions:  0123\nMismatches: ^  ^\nPath: bone \u2192 bore \u2192 bare \u2192 care\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {d, f, h, m, p, r, t, w, y*}\n  1: {e, i, o, u}\n  2: {d, f, g, k, m, n, p, s, t, v}\n  3: {b, d, k, l, n*, p, r, s, t}",
+      "raw_action": "EDIT 1 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "care",
+      "structure_after": "care"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     yarn\nCurrent:    care\nPositions:  0123\nMismatches: ^  ^\nPath: bone \u2192 bore \u2192 bare \u2192 care\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {d, f, h, m, p, r, t, w, y*}\n  1: {e, i, o, u}\n  2: {d, f, g, k, m, n, p, s, t, v}\n  3: {b, d, k, l, n*, p, r, s, t}",
+      "raw_action": "EDIT 1 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "care",
+      "structure_after": "care"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     yarn\nCurrent:    care\nPositions:  0123\nMismatches: ^  ^\nPath: bone \u2192 bore \u2192 bare \u2192 care\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {d, f, h, m, p, r, t, w, y*}\n  1: {e, i, o, u}\n  2: {d, f, g, k, m, n, p, s, t, v}\n  3: {b, d, k, l, n*, p, r, s, t}",
+      "raw_action": "EDIT 1 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "care",
+      "structure_after": "care"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     yarn\nCurrent:    care\nPositions:  0123\nMismatches: ^  ^\nPath: bone \u2192 bore \u2192 bare \u2192 care\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {d, f, h, m, p, r, t, w, y*}\n  1: {e, i, o, u}\n  2: {d, f, g, k, m, n, p, s, t, v}\n  3: {b, d, k, l, n*, p, r, s, t}",
+      "raw_action": "EDIT 1 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "n"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "care",
+      "structure_after": "care"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     yarn\nCurrent:    care\nPositions:  0123\nMismatches: ^  ^\nPath: bone \u2192 bore \u2192 bare \u2192 care\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {d, f, h, m, p, r, t, w, y*}\n  1: {e, i, o, u}\n  2: {d, f, g, k, m, n, p, s, t, v}\n  3: {b, d, k, l, n*, p, r, s, t}",
+      "raw_action": "EDIT 1 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "care",
+      "structure_after": "care"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     yarn\nCurrent:    care\nPositions:  0123\nMismatches: ^  ^\nPath: bone \u2192 bore \u2192 bare \u2192 care\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {d, f, h, m, p, r, t, w, y*}\n  1: {e, i, o, u}\n  2: {d, f, g, k, m, n, p, s, t, v}\n  3: {b, d, k, l, n*, p, r, s, t}",
+      "raw_action": "EDIT 1 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "n"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "care",
+      "structure_after": "care"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     yarn\nCurrent:    care\nPositions:  0123\nMismatches: ^  ^\nPath: bone \u2192 bore \u2192 bare \u2192 care\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {d, f, h, m, p, r, t, w, y*}\n  1: {e, i, o, u}\n  2: {d, f, g, k, m, n, p, s, t, v}\n  3: {b, d, k, l, n*, p, r, s, t}",
+      "raw_action": "EDIT 1 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "care",
+      "structure_after": "care"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     yarn\nCurrent:    care\nPositions:  0123\nMismatches: ^  ^\nPath: bone \u2192 bore \u2192 bare \u2192 care\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {d, f, h, m, p, r, t, w, y*}\n  1: {e, i, o, u}\n  2: {d, f, g, k, m, n, p, s, t, v}\n  3: {b, d, k, l, n*, p, r, s, t}",
+      "raw_action": "EDIT 1 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "n"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "care",
+      "structure_after": "care"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     yarn\nCurrent:    care\nPositions:  0123\nMismatches: ^  ^\nPath: bone \u2192 bore \u2192 bare \u2192 care\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {d, f, h, m, p, r, t, w, y*}\n  1: {e, i, o, u}\n  2: {d, f, g, k, m, n, p, s, t, v}\n  3: {b, d, k, l, n*, p, r, s, t}",
+      "raw_action": "EDIT 1 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "care",
+      "structure_after": "care"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     yarn\nCurrent:    care\nPositions:  0123\nMismatches: ^  ^\nPath: bone \u2192 bore \u2192 bare \u2192 care\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {d, f, h, m, p, r, t, w, y*}\n  1: {e, i, o, u}\n  2: {d, f, g, k, m, n, p, s, t, v}\n  3: {b, d, k, l, n*, p, r, s, t}",
+      "raw_action": "EDIT 1 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "n"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "care",
+      "structure_after": "care"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     yarn\nCurrent:    care\nPositions:  0123\nMismatches: ^  ^\nPath: bone \u2192 bore \u2192 bare \u2192 care\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {d, f, h, m, p, r, t, w, y*}\n  1: {e, i, o, u}\n  2: {d, f, g, k, m, n, p, s, t, v}\n  3: {b, d, k, l, n*, p, r, s, t}",
+      "raw_action": "EDIT 1 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "care",
+      "structure_after": "care"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     yarn\nCurrent:    care\nPositions:  0123\nMismatches: ^  ^\nPath: bone \u2192 bore \u2192 bare \u2192 care\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {d, f, h, m, p, r, t, w, y*}\n  1: {e, i, o, u}\n  2: {d, f, g, k, m, n, p, s, t, v}\n  3: {b, d, k, l, n*, p, r, s, t}",
+      "raw_action": "EDIT 1 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "n"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "care",
+      "structure_after": "care"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     yarn\nCurrent:    care\nPositions:  0123\nMismatches: ^  ^\nPath: bone \u2192 bore \u2192 bare \u2192 care\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {d, f, h, m, p, r, t, w, y*}\n  1: {e, i, o, u}\n  2: {d, f, g, k, m, n, p, s, t, v}\n  3: {b, d, k, l, n*, p, r, s, t}",
+      "raw_action": "EDIT 1 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "care",
+      "structure_after": "care"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     yarn\nCurrent:    care\nPositions:  0123\nMismatches: ^  ^\nPath: bone \u2192 bore \u2192 bare \u2192 care\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {d, f, h, m, p, r, t, w, y*}\n  1: {e, i, o, u}\n  2: {d, f, g, k, m, n, p, s, t, v}\n  3: {b, d, k, l, n*, p, r, s, t}",
+      "raw_action": "EDIT 1 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "n"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "care",
+      "structure_after": "care"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     yarn\nCurrent:    care\nPositions:  0123\nMismatches: ^  ^\nPath: bone \u2192 bore \u2192 bare \u2192 care\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {d, f, h, m, p, r, t, w, y*}\n  1: {e, i, o, u}\n  2: {d, f, g, k, m, n, p, s, t, v}\n  3: {b, d, k, l, n*, p, r, s, t}",
+      "raw_action": "EDIT 1 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "care",
+      "structure_after": "care"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "bone",
+    "target_word": "yarn",
+    "final_word": "care",
+    "path": [
+      "bone",
+      "bore",
+      "bare",
+      "care"
+    ],
+    "path_length": 3,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 17,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 18,
+    "optimal_distance_at_end": 2,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 39247,
+    "completion_tokens": 100,
+    "total_tokens": 39347
+  },
+  "wall_time_s": 55.20613193511963
+}

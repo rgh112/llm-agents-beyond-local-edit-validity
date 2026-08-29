@@ -1,0 +1,113 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check",
+  "memory_condition": "state_only",
+  "seed": 46,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     shaw\nCurrent:    sued\nPositions:  0123\nMismatches:  ^^^\nPath: cued \u2192 sued\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {h, r}\n  1: {e, h*, l, n, p}\n  2: {d, r}\n  3: {r, s, t}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cued",
+      "structure_after": "sued"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     shaw\nCurrent:    shed\nPositions:  0123\nMismatches:   ^^\nPath: cued \u2192 sued \u2192 shed\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {o}\n  1: {e, l, n, p}\n  2: {a*, o}\n  3: {a, s, w*}",
+      "raw_action": "EDIT 1 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sued",
+      "structure_after": "shed"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     shaw\nCurrent:    shad\nPositions:  0123\nMismatches:    ^\nPath: cued \u2192 sued \u2192 shed \u2192 shad\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {c}\n  1: {c}\n  2: {o}\n  3: {g, h, m, t, w*, y}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "shed",
+      "structure_after": "shad"
+    },
+    {
+      "t": 4,
+      "observation": "",
+      "raw_action": "EDIT 3 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "w"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 1.0,
+      "info": {
+        "valid": true,
+        "auto_success": true
+      },
+      "structure_before": "shad",
+      "structure_after": "shaw"
+    }
+  ],
+  "success": true,
+  "terminal_failure": null,
+  "failure_events": [],
+  "final_metrics": {
+    "success": true,
+    "steps_taken": 4,
+    "max_steps": 20,
+    "start_word": "cued",
+    "target_word": "shaw",
+    "final_word": "shaw",
+    "path": [
+      "cued",
+      "sued",
+      "shed",
+      "shad",
+      "shaw"
+    ],
+    "path_length": 4,
+    "optimal_length": 4,
+    "violations_by_type": {},
+    "total_violations": 0,
+    "optimal_distance_at_end": 0,
+    "events": []
+  },
+  "token_usage": {
+    "prompt_tokens": 2224,
+    "completion_tokens": 20,
+    "total_tokens": 2244
+  },
+  "wall_time_s": 1.6779670715332031
+}

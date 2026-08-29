@@ -1,0 +1,228 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "window_1",
+  "seed": 30,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     holp\nCurrent:    felt\nPositions:  0123\nMismatches: ^^ ^\nPath: felt\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, c, g, m, p, w}\n  2: {a, e}\n  3: {l}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "felt",
+      "structure_after": "felt"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     holp\nCurrent:    felt\nPositions:  0123\nMismatches: ^^ ^\nPath: felt\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, c, g, m, p, w}\n  2: {a, e}\n  3: {l}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "felt",
+      "structure_after": "felt"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     holp\nCurrent:    felt\nPositions:  0123\nMismatches: ^^ ^\nPath: felt\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {b, c, g, m, p, w}\n  2: {a, e}\n  3: {l}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "felt",
+      "structure_after": "felt"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     holp\nCurrent:    fell\nPositions:  0123\nMismatches: ^^ ^\nPath: felt \u2192 fell\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h*, j, m, s, t, w, y}\n  1: {a, i, u}\n  2: {a, e}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "felt",
+      "structure_after": "fell"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     holp\nCurrent:    hell\nPositions:  0123\nMismatches:  ^ ^\nPath: felt \u2192 fell \u2192 hell\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {b, c, d, j, m, s, t, w, y}\n  1: {a, i, u}\n  2: {a, e, i, r}\n  3: {d, m, o, p*}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fell",
+      "structure_after": "hell"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     holp\nCurrent:    hell\nPositions:  0123\nMismatches:  ^ ^\nPath: felt \u2192 fell \u2192 hell\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {b, c, d, j, m, s, t, w, y}\n  1: {a, i, u}\n  2: {a, e, i, r}\n  3: {d, m, o, p*}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "hell",
+      "structure_after": "hell"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     holp\nCurrent:    help\nPositions:  0123\nMismatches:  ^  \nPath: felt \u2192 fell \u2192 hell \u2192 help\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {k, y}\n  1: {o*}\n  2: {a, m}\n  3: {d, m, o}",
+      "raw_action": "EDIT 3 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hell",
+      "structure_after": "help"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     holp\nCurrent:    help\nPositions:  0123\nMismatches:  ^  \nPath: felt \u2192 fell \u2192 hell \u2192 help\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {k, y}\n  1: {o*}\n  2: {a, m}\n  3: {d, m, o}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "help",
+      "structure_after": "help"
+    },
+    {
+      "t": 9,
+      "observation": "",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 1.0,
+      "info": {
+        "valid": true,
+        "auto_success": true
+      },
+      "structure_before": "help",
+      "structure_after": "holp"
+    }
+  ],
+  "success": true,
+  "terminal_failure": null,
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT"
+  ],
+  "final_metrics": {
+    "success": true,
+    "steps_taken": 9,
+    "max_steps": 20,
+    "start_word": "felt",
+    "target_word": "holp",
+    "final_word": "holp",
+    "path": [
+      "felt",
+      "fell",
+      "hell",
+      "help",
+      "holp"
+    ],
+    "path_length": 4,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 4,
+      "ILLEGAL_EDIT": 1
+    },
+    "total_violations": 5,
+    "optimal_distance_at_end": 0,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 8524,
+    "completion_tokens": 45,
+    "total_tokens": 8569
+  },
+  "wall_time_s": 4.148898124694824
+}

@@ -1,0 +1,161 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 31,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     sade\nCurrent:    simp\nPositions:  0123\nMismatches:  ^^^\nPath: pimp \u2192 simp\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {g, j, l, w}\n  1: {a*, u}\n  3: {a, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pimp",
+      "structure_after": "simp"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     sade\nCurrent:    samp\nPositions:  0123\nMismatches:   ^^\nPath: pimp \u2192 simp \u2192 samp\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {c, d, g, l, r, t, v}\n  1: {u}\n  2: {l}\n  3: {e*}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "simp",
+      "structure_after": "samp"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     sade\nCurrent:    same\nPositions:  0123\nMismatches:   ^ \nPath: pimp \u2192 simp \u2192 samp \u2192 same\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {c, d, f, g, h, k, l, n, t, w}\n  1: {e, o}\n  2: {b, d*, f, g, k, l, n, t, v}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "samp",
+      "structure_after": "same"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     sade\nCurrent:    same\nPositions:  0123\nMismatches:   ^ \nPath: pimp \u2192 simp \u2192 samp \u2192 same\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {c, d, f, g, h, k, l, n, t, w}\n  1: {e, o}\n  2: {b, d*, f, g, k, l, n, t, v}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "same",
+      "structure_after": "same"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     sade\nCurrent:    same\nPositions:  0123\nMismatches:   ^ \nPath: pimp \u2192 simp \u2192 samp \u2192 same\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {c, d, f, g, h, k, l, n, t, w}\n  1: {e, o}\n  2: {b, d*, f, g, k, l, n, t, v}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "same",
+      "structure_after": "same"
+    },
+    {
+      "t": 6,
+      "observation": "",
+      "raw_action": "EDIT 2 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 1.0,
+      "info": {
+        "valid": true,
+        "auto_success": true
+      },
+      "structure_before": "same",
+      "structure_after": "sade"
+    }
+  ],
+  "success": true,
+  "terminal_failure": null,
+  "failure_events": [
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT"
+  ],
+  "final_metrics": {
+    "success": true,
+    "steps_taken": 6,
+    "max_steps": 20,
+    "start_word": "pimp",
+    "target_word": "sade",
+    "final_word": "sade",
+    "path": [
+      "pimp",
+      "simp",
+      "samp",
+      "same",
+      "sade"
+    ],
+    "path_length": 4,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "ILLEGAL_EDIT": 2
+    },
+    "total_violations": 2,
+    "optimal_distance_at_end": 0,
+    "events": [
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 3491,
+    "completion_tokens": 30,
+    "total_tokens": 3521
+  },
+  "wall_time_s": 3.6878650188446045
+}

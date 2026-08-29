@@ -1,0 +1,466 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "window_3",
+  "seed": 1,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     ruff\nCurrent:    real\nPositions:  0123\nMismatches:  ^^^\nPath: rial \u2192 real\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, p, s, t, v, w, z}\n  2: {e}\n  3: {d, m, p, r}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rial",
+      "structure_after": "real"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     ruff\nCurrent:    feal\nPositions:  0123\nMismatches: ^^^^\nPath: rial \u2192 real \u2192 feal\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, p, s, t, v, w, z}\n  1: {o}\n  2: {e, l}\n  3: {r, t}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "real",
+      "structure_after": "feal"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     ruff\nCurrent:    foal\nPositions:  0123\nMismatches: ^^^^\nPath: rial \u2192 real \u2192 feal \u2192 foal\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {i, o, u, w}\n  3: {m}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "feal",
+      "structure_after": "foal"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     ruff\nCurrent:    coal\nPositions:  0123\nMismatches: ^^^^\nPath: rial \u2192 real \u2192 feal \u2192 foal \u2192 coal\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {g}\n  2: {i, o, w}\n  3: {t, x}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "foal",
+      "structure_after": "coal"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     ruff\nCurrent:    coal\nPositions:  0123\nMismatches: ^^^^\nPath: rial \u2192 real \u2192 feal \u2192 foal \u2192 coal\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {g}\n  2: {i, o, w}\n  3: {t, x}",
+      "raw_action": "EDIT 3 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "coal",
+      "structure_after": "coal"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     ruff\nCurrent:    coal\nPositions:  0123\nMismatches: ^^^^\nPath: rial \u2192 real \u2192 feal \u2192 foal \u2192 coal\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {g}\n  2: {i, o, w}\n  3: {t, x}",
+      "raw_action": "EDIT 3 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "coal",
+      "structure_after": "coal"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     ruff\nCurrent:    coil\nPositions:  0123\nMismatches: ^^^^\nPath: rial \u2192 real \u2192 feal \u2192 foal \u2192 coal \u2192 coil\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {b, f, m, n, r*, s, t}\n  1: {e}\n  2: {o, w}\n  3: {f*, n, r}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "coal",
+      "structure_after": "coil"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     ruff\nCurrent:    roil\nPositions:  0123\nMismatches:  ^^^\nPath: rial \u2192 real \u2192 feal \u2192 ... \u2192 coil \u2192 roil\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {b, f, m, n, s, t}\n  1: {a}\n  2: {l, t}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "coil",
+      "structure_after": "roil"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     ruff\nCurrent:    roil\nPositions:  0123\nMismatches:  ^^^\nPath: rial \u2192 real \u2192 feal \u2192 ... \u2192 coil \u2192 roil\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {b, f, m, n, s, t}\n  1: {a}\n  2: {l, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "roil",
+      "structure_after": "roil"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     ruff\nCurrent:    roil\nPositions:  0123\nMismatches:  ^^^\nPath: rial \u2192 real \u2192 feal \u2192 ... \u2192 coil \u2192 roil\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {b, f, m, n, s, t}\n  1: {a}\n  2: {l, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "roil",
+      "structure_after": "roil"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     ruff\nCurrent:    roil\nPositions:  0123\nMismatches:  ^^^\nPath: rial \u2192 real \u2192 feal \u2192 ... \u2192 coil \u2192 roil\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {b, f, m, n, s, t}\n  1: {a}\n  2: {l, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "roil",
+      "structure_after": "roil"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     ruff\nCurrent:    roil\nPositions:  0123\nMismatches:  ^^^\nPath: rial \u2192 real \u2192 feal \u2192 ... \u2192 coil \u2192 roil\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {b, f, m, n, s, t}\n  1: {a}\n  2: {l, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "roil",
+      "structure_after": "roil"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     ruff\nCurrent:    roil\nPositions:  0123\nMismatches:  ^^^\nPath: rial \u2192 real \u2192 feal \u2192 ... \u2192 coil \u2192 roil\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {b, f, m, n, s, t}\n  1: {a}\n  2: {l, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "roil",
+      "structure_after": "roil"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     ruff\nCurrent:    roil\nPositions:  0123\nMismatches:  ^^^\nPath: rial \u2192 real \u2192 feal \u2192 ... \u2192 coil \u2192 roil\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {b, f, m, n, s, t}\n  1: {a}\n  2: {l, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "roil",
+      "structure_after": "roil"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     ruff\nCurrent:    roil\nPositions:  0123\nMismatches:  ^^^\nPath: rial \u2192 real \u2192 feal \u2192 ... \u2192 coil \u2192 roil\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {b, f, m, n, s, t}\n  1: {a}\n  2: {l, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "roil",
+      "structure_after": "roil"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     ruff\nCurrent:    roil\nPositions:  0123\nMismatches:  ^^^\nPath: rial \u2192 real \u2192 feal \u2192 ... \u2192 coil \u2192 roil\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {b, f, m, n, s, t}\n  1: {a}\n  2: {l, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "roil",
+      "structure_after": "roil"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     ruff\nCurrent:    roil\nPositions:  0123\nMismatches:  ^^^\nPath: rial \u2192 real \u2192 feal \u2192 ... \u2192 coil \u2192 roil\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {b, f, m, n, s, t}\n  1: {a}\n  2: {l, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "roil",
+      "structure_after": "roil"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     ruff\nCurrent:    roil\nPositions:  0123\nMismatches:  ^^^\nPath: rial \u2192 real \u2192 feal \u2192 ... \u2192 coil \u2192 roil\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {b, f, m, n, s, t}\n  1: {a}\n  2: {l, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "roil",
+      "structure_after": "roil"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     ruff\nCurrent:    roil\nPositions:  0123\nMismatches:  ^^^\nPath: rial \u2192 real \u2192 feal \u2192 ... \u2192 coil \u2192 roil\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {b, f, m, n, s, t}\n  1: {a}\n  2: {l, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "roil",
+      "structure_after": "roil"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     ruff\nCurrent:    roil\nPositions:  0123\nMismatches:  ^^^\nPath: rial \u2192 real \u2192 feal \u2192 ... \u2192 coil \u2192 roil\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {b, f, m, n, s, t}\n  1: {a}\n  2: {l, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "roil",
+      "structure_after": "roil"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "rial",
+    "target_word": "ruff",
+    "final_word": "roil",
+    "path": [
+      "rial",
+      "real",
+      "feal",
+      "foal",
+      "coal",
+      "coil",
+      "roil"
+    ],
+    "path_length": 6,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 14,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 15,
+    "optimal_distance_at_end": 5,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 78340,
+    "completion_tokens": 100,
+    "total_tokens": 78440
+  },
+  "wall_time_s": 12.279977798461914
+}

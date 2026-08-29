@@ -1,0 +1,467 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 18,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     suits\nCurrent:    frits\nPositions:  01234\nMismatches: ^^   \nPath: frith \u2192 frits\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, g, w}\n  1: {l}\n  2: {a, e}\n  3: {e, g}\n  4: {t, z}",
+      "raw_action": "EDIT 4 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "frith",
+      "structure_after": "frits"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     suits\nCurrent:    brits\nPositions:  01234\nMismatches: ^^   \nPath: frith \u2192 frits \u2192 brits\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {g, w}\n  1: {a}\n  2: {a}\n  3: {e, g, m, n, o}\n  4: {t}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "frits",
+      "structure_after": "brits"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     suits\nCurrent:    baits\nPositions:  01234\nMismatches: ^^   \nPath: frith \u2192 frits \u2192 brits \u2192 baits\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {g, w}\n  2: {h, s, t}\n  3: {l}\n  4: {h}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "brits",
+      "structure_after": "baits"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     suits\nCurrent:    basts\nPositions:  01234\nMismatches: ^^^  \nPath: frith \u2192 frits \u2192 brits \u2192 baits \u2192 basts\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {c, e, f, g, l, m, o, p, v, w}\n  1: {e, u*}\n  2: {h, t}\n  3: {e, i, k}\n  4: {e}",
+      "raw_action": "EDIT 2 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "baits",
+      "structure_after": "basts"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     suits\nCurrent:    busts\nPositions:  01234\nMismatches: ^ ^  \nPath: frith \u2192 frits \u2192 brits \u2192 baits \u2192 basts \u2192 busts\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {d, g, j, l, m, o, r}\n  1: {e}\n  2: {n, t}\n  3: {e, k}\n  4: {y}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "basts",
+      "structure_after": "busts"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     suits\nCurrent:    busts\nPositions:  01234\nMismatches: ^ ^  \nPath: frith \u2192 frits \u2192 brits \u2192 baits \u2192 basts \u2192 busts\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {d, g, j, l, m, o, r}\n  1: {e}\n  2: {n, t}\n  3: {e, k}\n  4: {y}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "busts",
+      "structure_after": "busts"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     suits\nCurrent:    busts\nPositions:  01234\nMismatches: ^ ^  \nPath: frith \u2192 frits \u2192 brits \u2192 baits \u2192 basts \u2192 busts\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {d, g, j, l, m, o, r}\n  1: {e}\n  2: {n, t}\n  3: {e, k}\n  4: {y}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "busts",
+      "structure_after": "busts"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     suits\nCurrent:    busts\nPositions:  01234\nMismatches: ^ ^  \nPath: frith \u2192 frits \u2192 brits \u2192 baits \u2192 basts \u2192 busts\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {d, g, j, l, m, o, r}\n  1: {e}\n  2: {n, t}\n  3: {e, k}\n  4: {y}",
+      "raw_action": "EDIT 2 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "busts",
+      "structure_after": "busts"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     suits\nCurrent:    busts\nPositions:  01234\nMismatches: ^ ^  \nPath: frith \u2192 frits \u2192 brits \u2192 baits \u2192 basts \u2192 busts\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {d, g, j, l, m, o, r}\n  1: {e}\n  2: {n, t}\n  3: {e, k}\n  4: {y}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "busts",
+      "structure_after": "busts"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     suits\nCurrent:    busts\nPositions:  01234\nMismatches: ^ ^  \nPath: frith \u2192 frits \u2192 brits \u2192 baits \u2192 basts \u2192 busts\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {d, g, j, l, m, o, r}\n  1: {e}\n  2: {n, t}\n  3: {e, k}\n  4: {y}",
+      "raw_action": "EDIT 4 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "busts",
+      "structure_after": "busts"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     suits\nCurrent:    busts\nPositions:  01234\nMismatches: ^ ^  \nPath: frith \u2192 frits \u2192 brits \u2192 baits \u2192 basts \u2192 busts\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {d, g, j, l, m, o, r}\n  1: {e}\n  2: {n, t}\n  3: {e, k}\n  4: {y}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "busts",
+      "structure_after": "busts"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     suits\nCurrent:    busts\nPositions:  01234\nMismatches: ^ ^  \nPath: frith \u2192 frits \u2192 brits \u2192 baits \u2192 basts \u2192 busts\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {d, g, j, l, m, o, r}\n  1: {e}\n  2: {n, t}\n  3: {e, k}\n  4: {y}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "busts",
+      "structure_after": "busts"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     suits\nCurrent:    busts\nPositions:  01234\nMismatches: ^ ^  \nPath: frith \u2192 frits \u2192 brits \u2192 baits \u2192 basts \u2192 busts\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {d, g, j, l, m, o, r}\n  1: {e}\n  2: {n, t}\n  3: {e, k}\n  4: {y}",
+      "raw_action": "EDIT 2 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "busts",
+      "structure_after": "busts"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     suits\nCurrent:    busts\nPositions:  01234\nMismatches: ^ ^  \nPath: frith \u2192 frits \u2192 brits \u2192 baits \u2192 basts \u2192 busts\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {d, g, j, l, m, o, r}\n  1: {e}\n  2: {n, t}\n  3: {e, k}\n  4: {y}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "busts",
+      "structure_after": "busts"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     suits\nCurrent:    busts\nPositions:  01234\nMismatches: ^ ^  \nPath: frith \u2192 frits \u2192 brits \u2192 baits \u2192 basts \u2192 busts\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {d, g, j, l, m, o, r}\n  1: {e}\n  2: {n, t}\n  3: {e, k}\n  4: {y}",
+      "raw_action": "EDIT 4 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "busts",
+      "structure_after": "busts"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     suits\nCurrent:    busts\nPositions:  01234\nMismatches: ^ ^  \nPath: frith \u2192 frits \u2192 brits \u2192 baits \u2192 basts \u2192 busts\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {d, g, j, l, m, o, r}\n  1: {e}\n  2: {n, t}\n  3: {e, k}\n  4: {y}",
+      "raw_action": "EDIT 0 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "busts",
+      "structure_after": "busts"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     suits\nCurrent:    busts\nPositions:  01234\nMismatches: ^ ^  \nPath: frith \u2192 frits \u2192 brits \u2192 baits \u2192 basts \u2192 busts\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {d, g, j, l, m, o, r}\n  1: {e}\n  2: {n, t}\n  3: {e, k}\n  4: {y}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "busts",
+      "structure_after": "busts"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     suits\nCurrent:    butts\nPositions:  01234\nMismatches: ^ ^  \nPath: frith \u2192 frits \u2192 brits \u2192 ... \u2192 busts \u2192 butts\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {m, p}\n  1: {a, i, o}\n  2: {n}\n  4: {e, y}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "busts",
+      "structure_after": "butts"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     suits\nCurrent:    butts\nPositions:  01234\nMismatches: ^ ^  \nPath: frith \u2192 frits \u2192 brits \u2192 ... \u2192 busts \u2192 butts\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {m, p}\n  1: {a, i, o}\n  2: {n}\n  4: {e, y}",
+      "raw_action": "EDIT 3 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "butts",
+      "structure_after": "butts"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     suits\nCurrent:    butts\nPositions:  01234\nMismatches: ^ ^  \nPath: frith \u2192 frits \u2192 brits \u2192 ... \u2192 busts \u2192 butts\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {m, p}\n  1: {a, i, o}\n  2: {n}\n  4: {e, y}",
+      "raw_action": "EDIT 4 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "butts",
+      "structure_after": "butts"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "frith",
+    "target_word": "suits",
+    "final_word": "butts",
+    "path": [
+      "frith",
+      "frits",
+      "brits",
+      "baits",
+      "basts",
+      "busts",
+      "butts"
+    ],
+    "path_length": 6,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 9,
+      "ILLEGAL_EDIT": 5,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 15,
+    "optimal_distance_at_end": 4,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 55738,
+    "completion_tokens": 100,
+    "total_tokens": 55838
+  },
+  "wall_time_s": 12.324738025665283
+}

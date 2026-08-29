@@ -1,0 +1,695 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "window_1",
+  "seed": 33,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     lost\nCurrent:    acta\nPositions:  0123\nMismatches: ^^^^\nPath: acta\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  1: {n}\n  3: {s}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "acta",
+      "structure_after": "acta"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     lost\nCurrent:    acts\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  1: {i, l, n, r}\n  2: {e}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "acta",
+      "structure_after": "acts"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     lost\nCurrent:    acts\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  1: {i, l, n, r}\n  2: {e}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "acts",
+      "structure_after": "acts"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     lost\nCurrent:    aits\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, k, l*, n, p, s, t, w, z}\n  1: {l, n, r}\n  2: {d, l, m, n, r}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "acts",
+      "structure_after": "aits"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "aits",
+      "structure_after": "ails"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 13/30  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 14/30  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 15/30  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 16/30  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 17/30  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 18/30  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 2 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 19/30  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 20/30  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 21/30  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 22/30  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 2 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 23/30  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 24/30  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 25/30  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 26,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 26/30  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 2 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 27,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 27/30  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 28,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 28/30  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 29,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 29/30  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    },
+    {
+      "t": 30,
+      "observation": "Target:     lost\nCurrent:    ails\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ails\nSteps used: 30/30  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {f, m, n, o, t}\n  1: {a, l, w}\n  2: {d, m, n, r}",
+      "raw_action": "EDIT 2 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ails",
+      "structure_after": "ails"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 30,
+    "max_steps": 30,
+    "start_word": "acta",
+    "target_word": "lost",
+    "final_word": "ails",
+    "path": [
+      "acta",
+      "acts",
+      "aits",
+      "ails"
+    ],
+    "path_length": 3,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "INVALID_WORD": 27,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 28,
+    "optimal_distance_at_end": 5,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 136421,
+    "completion_tokens": 150,
+    "total_tokens": 136571
+  },
+  "wall_time_s": 18.692028045654297
+}

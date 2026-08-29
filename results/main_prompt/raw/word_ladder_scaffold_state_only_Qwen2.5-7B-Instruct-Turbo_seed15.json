@@ -1,0 +1,310 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 15,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     slot\nCurrent:    mace\nPositions:  0123\nMismatches: ^^^^\nPath: mace\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  0: {d, f, l, p, r, t}\n  1: {i}\n  2: {b, d, g, k, l, n, r, t, z}\n  3: {h, k, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mace",
+      "structure_after": "mace"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     slot\nCurrent:    male\nPositions:  0123\nMismatches: ^^^^\nPath: mace \u2192 male\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  0: {b, d, g, h, k, p, r, s*, t, v, w}\n  1: {i, o, u}\n  2: {b, d, g, k, n, r, t, z}\n  3: {l, m, t*}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mace",
+      "structure_after": "male"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     slot\nCurrent:    male\nPositions:  0123\nMismatches: ^^^^\nPath: mace \u2192 male\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  0: {b, d, g, h, k, p, r, s*, t, v, w}\n  1: {i, o, u}\n  2: {b, d, g, k, n, r, t, z}\n  3: {l, m, t*}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "male",
+      "structure_after": "male"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     slot\nCurrent:    male\nPositions:  0123\nMismatches: ^^^^\nPath: mace \u2192 male\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  0: {b, d, g, h, k, p, r, s*, t, v, w}\n  1: {i, o, u}\n  2: {b, d, g, k, n, r, t, z}\n  3: {l, m, t*}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "male",
+      "structure_after": "male"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     slot\nCurrent:    mole\nPositions:  0123\nMismatches: ^^^^\nPath: mace \u2192 male \u2192 mole\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, p, r, s*, t, v}\n  1: {i, u}\n  2: {d, k, m, p, r, t, u, v}\n  3: {a, d, l, s, t*, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "male",
+      "structure_after": "mole"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     slot\nCurrent:    mole\nPositions:  0123\nMismatches: ^^^^\nPath: mace \u2192 male \u2192 mole\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, p, r, s*, t, v}\n  1: {i, u}\n  2: {d, k, m, p, r, t, u, v}\n  3: {a, d, l, s, t*, y}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mole",
+      "structure_after": "mole"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     slot\nCurrent:    molt\nPositions:  0123\nMismatches: ^^^ \nPath: mace \u2192 male \u2192 mole \u2192 molt\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, v}\n  1: {a, e, i}\n  2: {a, o*, r, s, t}\n  3: {a, d, l, s, y}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mole",
+      "structure_after": "molt"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     slot\nCurrent:    molt\nPositions:  0123\nMismatches: ^^^ \nPath: mace \u2192 male \u2192 mole \u2192 molt\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, v}\n  1: {a, e, i}\n  2: {a, o*, r, s, t}\n  3: {a, d, l, s, y}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "molt",
+      "structure_after": "molt"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     slot\nCurrent:    molt\nPositions:  0123\nMismatches: ^^^ \nPath: mace \u2192 male \u2192 mole \u2192 molt\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, v}\n  1: {a, e, i}\n  2: {a, o*, r, s, t}\n  3: {a, d, l, s, y}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "molt",
+      "structure_after": "molt"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     slot\nCurrent:    moot\nPositions:  0123\nMismatches: ^^  \nPath: mace \u2192 male \u2192 mole \u2192 molt \u2192 moot\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {b, c, f, h, l, r, s*, t}\n  2: {a, r, s, t}\n  3: {d, l, n, r, s}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "molt",
+      "structure_after": "moot"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     slot\nCurrent:    moot\nPositions:  0123\nMismatches: ^^  \nPath: mace \u2192 male \u2192 mole \u2192 molt \u2192 moot\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, c, f, h, l, r, s*, t}\n  2: {a, r, s, t}\n  3: {d, l, n, r, s}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "moot",
+      "structure_after": "moot"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     slot\nCurrent:    soot\nPositions:  0123\nMismatches:  ^  \nPath: mace \u2192 male \u2192 mole \u2192 molt \u2192 moot \u2192 soot\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, c, f, h, l, r, t}\n  1: {c, h, l*, n, p, w}\n  2: {f, r}\n  3: {k, n}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "moot",
+      "structure_after": "soot"
+    },
+    {
+      "t": 13,
+      "observation": "",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 1.0,
+      "info": {
+        "valid": true,
+        "auto_success": true
+      },
+      "structure_before": "soot",
+      "structure_after": "slot"
+    }
+  ],
+  "success": true,
+  "terminal_failure": null,
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT"
+  ],
+  "final_metrics": {
+    "success": true,
+    "steps_taken": 13,
+    "max_steps": 30,
+    "start_word": "mace",
+    "target_word": "slot",
+    "final_word": "slot",
+    "path": [
+      "mace",
+      "male",
+      "mole",
+      "molt",
+      "moot",
+      "soot",
+      "slot"
+    ],
+    "path_length": 6,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "INVALID_WORD": 5,
+      "ILLEGAL_EDIT": 2
+    },
+    "total_violations": 7,
+    "optimal_distance_at_end": 0,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 25437,
+    "completion_tokens": 65,
+    "total_tokens": 25502
+  },
+  "wall_time_s": 7.422363042831421
+}

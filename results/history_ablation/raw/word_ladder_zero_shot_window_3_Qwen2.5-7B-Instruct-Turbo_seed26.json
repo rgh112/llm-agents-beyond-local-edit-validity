@@ -1,0 +1,353 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "window_3",
+  "seed": 26,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     mump\nCurrent:    buns\nPositions:  0123\nMismatches: ^ ^^\nPath: bugs \u2192 buns\nSteps used: 1/15  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, m*, n, p, r, s, t}\n  1: {a, e, i}\n  2: {b, d, m*, r, s, t, y}\n  3: {d, g, k, n, t}",
+      "raw_action": "EDIT 2 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bugs",
+      "structure_after": "buns"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     mump\nCurrent:    duns\nPositions:  0123\nMismatches: ^ ^^\nPath: bugs \u2192 buns \u2192 duns\nSteps used: 2/15  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {f, g, h, m*, n, p, r, s, t}\n  1: {e, i, o}\n  2: {b, d, e, g, o, p}\n  3: {e, g, k, t}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "buns",
+      "structure_after": "duns"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     mump\nCurrent:    duns\nPositions:  0123\nMismatches: ^ ^^\nPath: bugs \u2192 buns \u2192 duns\nSteps used: 3/15  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {f, g, h, m*, n, p, r, s, t}\n  1: {e, i, o}\n  2: {b, d, e, g, o, p}\n  3: {e, g, k, t}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "duns",
+      "structure_after": "duns"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     mump\nCurrent:    dons\nPositions:  0123\nMismatches: ^^^^\nPath: bugs \u2192 buns \u2192 duns \u2192 dons\nSteps used: 4/15  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {c, e, f, h, i, m*, p, s, t, w}\n  1: {e, i}\n  2: {c, e, g, l, m*, r, s, t, w}\n  3: {a, e, g}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "duns",
+      "structure_after": "dons"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     mump\nCurrent:    cons\nPositions:  0123\nMismatches: ^^^^\nPath: bugs \u2192 buns \u2192 duns \u2192 dons \u2192 cons\nSteps used: 5/15  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {e, f, h, i, m*, p, s, t, w}\n  1: {a}\n  2: {b, d, g, l, o, p, s, t, w, y}\n  3: {e, i, k, n, y}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dons",
+      "structure_after": "cons"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     mump\nCurrent:    cons\nPositions:  0123\nMismatches: ^^^^\nPath: bugs \u2192 buns \u2192 duns \u2192 dons \u2192 cons\nSteps used: 6/15  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {e, f, h, i, m*, p, s, t, w}\n  1: {a}\n  2: {b, d, g, l, o, p, s, t, w, y}\n  3: {e, i, k, n, y}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cons",
+      "structure_after": "cons"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     mump\nCurrent:    cons\nPositions:  0123\nMismatches: ^^^^\nPath: bugs \u2192 buns \u2192 duns \u2192 dons \u2192 cons\nSteps used: 7/15  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {e, f, h, i, m*, p, s, t, w}\n  1: {a}\n  2: {b, d, g, l, o, p, s, t, w, y}\n  3: {e, i, k, n, y}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cons",
+      "structure_after": "cons"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     mump\nCurrent:    mons\nPositions:  0123\nMismatches:  ^^^\nPath: bugs \u2192 buns \u2192 duns \u2192 dons \u2192 cons \u2192 mons\nSteps used: 8/15  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {e, f, h, i, p, s, t, w}\n  1: {a, u*}\n  2: {a, b, c, d, g, l, m*, o, p, r, s, t, w}\n  3: {k, o, y}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cons",
+      "structure_after": "mons"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     mump\nCurrent:    muns\nPositions:  0123\nMismatches:   ^^\nPath: bugs \u2192 buns \u2192 duns \u2192 ... \u2192 mons \u2192 muns\nSteps used: 9/15  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {f, g, h, n, p, r, s, t}\n  1: {a}\n  2: {d, g, m*, s, t}\n  3: {i}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mons",
+      "structure_after": "muns"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     mump\nCurrent:    muns\nPositions:  0123\nMismatches:   ^^\nPath: bugs \u2192 buns \u2192 duns \u2192 ... \u2192 mons \u2192 muns\nSteps used: 10/15  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {f, g, h, n, p, r, s, t}\n  1: {a}\n  2: {d, g, m*, s, t}\n  3: {i}",
+      "raw_action": "EDIT 2 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "muns",
+      "structure_after": "muns"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     mump\nCurrent:    muns\nPositions:  0123\nMismatches:   ^^\nPath: bugs \u2192 buns \u2192 duns \u2192 ... \u2192 mons \u2192 muns\nSteps used: 11/15  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {f, g, h, n, p, r, s, t}\n  1: {a}\n  2: {d, g, m*, s, t}\n  3: {i}",
+      "raw_action": "EDIT 2 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "muns",
+      "structure_after": "muns"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     mump\nCurrent:    muns\nPositions:  0123\nMismatches:   ^^\nPath: bugs \u2192 buns \u2192 duns \u2192 ... \u2192 mons \u2192 muns\nSteps used: 12/15  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {f, g, h, n, p, r, s, t}\n  1: {a}\n  2: {d, g, m*, s, t}\n  3: {i}",
+      "raw_action": "EDIT 3 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "muns",
+      "structure_after": "muns"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     mump\nCurrent:    muns\nPositions:  0123\nMismatches:   ^^\nPath: bugs \u2192 buns \u2192 duns \u2192 ... \u2192 mons \u2192 muns\nSteps used: 13/15  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {f, g, h, n, p, r, s, t}\n  1: {a}\n  2: {d, g, m*, s, t}\n  3: {i}",
+      "raw_action": "EDIT 1 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "muns",
+      "structure_after": "muns"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     mump\nCurrent:    puns\nPositions:  0123\nMismatches: ^ ^^\nPath: bugs \u2192 buns \u2192 duns \u2192 ... \u2192 muns \u2192 puns\nSteps used: 14/15  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {f, g, h, n, r, s, t}\n  1: {a, e, i, o}\n  2: {b, d, g, l, p, r, s, t}\n  3: {a, g, k, t, y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "muns",
+      "structure_after": "puns"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     mump\nCurrent:    puns\nPositions:  0123\nMismatches: ^ ^^\nPath: bugs \u2192 buns \u2192 duns \u2192 ... \u2192 muns \u2192 puns\nSteps used: 15/15  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {f, g, h, n, r, s, t}\n  1: {a, e, i, o}\n  2: {b, d, g, l, p, r, s, t}\n  3: {a, g, k, t, y}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "puns",
+      "structure_after": "puns"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 15,
+    "max_steps": 15,
+    "start_word": "bugs",
+    "target_word": "mump",
+    "final_word": "puns",
+    "path": [
+      "bugs",
+      "buns",
+      "duns",
+      "dons",
+      "cons",
+      "mons",
+      "muns",
+      "puns"
+    ],
+    "path_length": 7,
+    "optimal_length": 3,
+    "violations_by_type": {
+      "INVALID_WORD": 8,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 9,
+    "optimal_distance_at_end": 3,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 33991,
+    "completion_tokens": 75,
+    "total_tokens": 34066
+  },
+  "wall_time_s": 7.589722156524658
+}

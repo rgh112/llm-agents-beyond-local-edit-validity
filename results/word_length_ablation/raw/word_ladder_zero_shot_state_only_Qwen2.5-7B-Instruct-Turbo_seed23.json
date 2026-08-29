@@ -1,0 +1,614 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 23,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     gelts\nCurrent:    chess\nPositions:  01234\nMismatches: ^^^^ \nPath: chefs \u2192 chess\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  1: {r}\n  3: {w}\n  4: {t}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "chefs",
+      "structure_after": "chess"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     gelts\nCurrent:    cress\nPositions:  01234\nMismatches: ^^^^ \nPath: chefs \u2192 chess \u2192 cress\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  0: {d, p, t}\n  2: {a, o}\n  3: {w}\n  4: {t}",
+      "raw_action": "EDIT 1 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "chess",
+      "structure_after": "cress"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     gelts\nCurrent:    tress\nPositions:  01234\nMismatches: ^^^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 tress\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  0: {d, p}\n  2: {a, u}\n  3: {e, k, t*, w, y}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cress",
+      "structure_after": "tress"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     gelts\nCurrent:    trass\nPositions:  01234\nMismatches: ^^^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 tress \u2192 trass\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g*}\n  2: {u}\n  3: {m, n, p, y}\n  4: {h}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tress",
+      "structure_after": "trass"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     gelts\nCurrent:    grass\nPositions:  01234\nMismatches:  ^^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 tress \u2192 trass \u2192 grass\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {b, c, f}\n  1: {l}\n  2: {o}\n  3: {b, d, m, n, y}\n  4: {p}",
+      "raw_action": "EDIT 0 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "trass",
+      "structure_after": "grass"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     gelts\nCurrent:    glass\nPositions:  01234\nMismatches:  ^^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 grass \u2192 glass\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {c}\n  2: {o}\n  3: {d, n}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "grass",
+      "structure_after": "glass"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     gelts\nCurrent:    class\nPositions:  01234\nMismatches: ^^^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 glass \u2192 class\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  1: {r}\n  3: {d, g, m, n, p, w, y}\n  4: {h, p, t}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "glass",
+      "structure_after": "class"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     gelts\nCurrent:    clads\nPositions:  01234\nMismatches: ^^^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 class \u2192 clads\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {g*}\n  1: {h}\n  2: {o}\n  3: {g, m, n, p, w, y}\n  4: {e}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "class",
+      "structure_after": "clads"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     gelts\nCurrent:    glads\nPositions:  01234\nMismatches:  ^^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 clads \u2192 glads\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  1: {o, r}\n  2: {e}\n  3: {n}\n  4: {e, y}",
+      "raw_action": "EDIT 0 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "clads",
+      "structure_after": "glads"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     gelts\nCurrent:    goads\nPositions:  01234\nMismatches:  ^^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 glads \u2192 goads\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {l, r, t, w}\n  1: {r}\n  2: {l*, o, w}\n  3: {l, t*}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "glads",
+      "structure_after": "goads"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     gelts\nCurrent:    loads\nPositions:  01234\nMismatches: ^^^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 goads \u2192 loads\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {r, t, w}\n  1: {e*}\n  2: {r}\n  3: {f, m, n}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "goads",
+      "structure_after": "loads"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     gelts\nCurrent:    leads\nPositions:  01234\nMismatches: ^ ^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 loads \u2192 leads\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, d, h, m, r}\n  2: {n, u}\n  3: {f, k, n, p, r}\n  4: {y}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "loads",
+      "structure_after": "leads"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     gelts\nCurrent:    beads\nPositions:  01234\nMismatches: ^ ^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 leads \u2192 beads\nSteps used: 13/30  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {d, h, m, r}\n  1: {r}\n  2: {n}\n  3: {k, m, n, r, t*, u}\n  4: {y}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "leads",
+      "structure_after": "beads"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     gelts\nCurrent:    deads\nPositions:  01234\nMismatches: ^ ^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 beads \u2192 deads\nSteps used: 14/30  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {h, m, r}\n  1: {u, y}\n  2: {e}\n  3: {l, n, r}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "beads",
+      "structure_after": "deads"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     gelts\nCurrent:    heads\nPositions:  01234\nMismatches: ^ ^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 deads \u2192 heads\nSteps used: 15/30  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {m, r}\n  2: {e, r}\n  3: {l, p, r, t*}\n  4: {y}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "deads",
+      "structure_after": "heads"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     gelts\nCurrent:    meads\nPositions:  01234\nMismatches: ^ ^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 heads \u2192 meads\nSteps used: 16/30  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {r}\n  2: {e, l*, n}\n  3: {l, n, t*}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "heads",
+      "structure_after": "meads"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     gelts\nCurrent:    reads\nPositions:  01234\nMismatches: ^ ^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 meads \u2192 reads\nSteps used: 17/30  (remaining: 13)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {d, e, n}\n  3: {l, m, p, r}\n  4: {d, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "meads",
+      "structure_after": "reads"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     gelts\nCurrent:    roads\nPositions:  01234\nMismatches: ^^^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 reads \u2192 roads\nSteps used: 18/30  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {t, w}\n  2: {o}\n  3: {m, n, r}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "reads",
+      "structure_after": "roads"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     gelts\nCurrent:    toads\nPositions:  01234\nMismatches: ^^^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 roads \u2192 toads\nSteps used: 19/30  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {w}\n  4: {y}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "roads",
+      "structure_after": "toads"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     gelts\nCurrent:    woads\nPositions:  01234\nMismatches: ^^^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 toads \u2192 woads\nSteps used: 20/30  (remaining: 10)\n\nEditable positions and valid replacements:\n  2: {l*, o, r}",
+      "raw_action": "EDIT 0 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "w"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "toads",
+      "structure_after": "woads"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     gelts\nCurrent:    wolds\nPositions:  01234\nMismatches: ^^ ^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 woads \u2192 wolds\nSteps used: 21/30  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g*, h, m}\n  1: {e*, i}\n  2: {o, r}\n  3: {f}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "woads",
+      "structure_after": "wolds"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     gelts\nCurrent:    bolds\nPositions:  01234\nMismatches: ^^ ^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 wolds \u2192 bolds\nSteps used: 22/30  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {c, f, g*, h, m}\n  1: {a}\n  2: {n}\n  3: {a, e, l, o, t*, u}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "wolds",
+      "structure_after": "bolds"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     gelts\nCurrent:    balds\nPositions:  01234\nMismatches: ^^ ^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 bolds \u2192 balds\nSteps used: 23/30  (remaining: 7)\n\nEditable positions and valid replacements:\n  2: {n, r, u, w}\n  3: {a, e, k, l, m}\n  4: {y}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bolds",
+      "structure_after": "balds"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     gelts\nCurrent:    bands\nPositions:  01234\nMismatches: ^^^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 balds \u2192 bands\nSteps used: 24/30  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {h, l, r, s, w}\n  1: {e*, i, o, u}\n  2: {r, u, w}\n  3: {e, g, k, n}\n  4: {y}",
+      "raw_action": "EDIT 2 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "balds",
+      "structure_after": "bands"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     gelts\nCurrent:    hands\nPositions:  01234\nMismatches: ^^^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 bands \u2192 hands\nSteps used: 25/30  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {l, r, s, w}\n  1: {i}\n  2: {r}\n  3: {g, k, t*}\n  4: {y}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bands",
+      "structure_after": "hands"
+    },
+    {
+      "t": 26,
+      "observation": "Target:     gelts\nCurrent:    lands\nPositions:  01234\nMismatches: ^^^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 hands \u2192 lands\nSteps used: 26/30  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {r, s, w}\n  1: {e*}\n  2: {r, u}\n  3: {e}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hands",
+      "structure_after": "lands"
+    },
+    {
+      "t": 27,
+      "observation": "Target:     gelts\nCurrent:    rands\nPositions:  01234\nMismatches: ^^^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 lands \u2192 rands\nSteps used: 27/30  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {s, w}\n  1: {e*, i, y}\n  2: {i}\n  3: {i, k, t*}\n  4: {y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lands",
+      "structure_after": "rands"
+    },
+    {
+      "t": 28,
+      "observation": "Target:     gelts\nCurrent:    sands\nPositions:  01234\nMismatches: ^^^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 rands \u2192 sands\nSteps used: 28/30  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {w}\n  1: {e*}\n  2: {i, r}\n  3: {e}\n  4: {y}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rands",
+      "structure_after": "sands"
+    },
+    {
+      "t": 29,
+      "observation": "Target:     gelts\nCurrent:    wands\nPositions:  01234\nMismatches: ^^^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 sands \u2192 wands\nSteps used: 29/30  (remaining: 1)\n\nEditable positions and valid replacements:\n  1: {e*, i, y}\n  2: {r}\n  3: {e, t*}",
+      "raw_action": "EDIT 0 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "w"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sands",
+      "structure_after": "wands"
+    },
+    {
+      "t": 30,
+      "observation": "Target:     gelts\nCurrent:    wends\nPositions:  01234\nMismatches: ^ ^^ \nPath: chefs \u2192 chess \u2192 cress \u2192 ... \u2192 wands \u2192 wends\nSteps used: 30/30  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {b, f, l, m, p, r, s, t, v}\n  1: {i, y}\n  2: {e, l*}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "wands",
+      "structure_after": "wends"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 30,
+    "max_steps": 30,
+    "start_word": "chefs",
+    "target_word": "gelts",
+    "final_word": "wends",
+    "path": [
+      "chefs",
+      "chess",
+      "cress",
+      "tress",
+      "trass",
+      "grass",
+      "glass",
+      "class",
+      "clads",
+      "glads",
+      "goads",
+      "loads",
+      "leads",
+      "beads",
+      "deads",
+      "heads",
+      "meads",
+      "reads",
+      "roads",
+      "toads",
+      "woads",
+      "wolds",
+      "bolds",
+      "balds",
+      "bands",
+      "hands",
+      "lands",
+      "rands",
+      "sands",
+      "wands",
+      "wends"
+    ],
+    "path_length": 30,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 1,
+    "optimal_distance_at_end": 3,
+    "events": [
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 62789,
+    "completion_tokens": 150,
+    "total_tokens": 62939
+  },
+  "wall_time_s": 18.51957893371582
+}

@@ -1,0 +1,625 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "few_shot_strategy",
+  "memory_condition": "state_only",
+  "seed": 32,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     lost\nCurrent:    acts\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  1: {i, l, n, r}\n  2: {e}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "acta",
+      "structure_after": "acts"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     lost\nCurrent:    acts\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  1: {i, l, n, r}\n  2: {e}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "acts",
+      "structure_after": "acts"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     lost\nCurrent:    aits\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, k, l*, n, p, s, t, w, z}\n  1: {l, n, r}\n  2: {d, l, m, n, r}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "acts",
+      "structure_after": "aits"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     lost\nCurrent:    bits\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 bits\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, k, l*, n, p, s, t, w, z}\n  1: {a, e, o*, u}\n  2: {a, b, d, g, n, o}\n  3: {e, t*}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "aits",
+      "structure_after": "bits"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     lost\nCurrent:    bats\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 bits \u2192 bats\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {c, e, f, g, h, k, l*, m, o, p, q, r, t, v, w}\n  1: {e, o*, u}\n  2: {a, d, g, l, m, n, p, r, s*, y}\n  3: {e, h, t*}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bits",
+      "structure_after": "bats"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     lost\nCurrent:    bats\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 bits \u2192 bats\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {c, e, f, g, h, k, l*, m, o, p, q, r, t, v, w}\n  1: {e, o*, u}\n  2: {a, d, g, l, m, n, p, r, s*, y}\n  3: {e, h, t*}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bats",
+      "structure_after": "bats"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     lost\nCurrent:    bats\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 bits \u2192 bats\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {c, e, f, g, h, k, l*, m, o, p, q, r, t, v, w}\n  1: {e, o*, u}\n  2: {a, d, g, l, m, n, p, r, s*, y}\n  3: {e, h, t*}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bats",
+      "structure_after": "bats"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     lost\nCurrent:    cats\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 bits \u2192 bats \u2192 cats\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {e, f, g, h, k, l*, m, o, p, q, r, t, v, w}\n  1: {o*, u}\n  2: {b, d, m, n, p, r, w, y}\n  3: {e}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bats",
+      "structure_after": "cats"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     lost\nCurrent:    cots\nPositions:  0123\nMismatches: ^ ^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 cats \u2192 cots\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {b, d, h, j, l*, m, o, p, r, s, t, w}\n  1: {u}\n  2: {b, d, g, l, n, o, p, s*, w, y}\n  3: {e}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cats",
+      "structure_after": "cots"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     lost\nCurrent:    cuts\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 cots \u2192 cuts\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {b, g, h, j, m, n, o, p, r, t}\n  2: {b, d, e, p, r, s*}\n  3: {e}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cots",
+      "structure_after": "cuts"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     lost\nCurrent:    buts\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 cuts \u2192 buts\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {g, h, j, m, n, o, p, r, t}\n  1: {e, o*}\n  2: {b, d, g, m, n, r, s*, y}\n  3: {e, t*}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cuts",
+      "structure_after": "buts"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     lost\nCurrent:    bets\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 buts \u2192 bets\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {f, g, h, j, l*, n, p, r, s, t, v, w}\n  1: {o*}\n  2: {d, e, g, l, n, y}\n  3: {a, h}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "buts",
+      "structure_after": "bets"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     lost\nCurrent:    fets\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 bets \u2192 fets\nSteps used: 13/30  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {g, h, j, l*, n, p, r, s, t, v, w}\n  1: {a, i}\n  2: {d, e, h, m, n, s*, u}\n  3: {a, e}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bets",
+      "structure_after": "fets"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     lost\nCurrent:    fats\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 fets \u2192 fats\nSteps used: 14/30  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {e, g, h, k, l*, m, o, p, q, r, t, v, w}\n  1: {i}\n  2: {d, g, n, y}\n  3: {e}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fets",
+      "structure_after": "fats"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     lost\nCurrent:    eats\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 fats \u2192 eats\nSteps used: 15/30  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {g, h, k, l*, m, o, p, q, r, t, v, w}\n  1: {f}\n  2: {r}\n  3: {h}",
+      "raw_action": "EDIT 0 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fats",
+      "structure_after": "eats"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     lost\nCurrent:    gats\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 eats \u2192 gats\nSteps used: 16/30  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {h, k, l*, m, o, p, q, r, t, v, w}\n  1: {e, i, u}\n  2: {b, d, e, g, l, m, p, r, y}\n  3: {e}",
+      "raw_action": "EDIT 0 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "eats",
+      "structure_after": "gats"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     lost\nCurrent:    gets\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 gats \u2192 gets\nSteps used: 17/30  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {h, j, l*, n, p, r, s, t, v, w}\n  1: {i, u}\n  2: {d, e, l, m, n}\n  3: {a}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gats",
+      "structure_after": "gets"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     lost\nCurrent:    hets\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 gets \u2192 hets\nSteps used: 18/30  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {j, l*, n, p, r, s, t, v, w}\n  1: {a, i, o*, u}\n  2: {h, m, n, r, w}\n  3: {h}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gets",
+      "structure_after": "hets"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     lost\nCurrent:    hats\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 hets \u2192 hats\nSteps used: 19/30  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {k, l*, m, o, p, q, r, t, v, w}\n  1: {i, o*, u}\n  2: {e, g, h, m, p, w, y}\n  3: {e, h}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hets",
+      "structure_after": "hats"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     lost\nCurrent:    kats\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 hats \u2192 kats\nSteps used: 20/30  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {l*, m, o, p, q, r, t, v, w}\n  1: {i}\n  2: {a, b, e, f, y}\n  3: {a}",
+      "raw_action": "EDIT 0 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "k"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hats",
+      "structure_after": "kats"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     lost\nCurrent:    kits\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 kats \u2192 kits\nSteps used: 21/30  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, l*, n, p, s, t, w, z}\n  2: {d, f, n, p, r, s*}\n  3: {e, h}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "kats",
+      "structure_after": "kits"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     lost\nCurrent:    dits\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 kits \u2192 dits\nSteps used: 22/30  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {f, g, h, l*, n, p, s, t, w, z}\n  1: {o*}\n  2: {b, e, g, m, n, p, s*}\n  3: {a, e, z}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "kits",
+      "structure_after": "dits"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     lost\nCurrent:    dots\nPositions:  0123\nMismatches: ^ ^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 dits \u2192 dots\nSteps used: 23/30  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {b, h, j, l*, m, o, p, r, s, t, w}\n  2: {c, e, g, l, m, n, r, s*, w}\n  3: {e, h, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dits",
+      "structure_after": "dots"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     lost\nCurrent:    bots\nPositions:  0123\nMismatches: ^ ^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 dots \u2192 bots\nSteps used: 24/30  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {h, j, l*, m, o, p, r, s, t, w}\n  2: {a, b, d, g, o, p, s*, w, y}\n  3: {a, h, t*}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dots",
+      "structure_after": "bots"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     lost\nCurrent:    hots\nPositions:  0123\nMismatches: ^ ^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 bots \u2192 hots\nSteps used: 25/30  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {j, l*, m, o, p, r, s, t, w}\n  1: {i, u}\n  2: {b, d, e, g, l, n, p, w, y}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bots",
+      "structure_after": "hots"
+    },
+    {
+      "t": 26,
+      "observation": "Target:     lost\nCurrent:    hits\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 hots \u2192 hits\nSteps used: 26/30  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {f, g, l*, n, p, s, t, w, z}\n  1: {u}\n  2: {e, n, p, s*}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hots",
+      "structure_after": "hits"
+    },
+    {
+      "t": 27,
+      "observation": "Target:     lost\nCurrent:    fits\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 hits \u2192 fits\nSteps used: 27/30  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {g, l*, n, p, s, t, w, z}\n  2: {b, d, g, l, n, r}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hits",
+      "structure_after": "fits"
+    },
+    {
+      "t": 28,
+      "observation": "Target:     lost\nCurrent:    gits\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 fits \u2192 gits\nSteps used: 28/30  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {l*, n, p, s, t, w, z}\n  1: {u}\n  2: {b, d, e, g, n, p}",
+      "raw_action": "EDIT 0 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fits",
+      "structure_after": "gits"
+    },
+    {
+      "t": 29,
+      "observation": "Target:     lost\nCurrent:    lits\nPositions:  0123\nMismatches:  ^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 gits \u2192 lits\nSteps used: 29/30  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {n, p, s, t, w, z}\n  1: {a, e, o*}\n  2: {b, d, e, n, p}\n  3: {e, u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gits",
+      "structure_after": "lits"
+    },
+    {
+      "t": 30,
+      "observation": "Target:     lost\nCurrent:    nits\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 acts \u2192 aits \u2192 ... \u2192 lits \u2192 nits\nSteps used: 30/30  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {p, s, t, w, z}\n  1: {e, u}\n  2: {b, l, m, p}\n  3: {e}",
+      "raw_action": "EDIT 0 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lits",
+      "structure_after": "nits"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 30,
+    "max_steps": 30,
+    "start_word": "acta",
+    "target_word": "lost",
+    "final_word": "nits",
+    "path": [
+      "acta",
+      "acts",
+      "aits",
+      "bits",
+      "bats",
+      "cats",
+      "cots",
+      "cuts",
+      "buts",
+      "bets",
+      "fets",
+      "fats",
+      "eats",
+      "gats",
+      "gets",
+      "hets",
+      "hats",
+      "kats",
+      "kits",
+      "dits",
+      "dots",
+      "bots",
+      "hots",
+      "hits",
+      "fits",
+      "gits",
+      "lits",
+      "nits"
+    ],
+    "path_length": 27,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "INVALID_WORD": 2,
+      "ILLEGAL_EDIT": 1,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 4,
+    "optimal_distance_at_end": 4,
+    "events": [
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 78395,
+    "completion_tokens": 150,
+    "total_tokens": 78545
+  },
+  "wall_time_s": 25.11050796508789
+}

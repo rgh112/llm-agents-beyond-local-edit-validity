@@ -1,0 +1,431 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "window_3",
+  "seed": 4,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     hiss\nCurrent:    gink\nPositions:  0123\nMismatches: ^ ^^\nPath: gunk \u2192 gink\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {d, f, j, k, l, m, o, p, r, s, w}\n  3: {s*}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gunk",
+      "structure_after": "gink"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     hiss\nCurrent:    dink\nPositions:  0123\nMismatches: ^ ^^\nPath: gunk \u2192 gink \u2192 dink\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {f, j, k, l, m, o, p, r, s, w}\n  1: {a, u}\n  2: {c, r, s*}\n  3: {e, g, s*, t}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gink",
+      "structure_after": "dink"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     hiss\nCurrent:    dank\nPositions:  0123\nMismatches: ^^^^\nPath: gunk \u2192 gink \u2192 dink \u2192 dank\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {b, h*, l, r, s, t, y}\n  1: {u}\n  2: {r, w}\n  3: {g}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dink",
+      "structure_after": "dank"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     hiss\nCurrent:    hank\nPositions:  0123\nMismatches:  ^^^\nPath: gunk \u2192 gink \u2192 dink \u2192 dank \u2192 hank\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, l, r, s, t, y}\n  1: {o, u}\n  2: {c, i, r, w}\n  3: {d, g, t}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dank",
+      "structure_after": "hank"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     hiss\nCurrent:    honk\nPositions:  0123\nMismatches:  ^^^\nPath: gunk \u2192 gink \u2192 dink \u2192 dank \u2192 hank \u2192 honk\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {b, c, k, m, w, z}\n  1: {u}\n  2: {c, l, o, w}\n  3: {e, g, s*}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hank",
+      "structure_after": "honk"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     hiss\nCurrent:    honk\nPositions:  0123\nMismatches:  ^^^\nPath: gunk \u2192 gink \u2192 dink \u2192 dank \u2192 hank \u2192 honk\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {b, c, k, m, w, z}\n  1: {u}\n  2: {c, l, o, w}\n  3: {e, g, s*}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "honk",
+      "structure_after": "honk"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     hiss\nCurrent:    bonk\nPositions:  0123\nMismatches: ^^^^\nPath: gunk \u2192 gink \u2192 dink \u2192 ... \u2192 honk \u2192 bonk\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {c, k, m, w, z}\n  1: {a, u}\n  2: {c, o, s*}\n  3: {d, e, g, y}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "honk",
+      "structure_after": "bonk"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     hiss\nCurrent:    conk\nPositions:  0123\nMismatches: ^^^^\nPath: gunk \u2192 gink \u2192 dink \u2192 ... \u2192 bonk \u2192 conk\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {k, m, w, z}\n  2: {c, o, r}\n  3: {e, i, n, s*, y}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bonk",
+      "structure_after": "conk"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     hiss\nCurrent:    konk\nPositions:  0123\nMismatches: ^^^^\nPath: gunk \u2192 gink \u2192 dink \u2192 ... \u2192 conk \u2192 konk\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {m, w, z}\n  1: {i*}\n  2: {o}",
+      "raw_action": "EDIT 0 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "k"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "conk",
+      "structure_after": "konk"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     hiss\nCurrent:    kink\nPositions:  0123\nMismatches: ^ ^^\nPath: gunk \u2192 gink \u2192 dink \u2192 ... \u2192 konk \u2192 kink\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {f, j, l, m, o, p, r, s, w}\n  2: {c, r}\n  3: {a, d, e, g, o, s*}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "konk",
+      "structure_after": "kink"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     hiss\nCurrent:    fink\nPositions:  0123\nMismatches: ^ ^^\nPath: gunk \u2192 gink \u2192 dink \u2192 ... \u2192 kink \u2192 fink\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {j, l, m, o, p, r, s, w}\n  1: {u}\n  3: {d, e, o, s*}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "kink",
+      "structure_after": "fink"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     hiss\nCurrent:    jink\nPositions:  0123\nMismatches: ^ ^^\nPath: gunk \u2192 gink \u2192 dink \u2192 ... \u2192 fink \u2192 jink\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {l, m, o, p, r, s, w}\n  1: {u}\n  3: {n, s*, x}",
+      "raw_action": "EDIT 0 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "j"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fink",
+      "structure_after": "jink"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     hiss\nCurrent:    link\nPositions:  0123\nMismatches: ^ ^^\nPath: gunk \u2192 gink \u2192 dink \u2192 ... \u2192 jink \u2192 link\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {m, o, p, r, s, w}\n  1: {a, u}\n  2: {c}\n  3: {e, g, n, o, s*, t, y}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "jink",
+      "structure_after": "link"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     hiss\nCurrent:    lank\nPositions:  0123\nMismatches: ^^^^\nPath: gunk \u2192 gink \u2192 dink \u2192 ... \u2192 link \u2192 lank\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {b, r, s, t, y}\n  1: {u}\n  2: {c, r}\n  3: {d, e, g}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "link",
+      "structure_after": "lank"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     hiss\nCurrent:    bank\nPositions:  0123\nMismatches: ^^^^\nPath: gunk \u2192 gink \u2192 dink \u2192 ... \u2192 lank \u2192 bank\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {r, s, t, y}\n  1: {u}\n  2: {c, l, r, s*}\n  3: {d, e, g, i, s*}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lank",
+      "structure_after": "bank"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     hiss\nCurrent:    rank\nPositions:  0123\nMismatches: ^^^^\nPath: gunk \u2192 gink \u2192 dink \u2192 ... \u2192 bank \u2192 rank\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {s, t, y}\n  1: {i*}\n  2: {c}\n  3: {d, g, i, t}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bank",
+      "structure_after": "rank"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     hiss\nCurrent:    sank\nPositions:  0123\nMismatches: ^^^^\nPath: gunk \u2192 gink \u2192 dink \u2192 ... \u2192 rank \u2192 sank\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {t, y}\n  1: {i*, u}\n  2: {c, r}\n  3: {d, e, g, s*}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rank",
+      "structure_after": "sank"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     hiss\nCurrent:    tank\nPositions:  0123\nMismatches: ^^^^\nPath: gunk \u2192 gink \u2192 dink \u2192 ... \u2192 sank \u2192 tank\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {y}\n  2: {c, l, s*}\n  3: {g, s*}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sank",
+      "structure_after": "tank"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     hiss\nCurrent:    yank\nPositions:  0123\nMismatches: ^^^^\nPath: gunk \u2192 gink \u2192 dink \u2192 ... \u2192 tank \u2192 yank\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 0 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "y"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tank",
+      "structure_after": "yank"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     hiss\nCurrent:    yank\nPositions:  0123\nMismatches: ^^^^\nPath: gunk \u2192 gink \u2192 dink \u2192 ... \u2192 tank \u2192 yank\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  2: {c}\n  3: {g}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "yank",
+      "structure_after": "yank"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "gunk",
+    "target_word": "hiss",
+    "final_word": "yank",
+    "path": [
+      "gunk",
+      "gink",
+      "dink",
+      "dank",
+      "hank",
+      "honk",
+      "bonk",
+      "conk",
+      "konk",
+      "kink",
+      "fink",
+      "jink",
+      "link",
+      "lank",
+      "bank",
+      "rank",
+      "sank",
+      "tank",
+      "yank"
+    ],
+    "path_length": 18,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "ILLEGAL_EDIT": 1,
+      "INVALID_WORD": 1,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 3,
+    "optimal_distance_at_end": 5,
+    "events": [
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 79705,
+    "completion_tokens": 100,
+    "total_tokens": 79805
+  },
+  "wall_time_s": 13.761260032653809
+}

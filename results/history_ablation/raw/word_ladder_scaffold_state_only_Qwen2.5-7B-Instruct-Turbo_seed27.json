@@ -1,0 +1,552 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 27,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     eath\nCurrent:    milk\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {s}\n  2: {c, n, r}\n  3: {d, e, l, o, s, t}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bilk",
+      "structure_after": "milk"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     eath\nCurrent:    mirk\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mirk\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {b, d, k}\n  1: {a*, e, u}\n  2: {c, n}\n  3: {e, i, s, y}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "milk",
+      "structure_after": "mirk"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     eath\nCurrent:    mark\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mirk \u2192 mark\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, l, n, p, s, w}\n  1: {e, u}\n  2: {c, s}\n  3: {c, e, l, s, t}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mirk",
+      "structure_after": "mark"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     eath\nCurrent:    mare\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mirk \u2192 mark \u2192 mare\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, h, p, r, t, w, y}\n  1: {e, i, o, u}\n  2: {b, c, d, g, k, l, n, t*, z}\n  3: {c, l, s, t}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mark",
+      "structure_after": "mare"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     eath\nCurrent:    mare\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mirk \u2192 mark \u2192 mare\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, h, p, r, t, w, y}\n  1: {e, i, o, u}\n  2: {b, c, d, g, k, l, n, t*, z}\n  3: {c, l, s, t}",
+      "raw_action": "EDIT 0 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mare",
+      "structure_after": "mare"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     eath\nCurrent:    mare\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mirk \u2192 mark \u2192 mare\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, h, p, r, t, w, y}\n  1: {e, i, o, u}\n  2: {b, c, d, g, k, l, n, t*, z}\n  3: {c, l, s, t}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mare",
+      "structure_after": "mare"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     eath\nCurrent:    mate\nPositions:  0123\nMismatches: ^  ^\nPath: bilk \u2192 milk \u2192 mirk \u2192 mark \u2192 mare \u2192 mate\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, h, l, p, r, s, t}\n  1: {e, i, o, u}\n  2: {b, c, d, g, k, l, n, z}\n  3: {h*, s, t}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mare",
+      "structure_after": "mate"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     eath\nCurrent:    mate\nPositions:  0123\nMismatches: ^  ^\nPath: bilk \u2192 milk \u2192 mirk \u2192 mark \u2192 mare \u2192 mate\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, h, l, p, r, s, t}\n  1: {e, i, o, u}\n  2: {b, c, d, g, k, l, n, z}\n  3: {h*, s, t}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mate",
+      "structure_after": "mate"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     eath\nCurrent:    mete\nPositions:  0123\nMismatches: ^^ ^\nPath: bilk \u2192 milk \u2192 mirk \u2192 ... \u2192 mate \u2192 mete\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {c, f, j, r}\n  1: {i, o, u}\n  2: {r, z}\n  3: {a, h*}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mate",
+      "structure_after": "mete"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     eath\nCurrent:    mete\nPositions:  0123\nMismatches: ^^ ^\nPath: bilk \u2192 milk \u2192 mirk \u2192 ... \u2192 mate \u2192 mete\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {c, f, j, r}\n  1: {i, o, u}\n  2: {r, z}\n  3: {a, h*}",
+      "raw_action": "EDIT 0 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mete",
+      "structure_after": "mete"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     eath\nCurrent:    mete\nPositions:  0123\nMismatches: ^^ ^\nPath: bilk \u2192 milk \u2192 mirk \u2192 ... \u2192 mate \u2192 mete\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {c, f, j, r}\n  1: {i, o, u}\n  2: {r, z}\n  3: {a, h*}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mete",
+      "structure_after": "mete"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     eath\nCurrent:    mete\nPositions:  0123\nMismatches: ^^ ^\nPath: bilk \u2192 milk \u2192 mirk \u2192 ... \u2192 mate \u2192 mete\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {c, f, j, r}\n  1: {i, o, u}\n  2: {r, z}\n  3: {a, h*}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mete",
+      "structure_after": "mete"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     eath\nCurrent:    meth\nPositions:  0123\nMismatches: ^^  \nPath: bilk \u2192 milk \u2192 mirk \u2192 ... \u2192 mete \u2192 meth\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {b, h, t}\n  1: {a*, o, y}\n  2: {s}\n  3: {a}",
+      "raw_action": "EDIT 3 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mete",
+      "structure_after": "meth"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     eath\nCurrent:    meth\nPositions:  0123\nMismatches: ^^  \nPath: bilk \u2192 milk \u2192 mirk \u2192 ... \u2192 mete \u2192 meth\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {b, h, t}\n  1: {a*, o, y}\n  2: {s}\n  3: {a}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "meth",
+      "structure_after": "meth"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     eath\nCurrent:    meth\nPositions:  0123\nMismatches: ^^  \nPath: bilk \u2192 milk \u2192 mirk \u2192 ... \u2192 mete \u2192 meth\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {b, h, t}\n  1: {a*, o, y}\n  2: {s}\n  3: {a}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "meth",
+      "structure_after": "meth"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     eath\nCurrent:    meth\nPositions:  0123\nMismatches: ^^  \nPath: bilk \u2192 milk \u2192 mirk \u2192 ... \u2192 mete \u2192 meth\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {b, h, t}\n  1: {a*, o, y}\n  2: {s}\n  3: {a}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "meth",
+      "structure_after": "meth"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     eath\nCurrent:    meth\nPositions:  0123\nMismatches: ^^  \nPath: bilk \u2192 milk \u2192 mirk \u2192 ... \u2192 mete \u2192 meth\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {b, h, t}\n  1: {a*, o, y}\n  2: {s}\n  3: {a}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "meth",
+      "structure_after": "meth"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     eath\nCurrent:    meth\nPositions:  0123\nMismatches: ^^  \nPath: bilk \u2192 milk \u2192 mirk \u2192 ... \u2192 mete \u2192 meth\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {b, h, t}\n  1: {a*, o, y}\n  2: {s}\n  3: {a}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "meth",
+      "structure_after": "meth"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     eath\nCurrent:    meth\nPositions:  0123\nMismatches: ^^  \nPath: bilk \u2192 milk \u2192 mirk \u2192 ... \u2192 mete \u2192 meth\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {b, h, t}\n  1: {a*, o, y}\n  2: {s}\n  3: {a}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "meth",
+      "structure_after": "meth"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     eath\nCurrent:    meth\nPositions:  0123\nMismatches: ^^  \nPath: bilk \u2192 milk \u2192 mirk \u2192 ... \u2192 mete \u2192 meth\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {b, h, t}\n  1: {a*, o, y}\n  2: {s}\n  3: {a}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "meth",
+      "structure_after": "meth"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     eath\nCurrent:    meth\nPositions:  0123\nMismatches: ^^  \nPath: bilk \u2192 milk \u2192 mirk \u2192 ... \u2192 mete \u2192 meth\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {b, h, t}\n  1: {a*, o, y}\n  2: {s}\n  3: {a}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "meth",
+      "structure_after": "meth"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     eath\nCurrent:    meth\nPositions:  0123\nMismatches: ^^  \nPath: bilk \u2192 milk \u2192 mirk \u2192 ... \u2192 mete \u2192 meth\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {b, h, t}\n  1: {a*, o, y}\n  2: {s}\n  3: {a}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "meth",
+      "structure_after": "meth"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     eath\nCurrent:    meth\nPositions:  0123\nMismatches: ^^  \nPath: bilk \u2192 milk \u2192 mirk \u2192 ... \u2192 mete \u2192 meth\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {b, h, t}\n  1: {a*, o, y}\n  2: {s}\n  3: {a}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "meth",
+      "structure_after": "meth"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     eath\nCurrent:    meth\nPositions:  0123\nMismatches: ^^  \nPath: bilk \u2192 milk \u2192 mirk \u2192 ... \u2192 mete \u2192 meth\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {b, h, t}\n  1: {a*, o, y}\n  2: {s}\n  3: {a}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "meth",
+      "structure_after": "meth"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     eath\nCurrent:    meth\nPositions:  0123\nMismatches: ^^  \nPath: bilk \u2192 milk \u2192 mirk \u2192 ... \u2192 mete \u2192 meth\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {b, h, t}\n  1: {a*, o, y}\n  2: {s}\n  3: {a}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "meth",
+      "structure_after": "meth"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "OSCILLATION",
+  "failure_events": [
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "OSCILLATION",
+    "ILLEGAL_EDIT",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "bilk",
+    "target_word": "eath",
+    "final_word": "meth",
+    "path": [
+      "bilk",
+      "milk",
+      "mirk",
+      "mark",
+      "mare",
+      "mate",
+      "mete",
+      "meth"
+    ],
+    "path_length": 7,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 3,
+      "ILLEGAL_EDIT": 2,
+      "OSCILLATION": 1,
+      "PREMATURE_FINALIZE": 12,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 19,
+    "optimal_distance_at_end": 2,
+    "events": [
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "OSCILLATION",
+      "ILLEGAL_EDIT",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 84916,
+    "completion_tokens": 101,
+    "total_tokens": 85017
+  },
+  "wall_time_s": 15.329341888427734
+}

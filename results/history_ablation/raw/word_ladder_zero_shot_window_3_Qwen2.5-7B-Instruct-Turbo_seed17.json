@@ -1,0 +1,572 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "window_3",
+  "seed": 17,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     leak\nCurrent:    lall\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {c, f, g, h, m, p, s, t, w}\n  1: {o, u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ball",
+      "structure_after": "lall"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     leak\nCurrent:    lall\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {c, f, g, h, m, p, s, t, w}\n  1: {o, u}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lall",
+      "structure_after": "lall"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lall",
+      "structure_after": "loll"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     leak\nCurrent:    boll\nPositions:  0123\nMismatches: ^^^^\nPath: ball \u2192 lall \u2192 loll \u2192 boll\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {d, m, p, r, t}\n  1: {e*, i, u}\n  2: {i, w}\n  3: {a, d, e, o, t}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "loll",
+      "structure_after": "boll"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     leak\nCurrent:    bell\nPositions:  0123\nMismatches: ^ ^^\nPath: ball \u2192 lall \u2192 loll \u2192 boll \u2192 bell\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {c, d, f, h, j, m, s, t, w, y}\n  1: {i, u}\n  3: {s, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "boll",
+      "structure_after": "bell"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     leak\nCurrent:    bell\nPositions:  0123\nMismatches: ^ ^^\nPath: ball \u2192 lall \u2192 loll \u2192 boll \u2192 bell\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {c, d, f, h, j, m, s, t, w, y}\n  1: {i, u}\n  3: {s, t}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bell",
+      "structure_after": "bell"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     leak\nCurrent:    cell\nPositions:  0123\nMismatches: ^ ^^\nPath: ball \u2192 lall \u2192 loll \u2192 boll \u2192 bell \u2192 cell\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {d, f, h, j, m, s, t, w, y}\n  1: {a, u}\n  2: {i}\n  3: {s, t}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bell",
+      "structure_after": "cell"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     leak\nCurrent:    cell\nPositions:  0123\nMismatches: ^ ^^\nPath: ball \u2192 lall \u2192 loll \u2192 boll \u2192 bell \u2192 cell\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {d, f, h, j, m, s, t, w, y}\n  1: {a, u}\n  2: {i}\n  3: {s, t}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cell",
+      "structure_after": "cell"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     leak\nCurrent:    cell\nPositions:  0123\nMismatches: ^ ^^\nPath: ball \u2192 lall \u2192 loll \u2192 boll \u2192 bell \u2192 cell\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {d, f, h, j, m, s, t, w, y}\n  1: {a, u}\n  2: {i}\n  3: {s, t}",
+      "raw_action": "EDIT 1 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "k"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cell",
+      "structure_after": "cell"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     leak\nCurrent:    call\nPositions:  0123\nMismatches: ^^^^\nPath: ball \u2192 lall \u2192 loll \u2192 ... \u2192 cell \u2192 call\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {f, g, h, m, p, s, t, w}\n  1: {u}\n  2: {r, u}\n  3: {f, k*, m, o, x}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cell",
+      "structure_after": "call"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     leak\nCurrent:    call\nPositions:  0123\nMismatches: ^^^^\nPath: ball \u2192 lall \u2192 loll \u2192 ... \u2192 cell \u2192 call\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {f, g, h, m, p, s, t, w}\n  1: {u}\n  2: {r, u}\n  3: {f, k*, m, o, x}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "call",
+      "structure_after": "call"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     leak\nCurrent:    call\nPositions:  0123\nMismatches: ^^^^\nPath: ball \u2192 lall \u2192 loll \u2192 ... \u2192 cell \u2192 call\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {f, g, h, m, p, s, t, w}\n  1: {u}\n  2: {r, u}\n  3: {f, k*, m, o, x}",
+      "raw_action": "EDIT 0 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "k"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "call",
+      "structure_after": "call"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     leak\nCurrent:    fall\nPositions:  0123\nMismatches: ^^^^\nPath: ball \u2192 lall \u2192 loll \u2192 ... \u2192 call \u2192 fall\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {g, h, m, p, s, t, w}\n  1: {e*, i, u}\n  2: {i, r}\n  3: {x}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "call",
+      "structure_after": "fall"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     leak\nCurrent:    fall\nPositions:  0123\nMismatches: ^^^^\nPath: ball \u2192 lall \u2192 loll \u2192 ... \u2192 call \u2192 fall\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {g, h, m, p, s, t, w}\n  1: {e*, i, u}\n  2: {i, r}\n  3: {x}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "fall",
+      "structure_after": "fall"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     leak\nCurrent:    fell\nPositions:  0123\nMismatches: ^ ^^\nPath: ball \u2192 lall \u2192 loll \u2192 ... \u2192 fall \u2192 fell\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {d, h, j, m, s, t, w, y}\n  1: {i, u}\n  2: {a*, e}\n  3: {t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fall",
+      "structure_after": "fell"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     leak\nCurrent:    fell\nPositions:  0123\nMismatches: ^ ^^\nPath: ball \u2192 lall \u2192 loll \u2192 ... \u2192 fall \u2192 fell\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {d, h, j, m, s, t, w, y}\n  1: {i, u}\n  2: {a*, e}\n  3: {t}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "fell",
+      "structure_after": "fell"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     leak\nCurrent:    fell\nPositions:  0123\nMismatches: ^ ^^\nPath: ball \u2192 lall \u2192 loll \u2192 ... \u2192 fall \u2192 fell\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {d, h, j, m, s, t, w, y}\n  1: {i, u}\n  2: {a*, e}\n  3: {t}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "fell",
+      "structure_after": "fell"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     leak\nCurrent:    fell\nPositions:  0123\nMismatches: ^ ^^\nPath: ball \u2192 lall \u2192 loll \u2192 ... \u2192 fall \u2192 fell\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {d, h, j, m, s, t, w, y}\n  1: {i, u}\n  2: {a*, e}\n  3: {t}",
+      "raw_action": "EDIT 0 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "k"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "fell",
+      "structure_after": "fell"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     leak\nCurrent:    fell\nPositions:  0123\nMismatches: ^ ^^\nPath: ball \u2192 lall \u2192 loll \u2192 ... \u2192 fall \u2192 fell\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {d, h, j, m, s, t, w, y}\n  1: {i, u}\n  2: {a*, e}\n  3: {t}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "fell",
+      "structure_after": "fell"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     leak\nCurrent:    fell\nPositions:  0123\nMismatches: ^ ^^\nPath: ball \u2192 lall \u2192 loll \u2192 ... \u2192 fall \u2192 fell\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {d, h, j, m, s, t, w, y}\n  1: {i, u}\n  2: {a*, e}\n  3: {t}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "fell",
+      "structure_after": "fell"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     leak\nCurrent:    fell\nPositions:  0123\nMismatches: ^ ^^\nPath: ball \u2192 lall \u2192 loll \u2192 ... \u2192 fall \u2192 fell\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {d, h, j, m, s, t, w, y}\n  1: {i, u}\n  2: {a*, e}\n  3: {t}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "fell",
+      "structure_after": "fell"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     leak\nCurrent:    fell\nPositions:  0123\nMismatches: ^ ^^\nPath: ball \u2192 lall \u2192 loll \u2192 ... \u2192 fall \u2192 fell\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {d, h, j, m, s, t, w, y}\n  1: {i, u}\n  2: {a*, e}\n  3: {t}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "fell",
+      "structure_after": "fell"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "OSCILLATION",
+  "failure_events": [
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "OSCILLATION",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "ball",
+    "target_word": "leak",
+    "final_word": "fell",
+    "path": [
+      "ball",
+      "lall",
+      "loll",
+      "boll",
+      "bell",
+      "cell",
+      "call",
+      "fall",
+      "fell"
+    ],
+    "path_length": 8,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 15,
+      "ILLEGAL_EDIT": 1,
+      "OSCILLATION": 1,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 18,
+    "optimal_distance_at_end": 3,
+    "events": [
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "OSCILLATION",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 86923,
+    "completion_tokens": 125,
+    "total_tokens": 87048
+  },
+  "wall_time_s": 15.123038053512573
+}

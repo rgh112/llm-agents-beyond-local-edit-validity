@@ -1,0 +1,628 @@
+{
+  "config": {
+    "model": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "memory": "state_only",
+    "prompt_conditions": [
+      "zero_shot",
+      "few_shot_format",
+      "few_shot_strategy",
+      "scaffold",
+      "self_check_generic",
+      "self_check"
+    ],
+    "environments": [
+      "word_ladder",
+      "alloy",
+      "gb1_sequence"
+    ],
+    "gb1_fitness_target": 5.0
+  },
+  "results": [
+    {
+      "env": "word_ladder",
+      "prompt": "zero_shot",
+      "memory": "state_only",
+      "SR": 0.18,
+      "n_success": 9,
+      "n_total": 50,
+      "avg_steps": 20.0,
+      "terminal_failures": {
+        "BUDGET_UNAWARE_ACTION": 34,
+        "OSCILLATION": 5,
+        "LOCAL_OPTIMUM_TRAP": 2
+      },
+      "all_events": {
+        "ILLEGAL_EDIT": 109,
+        "BUDGET_UNAWARE_ACTION": 39,
+        "INVALID_WORD": 528,
+        "OSCILLATION": 15,
+        "LOCAL_OPTIMUM_TRAP": 2
+      },
+      "surface_failure_count": 637,
+      "structural_failure_count": 56,
+      "avg_finalize_step": null,
+      "avg_first_failure": 6.4,
+      "prompt_metadata": {
+        "family": "zero_shot",
+        "strategy_bearing": false,
+        "task_specific": false,
+        "uses_examples": false
+      }
+    },
+    {
+      "env": "word_ladder",
+      "prompt": "few_shot_format",
+      "memory": "state_only",
+      "SR": 0.08,
+      "n_success": 4,
+      "n_total": 50,
+      "avg_steps": 22.0,
+      "terminal_failures": {
+        "BUDGET_UNAWARE_ACTION": 41,
+        "OSCILLATION": 4,
+        "LOCAL_OPTIMUM_TRAP": 1
+      },
+      "all_events": {
+        "INVALID_WORD": 557,
+        "BUDGET_UNAWARE_ACTION": 45,
+        "ILLEGAL_EDIT": 184,
+        "OSCILLATION": 11,
+        "LOCAL_OPTIMUM_TRAP": 1
+      },
+      "surface_failure_count": 741,
+      "structural_failure_count": 57,
+      "avg_finalize_step": null,
+      "avg_first_failure": 4.9,
+      "prompt_metadata": {
+        "family": "few_shot",
+        "strategy_bearing": false,
+        "task_specific": false,
+        "uses_examples": true
+      }
+    },
+    {
+      "env": "word_ladder",
+      "prompt": "few_shot_strategy",
+      "memory": "state_only",
+      "SR": 0.18,
+      "n_success": 9,
+      "n_total": 50,
+      "avg_steps": 20.2,
+      "terminal_failures": {
+        "LOCAL_OPTIMUM_TRAP": 2,
+        "BUDGET_UNAWARE_ACTION": 35,
+        "OSCILLATION": 4
+      },
+      "all_events": {
+        "INVALID_WORD": 467,
+        "LOCAL_OPTIMUM_TRAP": 2,
+        "BUDGET_UNAWARE_ACTION": 39,
+        "ILLEGAL_EDIT": 147,
+        "OSCILLATION": 14
+      },
+      "surface_failure_count": 614,
+      "structural_failure_count": 55,
+      "avg_finalize_step": null,
+      "avg_first_failure": 5.6,
+      "prompt_metadata": {
+        "family": "few_shot",
+        "strategy_bearing": true,
+        "task_specific": true,
+        "uses_examples": true
+      }
+    },
+    {
+      "env": "word_ladder",
+      "prompt": "scaffold",
+      "memory": "state_only",
+      "SR": 0.3,
+      "n_success": 15,
+      "n_total": 50,
+      "avg_steps": 19.1,
+      "terminal_failures": {
+        "BUDGET_UNAWARE_ACTION": 27,
+        "OSCILLATION": 4,
+        "PREMATURE_FINALIZE": 4
+      },
+      "all_events": {
+        "INVALID_WORD": 531,
+        "ILLEGAL_EDIT": 150,
+        "BUDGET_UNAWARE_ACTION": 35,
+        "OSCILLATION": 9,
+        "PREMATURE_FINALIZE": 87
+      },
+      "surface_failure_count": 681,
+      "structural_failure_count": 131,
+      "avg_finalize_step": 20.8,
+      "avg_first_failure": 2.8,
+      "prompt_metadata": {
+        "family": "scaffold",
+        "strategy_bearing": false,
+        "task_specific": true,
+        "uses_examples": false
+      }
+    },
+    {
+      "env": "word_ladder",
+      "prompt": "self_check_generic",
+      "memory": "state_only",
+      "SR": 0.06,
+      "n_success": 3,
+      "n_total": 50,
+      "avg_steps": 22.4,
+      "terminal_failures": {
+        "PREMATURE_FINALIZE": 8,
+        "BUDGET_UNAWARE_ACTION": 33,
+        "OSCILLATION": 6
+      },
+      "all_events": {
+        "INVALID_WORD": 681,
+        "PREMATURE_FINALIZE": 123,
+        "BUDGET_UNAWARE_ACTION": 47,
+        "ILLEGAL_EDIT": 52,
+        "OSCILLATION": 13
+      },
+      "surface_failure_count": 733,
+      "structural_failure_count": 183,
+      "avg_finalize_step": 21.2,
+      "avg_first_failure": 5.0,
+      "prompt_metadata": {
+        "family": "self_check",
+        "strategy_bearing": false,
+        "task_specific": false,
+        "uses_examples": false
+      }
+    },
+    {
+      "env": "word_ladder",
+      "prompt": "self_check",
+      "memory": "state_only",
+      "SR": 0.18,
+      "n_success": 9,
+      "n_total": 50,
+      "avg_steps": 20.6,
+      "terminal_failures": {
+        "PREMATURE_FINALIZE": 4,
+        "OSCILLATION": 7,
+        "BUDGET_UNAWARE_ACTION": 28,
+        "LOCAL_OPTIMUM_TRAP": 2
+      },
+      "all_events": {
+        "INVALID_WORD": 465,
+        "PREMATURE_FINALIZE": 60,
+        "BUDGET_UNAWARE_ACTION": 39,
+        "OSCILLATION": 44,
+        "ILLEGAL_EDIT": 78,
+        "LOCAL_OPTIMUM_TRAP": 2
+      },
+      "surface_failure_count": 543,
+      "structural_failure_count": 145,
+      "avg_finalize_step": 21.6,
+      "avg_first_failure": 6.9,
+      "prompt_metadata": {
+        "family": "self_check",
+        "strategy_bearing": true,
+        "task_specific": true,
+        "uses_examples": false
+      }
+    },
+    {
+      "env": "alloy",
+      "prompt": "zero_shot",
+      "memory": "state_only",
+      "SR": 0.12,
+      "n_success": 6,
+      "n_total": 50,
+      "avg_steps": 7.6,
+      "terminal_failures": {
+        "HARD_CONSTRAINT_VIOLATION": 7,
+        "OBJECTIVE_TRADEOFF_FAILURE": 33,
+        "LOCAL_OPTIMUM_TRAP": 4
+      },
+      "all_events": {
+        "HARD_CONSTRAINT_VIOLATION": 90,
+        "OBJECTIVE_TRADEOFF_FAILURE": 111,
+        "LOCAL_OPTIMUM_TRAP": 51,
+        "PREMATURE_FINALIZE": 44,
+        "BUDGET_UNAWARE_ACTION": 44,
+        "INVALID_VALUE": 33,
+        "OSCILLATION": 3,
+        "RECOVERY_COST_EXPLOSION": 1
+      },
+      "surface_failure_count": 33,
+      "structural_failure_count": 344,
+      "avg_finalize_step": 7.5,
+      "avg_first_failure": 1.2,
+      "prompt_metadata": {
+        "family": "zero_shot",
+        "strategy_bearing": false,
+        "task_specific": false,
+        "uses_examples": false
+      }
+    },
+    {
+      "env": "alloy",
+      "prompt": "few_shot_format",
+      "memory": "state_only",
+      "SR": 0.1,
+      "n_success": 5,
+      "n_total": 50,
+      "avg_steps": 7.7,
+      "terminal_failures": {
+        "HARD_CONSTRAINT_VIOLATION": 6,
+        "OBJECTIVE_TRADEOFF_FAILURE": 34,
+        "LOCAL_OPTIMUM_TRAP": 5
+      },
+      "all_events": {
+        "HARD_CONSTRAINT_VIOLATION": 52,
+        "OBJECTIVE_TRADEOFF_FAILURE": 156,
+        "LOCAL_OPTIMUM_TRAP": 78,
+        "PREMATURE_FINALIZE": 49,
+        "BUDGET_UNAWARE_ACTION": 45,
+        "RECOVERY_COST_EXPLOSION": 15,
+        "INVALID_VALUE": 15,
+        "REPEATED_EXACT_EDIT": 2
+      },
+      "surface_failure_count": 17,
+      "structural_failure_count": 395,
+      "avg_finalize_step": 7.7,
+      "avg_first_failure": 1.3,
+      "prompt_metadata": {
+        "family": "few_shot",
+        "strategy_bearing": false,
+        "task_specific": false,
+        "uses_examples": true
+      }
+    },
+    {
+      "env": "alloy",
+      "prompt": "few_shot_strategy",
+      "memory": "state_only",
+      "SR": 0.02,
+      "n_success": 1,
+      "n_total": 50,
+      "avg_steps": 7.9,
+      "terminal_failures": {
+        "HARD_CONSTRAINT_VIOLATION": 4,
+        "OBJECTIVE_TRADEOFF_FAILURE": 40,
+        "LOCAL_OPTIMUM_TRAP": 5
+      },
+      "all_events": {
+        "HARD_CONSTRAINT_VIOLATION": 66,
+        "OBJECTIVE_TRADEOFF_FAILURE": 157,
+        "LOCAL_OPTIMUM_TRAP": 67,
+        "PREMATURE_FINALIZE": 50,
+        "BUDGET_UNAWARE_ACTION": 49,
+        "INVALID_VALUE": 19,
+        "REPEATED_EXACT_EDIT": 2,
+        "RECOVERY_COST_EXPLOSION": 16,
+        "OSCILLATION": 1
+      },
+      "surface_failure_count": 21,
+      "structural_failure_count": 406,
+      "avg_finalize_step": 7.8,
+      "avg_first_failure": 1.1,
+      "prompt_metadata": {
+        "family": "few_shot",
+        "strategy_bearing": true,
+        "task_specific": true,
+        "uses_examples": true
+      }
+    },
+    {
+      "env": "alloy",
+      "prompt": "scaffold",
+      "memory": "state_only",
+      "SR": 0.14,
+      "n_success": 7,
+      "n_total": 50,
+      "avg_steps": 7.7,
+      "terminal_failures": {
+        "HARD_CONSTRAINT_VIOLATION": 8,
+        "LOCAL_OPTIMUM_TRAP": 2,
+        "OBJECTIVE_TRADEOFF_FAILURE": 33
+      },
+      "all_events": {
+        "HARD_CONSTRAINT_VIOLATION": 138,
+        "OSCILLATION": 6,
+        "OBJECTIVE_TRADEOFF_FAILURE": 91,
+        "LOCAL_OPTIMUM_TRAP": 52,
+        "PREMATURE_FINALIZE": 44,
+        "BUDGET_UNAWARE_ACTION": 43,
+        "INVALID_VALUE": 23,
+        "REPEATED_EXACT_EDIT": 3,
+        "RECOVERY_COST_EXPLOSION": 2
+      },
+      "surface_failure_count": 26,
+      "structural_failure_count": 376,
+      "avg_finalize_step": 7.7,
+      "avg_first_failure": 1.3,
+      "prompt_metadata": {
+        "family": "scaffold",
+        "strategy_bearing": false,
+        "task_specific": true,
+        "uses_examples": false
+      }
+    },
+    {
+      "env": "alloy",
+      "prompt": "self_check_generic",
+      "memory": "state_only",
+      "SR": 0.06,
+      "n_success": 3,
+      "n_total": 50,
+      "avg_steps": 7.7,
+      "terminal_failures": {
+        "HARD_CONSTRAINT_VIOLATION": 12,
+        "OBJECTIVE_TRADEOFF_FAILURE": 32,
+        "LOCAL_OPTIMUM_TRAP": 3
+      },
+      "all_events": {
+        "HARD_CONSTRAINT_VIOLATION": 100,
+        "OSCILLATION": 6,
+        "OBJECTIVE_TRADEOFF_FAILURE": 129,
+        "LOCAL_OPTIMUM_TRAP": 53,
+        "PREMATURE_FINALIZE": 50,
+        "BUDGET_UNAWARE_ACTION": 47,
+        "RECOVERY_COST_EXPLOSION": 15,
+        "INVALID_VALUE": 14,
+        "REPEATED_EXACT_EDIT": 4
+      },
+      "surface_failure_count": 18,
+      "structural_failure_count": 400,
+      "avg_finalize_step": 7.7,
+      "avg_first_failure": 1.2,
+      "prompt_metadata": {
+        "family": "self_check",
+        "strategy_bearing": false,
+        "task_specific": false,
+        "uses_examples": false
+      }
+    },
+    {
+      "env": "alloy",
+      "prompt": "self_check",
+      "memory": "state_only",
+      "SR": 0.16,
+      "n_success": 8,
+      "n_total": 50,
+      "avg_steps": 7.8,
+      "terminal_failures": {
+        "HARD_CONSTRAINT_VIOLATION": 7,
+        "OBJECTIVE_TRADEOFF_FAILURE": 32,
+        "LOCAL_OPTIMUM_TRAP": 3
+      },
+      "all_events": {
+        "HARD_CONSTRAINT_VIOLATION": 53,
+        "OSCILLATION": 6,
+        "OBJECTIVE_TRADEOFF_FAILURE": 150,
+        "LOCAL_OPTIMUM_TRAP": 71,
+        "PREMATURE_FINALIZE": 48,
+        "BUDGET_UNAWARE_ACTION": 42,
+        "INVALID_VALUE": 30,
+        "RECOVERY_COST_EXPLOSION": 8,
+        "REPEATED_EXACT_EDIT": 2
+      },
+      "surface_failure_count": 32,
+      "structural_failure_count": 378,
+      "avg_finalize_step": 7.7,
+      "avg_first_failure": 1.3,
+      "prompt_metadata": {
+        "family": "self_check",
+        "strategy_bearing": true,
+        "task_specific": true,
+        "uses_examples": false
+      }
+    },
+    {
+      "env": "gb1_sequence",
+      "prompt": "zero_shot",
+      "memory": "state_only",
+      "SR": 0.24,
+      "n_success": 12,
+      "n_total": 50,
+      "avg_steps": 3.9,
+      "terminal_failures": {
+        "LOCAL_OPTIMUM_TRAP": 20
+      },
+      "all_events": {
+        "LOCAL_OPTIMUM_TRAP": 20
+      },
+      "surface_failure_count": 0,
+      "structural_failure_count": 20,
+      "avg_finalize_step": 3.9,
+      "avg_first_failure": 2.6,
+      "prompt_metadata": {
+        "family": "zero_shot",
+        "strategy_bearing": false,
+        "task_specific": false,
+        "uses_examples": false
+      }
+    },
+    {
+      "env": "gb1_sequence",
+      "prompt": "few_shot_format",
+      "memory": "state_only",
+      "SR": 0.2,
+      "n_success": 10,
+      "n_total": 50,
+      "avg_steps": 3.9,
+      "terminal_failures": {
+        "LOCAL_OPTIMUM_TRAP": 24
+      },
+      "all_events": {
+        "LOCAL_OPTIMUM_TRAP": 25,
+        "INVALID_VALUE": 1
+      },
+      "surface_failure_count": 1,
+      "structural_failure_count": 25,
+      "avg_finalize_step": 3.9,
+      "avg_first_failure": 2.5,
+      "prompt_metadata": {
+        "family": "few_shot",
+        "strategy_bearing": false,
+        "task_specific": false,
+        "uses_examples": true
+      }
+    },
+    {
+      "env": "gb1_sequence",
+      "prompt": "few_shot_strategy",
+      "memory": "state_only",
+      "SR": 0.18,
+      "n_success": 9,
+      "n_total": 50,
+      "avg_steps": 4.0,
+      "terminal_failures": {
+        "LOCAL_OPTIMUM_TRAP": 10
+      },
+      "all_events": {
+        "LOCAL_OPTIMUM_TRAP": 10
+      },
+      "surface_failure_count": 0,
+      "structural_failure_count": 10,
+      "avg_finalize_step": 4.0,
+      "avg_first_failure": 2.5,
+      "prompt_metadata": {
+        "family": "few_shot",
+        "strategy_bearing": true,
+        "task_specific": true,
+        "uses_examples": true
+      }
+    },
+    {
+      "env": "gb1_sequence",
+      "prompt": "scaffold",
+      "memory": "state_only",
+      "SR": 0.12,
+      "n_success": 6,
+      "n_total": 50,
+      "avg_steps": 4.3,
+      "terminal_failures": {
+        "LOCAL_OPTIMUM_TRAP": 17,
+        "INVALID_VALUE": 4,
+        "OSCILLATION": 1
+      },
+      "all_events": {
+        "LOCAL_OPTIMUM_TRAP": 18,
+        "INVALID_VALUE": 6,
+        "MALFORMED_ACTION": 3,
+        "OSCILLATION": 1
+      },
+      "surface_failure_count": 9,
+      "structural_failure_count": 19,
+      "avg_finalize_step": 4.3,
+      "avg_first_failure": 2.9,
+      "prompt_metadata": {
+        "family": "scaffold",
+        "strategy_bearing": false,
+        "task_specific": true,
+        "uses_examples": false
+      }
+    },
+    {
+      "env": "gb1_sequence",
+      "prompt": "self_check_generic",
+      "memory": "state_only",
+      "SR": 0.26,
+      "n_success": 13,
+      "n_total": 50,
+      "avg_steps": 3.9,
+      "terminal_failures": {
+        "LOCAL_OPTIMUM_TRAP": 21
+      },
+      "all_events": {
+        "LOCAL_OPTIMUM_TRAP": 22
+      },
+      "surface_failure_count": 0,
+      "structural_failure_count": 22,
+      "avg_finalize_step": 3.9,
+      "avg_first_failure": 2.7,
+      "prompt_metadata": {
+        "family": "self_check",
+        "strategy_bearing": false,
+        "task_specific": false,
+        "uses_examples": false
+      }
+    },
+    {
+      "env": "gb1_sequence",
+      "prompt": "self_check",
+      "memory": "state_only",
+      "SR": 0.38,
+      "n_success": 19,
+      "n_total": 50,
+      "avg_steps": 4.0,
+      "terminal_failures": {
+        "LOCAL_OPTIMUM_TRAP": 20
+      },
+      "all_events": {
+        "LOCAL_OPTIMUM_TRAP": 22
+      },
+      "surface_failure_count": 0,
+      "structural_failure_count": 22,
+      "avg_finalize_step": 4.0,
+      "avg_first_failure": 2.9,
+      "prompt_metadata": {
+        "family": "self_check",
+        "strategy_bearing": true,
+        "task_specific": true,
+        "uses_examples": false
+      }
+    }
+  ],
+  "total_episodes": 900,
+  "wall_time_s": 18257.620004177094
+}

@@ -1,0 +1,614 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 13,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     wiggy\nCurrent:    sired\nPositions:  01234\nMismatches: ^ ^^^\nPath: sered \u2192 sired\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  0: {a, f, h, m, t, w*}\n  1: {h}\n  2: {d, p, t, z}\n  4: {e, n, s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sered",
+      "structure_after": "sired"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     wiggy\nCurrent:    sited\nPositions:  01234\nMismatches: ^ ^^^\nPath: sered \u2192 sired \u2192 sited\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  0: {c, k, w*}\n  1: {a}\n  2: {d, p, z}\n  4: {s}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sired",
+      "structure_after": "sited"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     wiggy\nCurrent:    cited\nPositions:  01234\nMismatches: ^ ^^^\nPath: sered \u2192 sired \u2192 sited \u2192 cited\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  0: {k, w*}\n  1: {o}\n  4: {r, s}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sited",
+      "structure_after": "cited"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     wiggy\nCurrent:    coted\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 cited \u2192 coted\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  0: {d, n, t, v}\n  2: {d, k, l, n, o, p, r, v, w, x, y}\n  4: {s}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cited",
+      "structure_after": "coted"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     wiggy\nCurrent:    doted\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 cited \u2192 coted \u2192 doted\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {n, t, v}\n  1: {a}\n  2: {l, m, p, s, w, z}\n  4: {r, s}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "coted",
+      "structure_after": "doted"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     wiggy\nCurrent:    dated\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 doted \u2192 dated\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {b, f, g, h, l, m, p, r, s}\n  2: {r, w, z}\n  4: {r, s}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "doted",
+      "structure_after": "dated"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     wiggy\nCurrent:    gated\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 dated \u2192 gated\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {b, f, h, l, m, p, r, s}\n  2: {g*, m, p, z}\n  4: {s}",
+      "raw_action": "EDIT 0 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dated",
+      "structure_after": "gated"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     wiggy\nCurrent:    gamed\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 gated \u2192 gamed\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {f, l, n, t}\n  2: {g*, p, z}\n  4: {r, s, y*}",
+      "raw_action": "EDIT 2 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gated",
+      "structure_after": "gamed"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     wiggy\nCurrent:    famed\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 gamed \u2192 famed\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {l, n, t}\n  1: {u}\n  2: {c, d, k, r, t, x, y, z}\n  4: {s}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gamed",
+      "structure_after": "famed"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     wiggy\nCurrent:    fumed\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 famed \u2192 fumed\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  2: {s, z}\n  4: {r, s, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "famed",
+      "structure_after": "fumed"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     wiggy\nCurrent:    fused\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 fumed \u2192 fused\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, m}\n  2: {z}\n  4: {e, l, s}",
+      "raw_action": "EDIT 2 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fumed",
+      "structure_after": "fused"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     wiggy\nCurrent:    bused\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 fused \u2192 bused\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {m}\n  1: {a}\n  4: {s}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fused",
+      "structure_after": "bused"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     wiggy\nCurrent:    based\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 bused \u2192 based\nSteps used: 13/30  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {c, e, l, r}\n  2: {a, k, l, n, r, t, y}\n  4: {r, s}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bused",
+      "structure_after": "based"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     wiggy\nCurrent:    cased\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 based \u2192 cased\nSteps used: 14/30  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {e, l, r}\n  2: {g*, k, n, p, r, v, w}\n  4: {s}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "based",
+      "structure_after": "cased"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     wiggy\nCurrent:    eased\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 cased \u2192 eased\nSteps used: 15/30  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {l, r}\n  2: {r, v}\n  4: {l, s}",
+      "raw_action": "EDIT 0 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cased",
+      "structure_after": "eased"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     wiggy\nCurrent:    lased\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 eased \u2192 lased\nSteps used: 16/30  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {r}\n  1: {y}\n  2: {c, d, k, m, t, v, w, y, z}\n  4: {r, s}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "eased",
+      "structure_after": "lased"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     wiggy\nCurrent:    rased\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 lased \u2192 rased\nSteps used: 17/30  (remaining: 13)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {c, g*, k, p, r, t, v, x, y, z}\n  4: {r, s}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lased",
+      "structure_after": "rased"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     wiggy\nCurrent:    rosed\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 rased \u2192 rosed\nSteps used: 18/30  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {d, h, n, p}\n  2: {b, p, v, w}\n  4: {s, t}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rased",
+      "structure_after": "rosed"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     wiggy\nCurrent:    dosed\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 rosed \u2192 dosed\nSteps used: 19/30  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {h, n, p}\n  2: {l, m, p, w, z}\n  4: {r, s}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rosed",
+      "structure_after": "dosed"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     wiggy\nCurrent:    hosed\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 dosed \u2192 hosed\nSteps used: 20/30  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {n, p}\n  2: {k, l, m, n, p}\n  4: {l, n, s}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dosed",
+      "structure_after": "hosed"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     wiggy\nCurrent:    nosed\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 hosed \u2192 nosed\nSteps used: 21/30  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {p}\n  2: {t}\n  4: {s, y*}",
+      "raw_action": "EDIT 0 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hosed",
+      "structure_after": "nosed"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     wiggy\nCurrent:    posed\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 nosed \u2192 posed\nSteps used: 22/30  (remaining: 8)\n\nEditable positions and valid replacements:\n  2: {k, l, r, x}\n  4: {r, s}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "nosed",
+      "structure_after": "posed"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     wiggy\nCurrent:    poked\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 posed \u2192 poked\nSteps used: 23/30  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {c, h, j, t, y}\n  1: {i*, u}\n  2: {l, r, x}\n  4: {r, s, y*}",
+      "raw_action": "EDIT 2 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "k"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "posed",
+      "structure_after": "poked"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     wiggy\nCurrent:    coked\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 poked \u2192 coked\nSteps used: 24/30  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {h, j, t, y}\n  1: {a}\n  2: {d, l, n, o, p, r, v, w, x, y}\n  4: {s}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "poked",
+      "structure_after": "coked"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     wiggy\nCurrent:    caked\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 coked \u2192 caked\nSteps used: 25/30  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {b, f, l, n, r, w*}\n  2: {g*, n, p, r, v, w}\n  4: {s, y*}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "coked",
+      "structure_after": "caked"
+    },
+    {
+      "t": 26,
+      "observation": "Target:     wiggy\nCurrent:    baked\nPositions:  01234\nMismatches: ^^^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 caked \u2192 baked\nSteps used: 26/30  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {f, l, n, r, w*}\n  1: {i*}\n  2: {a, l, n, r, t, y}\n  4: {r, s}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "caked",
+      "structure_after": "baked"
+    },
+    {
+      "t": 27,
+      "observation": "Target:     wiggy\nCurrent:    biked\nPositions:  01234\nMismatches: ^ ^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 baked \u2192 biked\nSteps used: 27/30  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {d, h, l, m, p}\n  2: {d, p}\n  4: {r, s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "baked",
+      "structure_after": "biked"
+    },
+    {
+      "t": 28,
+      "observation": "Target:     wiggy\nCurrent:    diked\nPositions:  01234\nMismatches: ^ ^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 biked \u2192 diked\nSteps used: 28/30  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {h, l, m, p}\n  1: {e, u, y}\n  2: {c, n, v}\n  4: {r, s, y*}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "biked",
+      "structure_after": "diked"
+    },
+    {
+      "t": 29,
+      "observation": "Target:     wiggy\nCurrent:    hiked\nPositions:  01234\nMismatches: ^ ^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 diked \u2192 hiked\nSteps used: 29/30  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {l, m, p}\n  1: {o}\n  2: {d, r, v}\n  4: {r, s}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "diked",
+      "structure_after": "hiked"
+    },
+    {
+      "t": 30,
+      "observation": "Target:     wiggy\nCurrent:    liked\nPositions:  01234\nMismatches: ^ ^^^\nPath: sered \u2192 sired \u2192 sited \u2192 ... \u2192 hiked \u2192 liked\nSteps used: 30/30  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {m, p}\n  1: {a}\n  2: {m, n, v}\n  4: {n, r, s}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hiked",
+      "structure_after": "liked"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 30,
+    "max_steps": 30,
+    "start_word": "sered",
+    "target_word": "wiggy",
+    "final_word": "liked",
+    "path": [
+      "sered",
+      "sired",
+      "sited",
+      "cited",
+      "coted",
+      "doted",
+      "dated",
+      "gated",
+      "gamed",
+      "famed",
+      "fumed",
+      "fused",
+      "bused",
+      "based",
+      "cased",
+      "eased",
+      "lased",
+      "rased",
+      "rosed",
+      "dosed",
+      "hosed",
+      "nosed",
+      "posed",
+      "poked",
+      "coked",
+      "caked",
+      "baked",
+      "biked",
+      "diked",
+      "hiked",
+      "liked"
+    ],
+    "path_length": 30,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 1,
+    "optimal_distance_at_end": 5,
+    "events": [
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 64621,
+    "completion_tokens": 150,
+    "total_tokens": 64771
+  },
+  "wall_time_s": 16.212975025177002
+}

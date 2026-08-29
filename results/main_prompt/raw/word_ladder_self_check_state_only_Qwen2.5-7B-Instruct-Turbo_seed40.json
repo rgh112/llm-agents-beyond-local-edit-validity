@@ -1,0 +1,453 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check",
+  "memory_condition": "state_only",
+  "seed": 40,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     teds\nCurrent:    fend\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, l, m, p, r, s, t*, v, w}\n  1: {i, u}\n  2: {e, o, u}\n  3: {s*}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fond",
+      "structure_after": "fend"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     teds\nCurrent:    bend\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {l, m, p, r, s, t*, v, w}\n  1: {a, i, o, u}\n  2: {a}\n  3: {e, s*, t}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fend",
+      "structure_after": "bend"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     teds\nCurrent:    band\nPositions:  0123\nMismatches: ^^^^\nPath: fond \u2192 fend \u2192 bend \u2192 band\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {h, l, r, s, w}\n  1: {i, o, u}\n  2: {l, r, u, w}\n  3: {e, g, i, k, s*}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bend",
+      "structure_after": "band"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     teds\nCurrent:    hand\nPositions:  0123\nMismatches: ^^^^\nPath: fond \u2192 fend \u2192 bend \u2192 band \u2192 hand\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {l, r, s, w}\n  1: {i}\n  2: {e, r}\n  3: {g, k, t}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "band",
+      "structure_after": "hand"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     teds\nCurrent:    land\nPositions:  0123\nMismatches: ^^^^\nPath: fond \u2192 fend \u2192 bend \u2192 band \u2192 hand \u2192 land\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {r, s, w}\n  1: {e*}\n  2: {i, r, u}\n  3: {e, g, k}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hand",
+      "structure_after": "land"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     teds\nCurrent:    lend\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 ... \u2192 land \u2192 lend\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {m, p, r, s, t*, v, w}\n  2: {a, u, w}\n  3: {o, s*, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "land",
+      "structure_after": "lend"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     teds\nCurrent:    mend\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 ... \u2192 lend \u2192 mend\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {p, r, s, t*, v, w}\n  1: {i}\n  2: {a, e, l}\n  3: {o, u}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lend",
+      "structure_after": "mend"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     teds\nCurrent:    mend\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 ... \u2192 lend \u2192 mend\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {p, r, s, t*, v, w}\n  1: {i}\n  2: {a, e, l}\n  3: {o, u}",
+      "raw_action": "EDIT 1 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mend",
+      "structure_after": "mend"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     teds\nCurrent:    meed\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 ... \u2192 mend \u2192 meed\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, j, n, p, r, s, t*, w}\n  2: {a, l}\n  3: {k, t}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mend",
+      "structure_after": "meed"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     teds\nCurrent:    meed\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend \u2192 bend \u2192 ... \u2192 mend \u2192 meed\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, j, n, p, r, s, t*, w}\n  2: {a, l}\n  3: {k, t}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "meed",
+      "structure_after": "meed"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     teds\nCurrent:    teed\nPositions:  0123\nMismatches:   ^^\nPath: fond \u2192 fend \u2192 bend \u2192 ... \u2192 meed \u2192 teed\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, j, n, p, r, s, w}\n  1: {i, o}\n  2: {n}\n  3: {l, m, n, s*}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "meed",
+      "structure_after": "teed"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     teds\nCurrent:    teed\nPositions:  0123\nMismatches:   ^^\nPath: fond \u2192 fend \u2192 bend \u2192 ... \u2192 meed \u2192 teed\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, j, n, p, r, s, w}\n  1: {i, o}\n  2: {n}\n  3: {l, m, n, s*}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "teed",
+      "structure_after": "teed"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     teds\nCurrent:    tees\nPositions:  0123\nMismatches:   ^ \nPath: fond \u2192 fend \u2192 bend \u2192 ... \u2192 teed \u2192 tees\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, y}\n  2: {a, d*, g, l, n, t, w}\n  3: {l, m, n}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "teed",
+      "structure_after": "tees"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     teds\nCurrent:    tees\nPositions:  0123\nMismatches:   ^ \nPath: fond \u2192 fend \u2192 bend \u2192 ... \u2192 teed \u2192 tees\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, y}\n  2: {a, d*, g, l, n, t, w}\n  3: {l, m, n}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tees",
+      "structure_after": "tees"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     teds\nCurrent:    dees\nPositions:  0123\nMismatches: ^ ^ \nPath: fond \u2192 fend \u2192 bend \u2192 ... \u2192 tees \u2192 dees\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, u, y}\n  2: {b, l, n, v, w, y}\n  3: {d, m, p, r, t}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tees",
+      "structure_after": "dees"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     teds\nCurrent:    dees\nPositions:  0123\nMismatches: ^ ^ \nPath: fond \u2192 fend \u2192 bend \u2192 ... \u2192 tees \u2192 dees\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, u, y}\n  2: {b, l, n, v, w, y}\n  3: {d, m, p, r, t}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dees",
+      "structure_after": "dees"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     teds\nCurrent:    dees\nPositions:  0123\nMismatches: ^ ^ \nPath: fond \u2192 fend \u2192 bend \u2192 ... \u2192 tees \u2192 dees\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, u, y}\n  2: {b, l, n, v, w, y}\n  3: {d, m, p, r, t}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dees",
+      "structure_after": "dees"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     teds\nCurrent:    dees\nPositions:  0123\nMismatches: ^ ^ \nPath: fond \u2192 fend \u2192 bend \u2192 ... \u2192 tees \u2192 dees\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, u, y}\n  2: {b, l, n, v, w, y}\n  3: {d, m, p, r, t}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dees",
+      "structure_after": "dees"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     teds\nCurrent:    dees\nPositions:  0123\nMismatches: ^ ^ \nPath: fond \u2192 fend \u2192 bend \u2192 ... \u2192 tees \u2192 dees\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, u, y}\n  2: {b, l, n, v, w, y}\n  3: {d, m, p, r, t}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dees",
+      "structure_after": "dees"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     teds\nCurrent:    dees\nPositions:  0123\nMismatches: ^ ^ \nPath: fond \u2192 fend \u2192 bend \u2192 ... \u2192 tees \u2192 dees\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, u, y}\n  2: {b, l, n, v, w, y}\n  3: {d, m, p, r, t}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dees",
+      "structure_after": "dees"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "OSCILLATION",
+  "failure_events": [
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "OSCILLATION",
+    "OSCILLATION",
+    "OSCILLATION",
+    "OSCILLATION",
+    "OSCILLATION",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "fond",
+    "target_word": "teds",
+    "final_word": "dees",
+    "path": [
+      "fond",
+      "fend",
+      "bend",
+      "band",
+      "hand",
+      "land",
+      "lend",
+      "mend",
+      "meed",
+      "teed",
+      "tees",
+      "dees"
+    ],
+    "path_length": 11,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 1,
+      "ILLEGAL_EDIT": 3,
+      "OSCILLATION": 5,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 10,
+    "optimal_distance_at_end": 2,
+    "events": [
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "OSCILLATION",
+      "OSCILLATION",
+      "OSCILLATION",
+      "OSCILLATION",
+      "OSCILLATION",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 34666,
+    "completion_tokens": 100,
+    "total_tokens": 34766
+  },
+  "wall_time_s": 11.548131227493286
+}

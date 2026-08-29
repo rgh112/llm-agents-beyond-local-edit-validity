@@ -1,0 +1,1760 @@
+{
+  "scorer_ablation": {
+    "text_visible": [
+      {
+        "model": "Qwen3-8B",
+        "env": "Word Ladder",
+        "SR": 0.35,
+        "n_success": 7,
+        "n_total": 20,
+        "local_valid": 0.5118343195266272,
+        "calls_per_ep": 50.7,
+        "tokens_per_ep": 142674.15,
+        "structural": 13,
+        "surface": 165,
+        "terminal_failures": {
+          "BUDGET_UNAWARE_ACTION": 11,
+          "LOCAL_OPTIMUM_TRAP": 2
+        },
+        "all_events": {
+          "INVALID_WORD": 133,
+          "BUDGET_UNAWARE_ACTION": 11,
+          "LOCAL_OPTIMUM_TRAP": 2,
+          "ILLEGAL_EDIT": 32
+        }
+      },
+      {
+        "model": "Qwen3-8B",
+        "env": "Alloy",
+        "SR": 0.1,
+        "n_success": 2,
+        "n_total": 20,
+        "local_valid": 0.6690647482014388,
+        "calls_per_ep": 23.85,
+        "tokens_per_ep": 46630.95,
+        "structural": 161,
+        "surface": 0,
+        "terminal_failures": {
+          "HARD_CONSTRAINT_VIOLATION": 6,
+          "OBJECTIVE_TRADEOFF_FAILURE": 12
+        },
+        "all_events": {
+          "HARD_CONSTRAINT_VIOLATION": 46,
+          "OBJECTIVE_TRADEOFF_FAILURE": 55,
+          "PREMATURE_FINALIZE": 17,
+          "BUDGET_UNAWARE_ACTION": 17,
+          "LOCAL_OPTIMUM_TRAP": 9,
+          "RECOVERY_COST_EXPLOSION": 13,
+          "OSCILLATION": 4
+        }
+      },
+      {
+        "model": "Qwen3-8B",
+        "env": "GB1",
+        "SR": 0.1,
+        "n_success": 2,
+        "n_total": 20,
+        "local_valid": 1.0,
+        "calls_per_ep": 16.35,
+        "tokens_per_ep": 26620.4,
+        "structural": 34,
+        "surface": 0,
+        "terminal_failures": {
+          "LOCAL_OPTIMUM_TRAP": 14,
+          "OSCILLATION": 3
+        },
+        "all_events": {
+          "LOCAL_OPTIMUM_TRAP": 17,
+          "OSCILLATION": 15,
+          "GLOBAL_FEASIBILITY_LOSS": 2
+        }
+      },
+      {
+        "model": "Ministral-8B",
+        "env": "Word Ladder",
+        "SR": 0.35,
+        "n_success": 7,
+        "n_total": 20,
+        "local_valid": 0.6875,
+        "calls_per_ep": 52.2,
+        "tokens_per_ep": 172587.1,
+        "structural": 13,
+        "surface": 194,
+        "terminal_failures": {
+          "BUDGET_UNAWARE_ACTION": 11,
+          "LOCAL_OPTIMUM_TRAP": 2
+        },
+        "all_events": {
+          "INVALID_WORD": 54,
+          "MALFORMED_ACTION": 124,
+          "BUDGET_UNAWARE_ACTION": 11,
+          "ILLEGAL_EDIT": 16,
+          "LOCAL_OPTIMUM_TRAP": 2
+        }
+      },
+      {
+        "model": "Ministral-8B",
+        "env": "Alloy",
+        "SR": 0.1,
+        "n_success": 2,
+        "n_total": 20,
+        "local_valid": 0.7564102564102564,
+        "calls_per_ep": 24.0,
+        "tokens_per_ep": 47214.4,
+        "structural": 140,
+        "surface": 1,
+        "terminal_failures": {
+          "OBJECTIVE_TRADEOFF_FAILURE": 9,
+          "HARD_CONSTRAINT_VIOLATION": 9
+        },
+        "all_events": {
+          "OBJECTIVE_TRADEOFF_FAILURE": 61,
+          "LOCAL_OPTIMUM_TRAP": 20,
+          "HARD_CONSTRAINT_VIOLATION": 38,
+          "BUDGET_UNAWARE_ACTION": 18,
+          "MALFORMED_ACTION": 1,
+          "PREMATURE_FINALIZE": 1,
+          "OSCILLATION": 2
+        }
+      },
+      {
+        "model": "Ministral-8B",
+        "env": "GB1",
+        "SR": 0.1,
+        "n_success": 2,
+        "n_total": 20,
+        "local_valid": 1.0,
+        "calls_per_ep": 16.8,
+        "tokens_per_ep": 27650.2,
+        "structural": 40,
+        "surface": 0,
+        "terminal_failures": {
+          "LOCAL_OPTIMUM_TRAP": 14,
+          "OSCILLATION": 2
+        },
+        "all_events": {
+          "LOCAL_OPTIMUM_TRAP": 21,
+          "OSCILLATION": 17,
+          "BUDGET_UNAWARE_ACTION": 1,
+          "GLOBAL_FEASIBILITY_LOSS": 1
+        }
+      },
+      {
+        "model": "Llama-8B",
+        "env": "Word Ladder",
+        "SR": 0.6,
+        "n_success": 12,
+        "n_total": 20,
+        "local_valid": 0.5051194539249146,
+        "calls_per_ep": 43.95,
+        "tokens_per_ep": 116190.7,
+        "structural": 18,
+        "surface": 135,
+        "terminal_failures": {
+          "OSCILLATION": 4,
+          "BUDGET_UNAWARE_ACTION": 4
+        },
+        "all_events": {
+          "INVALID_WORD": 110,
+          "OSCILLATION": 10,
+          "ILLEGAL_EDIT": 25,
+          "BUDGET_UNAWARE_ACTION": 8
+        }
+      },
+      {
+        "model": "Llama-8B",
+        "env": "Alloy",
+        "SR": 0.15,
+        "n_success": 3,
+        "n_total": 20,
+        "local_valid": 0.8857142857142857,
+        "calls_per_ep": 24.0,
+        "tokens_per_ep": 45268.75,
+        "structural": 150,
+        "surface": 0,
+        "terminal_failures": {
+          "OBJECTIVE_TRADEOFF_FAILURE": 11,
+          "HARD_CONSTRAINT_VIOLATION": 3,
+          "LOCAL_OPTIMUM_TRAP": 3
+        },
+        "all_events": {
+          "OBJECTIVE_TRADEOFF_FAILURE": 71,
+          "PREMATURE_FINALIZE": 17,
+          "BUDGET_UNAWARE_ACTION": 17,
+          "HARD_CONSTRAINT_VIOLATION": 16,
+          "LOCAL_OPTIMUM_TRAP": 26,
+          "RECOVERY_COST_EXPLOSION": 3
+        }
+      },
+      {
+        "model": "Llama-8B",
+        "env": "GB1",
+        "SR": 0.35,
+        "n_success": 7,
+        "n_total": 20,
+        "local_valid": 1.0,
+        "calls_per_ep": 16.5,
+        "tokens_per_ep": 25338.1,
+        "structural": 36,
+        "surface": 0,
+        "terminal_failures": {
+          "LOCAL_OPTIMUM_TRAP": 12,
+          "OSCILLATION": 1
+        },
+        "all_events": {
+          "LOCAL_OPTIMUM_TRAP": 21,
+          "OSCILLATION": 15
+        }
+      }
+    ],
+    "proxy": [
+      {
+        "model": "Qwen3-8B",
+        "env": "Word Ladder",
+        "SR": 0.4,
+        "n_success": 8,
+        "n_total": 20,
+        "local_valid": 0.5314465408805031,
+        "calls_per_ep": 47.7,
+        "tokens_per_ep": 129373.05,
+        "structural": 13,
+        "surface": 148,
+        "terminal_failures": {
+          "LOCAL_OPTIMUM_TRAP": 2,
+          "BUDGET_UNAWARE_ACTION": 9,
+          "OSCILLATION": 1
+        },
+        "all_events": {
+          "LOCAL_OPTIMUM_TRAP": 2,
+          "BUDGET_UNAWARE_ACTION": 10,
+          "INVALID_WORD": 120,
+          "ILLEGAL_EDIT": 28,
+          "OSCILLATION": 1
+        }
+      },
+      {
+        "model": "Qwen3-8B",
+        "env": "Alloy",
+        "SR": 0.1,
+        "n_success": 2,
+        "n_total": 20,
+        "local_valid": 0.6402877697841727,
+        "calls_per_ep": 24.0,
+        "tokens_per_ep": 47424.45,
+        "structural": 157,
+        "surface": 1,
+        "terminal_failures": {
+          "HARD_CONSTRAINT_VIOLATION": 7,
+          "OBJECTIVE_TRADEOFF_FAILURE": 11
+        },
+        "all_events": {
+          "HARD_CONSTRAINT_VIOLATION": 50,
+          "PREMATURE_FINALIZE": 19,
+          "BUDGET_UNAWARE_ACTION": 18,
+          "OBJECTIVE_TRADEOFF_FAILURE": 50,
+          "LOCAL_OPTIMUM_TRAP": 13,
+          "OSCILLATION": 5,
+          "REPEATED_EXACT_EDIT": 1,
+          "RECOVERY_COST_EXPLOSION": 2
+        }
+      },
+      {
+        "model": "Qwen3-8B",
+        "env": "GB1",
+        "SR": 0.1,
+        "n_success": 2,
+        "n_total": 20,
+        "local_valid": 1.0,
+        "calls_per_ep": 16.5,
+        "tokens_per_ep": 27120.4,
+        "structural": 36,
+        "surface": 0,
+        "terminal_failures": {
+          "LOCAL_OPTIMUM_TRAP": 17,
+          "OSCILLATION": 1
+        },
+        "all_events": {
+          "LOCAL_OPTIMUM_TRAP": 19,
+          "OSCILLATION": 15,
+          "GLOBAL_FEASIBILITY_LOSS": 2
+        }
+      },
+      {
+        "model": "Ministral-8B",
+        "env": "Word Ladder",
+        "SR": 0.55,
+        "n_success": 11,
+        "n_total": 20,
+        "local_valid": 0.7043478260869566,
+        "calls_per_ep": 46.35,
+        "tokens_per_ep": 144276.95,
+        "structural": 11,
+        "surface": 145,
+        "terminal_failures": {
+          "BUDGET_UNAWARE_ACTION": 7,
+          "OSCILLATION": 2
+        },
+        "all_events": {
+          "INVALID_WORD": 59,
+          "MALFORMED_ACTION": 79,
+          "BUDGET_UNAWARE_ACTION": 9,
+          "ILLEGAL_EDIT": 7,
+          "OSCILLATION": 2
+        }
+      },
+      {
+        "model": "Ministral-8B",
+        "env": "Alloy",
+        "SR": 0.05,
+        "n_success": 1,
+        "n_total": 20,
+        "local_valid": 0.7843137254901961,
+        "calls_per_ep": 24.0,
+        "tokens_per_ep": 47199.1,
+        "structural": 128,
+        "surface": 6,
+        "terminal_failures": {
+          "OBJECTIVE_TRADEOFF_FAILURE": 10,
+          "HARD_CONSTRAINT_VIOLATION": 8,
+          "LOCAL_OPTIMUM_TRAP": 1
+        },
+        "all_events": {
+          "OBJECTIVE_TRADEOFF_FAILURE": 56,
+          "LOCAL_OPTIMUM_TRAP": 18,
+          "HARD_CONSTRAINT_VIOLATION": 33,
+          "BUDGET_UNAWARE_ACTION": 19,
+          "MALFORMED_ACTION": 6,
+          "OSCILLATION": 2
+        }
+      },
+      {
+        "model": "Ministral-8B",
+        "env": "GB1",
+        "SR": 0.35,
+        "n_success": 7,
+        "n_total": 20,
+        "local_valid": 1.0,
+        "calls_per_ep": 17.55,
+        "tokens_per_ep": 29561.55,
+        "structural": 42,
+        "surface": 0,
+        "terminal_failures": {
+          "LOCAL_OPTIMUM_TRAP": 10,
+          "GLOBAL_FEASIBILITY_LOSS": 2,
+          "OSCILLATION": 1
+        },
+        "all_events": {
+          "LOCAL_OPTIMUM_TRAP": 20,
+          "OSCILLATION": 20,
+          "GLOBAL_FEASIBILITY_LOSS": 2
+        }
+      },
+      {
+        "model": "Llama-8B",
+        "env": "Word Ladder",
+        "SR": 0.4,
+        "n_success": 8,
+        "n_total": 20,
+        "local_valid": 0.5060240963855421,
+        "calls_per_ep": 49.8,
+        "tokens_per_ep": 137314.3,
+        "structural": 25,
+        "surface": 151,
+        "terminal_failures": {
+          "OSCILLATION": 5,
+          "BUDGET_UNAWARE_ACTION": 6,
+          "LOCAL_OPTIMUM_TRAP": 1
+        },
+        "all_events": {
+          "INVALID_WORD": 123,
+          "ILLEGAL_EDIT": 28,
+          "OSCILLATION": 13,
+          "BUDGET_UNAWARE_ACTION": 11,
+          "LOCAL_OPTIMUM_TRAP": 1
+        }
+      },
+      {
+        "model": "Llama-8B",
+        "env": "Alloy",
+        "SR": 0.3,
+        "n_success": 6,
+        "n_total": 20,
+        "local_valid": 0.8923076923076924,
+        "calls_per_ep": 22.5,
+        "tokens_per_ep": 41562.1,
+        "structural": 126,
+        "surface": 0,
+        "terminal_failures": {
+          "OBJECTIVE_TRADEOFF_FAILURE": 9,
+          "LOCAL_OPTIMUM_TRAP": 2,
+          "HARD_CONSTRAINT_VIOLATION": 3
+        },
+        "all_events": {
+          "OBJECTIVE_TRADEOFF_FAILURE": 48,
+          "RECOVERY_COST_EXPLOSION": 5,
+          "PREMATURE_FINALIZE": 14,
+          "BUDGET_UNAWARE_ACTION": 14,
+          "LOCAL_OPTIMUM_TRAP": 31,
+          "HARD_CONSTRAINT_VIOLATION": 14
+        }
+      },
+      {
+        "model": "Llama-8B",
+        "env": "GB1",
+        "SR": 0.35,
+        "n_success": 7,
+        "n_total": 20,
+        "local_valid": 1.0,
+        "calls_per_ep": 16.05,
+        "tokens_per_ep": 24247.25,
+        "structural": 33,
+        "surface": 0,
+        "terminal_failures": {
+          "LOCAL_OPTIMUM_TRAP": 11,
+          "GLOBAL_FEASIBILITY_LOSS": 1
+        },
+        "all_events": {
+          "LOCAL_OPTIMUM_TRAP": 20,
+          "OSCILLATION": 12,
+          "GLOBAL_FEASIBILITY_LOSS": 1
+        }
+      }
+    ],
+    "oracle": [
+      {
+        "model": "Qwen3-8B",
+        "env": "Word Ladder",
+        "SR": 0.4,
+        "n_success": 8,
+        "n_total": 20,
+        "local_valid": 0.6028571428571429,
+        "calls_per_ep": 52.5,
+        "tokens_per_ep": 146497.8,
+        "structural": 13,
+        "surface": 138,
+        "terminal_failures": {
+          "BUDGET_UNAWARE_ACTION": 10,
+          "LOCAL_OPTIMUM_TRAP": 1,
+          "OSCILLATION": 1
+        },
+        "all_events": {
+          "BUDGET_UNAWARE_ACTION": 11,
+          "INVALID_WORD": 110,
+          "LOCAL_OPTIMUM_TRAP": 1,
+          "ILLEGAL_EDIT": 28,
+          "OSCILLATION": 1
+        }
+      },
+      {
+        "model": "Qwen3-8B",
+        "env": "Alloy",
+        "SR": 0.1,
+        "n_success": 2,
+        "n_total": 20,
+        "local_valid": 0.6402877697841727,
+        "calls_per_ep": 23.85,
+        "tokens_per_ep": 46891.35,
+        "structural": 157,
+        "surface": 1,
+        "terminal_failures": {
+          "HARD_CONSTRAINT_VIOLATION": 7,
+          "OBJECTIVE_TRADEOFF_FAILURE": 11
+        },
+        "all_events": {
+          "HARD_CONSTRAINT_VIOLATION": 50,
+          "PREMATURE_FINALIZE": 17,
+          "BUDGET_UNAWARE_ACTION": 17,
+          "OBJECTIVE_TRADEOFF_FAILURE": 53,
+          "LOCAL_OPTIMUM_TRAP": 10,
+          "RECOVERY_COST_EXPLOSION": 7,
+          "OSCILLATION": 3,
+          "REPEATED_EXACT_EDIT": 1
+        }
+      },
+      {
+        "model": "Qwen3-8B",
+        "env": "GB1",
+        "SR": 0.1,
+        "n_success": 2,
+        "n_total": 20,
+        "local_valid": 0.9891304347826086,
+        "calls_per_ep": 16.8,
+        "tokens_per_ep": 27862.45,
+        "structural": 35,
+        "surface": 1,
+        "terminal_failures": {
+          "LOCAL_OPTIMUM_TRAP": 15,
+          "OSCILLATION": 2
+        },
+        "all_events": {
+          "LOCAL_OPTIMUM_TRAP": 17,
+          "INVALID_VALUE": 1,
+          "OSCILLATION": 16,
+          "GLOBAL_FEASIBILITY_LOSS": 2
+        }
+      },
+      {
+        "model": "Ministral-8B",
+        "env": "Word Ladder",
+        "SR": 0.4,
+        "n_success": 8,
+        "n_total": 20,
+        "local_valid": 0.5858585858585859,
+        "calls_per_ep": 51.9,
+        "tokens_per_ep": 183679.1,
+        "structural": 13,
+        "surface": 229,
+        "terminal_failures": {
+          "BUDGET_UNAWARE_ACTION": 9,
+          "LOCAL_OPTIMUM_TRAP": 2,
+          "OSCILLATION": 1
+        },
+        "all_events": {
+          "ILLEGAL_EDIT": 24,
+          "INVALID_WORD": 57,
+          "MALFORMED_ACTION": 148,
+          "BUDGET_UNAWARE_ACTION": 10,
+          "LOCAL_OPTIMUM_TRAP": 2,
+          "OSCILLATION": 1
+        }
+      },
+      {
+        "model": "Ministral-8B",
+        "env": "Alloy",
+        "SR": 0.15,
+        "n_success": 3,
+        "n_total": 20,
+        "local_valid": 0.7371794871794872,
+        "calls_per_ep": 24.0,
+        "tokens_per_ep": 47099.65,
+        "structural": 126,
+        "surface": 2,
+        "terminal_failures": {
+          "HARD_CONSTRAINT_VIOLATION": 9,
+          "OBJECTIVE_TRADEOFF_FAILURE": 7,
+          "LOCAL_OPTIMUM_TRAP": 1
+        },
+        "all_events": {
+          "HARD_CONSTRAINT_VIOLATION": 40,
+          "OBJECTIVE_TRADEOFF_FAILURE": 54,
+          "LOCAL_OPTIMUM_TRAP": 14,
+          "BUDGET_UNAWARE_ACTION": 17,
+          "MALFORMED_ACTION": 1,
+          "OSCILLATION": 1,
+          "INVALID_VALUE": 1
+        }
+      },
+      {
+        "model": "Ministral-8B",
+        "env": "GB1",
+        "SR": 0.3,
+        "n_success": 6,
+        "n_total": 20,
+        "local_valid": 1.0,
+        "calls_per_ep": 17.85,
+        "tokens_per_ep": 30349.1,
+        "structural": 42,
+        "surface": 1,
+        "terminal_failures": {
+          "LOCAL_OPTIMUM_TRAP": 10,
+          "OSCILLATION": 3,
+          "GLOBAL_FEASIBILITY_LOSS": 1
+        },
+        "all_events": {
+          "LOCAL_OPTIMUM_TRAP": 20,
+          "OSCILLATION": 20,
+          "MALFORMED_ACTION": 1,
+          "GLOBAL_FEASIBILITY_LOSS": 2
+        }
+      },
+      {
+        "model": "Llama-8B",
+        "env": "Word Ladder",
+        "SR": 0.45,
+        "n_success": 9,
+        "n_total": 20,
+        "local_valid": 0.4329268292682927,
+        "calls_per_ep": 49.2,
+        "tokens_per_ep": 137343.3,
+        "structural": 23,
+        "surface": 174,
+        "terminal_failures": {
+          "BUDGET_UNAWARE_ACTION": 8,
+          "OSCILLATION": 3
+        },
+        "all_events": {
+          "ILLEGAL_EDIT": 33,
+          "INVALID_WORD": 140,
+          "BUDGET_UNAWARE_ACTION": 11,
+          "INVALID_POSITION": 1,
+          "OSCILLATION": 12
+        }
+      },
+      {
+        "model": "Llama-8B",
+        "env": "Alloy",
+        "SR": 0.4,
+        "n_success": 8,
+        "n_total": 20,
+        "local_valid": 0.8776978417266187,
+        "calls_per_ep": 23.85,
+        "tokens_per_ep": 44667.0,
+        "structural": 138,
+        "surface": 0,
+        "terminal_failures": {
+          "OBJECTIVE_TRADEOFF_FAILURE": 8,
+          "LOCAL_OPTIMUM_TRAP": 3,
+          "HARD_CONSTRAINT_VIOLATION": 1
+        },
+        "all_events": {
+          "OBJECTIVE_TRADEOFF_FAILURE": 65,
+          "LOCAL_OPTIMUM_TRAP": 27,
+          "HARD_CONSTRAINT_VIOLATION": 17,
+          "PREMATURE_FINALIZE": 12,
+          "BUDGET_UNAWARE_ACTION": 12,
+          "RECOVERY_COST_EXPLOSION": 4,
+          "OSCILLATION": 1
+        }
+      },
+      {
+        "model": "Llama-8B",
+        "env": "GB1",
+        "SR": 0.3,
+        "n_success": 6,
+        "n_total": 20,
+        "local_valid": 1.0,
+        "calls_per_ep": 17.7,
+        "tokens_per_ep": 28214.95,
+        "structural": 38,
+        "surface": 0,
+        "terminal_failures": {
+          "LOCAL_OPTIMUM_TRAP": 8,
+          "OSCILLATION": 4,
+          "GLOBAL_FEASIBILITY_LOSS": 1
+        },
+        "all_events": {
+          "LOCAL_OPTIMUM_TRAP": 15,
+          "OSCILLATION": 21,
+          "GLOBAL_FEASIBILITY_LOSS": 2
+        }
+      }
+    ]
+  },
+  "api_stability": {
+    "Alloy": [
+      {
+        "model": "Qwen3-8B",
+        "prompt": "Zero-shot",
+        "SR": 0.0,
+        "n_success": 0,
+        "n_total": 20,
+        "local_valid": 0.6376811594202898,
+        "structural": 168
+      },
+      {
+        "model": "Qwen3-8B",
+        "prompt": "Self-check",
+        "SR": 0.15,
+        "n_success": 3,
+        "n_total": 20,
+        "local_valid": 0.5467625899280576,
+        "structural": 158
+      },
+      {
+        "model": "Ministral-8B",
+        "prompt": "Zero-shot",
+        "SR": 0.1,
+        "n_success": 2,
+        "n_total": 20,
+        "local_valid": 0.6582278481012658,
+        "structural": 142
+      },
+      {
+        "model": "Ministral-8B",
+        "prompt": "Self-check",
+        "SR": 0.0,
+        "n_success": 0,
+        "n_total": 20,
+        "local_valid": 0.6305732484076433,
+        "structural": 147
+      },
+      {
+        "model": "Llama-8B",
+        "prompt": "Zero-shot",
+        "SR": 0.05,
+        "n_success": 1,
+        "n_total": 20,
+        "local_valid": 0.6357142857142857,
+        "structural": 176
+      },
+      {
+        "model": "Llama-8B",
+        "prompt": "Self-check",
+        "SR": 0.0,
+        "n_success": 0,
+        "n_total": 20,
+        "local_valid": 0.6642857142857143,
+        "structural": 176
+      }
+    ],
+    "GB1": [
+      {
+        "model": "Qwen3-8B",
+        "prompt": "Zero-shot",
+        "SR": 0.1,
+        "n_success": 2,
+        "n_total": 20,
+        "local_valid": 1.0,
+        "structural": 31
+      },
+      {
+        "model": "Qwen3-8B",
+        "prompt": "Self-check",
+        "SR": 0.1,
+        "n_success": 2,
+        "n_total": 20,
+        "local_valid": 1.0,
+        "structural": 38
+      },
+      {
+        "model": "Ministral-8B",
+        "prompt": "Zero-shot",
+        "SR": 0.15,
+        "n_success": 3,
+        "n_total": 20,
+        "local_valid": 1.0,
+        "structural": 21
+      },
+      {
+        "model": "Ministral-8B",
+        "prompt": "Self-check",
+        "SR": 0.4,
+        "n_success": 8,
+        "n_total": 20,
+        "local_valid": 1.0,
+        "structural": 38
+      },
+      {
+        "model": "Llama-8B",
+        "prompt": "Zero-shot",
+        "SR": 0.3,
+        "n_success": 6,
+        "n_total": 20,
+        "local_valid": 1.0,
+        "structural": 37
+      },
+      {
+        "model": "Llama-8B",
+        "prompt": "Self-check",
+        "SR": 0.15,
+        "n_success": 3,
+        "n_total": 20,
+        "local_valid": 1.0,
+        "structural": 35
+      }
+    ]
+  },
+  "sensitivity": {
+    "Alloy": [
+      {
+        "model": "Qwen3-8B",
+        "setting": "default",
+        "prompt": "Zero-shot",
+        "SR": 0.02,
+        "n_success": 1,
+        "n_total": 50,
+        "local_valid": 0.5977011494252874,
+        "structural": 417
+      },
+      {
+        "model": "Qwen3-8B",
+        "setting": "default",
+        "prompt": "Self-check",
+        "SR": 0.04,
+        "n_success": 2,
+        "n_total": 50,
+        "local_valid": 0.6475644699140402,
+        "structural": 410
+      },
+      {
+        "model": "Ministral-8B",
+        "setting": "default",
+        "prompt": "Zero-shot",
+        "SR": 0.02,
+        "n_success": 1,
+        "n_total": 50,
+        "local_valid": 0.6215538847117794,
+        "structural": 372
+      },
+      {
+        "model": "Ministral-8B",
+        "setting": "default",
+        "prompt": "Self-check",
+        "SR": 0.0,
+        "n_success": 0,
+        "n_total": 50,
+        "local_valid": 0.6735751295336787,
+        "structural": 350
+      },
+      {
+        "model": "Llama-8B",
+        "setting": "default",
+        "prompt": "Zero-shot",
+        "SR": 0.0,
+        "n_success": 0,
+        "n_total": 50,
+        "local_valid": 0.6571428571428571,
+        "structural": 434
+      },
+      {
+        "model": "Llama-8B",
+        "setting": "default",
+        "prompt": "Self-check",
+        "SR": 0.1,
+        "n_success": 5,
+        "n_total": 50,
+        "local_valid": 0.6942857142857143,
+        "structural": 421
+      },
+      {
+        "model": "Qwen3-8B",
+        "setting": "heavy_scaling_off",
+        "prompt": "Zero-shot",
+        "SR": 0.12,
+        "n_success": 6,
+        "n_total": 50,
+        "local_valid": 0.622478386167147,
+        "structural": 391
+      },
+      {
+        "model": "Qwen3-8B",
+        "setting": "heavy_scaling_off",
+        "prompt": "Self-check",
+        "SR": 0.08,
+        "n_success": 4,
+        "n_total": 50,
+        "local_valid": 0.6350574712643678,
+        "structural": 397
+      },
+      {
+        "model": "Ministral-8B",
+        "setting": "heavy_scaling_off",
+        "prompt": "Zero-shot",
+        "SR": 0.04,
+        "n_success": 2,
+        "n_total": 50,
+        "local_valid": 0.6297229219143576,
+        "structural": 367
+      },
+      {
+        "model": "Ministral-8B",
+        "setting": "heavy_scaling_off",
+        "prompt": "Self-check",
+        "SR": 0.1,
+        "n_success": 5,
+        "n_total": 50,
+        "local_valid": 0.6288659793814433,
+        "structural": 352
+      },
+      {
+        "model": "Llama-8B",
+        "setting": "heavy_scaling_off",
+        "prompt": "Zero-shot",
+        "SR": 0.1,
+        "n_success": 5,
+        "n_total": 50,
+        "local_valid": 0.6457142857142857,
+        "structural": 389
+      },
+      {
+        "model": "Llama-8B",
+        "setting": "heavy_scaling_off",
+        "prompt": "Self-check",
+        "SR": 0.06,
+        "n_success": 3,
+        "n_total": 50,
+        "local_valid": 0.6885714285714286,
+        "structural": 433
+      }
+    ],
+    "GB1": [
+      {
+        "model": "Qwen3-8B",
+        "setting": "default",
+        "prompt": "Zero-shot",
+        "SR": 0.1,
+        "n_success": 5,
+        "n_total": 50,
+        "local_valid": 0.9950248756218906,
+        "structural": 68
+      },
+      {
+        "model": "Qwen3-8B",
+        "setting": "default",
+        "prompt": "Self-check",
+        "SR": 0.12,
+        "n_success": 6,
+        "n_total": 50,
+        "local_valid": 0.9953051643192489,
+        "structural": 76
+      },
+      {
+        "model": "Ministral-8B",
+        "setting": "default",
+        "prompt": "Zero-shot",
+        "SR": 0.1,
+        "n_success": 5,
+        "n_total": 50,
+        "local_valid": 1.0,
+        "structural": 48
+      },
+      {
+        "model": "Ministral-8B",
+        "setting": "default",
+        "prompt": "Self-check",
+        "SR": 0.24,
+        "n_success": 12,
+        "n_total": 50,
+        "local_valid": 1.0,
+        "structural": 90
+      },
+      {
+        "model": "Llama-8B",
+        "setting": "default",
+        "prompt": "Zero-shot",
+        "SR": 0.24,
+        "n_success": 12,
+        "n_total": 50,
+        "local_valid": 1.0,
+        "structural": 90
+      },
+      {
+        "model": "Llama-8B",
+        "setting": "default",
+        "prompt": "Self-check",
+        "SR": 0.22,
+        "n_success": 11,
+        "n_total": 50,
+        "local_valid": 0.9915254237288136,
+        "structural": 81
+      },
+      {
+        "model": "Qwen3-8B",
+        "setting": "additive_evaluator",
+        "prompt": "Zero-shot",
+        "SR": 0.1,
+        "n_success": 5,
+        "n_total": 50,
+        "local_valid": 0.9900990099009901,
+        "structural": 30
+      },
+      {
+        "model": "Qwen3-8B",
+        "setting": "additive_evaluator",
+        "prompt": "Self-check",
+        "SR": 0.08,
+        "n_success": 4,
+        "n_total": 50,
+        "local_valid": 0.9953703703703703,
+        "structural": 39
+      },
+      {
+        "model": "Ministral-8B",
+        "setting": "additive_evaluator",
+        "prompt": "Zero-shot",
+        "SR": 0.08,
+        "n_success": 4,
+        "n_total": 50,
+        "local_valid": 1.0,
+        "structural": 3
+      },
+      {
+        "model": "Ministral-8B",
+        "setting": "additive_evaluator",
+        "prompt": "Self-check",
+        "SR": 0.02,
+        "n_success": 1,
+        "n_total": 50,
+        "local_valid": 1.0,
+        "structural": 41
+      },
+      {
+        "model": "Llama-8B",
+        "setting": "additive_evaluator",
+        "prompt": "Zero-shot",
+        "SR": 0.02,
+        "n_success": 1,
+        "n_total": 50,
+        "local_valid": 0.9956140350877193,
+        "structural": 37
+      },
+      {
+        "model": "Llama-8B",
+        "setting": "additive_evaluator",
+        "prompt": "Self-check",
+        "SR": 0.0,
+        "n_success": 0,
+        "n_total": 50,
+        "local_valid": 0.991304347826087,
+        "structural": 40
+      }
+    ]
+  },
+  "memory": {
+    "Word Ladder": [
+      {
+        "model": "Qwen3-8B",
+        "memory": "State only",
+        "SR": 0.4,
+        "n_success": 20,
+        "n_total": 50,
+        "local_valid": 0.6239316239316239,
+        "structural": 35
+      },
+      {
+        "model": "Qwen3-8B",
+        "memory": "Window-3",
+        "SR": 0.44,
+        "n_success": 22,
+        "n_total": 50,
+        "local_valid": 0.7444876783398184,
+        "structural": 37
+      },
+      {
+        "model": "Qwen3-8B",
+        "memory": "Full history",
+        "SR": 0.48,
+        "n_success": 24,
+        "n_total": 50,
+        "local_valid": 0.6528150134048257,
+        "structural": 28
+      },
+      {
+        "model": "Qwen3-8B",
+        "memory": "Summary",
+        "SR": 0.4,
+        "n_success": 20,
+        "n_total": 50,
+        "local_valid": 0.64,
+        "structural": 35
+      },
+      {
+        "model": "Qwen3-8B",
+        "memory": "Best-state",
+        "SR": 0.42,
+        "n_success": 21,
+        "n_total": 50,
+        "local_valid": 0.544924154025671,
+        "structural": 35
+      },
+      {
+        "model": "Qwen3-8B",
+        "memory": "Randomized",
+        "SR": 0.46,
+        "n_success": 23,
+        "n_total": 50,
+        "local_valid": 0.7294117647058823,
+        "structural": 34
+      },
+      {
+        "model": "Qwen3-8B",
+        "memory": "Misleading",
+        "SR": 0.42,
+        "n_success": 21,
+        "n_total": 50,
+        "local_valid": 0.7096774193548387,
+        "structural": 34
+      },
+      {
+        "model": "Ministral-8B",
+        "memory": "State only",
+        "SR": 0.46,
+        "n_success": 23,
+        "n_total": 50,
+        "local_valid": 0.5402061855670103,
+        "structural": 29
+      },
+      {
+        "model": "Ministral-8B",
+        "memory": "Window-3",
+        "SR": 0.54,
+        "n_success": 27,
+        "n_total": 50,
+        "local_valid": 0.6880222841225627,
+        "structural": 26
+      },
+      {
+        "model": "Ministral-8B",
+        "memory": "Full history",
+        "SR": 0.6,
+        "n_success": 30,
+        "n_total": 50,
+        "local_valid": 0.7298507462686568,
+        "structural": 22
+      },
+      {
+        "model": "Ministral-8B",
+        "memory": "Summary",
+        "SR": 0.5,
+        "n_success": 25,
+        "n_total": 50,
+        "local_valid": 0.6660341555977229,
+        "structural": 29
+      },
+      {
+        "model": "Ministral-8B",
+        "memory": "Best-state",
+        "SR": 0.5,
+        "n_success": 25,
+        "n_total": 50,
+        "local_valid": 0.5471698113207547,
+        "structural": 27
+      },
+      {
+        "model": "Ministral-8B",
+        "memory": "Randomized",
+        "SR": 0.62,
+        "n_success": 31,
+        "n_total": 50,
+        "local_valid": 0.7324159021406728,
+        "structural": 22
+      },
+      {
+        "model": "Ministral-8B",
+        "memory": "Misleading",
+        "SR": 0.58,
+        "n_success": 29,
+        "n_total": 50,
+        "local_valid": 0.7485294117647059,
+        "structural": 22
+      },
+      {
+        "model": "Llama-8B",
+        "memory": "State only",
+        "SR": 0.46,
+        "n_success": 23,
+        "n_total": 50,
+        "local_valid": 0.37471526195899774,
+        "structural": 37
+      },
+      {
+        "model": "Llama-8B",
+        "memory": "Window-3",
+        "SR": 0.54,
+        "n_success": 27,
+        "n_total": 50,
+        "local_valid": 0.7101063829787234,
+        "structural": 29
+      },
+      {
+        "model": "Llama-8B",
+        "memory": "Full history",
+        "SR": 0.3,
+        "n_success": 15,
+        "n_total": 50,
+        "local_valid": 0.7214206437291898,
+        "structural": 40
+      },
+      {
+        "model": "Llama-8B",
+        "memory": "Summary",
+        "SR": 0.4,
+        "n_success": 20,
+        "n_total": 50,
+        "local_valid": 0.5064935064935064,
+        "structural": 43
+      },
+      {
+        "model": "Llama-8B",
+        "memory": "Best-state",
+        "SR": 0.38,
+        "n_success": 19,
+        "n_total": 50,
+        "local_valid": 0.41309523809523807,
+        "structural": 52
+      },
+      {
+        "model": "Llama-8B",
+        "memory": "Randomized",
+        "SR": 0.42,
+        "n_success": 21,
+        "n_total": 50,
+        "local_valid": 0.677819083023544,
+        "structural": 35
+      },
+      {
+        "model": "Llama-8B",
+        "memory": "Misleading",
+        "SR": 0.34,
+        "n_success": 17,
+        "n_total": 50,
+        "local_valid": 0.7556615017878426,
+        "structural": 38
+      }
+    ],
+    "Alloy": [
+      {
+        "model": "Qwen3-8B",
+        "memory": "State only",
+        "SR": 0.1,
+        "n_success": 5,
+        "n_total": 50,
+        "local_valid": 0.6551724137931034,
+        "structural": 405
+      },
+      {
+        "model": "Qwen3-8B",
+        "memory": "Window-3",
+        "SR": 0.1,
+        "n_success": 5,
+        "n_total": 50,
+        "local_valid": 0.7507163323782235,
+        "structural": 409
+      },
+      {
+        "model": "Qwen3-8B",
+        "memory": "Full history",
+        "SR": 0.02,
+        "n_success": 1,
+        "n_total": 50,
+        "local_valid": 0.74,
+        "structural": 415
+      },
+      {
+        "model": "Qwen3-8B",
+        "memory": "Summary",
+        "SR": 0.12,
+        "n_success": 6,
+        "n_total": 50,
+        "local_valid": 0.7586206896551724,
+        "structural": 387
+      },
+      {
+        "model": "Qwen3-8B",
+        "memory": "Best-state",
+        "SR": 0.12,
+        "n_success": 6,
+        "n_total": 50,
+        "local_valid": 0.7304347826086957,
+        "structural": 403
+      },
+      {
+        "model": "Qwen3-8B",
+        "memory": "Randomized",
+        "SR": 0.06,
+        "n_success": 3,
+        "n_total": 50,
+        "local_valid": 0.7714285714285715,
+        "structural": 407
+      },
+      {
+        "model": "Qwen3-8B",
+        "memory": "Misleading",
+        "SR": 0.08,
+        "n_success": 4,
+        "n_total": 50,
+        "local_valid": 0.7628571428571429,
+        "structural": 410
+      },
+      {
+        "model": "Ministral-8B",
+        "memory": "State only",
+        "SR": 0.04,
+        "n_success": 2,
+        "n_total": 50,
+        "local_valid": 0.6632124352331606,
+        "structural": 387
+      },
+      {
+        "model": "Ministral-8B",
+        "memory": "Window-3",
+        "SR": 0.2,
+        "n_success": 10,
+        "n_total": 50,
+        "local_valid": 0.6773333333333333,
+        "structural": 326
+      },
+      {
+        "model": "Ministral-8B",
+        "memory": "Full history",
+        "SR": 0.14,
+        "n_success": 7,
+        "n_total": 50,
+        "local_valid": 0.6558265582655827,
+        "structural": 354
+      },
+      {
+        "model": "Ministral-8B",
+        "memory": "Summary",
+        "SR": 0.16,
+        "n_success": 8,
+        "n_total": 50,
+        "local_valid": 0.6772486772486772,
+        "structural": 346
+      },
+      {
+        "model": "Ministral-8B",
+        "memory": "Best-state",
+        "SR": 0.02,
+        "n_success": 1,
+        "n_total": 50,
+        "local_valid": 0.7081218274111675,
+        "structural": 361
+      },
+      {
+        "model": "Ministral-8B",
+        "memory": "Randomized",
+        "SR": 0.14,
+        "n_success": 7,
+        "n_total": 50,
+        "local_valid": 0.6909090909090909,
+        "structural": 322
+      },
+      {
+        "model": "Ministral-8B",
+        "memory": "Misleading",
+        "SR": 0.06,
+        "n_success": 3,
+        "n_total": 50,
+        "local_valid": 0.6329113924050633,
+        "structural": 366
+      },
+      {
+        "model": "Llama-8B",
+        "memory": "State only",
+        "SR": 0.08,
+        "n_success": 4,
+        "n_total": 50,
+        "local_valid": 0.6857142857142857,
+        "structural": 444
+      },
+      {
+        "model": "Llama-8B",
+        "memory": "Window-3",
+        "SR": 0.06,
+        "n_success": 3,
+        "n_total": 50,
+        "local_valid": 0.6285714285714286,
+        "structural": 428
+      },
+      {
+        "model": "Llama-8B",
+        "memory": "Full history",
+        "SR": 0.06,
+        "n_success": 3,
+        "n_total": 50,
+        "local_valid": 0.6504297994269341,
+        "structural": 441
+      },
+      {
+        "model": "Llama-8B",
+        "memory": "Summary",
+        "SR": 0.06,
+        "n_success": 3,
+        "n_total": 50,
+        "local_valid": 0.6485714285714286,
+        "structural": 436
+      },
+      {
+        "model": "Llama-8B",
+        "memory": "Best-state",
+        "SR": 0.06,
+        "n_success": 3,
+        "n_total": 50,
+        "local_valid": 0.7085714285714285,
+        "structural": 411
+      },
+      {
+        "model": "Llama-8B",
+        "memory": "Randomized",
+        "SR": 0.22,
+        "n_success": 11,
+        "n_total": 50,
+        "local_valid": 0.6790830945558739,
+        "structural": 419
+      },
+      {
+        "model": "Llama-8B",
+        "memory": "Misleading",
+        "SR": 0.16,
+        "n_success": 8,
+        "n_total": 50,
+        "local_valid": 0.6504297994269341,
+        "structural": 426
+      }
+    ],
+    "GB1": [
+      {
+        "model": "Qwen3-8B",
+        "memory": "State only",
+        "SR": 0.1,
+        "n_success": 5,
+        "n_total": 50,
+        "local_valid": 1.0,
+        "structural": 74
+      },
+      {
+        "model": "Qwen3-8B",
+        "memory": "Window-3",
+        "SR": 0.14,
+        "n_success": 7,
+        "n_total": 50,
+        "local_valid": 0.9650655021834061,
+        "structural": 99
+      },
+      {
+        "model": "Qwen3-8B",
+        "memory": "Full history",
+        "SR": 0.16,
+        "n_success": 8,
+        "n_total": 50,
+        "local_valid": 0.976303317535545,
+        "structural": 80
+      },
+      {
+        "model": "Qwen3-8B",
+        "memory": "Summary",
+        "SR": 0.06,
+        "n_success": 3,
+        "n_total": 50,
+        "local_valid": 0.9551569506726457,
+        "structural": 92
+      },
+      {
+        "model": "Qwen3-8B",
+        "memory": "Best-state",
+        "SR": 0.06,
+        "n_success": 3,
+        "n_total": 50,
+        "local_valid": 0.9493087557603687,
+        "structural": 70
+      },
+      {
+        "model": "Qwen3-8B",
+        "memory": "Randomized",
+        "SR": 0.16,
+        "n_success": 8,
+        "n_total": 50,
+        "local_valid": 0.9864253393665159,
+        "structural": 87
+      },
+      {
+        "model": "Qwen3-8B",
+        "memory": "Misleading",
+        "SR": 0.1,
+        "n_success": 5,
+        "n_total": 50,
+        "local_valid": 0.9906976744186047,
+        "structural": 89
+      },
+      {
+        "model": "Ministral-8B",
+        "memory": "State only",
+        "SR": 0.2,
+        "n_success": 10,
+        "n_total": 50,
+        "local_valid": 1.0,
+        "structural": 85
+      },
+      {
+        "model": "Ministral-8B",
+        "memory": "Window-3",
+        "SR": 0.24,
+        "n_success": 12,
+        "n_total": 50,
+        "local_valid": 1.0,
+        "structural": 94
+      },
+      {
+        "model": "Ministral-8B",
+        "memory": "Full history",
+        "SR": 0.2,
+        "n_success": 10,
+        "n_total": 50,
+        "local_valid": 1.0,
+        "structural": 89
+      },
+      {
+        "model": "Ministral-8B",
+        "memory": "Summary",
+        "SR": 0.16,
+        "n_success": 8,
+        "n_total": 50,
+        "local_valid": 1.0,
+        "structural": 101
+      },
+      {
+        "model": "Ministral-8B",
+        "memory": "Best-state",
+        "SR": 0.16,
+        "n_success": 8,
+        "n_total": 50,
+        "local_valid": 1.0,
+        "structural": 128
+      },
+      {
+        "model": "Ministral-8B",
+        "memory": "Randomized",
+        "SR": 0.28,
+        "n_success": 14,
+        "n_total": 50,
+        "local_valid": 1.0,
+        "structural": 97
+      },
+      {
+        "model": "Ministral-8B",
+        "memory": "Misleading",
+        "SR": 0.22,
+        "n_success": 11,
+        "n_total": 50,
+        "local_valid": 1.0,
+        "structural": 99
+      },
+      {
+        "model": "Llama-8B",
+        "memory": "State only",
+        "SR": 0.2,
+        "n_success": 10,
+        "n_total": 50,
+        "local_valid": 0.9913793103448276,
+        "structural": 82
+      },
+      {
+        "model": "Llama-8B",
+        "memory": "Window-3",
+        "SR": 0.22,
+        "n_success": 11,
+        "n_total": 50,
+        "local_valid": 0.9906976744186047,
+        "structural": 69
+      },
+      {
+        "model": "Llama-8B",
+        "memory": "Full history",
+        "SR": 0.12,
+        "n_success": 6,
+        "n_total": 50,
+        "local_valid": 0.961864406779661,
+        "structural": 76
+      },
+      {
+        "model": "Llama-8B",
+        "memory": "Summary",
+        "SR": 0.18,
+        "n_success": 9,
+        "n_total": 50,
+        "local_valid": 0.9781659388646288,
+        "structural": 72
+      },
+      {
+        "model": "Llama-8B",
+        "memory": "Best-state",
+        "SR": 0.32,
+        "n_success": 16,
+        "n_total": 50,
+        "local_valid": 0.9612068965517241,
+        "structural": 79
+      },
+      {
+        "model": "Llama-8B",
+        "memory": "Randomized",
+        "SR": 0.18,
+        "n_success": 9,
+        "n_total": 50,
+        "local_valid": 0.9866071428571429,
+        "structural": 73
+      },
+      {
+        "model": "Llama-8B",
+        "memory": "Misleading",
+        "SR": 0.26,
+        "n_success": 13,
+        "n_total": 50,
+        "local_valid": 0.990990990990991,
+        "structural": 71
+      }
+    ]
+  },
+  "decoding": [
+    {
+      "model": "Qwen3-8B",
+      "env": "Word Ladder",
+      "prompt": "Zero-shot",
+      "SR": 0.45,
+      "n_success": 9,
+      "n_total": 20,
+      "local_valid": 0.775811209439528,
+      "structural": 11
+    },
+    {
+      "model": "Qwen3-8B",
+      "env": "Word Ladder",
+      "prompt": "Scaffold",
+      "SR": 0.4,
+      "n_success": 8,
+      "n_total": 20,
+      "local_valid": 0.5028248587570622,
+      "structural": 13
+    },
+    {
+      "model": "Qwen3-8B",
+      "env": "Alloy",
+      "prompt": "Zero-shot",
+      "SR": 0.0,
+      "n_success": 0,
+      "n_total": 20,
+      "local_valid": 0.5857142857142857,
+      "structural": 164
+    },
+    {
+      "model": "Qwen3-8B",
+      "env": "Alloy",
+      "prompt": "Self-check",
+      "SR": 0.05,
+      "n_success": 1,
+      "n_total": 20,
+      "local_valid": 0.6086956521739131,
+      "structural": 159
+    },
+    {
+      "model": "Qwen3-8B",
+      "env": "GB1",
+      "prompt": "Zero-shot",
+      "SR": 0.1,
+      "n_success": 2,
+      "n_total": 20,
+      "local_valid": 0.9882352941176471,
+      "structural": 30
+    },
+    {
+      "model": "Qwen3-8B",
+      "env": "GB1",
+      "prompt": "Self-check",
+      "SR": 0.1,
+      "n_success": 2,
+      "n_total": 20,
+      "local_valid": 1.0,
+      "structural": 33
+    },
+    {
+      "model": "Ministral-8B",
+      "env": "Word Ladder",
+      "prompt": "Zero-shot",
+      "SR": 0.15,
+      "n_success": 3,
+      "n_total": 20,
+      "local_valid": 0.40145985401459855,
+      "structural": 18
+    },
+    {
+      "model": "Ministral-8B",
+      "env": "Word Ladder",
+      "prompt": "Scaffold",
+      "SR": 0.3,
+      "n_success": 6,
+      "n_total": 20,
+      "local_valid": 0.5612648221343873,
+      "structural": 18
+    },
+    {
+      "model": "Ministral-8B",
+      "env": "Alloy",
+      "prompt": "Zero-shot",
+      "SR": 0.0,
+      "n_success": 0,
+      "n_total": 20,
+      "local_valid": 0.66875,
+      "structural": 147
+    },
+    {
+      "model": "Ministral-8B",
+      "env": "Alloy",
+      "prompt": "Self-check",
+      "SR": 0.05,
+      "n_success": 1,
+      "n_total": 20,
+      "local_valid": 0.6216216216216216,
+      "structural": 136
+    },
+    {
+      "model": "Ministral-8B",
+      "env": "GB1",
+      "prompt": "Zero-shot",
+      "SR": 0.0,
+      "n_success": 0,
+      "n_total": 20,
+      "local_valid": 1.0,
+      "structural": 20
+    },
+    {
+      "model": "Ministral-8B",
+      "env": "GB1",
+      "prompt": "Self-check",
+      "SR": 0.1,
+      "n_success": 2,
+      "n_total": 20,
+      "local_valid": 1.0,
+      "structural": 29
+    },
+    {
+      "model": "Llama-8B",
+      "env": "Word Ladder",
+      "prompt": "Zero-shot",
+      "SR": 0.35,
+      "n_success": 7,
+      "n_total": 20,
+      "local_valid": 0.4438202247191011,
+      "structural": 21
+    },
+    {
+      "model": "Llama-8B",
+      "env": "Word Ladder",
+      "prompt": "Scaffold",
+      "SR": 0.35,
+      "n_success": 7,
+      "n_total": 20,
+      "local_valid": 0.30303030303030304,
+      "structural": 20
+    },
+    {
+      "model": "Llama-8B",
+      "env": "Alloy",
+      "prompt": "Zero-shot",
+      "SR": 0.1,
+      "n_success": 2,
+      "n_total": 20,
+      "local_valid": 0.6928571428571428,
+      "structural": 172
+    },
+    {
+      "model": "Llama-8B",
+      "env": "Alloy",
+      "prompt": "Self-check",
+      "SR": 0.1,
+      "n_success": 2,
+      "n_total": 20,
+      "local_valid": 0.7142857142857143,
+      "structural": 176
+    },
+    {
+      "model": "Llama-8B",
+      "env": "GB1",
+      "prompt": "Zero-shot",
+      "SR": 0.15,
+      "n_success": 3,
+      "n_total": 20,
+      "local_valid": 0.9833333333333333,
+      "structural": 24
+    },
+    {
+      "model": "Llama-8B",
+      "env": "GB1",
+      "prompt": "Self-check",
+      "SR": 0.15,
+      "n_success": 3,
+      "n_total": 20,
+      "local_valid": 1.0,
+      "structural": 34
+    }
+  ]
+}

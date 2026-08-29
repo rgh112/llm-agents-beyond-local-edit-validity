@@ -1,0 +1,536 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 26,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     mouse\nCurrent:    doses\nPositions:  01234\nMismatches: ^ ^^^\nPath: coses \u2192 doses\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {h, l, n, p, r}\n  2: {g, l, m, p, t, v, z}\n  4: {d, r}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "coses",
+      "structure_after": "doses"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     mouse\nCurrent:    doges\nPositions:  01234\nMismatches: ^ ^^^\nPath: coses \u2192 doses \u2192 doges\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {l}\n  2: {l, m, p, t, v, z}\n  4: {y}",
+      "raw_action": "EDIT 2 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "doses",
+      "structure_after": "doges"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     mouse\nCurrent:    loges\nPositions:  01234\nMismatches: ^ ^^^\nPath: coses \u2192 doses \u2192 doges \u2192 loges\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  1: {e, u}\n  2: {b, d, p, r, s, v, w, x}\n  3: {o}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "doges",
+      "structure_after": "loges"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     mouse\nCurrent:    leges\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 loges \u2192 leges\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {r}\n  1: {u}\n  2: {n, x}\n  4: {r}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "loges",
+      "structure_after": "leges"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     mouse\nCurrent:    lenes\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 loges \u2192 leges \u2192 lenes\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {b, d, g, p}\n  1: {a, i, u}\n  2: {x}\n  3: {d, i, o}",
+      "raw_action": "EDIT 2 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "leges",
+      "structure_after": "lenes"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     mouse\nCurrent:    lends\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 lenes \u2192 lends\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, f, m*, p, r, s, t, v, w}\n  1: {a}\n  2: {a, u*}\n  3: {i, o}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lenes",
+      "structure_after": "lends"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     mouse\nCurrent:    leads\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 lends \u2192 leads\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, d, h, m*, r}\n  1: {o*}\n  2: {u*}\n  3: {f, k, n, p, r}\n  4: {y}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lends",
+      "structure_after": "leads"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     mouse\nCurrent:    loads\nPositions:  01234\nMismatches: ^ ^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 leads \u2192 loads\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {g, r, t, w}\n  2: {r}\n  3: {f, m, n}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "leads",
+      "structure_after": "loads"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     mouse\nCurrent:    goads\nPositions:  01234\nMismatches: ^ ^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 loads \u2192 goads\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {r, t, w}\n  1: {l, r}\n  2: {l, o, w}\n  3: {l, t}",
+      "raw_action": "EDIT 0 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "loads",
+      "structure_after": "goads"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     mouse\nCurrent:    glads\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 goads \u2192 glads\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {c}\n  1: {r}\n  2: {e}\n  3: {n, s*}\n  4: {e*, y}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "goads",
+      "structure_after": "glads"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     mouse\nCurrent:    glans\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 glads \u2192 glans\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {a, c, e, f, p, u}\n  1: {r, u}\n  2: {e}\n  3: {s*}\n  4: {d}",
+      "raw_action": "EDIT 3 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "glads",
+      "structure_after": "glans"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     mouse\nCurrent:    glans\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 glads \u2192 glans\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {a, c, e, f, p, u}\n  1: {r, u}\n  2: {e}\n  3: {s*}\n  4: {d}",
+      "raw_action": "EDIT 4 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glans",
+      "structure_after": "glans"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     mouse\nCurrent:    glans\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 glads \u2192 glans\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {a, c, e, f, p, u}\n  1: {r, u}\n  2: {e}\n  3: {s*}\n  4: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glans",
+      "structure_after": "glans"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     mouse\nCurrent:    glans\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 glads \u2192 glans\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {a, c, e, f, p, u}\n  1: {r, u}\n  2: {e}\n  3: {s*}\n  4: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glans",
+      "structure_after": "glans"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     mouse\nCurrent:    glans\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 glads \u2192 glans\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {a, c, e, f, p, u}\n  1: {r, u}\n  2: {e}\n  3: {s*}\n  4: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glans",
+      "structure_after": "glans"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     mouse\nCurrent:    glans\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 glads \u2192 glans\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {a, c, e, f, p, u}\n  1: {r, u}\n  2: {e}\n  3: {s*}\n  4: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glans",
+      "structure_after": "glans"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     mouse\nCurrent:    glans\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 glads \u2192 glans\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {a, c, e, f, p, u}\n  1: {r, u}\n  2: {e}\n  3: {s*}\n  4: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glans",
+      "structure_after": "glans"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     mouse\nCurrent:    glans\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 glads \u2192 glans\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {a, c, e, f, p, u}\n  1: {r, u}\n  2: {e}\n  3: {s*}\n  4: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glans",
+      "structure_after": "glans"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     mouse\nCurrent:    glans\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 glads \u2192 glans\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {a, c, e, f, p, u}\n  1: {r, u}\n  2: {e}\n  3: {s*}\n  4: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glans",
+      "structure_after": "glans"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     mouse\nCurrent:    glans\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 glads \u2192 glans\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {a, c, e, f, p, u}\n  1: {r, u}\n  2: {e}\n  3: {s*}\n  4: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glans",
+      "structure_after": "glans"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     mouse\nCurrent:    glans\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 glads \u2192 glans\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {a, c, e, f, p, u}\n  1: {r, u}\n  2: {e}\n  3: {s*}\n  4: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glans",
+      "structure_after": "glans"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     mouse\nCurrent:    glans\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 glads \u2192 glans\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {a, c, e, f, p, u}\n  1: {r, u}\n  2: {e}\n  3: {s*}\n  4: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glans",
+      "structure_after": "glans"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     mouse\nCurrent:    glans\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 glads \u2192 glans\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {a, c, e, f, p, u}\n  1: {r, u}\n  2: {e}\n  3: {s*}\n  4: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glans",
+      "structure_after": "glans"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     mouse\nCurrent:    glans\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 glads \u2192 glans\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {a, c, e, f, p, u}\n  1: {r, u}\n  2: {e}\n  3: {s*}\n  4: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glans",
+      "structure_after": "glans"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     mouse\nCurrent:    glans\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 glads \u2192 glans\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {a, c, e, f, p, u}\n  1: {r, u}\n  2: {e}\n  3: {s*}\n  4: {d}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glans",
+      "structure_after": "glans"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "PREMATURE_FINALIZE",
+  "failure_events": [
+    "ILLEGAL_EDIT",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "coses",
+    "target_word": "mouse",
+    "final_word": "glans",
+    "path": [
+      "coses",
+      "doses",
+      "doges",
+      "loges",
+      "leges",
+      "lenes",
+      "lends",
+      "leads",
+      "loads",
+      "goads",
+      "glads",
+      "glans"
+    ],
+    "path_length": 11,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "ILLEGAL_EDIT": 1,
+      "PREMATURE_FINALIZE": 13,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 15,
+    "optimal_distance_at_end": 8,
+    "events": [
+      "ILLEGAL_EDIT",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 83765,
+    "completion_tokens": 99,
+    "total_tokens": 83864
+  },
+  "wall_time_s": 14.666248321533203
+}

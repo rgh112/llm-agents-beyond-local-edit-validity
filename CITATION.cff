@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the accompanying paper."
+title: "Code for Evaluating LLM Agents Beyond Local Edit Validity"
+type: software
+authors:
+  - family-names: Ryu
+    given-names: Kunhee
+  - family-names: Lee
+    given-names: Chi-Guhn
+  - family-names: Lee
+    given-names: Keeheon
+date-released: 2026-08-29
+license: MIT
+repository-code: "https://github.com/rgh112/llm-agents-beyond-local-edit-validity"
+url: "https://github.com/rgh112/llm-agents-beyond-local-edit-validity"

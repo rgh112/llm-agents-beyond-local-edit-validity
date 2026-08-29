@@ -1,0 +1,445 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "few_shot_strategy",
+  "memory_condition": "state_only",
+  "seed": 31,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     sade\nCurrent:    pima\nPositions:  0123\nMismatches: ^^^^\nPath: pimp \u2192 pima\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, l, s*}\n  1: {u}\n  2: {c, k, n, t}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pimp",
+      "structure_after": "pima"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     sade\nCurrent:    bima\nPositions:  0123\nMismatches: ^^^^\nPath: pimp \u2192 pima \u2192 bima\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {l, s*}\n  1: {e}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pima",
+      "structure_after": "bima"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     sade\nCurrent:    lima\nPositions:  0123\nMismatches: ^^^^\nPath: pimp \u2192 pima \u2192 bima \u2192 lima\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {s*}\n  1: {a*}\n  2: {r}\n  3: {b, e*, n, o, p, y}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bima",
+      "structure_after": "lima"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     sade\nCurrent:    lama\nPositions:  0123\nMismatches: ^ ^^\nPath: pimp \u2192 pima \u2192 bima \u2192 lima \u2192 lama\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {g, m}\n  2: {v}\n  3: {b, e*, p, s}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lima",
+      "structure_after": "lama"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     sade\nCurrent:    gama\nPositions:  0123\nMismatches: ^ ^^\nPath: pimp \u2192 pima \u2192 bima \u2192 lima \u2192 lama \u2192 gama\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {m}\n  2: {g, l}\n  3: {b, e*, p, s, y}",
+      "raw_action": "EDIT 0 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lama",
+      "structure_after": "gama"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     sade\nCurrent:    mama\nPositions:  0123\nMismatches: ^ ^^\nPath: pimp \u2192 pima \u2192 bima \u2192 ... \u2192 gama \u2192 mama\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  2: {n, y}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gama",
+      "structure_after": "mama"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     sade\nCurrent:    mana\nPositions:  0123\nMismatches: ^ ^^\nPath: pimp \u2192 pima \u2192 bima \u2192 ... \u2192 mama \u2192 mana\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {k, n}\n  1: {i, y}\n  2: {y}\n  3: {e*, o, s, y}",
+      "raw_action": "EDIT 2 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mama",
+      "structure_after": "mana"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     sade\nCurrent:    kana\nPositions:  0123\nMismatches: ^ ^^\nPath: pimp \u2192 pima \u2192 bima \u2192 ... \u2192 mana \u2192 kana\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {n}\n  1: {i}\n  2: {k, p, t, v}\n  3: {e*}",
+      "raw_action": "EDIT 0 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "k"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mana",
+      "structure_after": "kana"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     sade\nCurrent:    nana\nPositions:  0123\nMismatches: ^ ^^\nPath: pimp \u2192 pima \u2192 bima \u2192 ... \u2192 kana \u2192 nana\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {d*}\n  3: {s}",
+      "raw_action": "EDIT 0 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "kana",
+      "structure_after": "nana"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     sade\nCurrent:    nona\nPositions:  0123\nMismatches: ^^^^\nPath: pimp \u2192 pima \u2192 bima \u2192 ... \u2192 nana \u2192 nona\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {d}\n  2: {m, t, v}\n  3: {e*}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "nana",
+      "structure_after": "nona"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     sade\nCurrent:    dona\nPositions:  0123\nMismatches: ^^^^\nPath: pimp \u2192 pima \u2192 bima \u2192 ... \u2192 nona \u2192 dona\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  2: {p}\n  3: {e*, g, s}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "nona",
+      "structure_after": "dona"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     sade\nCurrent:    dopa\nPositions:  0123\nMismatches: ^^^^\nPath: pimp \u2192 pima \u2192 bima \u2192 ... \u2192 dona \u2192 dopa\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  3: {e*, y}",
+      "raw_action": "EDIT 2 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dona",
+      "structure_after": "dopa"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     sade\nCurrent:    dope\nPositions:  0123\nMismatches: ^^^ \nPath: pimp \u2192 pima \u2192 bima \u2192 ... \u2192 dopa \u2192 dope\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {c, h, l, m, n, p, r, t}\n  1: {u}\n  2: {g, l, m, n, r, s, t, v, z}\n  3: {y}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dopa",
+      "structure_after": "dope"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     sade\nCurrent:    dope\nPositions:  0123\nMismatches: ^^^ \nPath: pimp \u2192 pima \u2192 bima \u2192 ... \u2192 dopa \u2192 dope\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {c, h, l, m, n, p, r, t}\n  1: {u}\n  2: {g, l, m, n, r, s, t, v, z}\n  3: {y}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dope",
+      "structure_after": "dope"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     sade\nCurrent:    dope\nPositions:  0123\nMismatches: ^^^ \nPath: pimp \u2192 pima \u2192 bima \u2192 ... \u2192 dopa \u2192 dope\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {c, h, l, m, n, p, r, t}\n  1: {u}\n  2: {g, l, m, n, r, s, t, v, z}\n  3: {y}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dope",
+      "structure_after": "dope"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     sade\nCurrent:    dope\nPositions:  0123\nMismatches: ^^^ \nPath: pimp \u2192 pima \u2192 bima \u2192 ... \u2192 dopa \u2192 dope\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {c, h, l, m, n, p, r, t}\n  1: {u}\n  2: {g, l, m, n, r, s, t, v, z}\n  3: {y}",
+      "raw_action": "EDIT 0 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dope",
+      "structure_after": "dope"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     sade\nCurrent:    dope\nPositions:  0123\nMismatches: ^^^ \nPath: pimp \u2192 pima \u2192 bima \u2192 ... \u2192 dopa \u2192 dope\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {c, h, l, m, n, p, r, t}\n  1: {u}\n  2: {g, l, m, n, r, s, t, v, z}\n  3: {y}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dope",
+      "structure_after": "dope"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     sade\nCurrent:    dope\nPositions:  0123\nMismatches: ^^^ \nPath: pimp \u2192 pima \u2192 bima \u2192 ... \u2192 dopa \u2192 dope\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {c, h, l, m, n, p, r, t}\n  1: {u}\n  2: {g, l, m, n, r, s, t, v, z}\n  3: {y}",
+      "raw_action": "EDIT 0 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dope",
+      "structure_after": "dope"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     sade\nCurrent:    dope\nPositions:  0123\nMismatches: ^^^ \nPath: pimp \u2192 pima \u2192 bima \u2192 ... \u2192 dopa \u2192 dope\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {c, h, l, m, n, p, r, t}\n  1: {u}\n  2: {g, l, m, n, r, s, t, v, z}\n  3: {y}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dope",
+      "structure_after": "dope"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     sade\nCurrent:    dope\nPositions:  0123\nMismatches: ^^^ \nPath: pimp \u2192 pima \u2192 bima \u2192 ... \u2192 dopa \u2192 dope\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {c, h, l, m, n, p, r, t}\n  1: {u}\n  2: {g, l, m, n, r, s, t, v, z}\n  3: {y}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dope",
+      "structure_after": "dope"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "pimp",
+    "target_word": "sade",
+    "final_word": "dope",
+    "path": [
+      "pimp",
+      "pima",
+      "bima",
+      "lima",
+      "lama",
+      "gama",
+      "mama",
+      "mana",
+      "kana",
+      "nana",
+      "nona",
+      "dona",
+      "dopa",
+      "dope"
+    ],
+    "path_length": 13,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 7,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 8,
+    "optimal_distance_at_end": 4,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 32810,
+    "completion_tokens": 100,
+    "total_tokens": 32910
+  },
+  "wall_time_s": 67.52800607681274
+}

@@ -1,0 +1,311 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 41,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     deli\nCurrent:    curd\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {n, s, t}\n  1: {a, o}\n  2: {e}\n  3: {b, e, f, l, n, r, s, t}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "burd",
+      "structure_after": "curd"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     deli\nCurrent:    cued\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 cued\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {h, r, s}\n  1: {o}\n  3: {s}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "curd",
+      "structure_after": "cued"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     deli\nCurrent:    hued\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 cued \u2192 hued\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {r, s}\n  1: {a, e*, i, o}\n  3: {s}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cued",
+      "structure_after": "hued"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     deli\nCurrent:    haed\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 cued \u2192 hued \u2192 haed\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {g}\n  1: {e*, i, o}\n  2: {n, r}\n  3: {m, n, s, t}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hued",
+      "structure_after": "haed"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     deli\nCurrent:    gaed\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 cued \u2192 hued \u2192 haed \u2192 gaed\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  1: {e*, i, l}\n  2: {u}\n  3: {n, s}",
+      "raw_action": "EDIT 0 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "haed",
+      "structure_after": "gaed"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     deli\nCurrent:    gled\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 cued \u2192 ... \u2192 gaed \u2192 gled\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, f, p, s}\n  1: {e*, i}\n  2: {a}\n  3: {e, g, n, y}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gaed",
+      "structure_after": "gled"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     deli\nCurrent:    bled\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 cued \u2192 ... \u2192 gled \u2192 bled\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {f, p, s}\n  1: {r}\n  3: {b, t, w}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gled",
+      "structure_after": "bled"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     deli\nCurrent:    bred\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 cued \u2192 ... \u2192 bled \u2192 bred\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {i}\n  2: {a}\n  3: {e, n, w}",
+      "raw_action": "EDIT 1 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bled",
+      "structure_after": "bred"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     deli\nCurrent:    ired\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 cued \u2192 ... \u2192 bred \u2192 ired\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  1: {c}\n  2: {i}\n  3: {s}",
+      "raw_action": "EDIT 0 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bred",
+      "structure_after": "ired"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     deli\nCurrent:    iced\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 cued \u2192 ... \u2192 ired \u2192 iced\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {a}\n  3: {s}",
+      "raw_action": "EDIT 1 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ired",
+      "structure_after": "iced"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     deli\nCurrent:    aced\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 cued \u2192 ... \u2192 iced \u2192 aced\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  1: {b, g, p, w, x}\n  2: {i}\n  3: {s}",
+      "raw_action": "EDIT 0 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "iced",
+      "structure_after": "aced"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     deli\nCurrent:    abed\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 cued \u2192 ... \u2192 aced \u2192 abed\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  1: {g, p, w, x}\n  3: {t}",
+      "raw_action": "EDIT 1 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "aced",
+      "structure_after": "abed"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     deli\nCurrent:    abet\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 cued \u2192 ... \u2192 abed \u2192 abet\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  2: {u}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "abed",
+      "structure_after": "abet"
+    },
+    {
+      "t": 14,
+      "observation": "",
+      "raw_action": "EDIT 2 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [
+        "LOCAL_OPTIMUM_TRAP"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true,
+        "dead_end": true
+      },
+      "structure_before": "abet",
+      "structure_after": "abut"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "LOCAL_OPTIMUM_TRAP",
+  "failure_events": [
+    "LOCAL_OPTIMUM_TRAP"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 14,
+    "max_steps": 25,
+    "start_word": "burd",
+    "target_word": "deli",
+    "final_word": "abut",
+    "path": [
+      "burd",
+      "curd",
+      "cued",
+      "hued",
+      "haed",
+      "gaed",
+      "gled",
+      "bled",
+      "bred",
+      "ired",
+      "iced",
+      "aced",
+      "abed",
+      "abet",
+      "abut"
+    ],
+    "path_length": 14,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "LOCAL_OPTIMUM_TRAP": 1
+    },
+    "total_violations": 1,
+    "optimal_distance_at_end": 9,
+    "events": [
+      "LOCAL_OPTIMUM_TRAP"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 15173,
+    "completion_tokens": 70,
+    "total_tokens": 15243
+  },
+  "wall_time_s": 29.061949968338013
+}

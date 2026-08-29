@@ -1,0 +1,679 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 7,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     mohel\nCurrent:    musts\nPositions:  01234\nMismatches:  ^^^^\nPath: justs \u2192 musts\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  0: {b, d, g, l, o, r}\n  1: {a, i, o*}\n  2: {t}\n  3: {e*, k}\n  4: {h, y}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "justs",
+      "structure_after": "musts"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     mohel\nCurrent:    masts\nPositions:  01234\nMismatches:  ^^^^\nPath: justs \u2192 musts \u2192 masts\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  0: {b, c, e, f, g, l, o, p, v, w}\n  1: {i, o*}\n  2: {l, r, t, u}\n  3: {k}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "musts",
+      "structure_after": "masts"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     mohel\nCurrent:    malts\nPositions:  01234\nMismatches:  ^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 malts\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  0: {h, s}\n  1: {e, i, o*}\n  2: {r, t, u}\n  3: {e*, l, m}\n  4: {y}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "masts",
+      "structure_after": "malts"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     mohel\nCurrent:    halts\nPositions:  01234\nMismatches: ^^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 malts \u2192 halts\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  0: {s}\n  1: {i, o*}\n  2: {e, f, n, r}\n  3: {e*, l, m, o}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "malts",
+      "structure_after": "halts"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     mohel\nCurrent:    holts\nPositions:  01234\nMismatches: ^ ^^^\nPath: justs \u2192 musts \u2192 masts \u2192 malts \u2192 halts \u2192 holts\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {b, c, d, j, m*, v}\n  1: {i}\n  2: {o, s}\n  3: {d, e*, k, m}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "halts",
+      "structure_after": "holts"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     mohel\nCurrent:    molts\nPositions:  01234\nMismatches:   ^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 holts \u2192 molts\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {b, c, d, j, v}\n  1: {e, i}\n  2: {a, o, r, s, t}\n  3: {a, d, e*, l}\n  4: {o}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "holts",
+      "structure_after": "molts"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     mohel\nCurrent:    melts\nPositions:  01234\nMismatches:  ^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 molts \u2192 melts\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g, p, w}\n  1: {i}\n  2: {a, e}\n  3: {d, l}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "molts",
+      "structure_after": "melts"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     mohel\nCurrent:    melts\nPositions:  01234\nMismatches:  ^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 molts \u2192 melts\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g, p, w}\n  1: {i}\n  2: {a, e}\n  3: {d, l}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "melts",
+      "structure_after": "melts"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     mohel\nCurrent:    melts\nPositions:  01234\nMismatches:  ^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 molts \u2192 melts\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g, p, w}\n  1: {i}\n  2: {a, e}\n  3: {d, l}",
+      "raw_action": "EDIT 3 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "h"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "melts",
+      "structure_after": "melts"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     mohel\nCurrent:    melts\nPositions:  01234\nMismatches:  ^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 molts \u2192 melts\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g, p, w}\n  1: {i}\n  2: {a, e}\n  3: {d, l}",
+      "raw_action": "EDIT 4 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "melts",
+      "structure_after": "melts"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     mohel\nCurrent:    melts\nPositions:  01234\nMismatches:  ^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 molts \u2192 melts\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g, p, w}\n  1: {i}\n  2: {a, e}\n  3: {d, l}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "melts",
+      "structure_after": "melts"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     mohel\nCurrent:    melts\nPositions:  01234\nMismatches:  ^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 molts \u2192 melts\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g, p, w}\n  1: {i}\n  2: {a, e}\n  3: {d, l}",
+      "raw_action": "EDIT 4 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "melts",
+      "structure_after": "melts"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     mohel\nCurrent:    melts\nPositions:  01234\nMismatches:  ^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 molts \u2192 melts\nSteps used: 13/30  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g, p, w}\n  1: {i}\n  2: {a, e}\n  3: {d, l}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "melts",
+      "structure_after": "melts"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     mohel\nCurrent:    melts\nPositions:  01234\nMismatches:  ^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 molts \u2192 melts\nSteps used: 14/30  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g, p, w}\n  1: {i}\n  2: {a, e}\n  3: {d, l}",
+      "raw_action": "EDIT 4 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "h"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "melts",
+      "structure_after": "melts"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     mohel\nCurrent:    melts\nPositions:  01234\nMismatches:  ^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 molts \u2192 melts\nSteps used: 15/30  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g, p, w}\n  1: {i}\n  2: {a, e}\n  3: {d, l}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "melts",
+      "structure_after": "melts"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     mohel\nCurrent:    melts\nPositions:  01234\nMismatches:  ^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 molts \u2192 melts\nSteps used: 16/30  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g, p, w}\n  1: {i}\n  2: {a, e}\n  3: {d, l}",
+      "raw_action": "EDIT 4 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "melts",
+      "structure_after": "melts"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     mohel\nCurrent:    mells\nPositions:  01234\nMismatches:  ^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 melts \u2192 mells\nSteps used: 17/30  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, h, j, s, t, w, y}\n  1: {a, i, o*, u}\n  2: {a, r, w}\n  3: {d}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "melts",
+      "structure_after": "mells"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     mohel\nCurrent:    hells\nPositions:  01234\nMismatches: ^^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 mells \u2192 hells\nSteps used: 18/30  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, j, s, t, w, y}\n  1: {a, i, u}\n  2: {a, e, i, r}\n  3: {m, o, p}\n  4: {o}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mells",
+      "structure_after": "hells"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     mohel\nCurrent:    hells\nPositions:  01234\nMismatches: ^^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 mells \u2192 hells\nSteps used: 19/30  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, j, s, t, w, y}\n  1: {a, i, u}\n  2: {a, e, i, r}\n  3: {m, o, p}\n  4: {o}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "hells",
+      "structure_after": "hells"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     mohel\nCurrent:    hells\nPositions:  01234\nMismatches: ^^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 mells \u2192 hells\nSteps used: 20/30  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, j, s, t, w, y}\n  1: {a, i, u}\n  2: {a, e, i, r}\n  3: {m, o, p}\n  4: {o}",
+      "raw_action": "EDIT 0 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "hells",
+      "structure_after": "hells"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     mohel\nCurrent:    hells\nPositions:  01234\nMismatches: ^^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 mells \u2192 hells\nSteps used: 21/30  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, j, s, t, w, y}\n  1: {a, i, u}\n  2: {a, e, i, r}\n  3: {m, o, p}\n  4: {o}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "hells",
+      "structure_after": "hells"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     mohel\nCurrent:    hells\nPositions:  01234\nMismatches: ^^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 mells \u2192 hells\nSteps used: 22/30  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, j, s, t, w, y}\n  1: {a, i, u}\n  2: {a, e, i, r}\n  3: {m, o, p}\n  4: {o}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "hells",
+      "structure_after": "hells"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     mohel\nCurrent:    hells\nPositions:  01234\nMismatches: ^^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 mells \u2192 hells\nSteps used: 23/30  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, j, s, t, w, y}\n  1: {a, i, u}\n  2: {a, e, i, r}\n  3: {m, o, p}\n  4: {o}",
+      "raw_action": "EDIT 0 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "hells",
+      "structure_after": "hells"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     mohel\nCurrent:    hells\nPositions:  01234\nMismatches: ^^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 mells \u2192 hells\nSteps used: 24/30  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, j, s, t, w, y}\n  1: {a, i, u}\n  2: {a, e, i, r}\n  3: {m, o, p}\n  4: {o}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "hells",
+      "structure_after": "hells"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     mohel\nCurrent:    hells\nPositions:  01234\nMismatches: ^^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 mells \u2192 hells\nSteps used: 25/30  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, j, s, t, w, y}\n  1: {a, i, u}\n  2: {a, e, i, r}\n  3: {m, o, p}\n  4: {o}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "hells",
+      "structure_after": "hells"
+    },
+    {
+      "t": 26,
+      "observation": "Target:     mohel\nCurrent:    hells\nPositions:  01234\nMismatches: ^^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 mells \u2192 hells\nSteps used: 26/30  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, j, s, t, w, y}\n  1: {a, i, u}\n  2: {a, e, i, r}\n  3: {m, o, p}\n  4: {o}",
+      "raw_action": "EDIT 0 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "hells",
+      "structure_after": "hells"
+    },
+    {
+      "t": 27,
+      "observation": "Target:     mohel\nCurrent:    hells\nPositions:  01234\nMismatches: ^^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 mells \u2192 hells\nSteps used: 27/30  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, j, s, t, w, y}\n  1: {a, i, u}\n  2: {a, e, i, r}\n  3: {m, o, p}\n  4: {o}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "hells",
+      "structure_after": "hells"
+    },
+    {
+      "t": 28,
+      "observation": "Target:     mohel\nCurrent:    hells\nPositions:  01234\nMismatches: ^^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 mells \u2192 hells\nSteps used: 28/30  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, j, s, t, w, y}\n  1: {a, i, u}\n  2: {a, e, i, r}\n  3: {m, o, p}\n  4: {o}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "hells",
+      "structure_after": "hells"
+    },
+    {
+      "t": 29,
+      "observation": "Target:     mohel\nCurrent:    hells\nPositions:  01234\nMismatches: ^^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 mells \u2192 hells\nSteps used: 29/30  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, j, s, t, w, y}\n  1: {a, i, u}\n  2: {a, e, i, r}\n  3: {m, o, p}\n  4: {o}",
+      "raw_action": "EDIT 0 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "hells",
+      "structure_after": "hells"
+    },
+    {
+      "t": 30,
+      "observation": "Target:     mohel\nCurrent:    hells\nPositions:  01234\nMismatches: ^^^^^\nPath: justs \u2192 musts \u2192 masts \u2192 ... \u2192 mells \u2192 hells\nSteps used: 30/30  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, j, s, t, w, y}\n  1: {a, i, u}\n  2: {a, e, i, r}\n  3: {m, o, p}\n  4: {o}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "hells",
+      "structure_after": "hells"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "OSCILLATION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "OSCILLATION",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "OSCILLATION",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "OSCILLATION",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "OSCILLATION",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 30,
+    "max_steps": 30,
+    "start_word": "justs",
+    "target_word": "mohel",
+    "final_word": "hells",
+    "path": [
+      "justs",
+      "musts",
+      "masts",
+      "malts",
+      "halts",
+      "holts",
+      "molts",
+      "melts",
+      "mells",
+      "hells"
+    ],
+    "path_length": 9,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "INVALID_WORD": 13,
+      "OSCILLATION": 4,
+      "ILLEGAL_EDIT": 4,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 22,
+    "optimal_distance_at_end": 6,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "OSCILLATION",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "OSCILLATION",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "OSCILLATION",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "OSCILLATION",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 70934,
+    "completion_tokens": 150,
+    "total_tokens": 71084
+  },
+  "wall_time_s": 16.502596139907837
+}

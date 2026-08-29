@@ -1,0 +1,572 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 47,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     veil\nCurrent:    rebs\nPositions:  0123\nMismatches: ^ ^^\nPath: rubs \u2192 rebs\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {d, n, w}\n  1: {i, o}\n  2: {c, d, e, f, g, i*, m, p, t, v}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rubs",
+      "structure_after": "rebs"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     veil\nCurrent:    revs\nPositions:  0123\nMismatches: ^ ^^\nPath: rubs \u2192 rebs \u2192 revs\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {d}\n  2: {c, d, e, f, g, i*, m, p, t}",
+      "raw_action": "EDIT 2 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "v"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rebs",
+      "structure_after": "revs"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     veil\nCurrent:    revs\nPositions:  0123\nMismatches: ^ ^^\nPath: rubs \u2192 rebs \u2192 revs\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {d}\n  2: {c, d, e, f, g, i*, m, p, t}",
+      "raw_action": "EDIT 0 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "revs",
+      "structure_after": "revs"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     veil\nCurrent:    revs\nPositions:  0123\nMismatches: ^ ^^\nPath: rubs \u2192 rebs \u2192 revs\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {d}\n  2: {c, d, e, f, g, i*, m, p, t}",
+      "raw_action": "EDIT 3 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "revs",
+      "structure_after": "revs"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     veil\nCurrent:    rees\nPositions:  0123\nMismatches: ^ ^^\nPath: rubs \u2192 rebs \u2192 revs \u2192 rees\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, s, t, v*, w, z}\n  1: {o, u, y}\n  2: {c, d, f, g, i*, m, p, t}\n  3: {d, f, k, l*}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "revs",
+      "structure_after": "rees"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     veil\nCurrent:    rees\nPositions:  0123\nMismatches: ^ ^^\nPath: rubs \u2192 rebs \u2192 revs \u2192 rees\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, s, t, v*, w, z}\n  1: {o, u, y}\n  2: {c, d, f, g, i*, m, p, t}\n  3: {d, f, k, l*}",
+      "raw_action": "EDIT 3 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "rees",
+      "structure_after": "rees"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     veil\nCurrent:    vees\nPositions:  0123\nMismatches:   ^^\nPath: rubs \u2192 rebs \u2192 revs \u2192 rees \u2192 vees\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, s, t, w, z}\n  1: {i, o}\n  2: {t}\n  3: {p, r}",
+      "raw_action": "EDIT 0 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "v"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rees",
+      "structure_after": "vees"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     veil\nCurrent:    vies\nPositions:  0123\nMismatches:  ^^^\nPath: rubs \u2192 rebs \u2192 revs \u2192 rees \u2192 vees \u2192 vies\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {d, g, h, l, p, t}\n  1: {o}\n  2: {g, m}\n  3: {d, r, w}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "vees",
+      "structure_after": "vies"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     veil\nCurrent:    vies\nPositions:  0123\nMismatches:  ^^^\nPath: rubs \u2192 rebs \u2192 revs \u2192 rees \u2192 vees \u2192 vies\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {d, g, h, l, p, t}\n  1: {o}\n  2: {g, m}\n  3: {d, r, w}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "vies",
+      "structure_after": "vies"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     veil\nCurrent:    vies\nPositions:  0123\nMismatches:  ^^^\nPath: rubs \u2192 rebs \u2192 revs \u2192 rees \u2192 vees \u2192 vies\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {d, g, h, l, p, t}\n  1: {o}\n  2: {g, m}\n  3: {d, r, w}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "vies",
+      "structure_after": "vies"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     veil\nCurrent:    lies\nPositions:  0123\nMismatches: ^^^^\nPath: rubs \u2192 rebs \u2192 revs \u2192 ... \u2192 vies \u2192 lies\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {d, g, h, p, t}\n  1: {e*, u, y}\n  2: {b, d, n, p, t}\n  3: {d, f, n, r, u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "vies",
+      "structure_after": "lies"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     veil\nCurrent:    lies\nPositions:  0123\nMismatches: ^^^^\nPath: rubs \u2192 rebs \u2192 revs \u2192 ... \u2192 vies \u2192 lies\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {d, g, h, p, t}\n  1: {e*, u, y}\n  2: {b, d, n, p, t}\n  3: {d, f, n, r, u}",
+      "raw_action": "EDIT 0 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lies",
+      "structure_after": "lies"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     veil\nCurrent:    lees\nPositions:  0123\nMismatches: ^ ^^\nPath: rubs \u2192 rebs \u2192 revs \u2192 ... \u2192 lies \u2192 lees\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, p, s, t, w, z}\n  1: {u, y}\n  2: {a, g, i*, k, n, s, t, y}\n  3: {k, r, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lies",
+      "structure_after": "lees"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     veil\nCurrent:    leis\nPositions:  0123\nMismatches: ^  ^\nPath: rubs \u2192 rebs \u2192 revs \u2192 ... \u2192 lees \u2192 leis\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {r, s}\n  2: {a, g, k, n, s, t, y}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lees",
+      "structure_after": "leis"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     veil\nCurrent:    leis\nPositions:  0123\nMismatches: ^  ^\nPath: rubs \u2192 rebs \u2192 revs \u2192 ... \u2192 lees \u2192 leis\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {r, s}\n  2: {a, g, k, n, s, t, y}",
+      "raw_action": "EDIT 0 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "leis",
+      "structure_after": "leis"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     veil\nCurrent:    leis\nPositions:  0123\nMismatches: ^  ^\nPath: rubs \u2192 rebs \u2192 revs \u2192 ... \u2192 lees \u2192 leis\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {r, s}\n  2: {a, g, k, n, s, t, y}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "leis",
+      "structure_after": "leis"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     veil\nCurrent:    leis\nPositions:  0123\nMismatches: ^  ^\nPath: rubs \u2192 rebs \u2192 revs \u2192 ... \u2192 lees \u2192 leis\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {r, s}\n  2: {a, g, k, n, s, t, y}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "leis",
+      "structure_after": "leis"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     veil\nCurrent:    leis\nPositions:  0123\nMismatches: ^  ^\nPath: rubs \u2192 rebs \u2192 revs \u2192 ... \u2192 lees \u2192 leis\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {r, s}\n  2: {a, g, k, n, s, t, y}",
+      "raw_action": "EDIT 0 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "leis",
+      "structure_after": "leis"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     veil\nCurrent:    leis\nPositions:  0123\nMismatches: ^  ^\nPath: rubs \u2192 rebs \u2192 revs \u2192 ... \u2192 lees \u2192 leis\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {r, s}\n  2: {a, g, k, n, s, t, y}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "leis",
+      "structure_after": "leis"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     veil\nCurrent:    leis\nPositions:  0123\nMismatches: ^  ^\nPath: rubs \u2192 rebs \u2192 revs \u2192 ... \u2192 lees \u2192 leis\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {r, s}\n  2: {a, g, k, n, s, t, y}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "leis",
+      "structure_after": "leis"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     veil\nCurrent:    leis\nPositions:  0123\nMismatches: ^  ^\nPath: rubs \u2192 rebs \u2192 revs \u2192 ... \u2192 lees \u2192 leis\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {r, s}\n  2: {a, g, k, n, s, t, y}",
+      "raw_action": "EDIT 0 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "leis",
+      "structure_after": "leis"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     veil\nCurrent:    leis\nPositions:  0123\nMismatches: ^  ^\nPath: rubs \u2192 rebs \u2192 revs \u2192 ... \u2192 lees \u2192 leis\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {r, s}\n  2: {a, g, k, n, s, t, y}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "leis",
+      "structure_after": "leis"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     veil\nCurrent:    leis\nPositions:  0123\nMismatches: ^  ^\nPath: rubs \u2192 rebs \u2192 revs \u2192 ... \u2192 lees \u2192 leis\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {r, s}\n  2: {a, g, k, n, s, t, y}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "leis",
+      "structure_after": "leis"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     veil\nCurrent:    leis\nPositions:  0123\nMismatches: ^  ^\nPath: rubs \u2192 rebs \u2192 revs \u2192 ... \u2192 lees \u2192 leis\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {r, s}\n  2: {a, g, k, n, s, t, y}",
+      "raw_action": "EDIT 0 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "leis",
+      "structure_after": "leis"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     veil\nCurrent:    leis\nPositions:  0123\nMismatches: ^  ^\nPath: rubs \u2192 rebs \u2192 revs \u2192 ... \u2192 lees \u2192 leis\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {r, s}\n  2: {a, g, k, n, s, t, y}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "leis",
+      "structure_after": "leis"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "OSCILLATION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "OSCILLATION",
+    "INVALID_WORD",
+    "OSCILLATION",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "OSCILLATION",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "rubs",
+    "target_word": "veil",
+    "final_word": "leis",
+    "path": [
+      "rubs",
+      "rebs",
+      "revs",
+      "rees",
+      "vees",
+      "vies",
+      "lies",
+      "lees",
+      "leis"
+    ],
+    "path_length": 8,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 11,
+      "ILLEGAL_EDIT": 3,
+      "OSCILLATION": 3,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 18,
+    "optimal_distance_at_end": 4,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "OSCILLATION",
+      "INVALID_WORD",
+      "OSCILLATION",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "OSCILLATION",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 83918,
+    "completion_tokens": 125,
+    "total_tokens": 84043
+  },
+  "wall_time_s": 14.808486938476562
+}

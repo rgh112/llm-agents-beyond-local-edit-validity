@@ -1,0 +1,132 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 10,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     zonk\nCurrent:    buds\nPositions:  0123\nMismatches: ^^^^\nPath: fuds \u2192 buds\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {c, d, m, o, p, s}\n  1: {a, e, i, o*}\n  2: {b, g, m, n*, r, s, t, y}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fuds",
+      "structure_after": "buds"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     zonk\nCurrent:    buns\nPositions:  0123\nMismatches: ^^ ^\nPath: fuds \u2192 buds \u2192 buns\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, m, n, p, r, s, t}\n  1: {a, e, i}\n  2: {b, g, m, r, s, t, y}\n  3: {d, g, k*, n, t}",
+      "raw_action": "EDIT 2 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "buds",
+      "structure_after": "buns"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     zonk\nCurrent:    bunk\nPositions:  0123\nMismatches: ^^  \nPath: fuds \u2192 buds \u2192 buns \u2192 bunk\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, j, l, p, s}\n  1: {a, o*}\n  2: {c, l, s}\n  3: {d, g, n, t}",
+      "raw_action": "EDIT 3 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "k"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "buns",
+      "structure_after": "bunk"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     zonk\nCurrent:    bonk\nPositions:  0123\nMismatches: ^   \nPath: fuds \u2192 buds \u2192 buns \u2192 bunk \u2192 bonk\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {c, h, k, m, w, z*}\n  1: {a}\n  2: {c, o, s}\n  3: {d, e, g, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bunk",
+      "structure_after": "bonk"
+    },
+    {
+      "t": 5,
+      "observation": "",
+      "raw_action": "EDIT 0 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "z"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 1.0,
+      "info": {
+        "valid": true,
+        "auto_success": true
+      },
+      "structure_before": "bonk",
+      "structure_after": "zonk"
+    }
+  ],
+  "success": true,
+  "terminal_failure": null,
+  "failure_events": [],
+  "final_metrics": {
+    "success": true,
+    "steps_taken": 5,
+    "max_steps": 25,
+    "start_word": "fuds",
+    "target_word": "zonk",
+    "final_word": "zonk",
+    "path": [
+      "fuds",
+      "buds",
+      "buns",
+      "bunk",
+      "bonk",
+      "zonk"
+    ],
+    "path_length": 5,
+    "optimal_length": 5,
+    "violations_by_type": {},
+    "total_violations": 0,
+    "optimal_distance_at_end": 0,
+    "events": []
+  },
+  "token_usage": {
+    "prompt_tokens": 4511,
+    "completion_tokens": 25,
+    "total_tokens": 4536
+  },
+  "wall_time_s": 2.737156867980957
+}

@@ -1,0 +1,532 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 11,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     limba\nCurrent:    links\nPositions:  01234\nMismatches:   ^^^\nPath: ginks \u2192 links\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {d, f, j, k, m, o, p, r, s, w}\n  1: {u}\n  2: {c}\n  3: {e, g, n, o, t}\n  4: {y}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ginks",
+      "structure_after": "links"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     limba\nCurrent:    lunks\nPositions:  01234\nMismatches:  ^^^^\nPath: ginks \u2192 links \u2192 lunks\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, j, p}\n  2: {c, r}\n  3: {a, e, g, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "links",
+      "structure_after": "lunks"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     limba\nCurrent:    bunks\nPositions:  01234\nMismatches: ^^^^^\nPath: ginks \u2192 links \u2192 lunks \u2192 bunks\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, j, p}\n  1: {a, o}\n  2: {c, l, s}\n  3: {d, g, n, t}\n  4: {o}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lunks",
+      "structure_after": "bunks"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     limba\nCurrent:    banks\nPositions:  01234\nMismatches: ^^^^^\nPath: ginks \u2192 links \u2192 lunks \u2192 bunks \u2192 banks\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {h, r, t, y}\n  1: {o}\n  2: {c, l, r, s}\n  3: {d, e, g, n}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bunks",
+      "structure_after": "banks"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     limba\nCurrent:    hanks\nPositions:  01234\nMismatches: ^^^^^\nPath: ginks \u2192 links \u2192 lunks \u2192 bunks \u2192 banks \u2192 hanks\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {r, t, y}\n  1: {o, u}\n  2: {c, i, r, w}\n  3: {d, g, t}\n  4: {y}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "banks",
+      "structure_after": "hanks"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     limba\nCurrent:    hunks\nPositions:  01234\nMismatches: ^^^^^\nPath: ginks \u2192 links \u2192 lunks \u2192 ... \u2192 hanks \u2192 hunks\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {d, f, g, j, p}\n  1: {o}\n  2: {c, l, s}\n  3: {t}\n  4: {y}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hanks",
+      "structure_after": "hunks"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     limba\nCurrent:    dunks\nPositions:  01234\nMismatches: ^^^^^\nPath: ginks \u2192 links \u2192 lunks \u2192 ... \u2192 hunks \u2192 dunks\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {f, g, j, p}\n  1: {i*}\n  2: {c, s}\n  3: {e, g, t}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hunks",
+      "structure_after": "dunks"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     limba\nCurrent:    dinks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 links \u2192 lunks \u2192 ... \u2192 dunks \u2192 dinks\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {f, j, k, m, o, p, r, s, w}\n  2: {c, r, s}\n  3: {e, g, t}\n  4: {y}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dunks",
+      "structure_after": "dinks"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     limba\nCurrent:    finks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 links \u2192 lunks \u2192 ... \u2192 dinks \u2192 finks\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {j, k, m, o, p, r, s, w}\n  1: {u}\n  3: {d, e, i, o}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dinks",
+      "structure_after": "finks"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     limba\nCurrent:    funks\nPositions:  01234\nMismatches: ^^^^^\nPath: ginks \u2192 links \u2192 lunks \u2192 ... \u2192 finks \u2192 funks\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {g, j, p}\n  2: {c}\n  3: {d}\n  4: {y}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "finks",
+      "structure_after": "funks"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     limba\nCurrent:    gunks\nPositions:  01234\nMismatches: ^^^^^\nPath: ginks \u2192 links \u2192 lunks \u2192 ... \u2192 funks \u2192 gunks\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {j, p}\n  2: {c}\n  4: {y}",
+      "raw_action": "EDIT 0 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "funks",
+      "structure_after": "gunks"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     limba\nCurrent:    junks\nPositions:  01234\nMismatches: ^^^^^\nPath: ginks \u2192 links \u2192 lunks \u2192 ... \u2192 gunks \u2192 junks\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {p}\n  1: {i*}\n  4: {y}",
+      "raw_action": "EDIT 0 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "j"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gunks",
+      "structure_after": "junks"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     limba\nCurrent:    punks\nPositions:  01234\nMismatches: ^^^^^\nPath: ginks \u2192 links \u2192 lunks \u2192 ... \u2192 junks \u2192 punks\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  1: {i*}\n  2: {c}\n  3: {a, g, t}\n  4: {a*, y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "junks",
+      "structure_after": "punks"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     limba\nCurrent:    pinks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 links \u2192 lunks \u2192 ... \u2192 punks \u2192 pinks\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {j, k, m, o, r, s, w}\n  2: {c}\n  3: {a, e, g, t}\n  4: {o, y}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "punks",
+      "structure_after": "pinks"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     limba\nCurrent:    jinks\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 links \u2192 lunks \u2192 ... \u2192 pinks \u2192 jinks\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {k, m, o, r, s, w}\n  3: {n}",
+      "raw_action": "EDIT 0 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "j"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pinks",
+      "structure_after": "jinks"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     limba\nCurrent:    jinns\nPositions:  01234\nMismatches: ^ ^^^\nPath: ginks \u2192 links \u2192 lunks \u2192 ... \u2192 jinks \u2192 jinns\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {l*}\n  4: {i}",
+      "raw_action": "EDIT 3 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "jinks",
+      "structure_after": "jinns"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     limba\nCurrent:    linns\nPositions:  01234\nMismatches:   ^^^\nPath: ginks \u2192 links \u2192 lunks \u2192 ... \u2192 jinns \u2192 linns\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  2: {e, m*, o}\n  3: {e, g, o, t}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "jinns",
+      "structure_after": "linns"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     limba\nCurrent:    linns\nPositions:  01234\nMismatches:   ^^^\nPath: ginks \u2192 links \u2192 lunks \u2192 ... \u2192 jinns \u2192 linns\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  2: {e, m*, o}\n  3: {e, g, o, t}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "linns",
+      "structure_after": "linns"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     limba\nCurrent:    linns\nPositions:  01234\nMismatches:   ^^^\nPath: ginks \u2192 links \u2192 lunks \u2192 ... \u2192 jinns \u2192 linns\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  2: {e, m*, o}\n  3: {e, g, o, t}",
+      "raw_action": "EDIT 3 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "linns",
+      "structure_after": "linns"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     limba\nCurrent:    linns\nPositions:  01234\nMismatches:   ^^^\nPath: ginks \u2192 links \u2192 lunks \u2192 ... \u2192 jinns \u2192 linns\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  2: {e, m*, o}\n  3: {e, g, o, t}",
+      "raw_action": "EDIT 3 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "b"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "linns",
+      "structure_after": "linns"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     limba\nCurrent:    linns\nPositions:  01234\nMismatches:   ^^^\nPath: ginks \u2192 links \u2192 lunks \u2192 ... \u2192 jinns \u2192 linns\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  2: {e, m*, o}\n  3: {e, g, o, t}",
+      "raw_action": "EDIT 3 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "linns",
+      "structure_after": "linns"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     limba\nCurrent:    limns\nPositions:  01234\nMismatches:    ^^\nPath: ginks \u2192 links \u2192 lunks \u2192 ... \u2192 linns \u2192 limns\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  2: {e, o}\n  3: {a, b*, e, o, p}",
+      "raw_action": "EDIT 2 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "linns",
+      "structure_after": "limns"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     limba\nCurrent:    limas\nPositions:  01234\nMismatches:    ^^\nPath: ginks \u2192 links \u2192 lunks \u2192 ... \u2192 limns \u2192 limas\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {b, p, s}\n  1: {a}\n  2: {r, t}\n  3: {b*, e, o, p}\n  4: {n}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "limns",
+      "structure_after": "limas"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     limba\nCurrent:    bimas\nPositions:  01234\nMismatches: ^  ^^\nPath: ginks \u2192 links \u2192 lunks \u2192 ... \u2192 limas \u2192 bimas\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {p, s}\n  1: {e}\n  4: {h}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "limas",
+      "structure_after": "bimas"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     limba\nCurrent:    pimas\nPositions:  01234\nMismatches: ^  ^^\nPath: ginks \u2192 links \u2192 lunks \u2192 ... \u2192 bimas \u2192 pimas\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {s}\n  1: {u}\n  2: {c, k, n, t}\n  3: {p}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bimas",
+      "structure_after": "pimas"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "ginks",
+    "target_word": "limba",
+    "final_word": "pimas",
+    "path": [
+      "ginks",
+      "links",
+      "lunks",
+      "bunks",
+      "banks",
+      "hanks",
+      "hunks",
+      "dunks",
+      "dinks",
+      "finks",
+      "funks",
+      "gunks",
+      "junks",
+      "punks",
+      "pinks",
+      "jinks",
+      "jinns",
+      "linns",
+      "limns",
+      "limas",
+      "bimas",
+      "pimas"
+    ],
+    "path_length": 21,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 4,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 5,
+    "optimal_distance_at_end": 3,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 46645,
+    "completion_tokens": 125,
+    "total_tokens": 46770
+  },
+  "wall_time_s": 14.777018785476685
+}

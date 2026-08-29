@@ -1,0 +1,471 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 14,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     jowed\nCurrent:    cover\nPositions:  01234\nMismatches: ^ ^ ^\nPath: hover \u2192 cover\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {l, m, r}\n  1: {a}\n  2: {d, m, o, p, r, w*, y}\n  4: {d*, n, s, t, y}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hover",
+      "structure_after": "cover"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     jowed\nCurrent:    coder\nPositions:  01234\nMismatches: ^ ^ ^\nPath: hover \u2192 cover \u2192 coder\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  1: {e, i, y}\n  2: {m, o, p, r, w*, y}\n  4: {c, d*, n, s, x}",
+      "raw_action": "EDIT 2 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cover",
+      "structure_after": "coder"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     jowed\nCurrent:    ceder\nPositions:  01234\nMismatches: ^^^ ^\nPath: hover \u2192 cover \u2192 coder \u2192 ceder\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {h, s}\n  1: {i, y}\n  3: {a}\n  4: {d*, s}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "coder",
+      "structure_after": "ceder"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     jowed\nCurrent:    ceder\nPositions:  01234\nMismatches: ^^^ ^\nPath: hover \u2192 cover \u2192 coder \u2192 ceder\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {h, s}\n  1: {i, y}\n  3: {a}\n  4: {d*, s}",
+      "raw_action": "EDIT 0 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "j"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ceder",
+      "structure_after": "ceder"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     jowed\nCurrent:    ceder\nPositions:  01234\nMismatches: ^^^ ^\nPath: hover \u2192 cover \u2192 coder \u2192 ceder\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {h, s}\n  1: {i, y}\n  3: {a}\n  4: {d*, s}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ceder",
+      "structure_after": "ceder"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     jowed\nCurrent:    ceder\nPositions:  01234\nMismatches: ^^^ ^\nPath: hover \u2192 cover \u2192 coder \u2192 ceder\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {h, s}\n  1: {i, y}\n  3: {a}\n  4: {d*, s}",
+      "raw_action": "EDIT 3 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ceder",
+      "structure_after": "ceder"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     jowed\nCurrent:    ceder\nPositions:  01234\nMismatches: ^^^ ^\nPath: hover \u2192 cover \u2192 coder \u2192 ceder\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {h, s}\n  1: {i, y}\n  3: {a}\n  4: {d*, s}",
+      "raw_action": "EDIT 4 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ceder",
+      "structure_after": "ceder"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     jowed\nCurrent:    ceder\nPositions:  01234\nMismatches: ^^^ ^\nPath: hover \u2192 cover \u2192 coder \u2192 ceder\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {h, s}\n  1: {i, y}\n  3: {a}\n  4: {d*, s}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ceder",
+      "structure_after": "ceder"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     jowed\nCurrent:    ceder\nPositions:  01234\nMismatches: ^^^ ^\nPath: hover \u2192 cover \u2192 coder \u2192 ceder\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {h, s}\n  1: {i, y}\n  3: {a}\n  4: {d*, s}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ceder",
+      "structure_after": "ceder"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     jowed\nCurrent:    ceded\nPositions:  01234\nMismatches: ^^^  \nPath: hover \u2192 cover \u2192 coder \u2192 ceder \u2192 ceded\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {r}\n  1: {o*}\n  2: {r}\n  4: {s}",
+      "raw_action": "EDIT 4 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ceder",
+      "structure_after": "ceded"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     jowed\nCurrent:    ceded\nPositions:  01234\nMismatches: ^^^  \nPath: hover \u2192 cover \u2192 coder \u2192 ceder \u2192 ceded\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {r}\n  1: {o*}\n  2: {r}\n  4: {s}",
+      "raw_action": "EDIT 0 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "j"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ceded",
+      "structure_after": "ceded"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     jowed\nCurrent:    coded\nPositions:  01234\nMismatches: ^ ^  \nPath: hover \u2192 cover \u2192 coder \u2192 ceder \u2192 ceded \u2192 coded\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {b}\n  2: {k, l, n, o, p, r, t, v, w*, x, y}\n  4: {c, n, s, x}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ceded",
+      "structure_after": "coded"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     jowed\nCurrent:    coded\nPositions:  01234\nMismatches: ^ ^  \nPath: hover \u2192 cover \u2192 coder \u2192 ceder \u2192 ceded \u2192 coded\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {b}\n  2: {k, l, n, o, p, r, t, v, w*, x, y}\n  4: {c, n, s, x}",
+      "raw_action": "EDIT 0 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "j"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "coded",
+      "structure_after": "coded"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     jowed\nCurrent:    coded\nPositions:  01234\nMismatches: ^ ^  \nPath: hover \u2192 cover \u2192 coder \u2192 ceder \u2192 ceded \u2192 coded\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {b}\n  2: {k, l, n, o, p, r, t, v, w*, x, y}\n  4: {c, n, s, x}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "coded",
+      "structure_after": "coded"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     jowed\nCurrent:    coded\nPositions:  01234\nMismatches: ^ ^  \nPath: hover \u2192 cover \u2192 coder \u2192 ceder \u2192 ceded \u2192 coded\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {b}\n  2: {k, l, n, o, p, r, t, v, w*, x, y}\n  4: {c, n, s, x}",
+      "raw_action": "EDIT 4 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "coded",
+      "structure_after": "coded"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     jowed\nCurrent:    coded\nPositions:  01234\nMismatches: ^ ^  \nPath: hover \u2192 cover \u2192 coder \u2192 ceder \u2192 ceded \u2192 coded\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {b}\n  2: {k, l, n, o, p, r, t, v, w*, x, y}\n  4: {c, n, s, x}",
+      "raw_action": "EDIT 0 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "j"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "coded",
+      "structure_after": "coded"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     jowed\nCurrent:    coded\nPositions:  01234\nMismatches: ^ ^  \nPath: hover \u2192 cover \u2192 coder \u2192 ceder \u2192 ceded \u2192 coded\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {b}\n  2: {k, l, n, o, p, r, t, v, w*, x, y}\n  4: {c, n, s, x}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "coded",
+      "structure_after": "coded"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     jowed\nCurrent:    coded\nPositions:  01234\nMismatches: ^ ^  \nPath: hover \u2192 cover \u2192 coder \u2192 ceder \u2192 ceded \u2192 coded\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {b}\n  2: {k, l, n, o, p, r, t, v, w*, x, y}\n  4: {c, n, s, x}",
+      "raw_action": "EDIT 4 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "coded",
+      "structure_after": "coded"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     jowed\nCurrent:    coded\nPositions:  01234\nMismatches: ^ ^  \nPath: hover \u2192 cover \u2192 coder \u2192 ceder \u2192 ceded \u2192 coded\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {b}\n  2: {k, l, n, o, p, r, t, v, w*, x, y}\n  4: {c, n, s, x}",
+      "raw_action": "EDIT 0 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "j"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "coded",
+      "structure_after": "coded"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     jowed\nCurrent:    coded\nPositions:  01234\nMismatches: ^ ^  \nPath: hover \u2192 cover \u2192 coder \u2192 ceder \u2192 ceded \u2192 coded\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {b}\n  2: {k, l, n, o, p, r, t, v, w*, x, y}\n  4: {c, n, s, x}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "coded",
+      "structure_after": "coded"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "OSCILLATION",
+  "failure_events": [
+    "INVALID_WORD",
+    "OSCILLATION",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "OSCILLATION",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "hover",
+    "target_word": "jowed",
+    "final_word": "coded",
+    "path": [
+      "hover",
+      "cover",
+      "coder",
+      "ceder",
+      "ceded",
+      "coded"
+    ],
+    "path_length": 5,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 9,
+      "OSCILLATION": 2,
+      "ILLEGAL_EDIT": 4,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 16,
+    "optimal_distance_at_end": 2,
+    "events": [
+      "INVALID_WORD",
+      "OSCILLATION",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "OSCILLATION",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 52748,
+    "completion_tokens": 100,
+    "total_tokens": 52848
+  },
+  "wall_time_s": 10.971174955368042
+}

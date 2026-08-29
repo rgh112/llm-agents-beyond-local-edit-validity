@@ -1,0 +1,206 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 22,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     mild\nCurrent:    lode\nPositions:  0123\nMismatches: ^^^^\nPath: lode\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, c, m*, n, r}\n  1: {a, u}\n  2: {b, g, n, p, r, s, v, w}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lode",
+      "structure_after": "lode"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     mild\nCurrent:    mode\nPositions:  0123\nMismatches:  ^^^\nPath: lode \u2192 mode\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, c, n, r}\n  1: {a}\n  2: {k, l*, m, p, r, t, u, v}\n  3: {i, s}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lode",
+      "structure_after": "mode"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     mild\nCurrent:    mole\nPositions:  0123\nMismatches:  ^ ^\nPath: lode \u2192 mode \u2192 mole\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, p, r, s, t, v}\n  1: {a, i*, u}\n  2: {k, m, p, r, t, u, v}\n  3: {a, d*, l, s, t, y}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mode",
+      "structure_after": "mole"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     mild\nCurrent:    mole\nPositions:  0123\nMismatches:  ^ ^\nPath: lode \u2192 mode \u2192 mole\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, p, r, s, t, v}\n  1: {a, i*, u}\n  2: {k, m, p, r, t, u, v}\n  3: {a, d*, l, s, t, y}",
+      "raw_action": "EDIT 3 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mole",
+      "structure_after": "mole"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     mild\nCurrent:    mole\nPositions:  0123\nMismatches:  ^ ^\nPath: lode \u2192 mode \u2192 mole\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, p, r, s, t, v}\n  1: {a, i*, u}\n  2: {k, m, p, r, t, u, v}\n  3: {a, d*, l, s, t, y}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mole",
+      "structure_after": "mole"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     mild\nCurrent:    mole\nPositions:  0123\nMismatches:  ^ ^\nPath: lode \u2192 mode \u2192 mole\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, p, r, s, t, v}\n  1: {a, i*, u}\n  2: {k, m, p, r, t, u, v}\n  3: {a, d*, l, s, t, y}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mole",
+      "structure_after": "mole"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     mild\nCurrent:    mold\nPositions:  0123\nMismatches:  ^  \nPath: lode \u2192 mode \u2192 mole \u2192 mold\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g, h, s, t, w}\n  1: {e, i*}\n  2: {o}\n  3: {a, l, s, t, y}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mole",
+      "structure_after": "mold"
+    },
+    {
+      "t": 8,
+      "observation": "",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 1.0,
+      "info": {
+        "valid": true,
+        "auto_success": true
+      },
+      "structure_before": "mold",
+      "structure_after": "mild"
+    }
+  ],
+  "success": true,
+  "terminal_failure": null,
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT"
+  ],
+  "final_metrics": {
+    "success": true,
+    "steps_taken": 8,
+    "max_steps": 20,
+    "start_word": "lode",
+    "target_word": "mild",
+    "final_word": "mild",
+    "path": [
+      "lode",
+      "mode",
+      "mole",
+      "mold",
+      "mild"
+    ],
+    "path_length": 4,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 3,
+      "ILLEGAL_EDIT": 1
+    },
+    "total_violations": 4,
+    "optimal_distance_at_end": 0,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 10206,
+    "completion_tokens": 40,
+    "total_tokens": 10246
+  },
+  "wall_time_s": 4.120122909545898
+}

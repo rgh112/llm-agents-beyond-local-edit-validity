@@ -1,0 +1,695 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check_generic",
+  "memory_condition": "state_only",
+  "seed": 32,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     lost\nCurrent:    acta\nPositions:  0123\nMismatches: ^^^^\nPath: acta\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  1: {n}\n  3: {s}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "acta",
+      "structure_after": "acta"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     lost\nCurrent:    acta\nPositions:  0123\nMismatches: ^^^^\nPath: acta\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  1: {n}\n  3: {s}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "acta",
+      "structure_after": "acta"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     lost\nCurrent:    anta\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  2: {g, n, o, s*}\n  3: {e, i, s}",
+      "raw_action": "EDIT 1 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "acta",
+      "structure_after": "anta"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     lost\nCurrent:    anta\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  2: {g, n, o, s*}\n  3: {e, i, s}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "anta",
+      "structure_after": "anta"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     lost\nCurrent:    anga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  1: {l}\n  2: {n, o, s*}",
+      "raw_action": "EDIT 2 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "anta",
+      "structure_after": "anga"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "anga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 13/30  (remaining: 17)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 14/30  (remaining: 16)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 15/30  (remaining: 15)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 16/30  (remaining: 14)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 17/30  (remaining: 13)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 18/30  (remaining: 12)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 19/30  (remaining: 11)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 20/30  (remaining: 10)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 21/30  (remaining: 9)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 22/30  (remaining: 8)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 23/30  (remaining: 7)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 24/30  (remaining: 6)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 25/30  (remaining: 5)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 26,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 26/30  (remaining: 4)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 27,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 27/30  (remaining: 3)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 28,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 28/30  (remaining: 2)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 29,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 29/30  (remaining: 1)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    },
+    {
+      "t": 30,
+      "observation": "Target:     lost\nCurrent:    alga\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 anga \u2192 alga\nSteps used: 30/30  (remaining: 0)\n\nEditable positions and valid replacements:\n  2: {b, f, m}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "alga",
+      "structure_after": "alga"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 30,
+    "max_steps": 30,
+    "start_word": "acta",
+    "target_word": "lost",
+    "final_word": "alga",
+    "path": [
+      "acta",
+      "anta",
+      "anga",
+      "alga"
+    ],
+    "path_length": 3,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "INVALID_WORD": 27,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 28,
+    "optimal_distance_at_end": 8,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 55368,
+    "completion_tokens": 150,
+    "total_tokens": 55518
+  },
+  "wall_time_s": 45.220497846603394
+}

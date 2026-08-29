@@ -1,0 +1,353 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 6,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     sifts\nCurrent:    birls\nPositions:  01234\nMismatches: ^ ^^ \nPath: girls \u2192 birls\nSteps used: 1/15  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {d, t, v}\n  1: {u, y}\n  2: {l}\n  3: {d, k, r}\n  4: {e}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "girls",
+      "structure_after": "birls"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     sifts\nCurrent:    burls\nPositions:  01234\nMismatches: ^^^^ \nPath: girls \u2192 birls \u2192 burls\nSteps used: 2/15  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {c, f, h, n, p}\n  1: {y}\n  2: {h, l}\n  3: {a, b, d, g, n, p, r}\n  4: {y}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "birls",
+      "structure_after": "burls"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     sifts\nCurrent:    curls\nPositions:  01234\nMismatches: ^^^^ \nPath: girls \u2192 birls \u2192 burls \u2192 curls\nSteps used: 3/15  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {f, h, n, p}\n  1: {a}\n  2: {l}\n  3: {b, d, e, f, n, r}\n  4: {y}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "burls",
+      "structure_after": "curls"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     sifts\nCurrent:    carls\nPositions:  01234\nMismatches: ^^^^ \nPath: girls \u2192 birls \u2192 burls \u2192 curls \u2192 carls\nSteps used: 4/15  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {e, f, h, j, m}\n  2: {l, u}\n  3: {b, d, e, k, n, p, r, t*}\n  4: {e}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "curls",
+      "structure_after": "carls"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     sifts\nCurrent:    earls\nPositions:  01234\nMismatches: ^^^^ \nPath: girls \u2192 birls \u2192 burls \u2192 curls \u2192 carls \u2192 earls\nSteps used: 5/15  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {f, h, j, m}\n  3: {n}\n  4: {y}",
+      "raw_action": "EDIT 0 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "carls",
+      "structure_after": "earls"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     sifts\nCurrent:    earns\nPositions:  01234\nMismatches: ^^^^ \nPath: girls \u2192 birls \u2192 burls \u2192 ... \u2192 earls \u2192 earns\nSteps used: 6/15  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {b, c, d, k, t, w, y}",
+      "raw_action": "EDIT 3 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "earls",
+      "structure_after": "earns"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     sifts\nCurrent:    earns\nPositions:  01234\nMismatches: ^^^^ \nPath: girls \u2192 birls \u2192 burls \u2192 ... \u2192 earls \u2192 earns\nSteps used: 7/15  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {b, c, d, k, t, w, y}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "earns",
+      "structure_after": "earns"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     sifts\nCurrent:    tarns\nPositions:  01234\nMismatches: ^^^^ \nPath: girls \u2192 birls \u2192 burls \u2192 ... \u2192 earns \u2192 tarns\nSteps used: 8/15  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {b, c, d, k, w, y}\n  1: {e, u}\n  2: {i}\n  3: {e, o, p, t*}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "earns",
+      "structure_after": "tarns"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     sifts\nCurrent:    tarns\nPositions:  01234\nMismatches: ^^^^ \nPath: girls \u2192 birls \u2192 burls \u2192 ... \u2192 earns \u2192 tarns\nSteps used: 9/15  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {b, c, d, k, w, y}\n  1: {e, u}\n  2: {i}\n  3: {e, o, p, t*}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tarns",
+      "structure_after": "tarns"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     sifts\nCurrent:    tarns\nPositions:  01234\nMismatches: ^^^^ \nPath: girls \u2192 birls \u2192 burls \u2192 ... \u2192 earns \u2192 tarns\nSteps used: 10/15  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {b, c, d, k, w, y}\n  1: {e, u}\n  2: {i}\n  3: {e, o, p, t*}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tarns",
+      "structure_after": "tarns"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     sifts\nCurrent:    tarns\nPositions:  01234\nMismatches: ^^^^ \nPath: girls \u2192 birls \u2192 burls \u2192 ... \u2192 earns \u2192 tarns\nSteps used: 11/15  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {b, c, d, k, w, y}\n  1: {e, u}\n  2: {i}\n  3: {e, o, p, t*}",
+      "raw_action": "EDIT 3 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "f"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tarns",
+      "structure_after": "tarns"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     sifts\nCurrent:    tarns\nPositions:  01234\nMismatches: ^^^^ \nPath: girls \u2192 birls \u2192 burls \u2192 ... \u2192 earns \u2192 tarns\nSteps used: 12/15  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {b, c, d, k, w, y}\n  1: {e, u}\n  2: {i}\n  3: {e, o, p, t*}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tarns",
+      "structure_after": "tarns"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     sifts\nCurrent:    tarns\nPositions:  01234\nMismatches: ^^^^ \nPath: girls \u2192 birls \u2192 burls \u2192 ... \u2192 earns \u2192 tarns\nSteps used: 13/15  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {b, c, d, k, w, y}\n  1: {e, u}\n  2: {i}\n  3: {e, o, p, t*}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tarns",
+      "structure_after": "tarns"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     sifts\nCurrent:    tarns\nPositions:  01234\nMismatches: ^^^^ \nPath: girls \u2192 birls \u2192 burls \u2192 ... \u2192 earns \u2192 tarns\nSteps used: 14/15  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {b, c, d, k, w, y}\n  1: {e, u}\n  2: {i}\n  3: {e, o, p, t*}",
+      "raw_action": "EDIT 0 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tarns",
+      "structure_after": "tarns"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     sifts\nCurrent:    tarns\nPositions:  01234\nMismatches: ^^^^ \nPath: girls \u2192 birls \u2192 burls \u2192 ... \u2192 earns \u2192 tarns\nSteps used: 15/15  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {b, c, d, k, w, y}\n  1: {e, u}\n  2: {i}\n  3: {e, o, p, t*}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tarns",
+      "structure_after": "tarns"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 15,
+    "max_steps": 15,
+    "start_word": "girls",
+    "target_word": "sifts",
+    "final_word": "tarns",
+    "path": [
+      "girls",
+      "birls",
+      "burls",
+      "curls",
+      "carls",
+      "earls",
+      "earns",
+      "tarns"
+    ],
+    "path_length": 7,
+    "optimal_length": 3,
+    "violations_by_type": {
+      "INVALID_WORD": 8,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 9,
+    "optimal_distance_at_end": 5,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 18174,
+    "completion_tokens": 75,
+    "total_tokens": 18249
+  },
+  "wall_time_s": 14.989916801452637
+}

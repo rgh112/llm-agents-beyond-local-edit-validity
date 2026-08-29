@@ -1,0 +1,284 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check",
+  "memory_condition": "state_only",
+  "seed": 16,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     time\nCurrent:    tote\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote\nSteps used: 1/15  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {d, m, n, r, v}\n  1: {a}\n  2: {k, l, m*, n, p, r}\n  3: {s}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cote",
+      "structure_after": "tote"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     time\nCurrent:    tate\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote \u2192 tate\nSteps used: 2/15  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, h, l, m, p, r, s}\n  2: {c, k, l, m*, p, r}\n  3: {s}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tote",
+      "structure_after": "tate"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     time\nCurrent:    tale\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote \u2192 tate \u2192 tale\nSteps used: 3/15  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {b, d, g, h, k, m, p, r, s, v, w}\n  1: {e, i*, o, u}\n  2: {c, k, m*, p, r}\n  3: {a, c, i, k, l}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tate",
+      "structure_after": "tale"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     time\nCurrent:    tile\nPositions:  0123\nMismatches:   ^ \nPath: cote \u2192 tote \u2192 tate \u2192 tale \u2192 tile\nSteps used: 4/15  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {b, f, m, p, r, v, w}\n  1: {e, o, u}\n  2: {d, k, m*, n, r}\n  3: {l, s, t}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tale",
+      "structure_after": "tile"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     time\nCurrent:    tele\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote \u2192 tate \u2192 tale \u2192 tile \u2192 tele\nSteps used: 5/15  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {d, p}\n  1: {o, u}\n  3: {a, l, s}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tile",
+      "structure_after": "tele"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     time\nCurrent:    dele\nPositions:  0123\nMismatches: ^^^ \nPath: cote \u2192 tote \u2192 tate \u2192 ... \u2192 tele \u2192 dele\nSteps used: 6/15  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {p}\n  1: {a, o}\n  2: {k, m*, n, r}\n  3: {f, i, l, s}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tele",
+      "structure_after": "dele"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     time\nCurrent:    dale\nPositions:  0123\nMismatches: ^^^ \nPath: cote \u2192 tote \u2192 tate \u2192 ... \u2192 dele \u2192 dale\nSteps used: 7/15  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {b, g, h, k, m, p, r, s, v, w}\n  1: {o}\n  2: {c, m*, r, t, z}\n  3: {s}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dele",
+      "structure_after": "dale"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     time\nCurrent:    dame\nPositions:  0123\nMismatches: ^^  \nPath: cote \u2192 tote \u2192 tate \u2192 ... \u2192 dale \u2192 dame\nSteps used: 8/15  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {c, f, g, h, k, l, n, s, t*, w}\n  1: {e, i*, o}\n  2: {c, r, t, z}\n  3: {n, p, s}",
+      "raw_action": "EDIT 2 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dale",
+      "structure_after": "dame"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     time\nCurrent:    dime\nPositions:  0123\nMismatches: ^   \nPath: cote \u2192 tote \u2192 tate \u2192 ... \u2192 dame \u2192 dime\nSteps used: 9/15  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {l, m, r, t*}\n  1: {e, o}\n  2: {c, k, n, r, t, v}\n  3: {s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dame",
+      "structure_after": "dime"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     time\nCurrent:    lime\nPositions:  0123\nMismatches: ^   \nPath: cote \u2192 tote \u2192 tate \u2192 ... \u2192 dime \u2192 lime\nSteps used: 10/15  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {m, r, t*}\n  1: {a}\n  2: {c, f, k, n, r, t, v}\n  3: {a, b, n, o, p, y}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dime",
+      "structure_after": "lime"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     time\nCurrent:    mime\nPositions:  0123\nMismatches: ^   \nPath: cote \u2192 tote \u2192 tate \u2192 ... \u2192 lime \u2192 mime\nSteps used: 11/15  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {r, t*}\n  1: {o}\n  2: {c, k, l, n, r, s, t}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lime",
+      "structure_after": "mime"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     time\nCurrent:    rime\nPositions:  0123\nMismatches: ^   \nPath: cote \u2192 tote \u2192 tate \u2192 ... \u2192 mime \u2192 rime\nSteps used: 12/15  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {t*}\n  2: {c, d, f, l, p, s, t, v}\n  3: {s, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mime",
+      "structure_after": "rime"
+    },
+    {
+      "t": 13,
+      "observation": "",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 1.0,
+      "info": {
+        "valid": true,
+        "auto_success": true
+      },
+      "structure_before": "rime",
+      "structure_after": "time"
+    }
+  ],
+  "success": true,
+  "terminal_failure": null,
+  "failure_events": [],
+  "final_metrics": {
+    "success": true,
+    "steps_taken": 13,
+    "max_steps": 15,
+    "start_word": "cote",
+    "target_word": "time",
+    "final_word": "time",
+    "path": [
+      "cote",
+      "tote",
+      "tate",
+      "tale",
+      "tile",
+      "tele",
+      "dele",
+      "dale",
+      "dame",
+      "dime",
+      "lime",
+      "mime",
+      "rime",
+      "time"
+    ],
+    "path_length": 13,
+    "optimal_length": 3,
+    "violations_by_type": {},
+    "total_violations": 0,
+    "optimal_distance_at_end": 0,
+    "events": []
+  },
+  "token_usage": {
+    "prompt_tokens": 16025,
+    "completion_tokens": 65,
+    "total_tokens": 16090
+  },
+  "wall_time_s": 7.557271242141724
+}

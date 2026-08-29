@@ -1,0 +1,614 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check",
+  "memory_condition": "state_only",
+  "seed": 25,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     rhus\nCurrent:    bola\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  0: {k, m, s, t}\n  2: {r, t}\n  3: {d, e, l, o, t}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cola",
+      "structure_after": "bola"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     rhus\nCurrent:    bora\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  0: {f, h, m, s, t}\n  1: {u}\n  2: {t}\n  3: {e, n, t}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bola",
+      "structure_after": "bora"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     rhus\nCurrent:    bura\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 bura\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  0: {a, d, j, m, s}\n  3: {d, g, l, n, p, r, s*, y}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bora",
+      "structure_after": "bura"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     rhus\nCurrent:    aura\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 bura \u2192 aura\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  0: {d, j, m, s}",
+      "raw_action": "EDIT 0 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bura",
+      "structure_after": "aura"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     rhus\nCurrent:    dura\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 bura \u2192 aura \u2192 dura\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {j, m, s}\n  2: {m}\n  3: {e, n, o, r}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "aura",
+      "structure_after": "dura"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     rhus\nCurrent:    jura\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 dura \u2192 jura\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {m, s}\n  2: {b, g}\n  3: {y}",
+      "raw_action": "EDIT 0 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "j"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dura",
+      "structure_after": "jura"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     rhus\nCurrent:    mura\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 jura \u2192 mura\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {s}\n  1: {o}\n  3: {e, k, r}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "jura",
+      "structure_after": "mura"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     rhus\nCurrent:    sura\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 mura \u2192 sura\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  1: {e, o}\n  2: {b}\n  3: {d, e, f}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mura",
+      "structure_after": "sura"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     rhus\nCurrent:    sera\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 sura \u2192 sera\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {v}\n  1: {o}\n  2: {t}\n  3: {e, f, s*}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sura",
+      "structure_after": "sera"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     rhus\nCurrent:    vera\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 sera \u2192 vera\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  1: {a}\n  2: {l, n}\n  3: {b, t, y}",
+      "raw_action": "EDIT 0 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "v"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sera",
+      "structure_after": "vera"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     rhus\nCurrent:    vara\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 vera \u2192 vara\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {p}\n  2: {s}\n  3: {s*, y}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "vera",
+      "structure_after": "vara"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     rhus\nCurrent:    para\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 vara \u2192 para\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  2: {c, p}\n  3: {d, e, k, r, s*, t}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "vara",
+      "structure_after": "para"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     rhus\nCurrent:    paca\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 para \u2192 paca\nSteps used: 13/30  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {c}\n  1: {i}\n  2: {p}\n  3: {e, k, s*, t}",
+      "raw_action": "EDIT 2 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "para",
+      "structure_after": "paca"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     rhus\nCurrent:    pica\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 paca \u2192 pica\nSteps used: 14/30  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {m}\n  2: {k, m, n, t}\n  3: {e, k, s*}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "paca",
+      "structure_after": "pica"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     rhus\nCurrent:    mica\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 pica \u2192 mica\nSteps used: 15/30  (remaining: 15)\n\nEditable positions and valid replacements:\n  2: {n}\n  3: {e, k}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pica",
+      "structure_after": "mica"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     rhus\nCurrent:    mina\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 mica \u2192 mina\nSteps used: 16/30  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {k, p, v}\n  1: {a, y}\n  3: {d, e, i, k, t, x}",
+      "raw_action": "EDIT 2 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mica",
+      "structure_after": "mina"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     rhus\nCurrent:    kina\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 mina \u2192 kina\nSteps used: 17/30  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {p, v}\n  1: {a}\n  2: {v}\n  3: {d, e, g, k, o, s*}",
+      "raw_action": "EDIT 0 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "k"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mina",
+      "structure_after": "kina"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     rhus\nCurrent:    pina\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 kina \u2192 pina\nSteps used: 18/30  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {v}\n  1: {u}\n  2: {k, m, t}\n  3: {e, g, k, s*, t, y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "kina",
+      "structure_after": "pina"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     rhus\nCurrent:    vina\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 pina \u2192 vina\nSteps used: 19/30  (remaining: 11)\n\nEditable positions and valid replacements:\n  1: {e}\n  2: {g, s, t, v}\n  3: {e, o, y}",
+      "raw_action": "EDIT 0 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "v"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pina",
+      "structure_after": "vina"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     rhus\nCurrent:    vena\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 vina \u2192 vena\nSteps used: 20/30  (remaining: 10)\n\nEditable positions and valid replacements:\n  2: {l}\n  3: {d, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "vina",
+      "structure_after": "vena"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     rhus\nCurrent:    vela\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 vena \u2192 vela\nSteps used: 21/30  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {t}\n  3: {d}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "vena",
+      "structure_after": "vela"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     rhus\nCurrent:    tela\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 vela \u2192 tela\nSteps used: 22/30  (remaining: 8)\n\nEditable positions and valid replacements:\n  1: {a, o}\n  2: {p}\n  3: {e, l, s*}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "vela",
+      "structure_after": "tela"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     rhus\nCurrent:    tala\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 tela \u2192 tala\nSteps used: 23/30  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {g}\n  1: {o}\n  2: {k, p, x}\n  3: {c, e, i, k, l}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tela",
+      "structure_after": "tala"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     rhus\nCurrent:    tola\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 tala \u2192 tola\nSteps used: 24/30  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {k, m, s}\n  2: {e, g, r}\n  3: {d, e, l, u}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tala",
+      "structure_after": "tola"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     rhus\nCurrent:    kola\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 tola \u2192 kola\nSteps used: 25/30  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {m, s}\n  3: {o}",
+      "raw_action": "EDIT 0 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "k"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tola",
+      "structure_after": "kola"
+    },
+    {
+      "t": 26,
+      "observation": "Target:     rhus\nCurrent:    mola\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 kola \u2192 mola\nSteps used: 26/30  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {s}\n  2: {r, x}\n  3: {d, e, l, s*, t, y}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "kola",
+      "structure_after": "mola"
+    },
+    {
+      "t": 27,
+      "observation": "Target:     rhus\nCurrent:    sola\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 mola \u2192 sola\nSteps used: 27/30  (remaining: 3)\n\nEditable positions and valid replacements:\n  2: {d, f, j, m, r, y}\n  3: {d, e, i, o, s*}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mola",
+      "structure_after": "sola"
+    },
+    {
+      "t": 28,
+      "observation": "Target:     rhus\nCurrent:    sora\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 sola \u2192 sora\nSteps used: 28/30  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {f, h, m, t}\n  2: {d, f, j, m, y}\n  3: {b, d, e, i, n, t}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sola",
+      "structure_after": "sora"
+    },
+    {
+      "t": 29,
+      "observation": "Target:     rhus\nCurrent:    hora\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 sora \u2192 hora\nSteps used: 29/30  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {f, m, t}\n  2: {y}\n  3: {n}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sora",
+      "structure_after": "hora"
+    },
+    {
+      "t": 30,
+      "observation": "Target:     rhus\nCurrent:    fora\nPositions:  0123\nMismatches: ^^^^\nPath: cola \u2192 bola \u2192 bora \u2192 ... \u2192 hora \u2192 fora\nSteps used: 30/30  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {m, t}\n  3: {b, d, e, k, m, t}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hora",
+      "structure_after": "fora"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 30,
+    "max_steps": 30,
+    "start_word": "cola",
+    "target_word": "rhus",
+    "final_word": "fora",
+    "path": [
+      "cola",
+      "bola",
+      "bora",
+      "bura",
+      "aura",
+      "dura",
+      "jura",
+      "mura",
+      "sura",
+      "sera",
+      "vera",
+      "vara",
+      "para",
+      "paca",
+      "pica",
+      "mica",
+      "mina",
+      "kina",
+      "pina",
+      "vina",
+      "vena",
+      "vela",
+      "tela",
+      "tala",
+      "tola",
+      "kola",
+      "mola",
+      "sola",
+      "sora",
+      "hora",
+      "fora"
+    ],
+    "path_length": 30,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 1,
+    "optimal_distance_at_end": 6,
+    "events": [
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 65859,
+    "completion_tokens": 150,
+    "total_tokens": 66009
+  },
+  "wall_time_s": 17.54754400253296
+}

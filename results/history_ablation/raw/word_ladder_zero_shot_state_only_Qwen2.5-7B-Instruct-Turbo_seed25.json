@@ -1,0 +1,704 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 25,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 3 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "h"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 13/30  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 14/30  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 15/30  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 16/30  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 17/30  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 18/30  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 19/30  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 20/30  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 21/30  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 22/30  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 23/30  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 24/30  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 25/30  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 26,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 26/30  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 27,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 27/30  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 28,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 28/30  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 29,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 29/30  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    },
+    {
+      "t": 30,
+      "observation": "Target:     rhus\nCurrent:    cola\nPositions:  0123\nMismatches: ^^^^\nPath: cola\nSteps used: 30/30  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {b, k, m, s, t}\n  2: {c, d, m, x}\n  3: {d, e, s*, t, y}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cola",
+      "structure_after": "cola"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 30,
+    "max_steps": 30,
+    "start_word": "cola",
+    "target_word": "rhus",
+    "final_word": "cola",
+    "path": [
+      "cola"
+    ],
+    "path_length": 0,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "INVALID_WORD": 30,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 31,
+    "optimal_distance_at_end": 6,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 61431,
+    "completion_tokens": 150,
+    "total_tokens": 61581
+  },
+  "wall_time_s": 17.18010425567627
+}

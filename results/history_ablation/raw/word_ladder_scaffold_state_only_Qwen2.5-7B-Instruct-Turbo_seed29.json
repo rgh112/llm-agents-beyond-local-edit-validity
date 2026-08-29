@@ -1,0 +1,477 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 29,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     soar\nCurrent:    hows\nPositions:  0123\nMismatches: ^ ^^\nPath: hews \u2192 hows\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, c, d, j, l, m, n, p, r, s*, t, v, w, y}\n  1: {a}\n  2: {b, d, e, g, l, n, p, t, y}\n  3: {e, f, k, l}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hews",
+      "structure_after": "hows"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     soar\nCurrent:    sows\nPositions:  0123\nMismatches:   ^^\nPath: hews \u2192 hows \u2192 sows\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, c, d, j, l, m, n, p, r, t, v, w, y}\n  1: {a, e}\n  2: {b, d, l, n, p, t, u, y}\n  3: {n}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hows",
+      "structure_after": "sows"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     soar\nCurrent:    sows\nPositions:  0123\nMismatches:   ^^\nPath: hews \u2192 hows \u2192 sows\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {b, c, d, j, l, m, n, p, r, t, v, w, y}\n  1: {a, e}\n  2: {b, d, l, n, p, t, u, y}\n  3: {n}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sows",
+      "structure_after": "sows"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     soar\nCurrent:    sows\nPositions:  0123\nMismatches:   ^^\nPath: hews \u2192 hows \u2192 sows\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, c, d, j, l, m, n, p, r, t, v, w, y}\n  1: {a, e}\n  2: {b, d, l, n, p, t, u, y}\n  3: {n}",
+      "raw_action": "EDIT 2 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sows",
+      "structure_after": "sows"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     soar\nCurrent:    sows\nPositions:  0123\nMismatches:   ^^\nPath: hews \u2192 hows \u2192 sows\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {b, c, d, j, l, m, n, p, r, t, v, w, y}\n  1: {a, e}\n  2: {b, d, l, n, p, t, u, y}\n  3: {n}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sows",
+      "structure_after": "sows"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     soar\nCurrent:    saws\nPositions:  0123\nMismatches:  ^^^\nPath: hews \u2192 hows \u2192 sows \u2192 saws\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, l, m, p, r, t, v, w, y}\n  1: {e}\n  2: {b, c, g, l, n, p, s, y}\n  3: {n}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sows",
+      "structure_after": "saws"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     soar\nCurrent:    saws\nPositions:  0123\nMismatches:  ^^^\nPath: hews \u2192 hows \u2192 sows \u2192 saws\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, l, m, p, r, t, v, w, y}\n  1: {e}\n  2: {b, c, g, l, n, p, s, y}\n  3: {n}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saws",
+      "structure_after": "saws"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     soar\nCurrent:    saws\nPositions:  0123\nMismatches:  ^^^\nPath: hews \u2192 hows \u2192 sows \u2192 saws\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, l, m, p, r, t, v, w, y}\n  1: {e}\n  2: {b, c, g, l, n, p, s, y}\n  3: {n}",
+      "raw_action": "EDIT 3 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saws",
+      "structure_after": "saws"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     soar\nCurrent:    saws\nPositions:  0123\nMismatches:  ^^^\nPath: hews \u2192 hows \u2192 sows \u2192 saws\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, l, m, p, r, t, v, w, y}\n  1: {e}\n  2: {b, c, g, l, n, p, s, y}\n  3: {n}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saws",
+      "structure_after": "saws"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     soar\nCurrent:    saws\nPositions:  0123\nMismatches:  ^^^\nPath: hews \u2192 hows \u2192 sows \u2192 saws\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, l, m, p, r, t, v, w, y}\n  1: {e}\n  2: {b, c, g, l, n, p, s, y}\n  3: {n}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saws",
+      "structure_after": "saws"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     soar\nCurrent:    saws\nPositions:  0123\nMismatches:  ^^^\nPath: hews \u2192 hows \u2192 sows \u2192 saws\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, l, m, p, r, t, v, w, y}\n  1: {e}\n  2: {b, c, g, l, n, p, s, y}\n  3: {n}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saws",
+      "structure_after": "saws"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     soar\nCurrent:    saws\nPositions:  0123\nMismatches:  ^^^\nPath: hews \u2192 hows \u2192 sows \u2192 saws\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, l, m, p, r, t, v, w, y}\n  1: {e}\n  2: {b, c, g, l, n, p, s, y}\n  3: {n}",
+      "raw_action": "EDIT 2 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saws",
+      "structure_after": "saws"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     soar\nCurrent:    saws\nPositions:  0123\nMismatches:  ^^^\nPath: hews \u2192 hows \u2192 sows \u2192 saws\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, l, m, p, r, t, v, w, y}\n  1: {e}\n  2: {b, c, g, l, n, p, s, y}\n  3: {n}",
+      "raw_action": "EDIT 3 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saws",
+      "structure_after": "saws"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     soar\nCurrent:    saws\nPositions:  0123\nMismatches:  ^^^\nPath: hews \u2192 hows \u2192 sows \u2192 saws\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, l, m, p, r, t, v, w, y}\n  1: {e}\n  2: {b, c, g, l, n, p, s, y}\n  3: {n}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saws",
+      "structure_after": "saws"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     soar\nCurrent:    saws\nPositions:  0123\nMismatches:  ^^^\nPath: hews \u2192 hows \u2192 sows \u2192 saws\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, l, m, p, r, t, v, w, y}\n  1: {e}\n  2: {b, c, g, l, n, p, s, y}\n  3: {n}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saws",
+      "structure_after": "saws"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     soar\nCurrent:    saws\nPositions:  0123\nMismatches:  ^^^\nPath: hews \u2192 hows \u2192 sows \u2192 saws\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, l, m, p, r, t, v, w, y}\n  1: {e}\n  2: {b, c, g, l, n, p, s, y}\n  3: {n}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saws",
+      "structure_after": "saws"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     soar\nCurrent:    saws\nPositions:  0123\nMismatches:  ^^^\nPath: hews \u2192 hows \u2192 sows \u2192 saws\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, l, m, p, r, t, v, w, y}\n  1: {e}\n  2: {b, c, g, l, n, p, s, y}\n  3: {n}",
+      "raw_action": "EDIT 2 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saws",
+      "structure_after": "saws"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     soar\nCurrent:    saws\nPositions:  0123\nMismatches:  ^^^\nPath: hews \u2192 hows \u2192 sows \u2192 saws\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, l, m, p, r, t, v, w, y}\n  1: {e}\n  2: {b, c, g, l, n, p, s, y}\n  3: {n}",
+      "raw_action": "EDIT 3 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saws",
+      "structure_after": "saws"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     soar\nCurrent:    saws\nPositions:  0123\nMismatches:  ^^^\nPath: hews \u2192 hows \u2192 sows \u2192 saws\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, l, m, p, r, t, v, w, y}\n  1: {e}\n  2: {b, c, g, l, n, p, s, y}\n  3: {n}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saws",
+      "structure_after": "saws"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     soar\nCurrent:    saws\nPositions:  0123\nMismatches:  ^^^\nPath: hews \u2192 hows \u2192 sows \u2192 saws\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, l, m, p, r, t, v, w, y}\n  1: {e}\n  2: {b, c, g, l, n, p, s, y}\n  3: {n}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "saws",
+      "structure_after": "saws"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "OSCILLATION",
+  "failure_events": [
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "OSCILLATION",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "OSCILLATION",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "OSCILLATION",
+    "ILLEGAL_EDIT",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "hews",
+    "target_word": "soar",
+    "final_word": "saws",
+    "path": [
+      "hews",
+      "hows",
+      "sows",
+      "saws"
+    ],
+    "path_length": 3,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "ILLEGAL_EDIT": 9,
+      "INVALID_WORD": 5,
+      "OSCILLATION": 3,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 18,
+    "optimal_distance_at_end": 4,
+    "events": [
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "OSCILLATION",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "OSCILLATION",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "OSCILLATION",
+      "ILLEGAL_EDIT",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 58351,
+    "completion_tokens": 100,
+    "total_tokens": 58451
+  },
+  "wall_time_s": 10.617461919784546
+}

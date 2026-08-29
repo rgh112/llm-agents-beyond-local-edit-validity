@@ -1,0 +1,474 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 8,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     seed\nCurrent:    sang\nPositions:  0123\nMismatches:  ^^^\nPath: rang \u2192 sang\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, l, p, t, v, y}\n  1: {i, o, u}\n  3: {d*, e, k, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rang",
+      "structure_after": "sang"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     seed\nCurrent:    sang\nPositions:  0123\nMismatches:  ^^^\nPath: rang \u2192 sang\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, l, p, t, v, y}\n  1: {i, o, u}\n  3: {d*, e, k, s}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sang",
+      "structure_after": "sang"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     seed\nCurrent:    sand\nPositions:  0123\nMismatches:  ^^ \nPath: rang \u2192 sang \u2192 sand\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {b, h, l, r, w}\n  1: {e*}\n  2: {i, r}\n  3: {e, k, s}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sang",
+      "structure_after": "sand"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     seed\nCurrent:    send\nPositions:  0123\nMismatches:   ^ \nPath: rang \u2192 sang \u2192 sand \u2192 send\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, f, l, m, p, r, t, v, w}\n  2: {e*}\n  3: {e, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sand",
+      "structure_after": "send"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     seed\nCurrent:    bend\nPositions:  0123\nMismatches: ^ ^ \nPath: rang \u2192 sang \u2192 sand \u2192 send \u2192 bend\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {f, l, m, p, r, t, v, w}\n  1: {a, i, o, u}\n  2: {a}\n  3: {e, s, t}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "send",
+      "structure_after": "bend"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     seed\nCurrent:    bend\nPositions:  0123\nMismatches: ^ ^ \nPath: rang \u2192 sang \u2192 sand \u2192 send \u2192 bend\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {f, l, m, p, r, t, v, w}\n  1: {a, i, o, u}\n  2: {a}\n  3: {e, s, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bend",
+      "structure_after": "bend"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     seed\nCurrent:    bend\nPositions:  0123\nMismatches: ^ ^ \nPath: rang \u2192 sang \u2192 sand \u2192 send \u2192 bend\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {f, l, m, p, r, t, v, w}\n  1: {a, i, o, u}\n  2: {a}\n  3: {e, s, t}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bend",
+      "structure_after": "bend"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     seed\nCurrent:    bend\nPositions:  0123\nMismatches: ^ ^ \nPath: rang \u2192 sang \u2192 sand \u2192 send \u2192 bend\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {f, l, m, p, r, t, v, w}\n  1: {a, i, o, u}\n  2: {a}\n  3: {e, s, t}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bend",
+      "structure_after": "bend"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     seed\nCurrent:    bend\nPositions:  0123\nMismatches: ^ ^ \nPath: rang \u2192 sang \u2192 sand \u2192 send \u2192 bend\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {f, l, m, p, r, t, v, w}\n  1: {a, i, o, u}\n  2: {a}\n  3: {e, s, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bend",
+      "structure_after": "bend"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     seed\nCurrent:    bend\nPositions:  0123\nMismatches: ^ ^ \nPath: rang \u2192 sang \u2192 sand \u2192 send \u2192 bend\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {f, l, m, p, r, t, v, w}\n  1: {a, i, o, u}\n  2: {a}\n  3: {e, s, t}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bend",
+      "structure_after": "bend"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     seed\nCurrent:    bend\nPositions:  0123\nMismatches: ^ ^ \nPath: rang \u2192 sang \u2192 sand \u2192 send \u2192 bend\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {f, l, m, p, r, t, v, w}\n  1: {a, i, o, u}\n  2: {a}\n  3: {e, s, t}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bend",
+      "structure_after": "bend"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     seed\nCurrent:    bend\nPositions:  0123\nMismatches: ^ ^ \nPath: rang \u2192 sang \u2192 sand \u2192 send \u2192 bend\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {f, l, m, p, r, t, v, w}\n  1: {a, i, o, u}\n  2: {a}\n  3: {e, s, t}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bend",
+      "structure_after": "bend"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     seed\nCurrent:    bend\nPositions:  0123\nMismatches: ^ ^ \nPath: rang \u2192 sang \u2192 sand \u2192 send \u2192 bend\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {f, l, m, p, r, t, v, w}\n  1: {a, i, o, u}\n  2: {a}\n  3: {e, s, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bend",
+      "structure_after": "bend"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     seed\nCurrent:    bend\nPositions:  0123\nMismatches: ^ ^ \nPath: rang \u2192 sang \u2192 sand \u2192 send \u2192 bend\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {f, l, m, p, r, t, v, w}\n  1: {a, i, o, u}\n  2: {a}\n  3: {e, s, t}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bend",
+      "structure_after": "bend"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     seed\nCurrent:    bend\nPositions:  0123\nMismatches: ^ ^ \nPath: rang \u2192 sang \u2192 sand \u2192 send \u2192 bend\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {f, l, m, p, r, t, v, w}\n  1: {a, i, o, u}\n  2: {a}\n  3: {e, s, t}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bend",
+      "structure_after": "bend"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     seed\nCurrent:    bend\nPositions:  0123\nMismatches: ^ ^ \nPath: rang \u2192 sang \u2192 sand \u2192 send \u2192 bend\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {f, l, m, p, r, t, v, w}\n  1: {a, i, o, u}\n  2: {a}\n  3: {e, s, t}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bend",
+      "structure_after": "bend"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     seed\nCurrent:    bend\nPositions:  0123\nMismatches: ^ ^ \nPath: rang \u2192 sang \u2192 sand \u2192 send \u2192 bend\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {f, l, m, p, r, t, v, w}\n  1: {a, i, o, u}\n  2: {a}\n  3: {e, s, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bend",
+      "structure_after": "bend"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     seed\nCurrent:    bend\nPositions:  0123\nMismatches: ^ ^ \nPath: rang \u2192 sang \u2192 sand \u2192 send \u2192 bend\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {f, l, m, p, r, t, v, w}\n  1: {a, i, o, u}\n  2: {a}\n  3: {e, s, t}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bend",
+      "structure_after": "bend"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     seed\nCurrent:    bend\nPositions:  0123\nMismatches: ^ ^ \nPath: rang \u2192 sang \u2192 sand \u2192 send \u2192 bend\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {f, l, m, p, r, t, v, w}\n  1: {a, i, o, u}\n  2: {a}\n  3: {e, s, t}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bend",
+      "structure_after": "bend"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     seed\nCurrent:    bend\nPositions:  0123\nMismatches: ^ ^ \nPath: rang \u2192 sang \u2192 sand \u2192 send \u2192 bend\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {f, l, m, p, r, t, v, w}\n  1: {a, i, o, u}\n  2: {a}\n  3: {e, s, t}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bend",
+      "structure_after": "bend"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "OSCILLATION",
+  "failure_events": [
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "OSCILLATION",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "OSCILLATION",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "OSCILLATION",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "OSCILLATION",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "rang",
+    "target_word": "seed",
+    "final_word": "bend",
+    "path": [
+      "rang",
+      "sang",
+      "sand",
+      "send",
+      "bend"
+    ],
+    "path_length": 4,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 4,
+      "ILLEGAL_EDIT": 8,
+      "OSCILLATION": 4,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 17,
+    "optimal_distance_at_end": 2,
+    "events": [
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "OSCILLATION",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "OSCILLATION",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "OSCILLATION",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "OSCILLATION",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 30875,
+    "completion_tokens": 100,
+    "total_tokens": 30975
+  },
+  "wall_time_s": 33.84431505203247
+}

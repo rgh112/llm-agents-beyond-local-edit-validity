@@ -1,0 +1,479 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "few_shot_strategy",
+  "memory_condition": "state_only",
+  "seed": 12,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     toot\nCurrent:    tats\nPositions:  0123\nMismatches:  ^^^\nPath: cats \u2192 tats\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, e, f, g, h, k, l, m, o, p, q, r, v, w}\n  1: {e, i, o*, u}\n  2: {b, d, g, m, n, o*, p, r, s, u, v, w}\n  3: {e}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cats",
+      "structure_after": "tats"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     toot\nCurrent:    tots\nPositions:  0123\nMismatches:   ^^\nPath: cats \u2192 tats \u2192 tots\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, l, m, o, p, r, s, w}\n  1: {e, i, u}\n  2: {d, e, g, m, n, p, r, s, w, y}\n  3: {e}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tats",
+      "structure_after": "tots"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     toot\nCurrent:    tots\nPositions:  0123\nMismatches:   ^^\nPath: cats \u2192 tats \u2192 tots\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, l, m, o, p, r, s, w}\n  1: {e, i, u}\n  2: {d, e, g, m, n, p, r, s, w, y}\n  3: {e}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tots",
+      "structure_after": "tots"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     toot\nCurrent:    tots\nPositions:  0123\nMismatches:   ^^\nPath: cats \u2192 tats \u2192 tots\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, l, m, o, p, r, s, w}\n  1: {e, i, u}\n  2: {d, e, g, m, n, p, r, s, w, y}\n  3: {e}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tots",
+      "structure_after": "tots"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     toot\nCurrent:    tots\nPositions:  0123\nMismatches:   ^^\nPath: cats \u2192 tats \u2192 tots\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, l, m, o, p, r, s, w}\n  1: {e, i, u}\n  2: {d, e, g, m, n, p, r, s, w, y}\n  3: {e}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tots",
+      "structure_after": "tots"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     toot\nCurrent:    tots\nPositions:  0123\nMismatches:   ^^\nPath: cats \u2192 tats \u2192 tots\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, l, m, o, p, r, s, w}\n  1: {e, i, u}\n  2: {d, e, g, m, n, p, r, s, w, y}\n  3: {e}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tots",
+      "structure_after": "tots"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     toot\nCurrent:    tots\nPositions:  0123\nMismatches:   ^^\nPath: cats \u2192 tats \u2192 tots\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, l, m, o, p, r, s, w}\n  1: {e, i, u}\n  2: {d, e, g, m, n, p, r, s, w, y}\n  3: {e}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tots",
+      "structure_after": "tots"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     toot\nCurrent:    tots\nPositions:  0123\nMismatches:   ^^\nPath: cats \u2192 tats \u2192 tots\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, l, m, o, p, r, s, w}\n  1: {e, i, u}\n  2: {d, e, g, m, n, p, r, s, w, y}\n  3: {e}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tots",
+      "structure_after": "tots"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     toot\nCurrent:    tots\nPositions:  0123\nMismatches:   ^^\nPath: cats \u2192 tats \u2192 tots\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, l, m, o, p, r, s, w}\n  1: {e, i, u}\n  2: {d, e, g, m, n, p, r, s, w, y}\n  3: {e}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tots",
+      "structure_after": "tots"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     toot\nCurrent:    tots\nPositions:  0123\nMismatches:   ^^\nPath: cats \u2192 tats \u2192 tots\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, l, m, o, p, r, s, w}\n  1: {e, i, u}\n  2: {d, e, g, m, n, p, r, s, w, y}\n  3: {e}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tots",
+      "structure_after": "tots"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     toot\nCurrent:    tots\nPositions:  0123\nMismatches:   ^^\nPath: cats \u2192 tats \u2192 tots\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, l, m, o, p, r, s, w}\n  1: {e, i, u}\n  2: {d, e, g, m, n, p, r, s, w, y}\n  3: {e}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tots",
+      "structure_after": "tots"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     toot\nCurrent:    tots\nPositions:  0123\nMismatches:   ^^\nPath: cats \u2192 tats \u2192 tots\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, l, m, o, p, r, s, w}\n  1: {e, i, u}\n  2: {d, e, g, m, n, p, r, s, w, y}\n  3: {e}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tots",
+      "structure_after": "tots"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     toot\nCurrent:    tots\nPositions:  0123\nMismatches:   ^^\nPath: cats \u2192 tats \u2192 tots\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, l, m, o, p, r, s, w}\n  1: {e, i, u}\n  2: {d, e, g, m, n, p, r, s, w, y}\n  3: {e}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tots",
+      "structure_after": "tots"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     toot\nCurrent:    tots\nPositions:  0123\nMismatches:   ^^\nPath: cats \u2192 tats \u2192 tots\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, l, m, o, p, r, s, w}\n  1: {e, i, u}\n  2: {d, e, g, m, n, p, r, s, w, y}\n  3: {e}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tots",
+      "structure_after": "tots"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     toot\nCurrent:    tots\nPositions:  0123\nMismatches:   ^^\nPath: cats \u2192 tats \u2192 tots\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, l, m, o, p, r, s, w}\n  1: {e, i, u}\n  2: {d, e, g, m, n, p, r, s, w, y}\n  3: {e}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tots",
+      "structure_after": "tots"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     toot\nCurrent:    tots\nPositions:  0123\nMismatches:   ^^\nPath: cats \u2192 tats \u2192 tots\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, l, m, o, p, r, s, w}\n  1: {e, i, u}\n  2: {d, e, g, m, n, p, r, s, w, y}\n  3: {e}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tots",
+      "structure_after": "tots"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     toot\nCurrent:    tots\nPositions:  0123\nMismatches:   ^^\nPath: cats \u2192 tats \u2192 tots\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, l, m, o, p, r, s, w}\n  1: {e, i, u}\n  2: {d, e, g, m, n, p, r, s, w, y}\n  3: {e}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tots",
+      "structure_after": "tots"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     toot\nCurrent:    tots\nPositions:  0123\nMismatches:   ^^\nPath: cats \u2192 tats \u2192 tots\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, l, m, o, p, r, s, w}\n  1: {e, i, u}\n  2: {d, e, g, m, n, p, r, s, w, y}\n  3: {e}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tots",
+      "structure_after": "tots"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     toot\nCurrent:    tots\nPositions:  0123\nMismatches:   ^^\nPath: cats \u2192 tats \u2192 tots\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, l, m, o, p, r, s, w}\n  1: {e, i, u}\n  2: {d, e, g, m, n, p, r, s, w, y}\n  3: {e}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tots",
+      "structure_after": "tots"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     toot\nCurrent:    tots\nPositions:  0123\nMismatches:   ^^\nPath: cats \u2192 tats \u2192 tots\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, l, m, o, p, r, s, w}\n  1: {e, i, u}\n  2: {d, e, g, m, n, p, r, s, w, y}\n  3: {e}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tots",
+      "structure_after": "tots"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "cats",
+    "target_word": "toot",
+    "final_word": "tots",
+    "path": [
+      "cats",
+      "tats",
+      "tots"
+    ],
+    "path_length": 2,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 2,
+      "ILLEGAL_EDIT": 16,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 19,
+    "optimal_distance_at_end": 3,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 40319,
+    "completion_tokens": 100,
+    "total_tokens": 40419
+  },
+  "wall_time_s": 10.820075035095215
+}

@@ -1,0 +1,478 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "window_1",
+  "seed": 14,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     yill\nCurrent:    bear\nPositions:  0123\nMismatches: ^^^^\nPath: sear \u2192 bear\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, l, n, p, r, t, w, y*}\n  1: {o}\n  2: {e}\n  3: {d, k, m, n, t, u}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sear",
+      "structure_after": "bear"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     yill\nCurrent:    bear\nPositions:  0123\nMismatches: ^^^^\nPath: sear \u2192 bear\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, l, n, p, r, t, w, y*}\n  1: {o}\n  2: {e}\n  3: {d, k, m, n, t, u}",
+      "raw_action": "EDIT 1 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bear",
+      "structure_after": "bear"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     yill\nCurrent:    boar\nPositions:  0123\nMismatches: ^^^^\nPath: sear \u2192 bear \u2192 boar\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {h, r, s}\n  2: {o}\n  3: {s, t}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bear",
+      "structure_after": "boar"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     yill\nCurrent:    boar\nPositions:  0123\nMismatches: ^^^^\nPath: sear \u2192 bear \u2192 boar\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {h, r, s}\n  2: {o}\n  3: {s, t}",
+      "raw_action": "EDIT 0 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "boar",
+      "structure_after": "boar"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     yill\nCurrent:    boar\nPositions:  0123\nMismatches: ^^^^\nPath: sear \u2192 bear \u2192 boar\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {h, r, s}\n  2: {o}\n  3: {s, t}",
+      "raw_action": "EDIT 0 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "boar",
+      "structure_after": "boar"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     yill\nCurrent:    boar\nPositions:  0123\nMismatches: ^^^^\nPath: sear \u2192 bear \u2192 boar\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {h, r, s}\n  2: {o}\n  3: {s, t}",
+      "raw_action": "EDIT 0 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "boar",
+      "structure_after": "boar"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     yill\nCurrent:    boar\nPositions:  0123\nMismatches: ^^^^\nPath: sear \u2192 bear \u2192 boar\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {h, r, s}\n  2: {o}\n  3: {s, t}",
+      "raw_action": "EDIT 0 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "boar",
+      "structure_after": "boar"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     yill\nCurrent:    boar\nPositions:  0123\nMismatches: ^^^^\nPath: sear \u2192 bear \u2192 boar\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {h, r, s}\n  2: {o}\n  3: {s, t}",
+      "raw_action": "EDIT 0 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "boar",
+      "structure_after": "boar"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     yill\nCurrent:    boar\nPositions:  0123\nMismatches: ^^^^\nPath: sear \u2192 bear \u2192 boar\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {h, r, s}\n  2: {o}\n  3: {s, t}",
+      "raw_action": "EDIT 0 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "boar",
+      "structure_after": "boar"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     yill\nCurrent:    boar\nPositions:  0123\nMismatches: ^^^^\nPath: sear \u2192 bear \u2192 boar\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {h, r, s}\n  2: {o}\n  3: {s, t}",
+      "raw_action": "EDIT 0 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "boar",
+      "structure_after": "boar"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     yill\nCurrent:    boar\nPositions:  0123\nMismatches: ^^^^\nPath: sear \u2192 bear \u2192 boar\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {h, r, s}\n  2: {o}\n  3: {s, t}",
+      "raw_action": "EDIT 0 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "boar",
+      "structure_after": "boar"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     yill\nCurrent:    boar\nPositions:  0123\nMismatches: ^^^^\nPath: sear \u2192 bear \u2192 boar\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {h, r, s}\n  2: {o}\n  3: {s, t}",
+      "raw_action": "EDIT 0 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "boar",
+      "structure_after": "boar"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     yill\nCurrent:    boar\nPositions:  0123\nMismatches: ^^^^\nPath: sear \u2192 bear \u2192 boar\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {h, r, s}\n  2: {o}\n  3: {s, t}",
+      "raw_action": "EDIT 0 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "boar",
+      "structure_after": "boar"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     yill\nCurrent:    boar\nPositions:  0123\nMismatches: ^^^^\nPath: sear \u2192 bear \u2192 boar\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {h, r, s}\n  2: {o}\n  3: {s, t}",
+      "raw_action": "EDIT 0 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "boar",
+      "structure_after": "boar"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     yill\nCurrent:    boar\nPositions:  0123\nMismatches: ^^^^\nPath: sear \u2192 bear \u2192 boar\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {h, r, s}\n  2: {o}\n  3: {s, t}",
+      "raw_action": "EDIT 0 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "boar",
+      "structure_after": "boar"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     yill\nCurrent:    boar\nPositions:  0123\nMismatches: ^^^^\nPath: sear \u2192 bear \u2192 boar\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {h, r, s}\n  2: {o}\n  3: {s, t}",
+      "raw_action": "EDIT 0 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "boar",
+      "structure_after": "boar"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     yill\nCurrent:    boar\nPositions:  0123\nMismatches: ^^^^\nPath: sear \u2192 bear \u2192 boar\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {h, r, s}\n  2: {o}\n  3: {s, t}",
+      "raw_action": "EDIT 0 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "boar",
+      "structure_after": "boar"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     yill\nCurrent:    boar\nPositions:  0123\nMismatches: ^^^^\nPath: sear \u2192 bear \u2192 boar\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {h, r, s}\n  2: {o}\n  3: {s, t}",
+      "raw_action": "EDIT 0 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "boar",
+      "structure_after": "boar"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     yill\nCurrent:    boar\nPositions:  0123\nMismatches: ^^^^\nPath: sear \u2192 bear \u2192 boar\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {h, r, s}\n  2: {o}\n  3: {s, t}",
+      "raw_action": "EDIT 0 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "boar",
+      "structure_after": "boar"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     yill\nCurrent:    boar\nPositions:  0123\nMismatches: ^^^^\nPath: sear \u2192 bear \u2192 boar\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {h, r, s}\n  2: {o}\n  3: {s, t}",
+      "raw_action": "EDIT 0 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "y"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "boar",
+      "structure_after": "boar"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "sear",
+    "target_word": "yill",
+    "final_word": "boar",
+    "path": [
+      "sear",
+      "bear",
+      "boar"
+    ],
+    "path_length": 2,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 18,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 19,
+    "optimal_distance_at_end": 5,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 38685,
+    "completion_tokens": 100,
+    "total_tokens": 38785
+  },
+  "wall_time_s": 12.438211679458618
+}

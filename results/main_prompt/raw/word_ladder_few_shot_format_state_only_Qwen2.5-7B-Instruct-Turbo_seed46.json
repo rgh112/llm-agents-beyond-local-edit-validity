@@ -1,0 +1,469 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "few_shot_format",
+  "memory_condition": "state_only",
+  "seed": 46,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     shaw\nCurrent:    sued\nPositions:  0123\nMismatches:  ^^^\nPath: cued \u2192 sued\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {h, r}\n  1: {e, h*, l, n, p}\n  2: {d, r}\n  3: {r, s, t}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cued",
+      "structure_after": "sued"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     shaw\nCurrent:    hued\nPositions:  0123\nMismatches: ^^^^\nPath: cued \u2192 sued \u2192 hued\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {r}\n  1: {a, e, i, o}\n  3: {s}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sued",
+      "structure_after": "hued"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     shaw\nCurrent:    rued\nPositions:  0123\nMismatches: ^^^^\nPath: cued \u2192 sued \u2192 hued \u2192 rued\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  1: {e}\n  2: {d}\n  3: {r, s}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hued",
+      "structure_after": "rued"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     shaw\nCurrent:    rued\nPositions:  0123\nMismatches: ^^^^\nPath: cued \u2192 sued \u2192 hued \u2192 rued\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  1: {e}\n  2: {d}\n  3: {r, s}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "rued",
+      "structure_after": "rued"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     shaw\nCurrent:    rudd\nPositions:  0123\nMismatches: ^^^^\nPath: cued \u2192 sued \u2192 hued \u2192 rued \u2192 rudd\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {s*}\n  1: {e}\n  3: {e}",
+      "raw_action": "EDIT 2 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rued",
+      "structure_after": "rudd"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     shaw\nCurrent:    sudd\nPositions:  0123\nMismatches:  ^^^\nPath: cued \u2192 sued \u2192 hued \u2192 rued \u2192 rudd \u2192 sudd\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  2: {r}\n  3: {s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rudd",
+      "structure_after": "sudd"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     shaw\nCurrent:    sudd\nPositions:  0123\nMismatches:  ^^^\nPath: cued \u2192 sued \u2192 hued \u2192 rued \u2192 rudd \u2192 sudd\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  2: {r}\n  3: {s}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sudd",
+      "structure_after": "sudd"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     shaw\nCurrent:    sudd\nPositions:  0123\nMismatches:  ^^^\nPath: cued \u2192 sued \u2192 hued \u2192 rued \u2192 rudd \u2192 sudd\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  2: {r}\n  3: {s}",
+      "raw_action": "EDIT 3 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sudd",
+      "structure_after": "sudd"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     shaw\nCurrent:    sudd\nPositions:  0123\nMismatches:  ^^^\nPath: cued \u2192 sued \u2192 hued \u2192 rued \u2192 rudd \u2192 sudd\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  2: {r}\n  3: {s}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sudd",
+      "structure_after": "sudd"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     shaw\nCurrent:    sudd\nPositions:  0123\nMismatches:  ^^^\nPath: cued \u2192 sued \u2192 hued \u2192 rued \u2192 rudd \u2192 sudd\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  2: {r}\n  3: {s}",
+      "raw_action": "EDIT 3 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "h"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sudd",
+      "structure_after": "sudd"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     shaw\nCurrent:    sudd\nPositions:  0123\nMismatches:  ^^^\nPath: cued \u2192 sued \u2192 hued \u2192 rued \u2192 rudd \u2192 sudd\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  2: {r}\n  3: {s}",
+      "raw_action": "EDIT 2 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sudd",
+      "structure_after": "sudd"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     shaw\nCurrent:    sudd\nPositions:  0123\nMismatches:  ^^^\nPath: cued \u2192 sued \u2192 hued \u2192 rued \u2192 rudd \u2192 sudd\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  2: {r}\n  3: {s}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sudd",
+      "structure_after": "sudd"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     shaw\nCurrent:    sudd\nPositions:  0123\nMismatches:  ^^^\nPath: cued \u2192 sued \u2192 hued \u2192 rued \u2192 rudd \u2192 sudd\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  2: {r}\n  3: {s}",
+      "raw_action": "EDIT 2 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "h"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sudd",
+      "structure_after": "sudd"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     shaw\nCurrent:    sudd\nPositions:  0123\nMismatches:  ^^^\nPath: cued \u2192 sued \u2192 hued \u2192 rued \u2192 rudd \u2192 sudd\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  2: {r}\n  3: {s}",
+      "raw_action": "EDIT 3 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sudd",
+      "structure_after": "sudd"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     shaw\nCurrent:    sudd\nPositions:  0123\nMismatches:  ^^^\nPath: cued \u2192 sued \u2192 hued \u2192 rued \u2192 rudd \u2192 sudd\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  2: {r}\n  3: {s}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sudd",
+      "structure_after": "sudd"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     shaw\nCurrent:    sudd\nPositions:  0123\nMismatches:  ^^^\nPath: cued \u2192 sued \u2192 hued \u2192 rued \u2192 rudd \u2192 sudd\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  2: {r}\n  3: {s}",
+      "raw_action": "EDIT 3 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "h"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sudd",
+      "structure_after": "sudd"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     shaw\nCurrent:    sudd\nPositions:  0123\nMismatches:  ^^^\nPath: cued \u2192 sued \u2192 hued \u2192 rued \u2192 rudd \u2192 sudd\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  2: {r}\n  3: {s}",
+      "raw_action": "EDIT 2 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sudd",
+      "structure_after": "sudd"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     shaw\nCurrent:    sudd\nPositions:  0123\nMismatches:  ^^^\nPath: cued \u2192 sued \u2192 hued \u2192 rued \u2192 rudd \u2192 sudd\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  2: {r}\n  3: {s}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sudd",
+      "structure_after": "sudd"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     shaw\nCurrent:    sudd\nPositions:  0123\nMismatches:  ^^^\nPath: cued \u2192 sued \u2192 hued \u2192 rued \u2192 rudd \u2192 sudd\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  2: {r}\n  3: {s}",
+      "raw_action": "EDIT 2 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "h"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sudd",
+      "structure_after": "sudd"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     shaw\nCurrent:    sudd\nPositions:  0123\nMismatches:  ^^^\nPath: cued \u2192 sued \u2192 hued \u2192 rued \u2192 rudd \u2192 sudd\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  2: {r}\n  3: {s}",
+      "raw_action": "EDIT 3 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sudd",
+      "structure_after": "sudd"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "cued",
+    "target_word": "shaw",
+    "final_word": "sudd",
+    "path": [
+      "cued",
+      "sued",
+      "hued",
+      "rued",
+      "rudd",
+      "sudd"
+    ],
+    "path_length": 5,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 15,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 16,
+    "optimal_distance_at_end": 4,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 28845,
+    "completion_tokens": 100,
+    "total_tokens": 28945
+  },
+  "wall_time_s": 53.80722212791443
+}

@@ -1,0 +1,440 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check",
+  "memory_condition": "state_only",
+  "seed": 22,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     mild\nCurrent:    bode\nPositions:  0123\nMismatches: ^^^^\nPath: lode \u2192 bode\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {c, m*, n, r}\n  1: {a, i*}\n  2: {l*, n, r}\n  3: {s, y}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lode",
+      "structure_after": "bode"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     mild\nCurrent:    bide\nPositions:  0123\nMismatches: ^ ^^\nPath: lode \u2192 bode \u2192 bide\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {a, e, h, n, r, s, t, v, w}\n  1: {a}\n  2: {c, k, l*, n, s, t, z}\n  3: {s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bode",
+      "structure_after": "bide"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     mild\nCurrent:    bile\nPositions:  0123\nMismatches: ^  ^\nPath: lode \u2192 bode \u2192 bide \u2192 bile\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {f, m*, p, r, t, v, w}\n  1: {a, o}\n  2: {c, k, n, s, t, z}\n  3: {k, l}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bide",
+      "structure_after": "bile"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     mild\nCurrent:    mile\nPositions:  0123\nMismatches:    ^\nPath: lode \u2192 bode \u2192 bide \u2192 bile \u2192 mile\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {f, p, r, t, v, w}\n  1: {a, o, u}\n  2: {c, k, m, n, r, s, t}\n  3: {d*, k, l, o, s, t}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bile",
+      "structure_after": "mile"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     mild\nCurrent:    mile\nPositions:  0123\nMismatches:    ^\nPath: lode \u2192 bode \u2192 bide \u2192 bile \u2192 mile\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {f, p, r, t, v, w}\n  1: {a, o, u}\n  2: {c, k, m, n, r, s, t}\n  3: {d*, k, l, o, s, t}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mile",
+      "structure_after": "mile"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     mild\nCurrent:    mile\nPositions:  0123\nMismatches:    ^\nPath: lode \u2192 bode \u2192 bide \u2192 bile \u2192 mile\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {f, p, r, t, v, w}\n  1: {a, o, u}\n  2: {c, k, m, n, r, s, t}\n  3: {d*, k, l, o, s, t}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mile",
+      "structure_after": "mile"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     mild\nCurrent:    mile\nPositions:  0123\nMismatches:    ^\nPath: lode \u2192 bode \u2192 bide \u2192 bile \u2192 mile\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {f, p, r, t, v, w}\n  1: {a, o, u}\n  2: {c, k, m, n, r, s, t}\n  3: {d*, k, l, o, s, t}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mile",
+      "structure_after": "mile"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     mild\nCurrent:    mile\nPositions:  0123\nMismatches:    ^\nPath: lode \u2192 bode \u2192 bide \u2192 bile \u2192 mile\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {f, p, r, t, v, w}\n  1: {a, o, u}\n  2: {c, k, m, n, r, s, t}\n  3: {d*, k, l, o, s, t}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mile",
+      "structure_after": "mile"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     mild\nCurrent:    mile\nPositions:  0123\nMismatches:    ^\nPath: lode \u2192 bode \u2192 bide \u2192 bile \u2192 mile\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {f, p, r, t, v, w}\n  1: {a, o, u}\n  2: {c, k, m, n, r, s, t}\n  3: {d*, k, l, o, s, t}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mile",
+      "structure_after": "mile"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     mild\nCurrent:    mile\nPositions:  0123\nMismatches:    ^\nPath: lode \u2192 bode \u2192 bide \u2192 bile \u2192 mile\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {f, p, r, t, v, w}\n  1: {a, o, u}\n  2: {c, k, m, n, r, s, t}\n  3: {d*, k, l, o, s, t}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mile",
+      "structure_after": "mile"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     mild\nCurrent:    mile\nPositions:  0123\nMismatches:    ^\nPath: lode \u2192 bode \u2192 bide \u2192 bile \u2192 mile\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {f, p, r, t, v, w}\n  1: {a, o, u}\n  2: {c, k, m, n, r, s, t}\n  3: {d*, k, l, o, s, t}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mile",
+      "structure_after": "mile"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     mild\nCurrent:    mile\nPositions:  0123\nMismatches:    ^\nPath: lode \u2192 bode \u2192 bide \u2192 bile \u2192 mile\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {f, p, r, t, v, w}\n  1: {a, o, u}\n  2: {c, k, m, n, r, s, t}\n  3: {d*, k, l, o, s, t}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mile",
+      "structure_after": "mile"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     mild\nCurrent:    mile\nPositions:  0123\nMismatches:    ^\nPath: lode \u2192 bode \u2192 bide \u2192 bile \u2192 mile\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {f, p, r, t, v, w}\n  1: {a, o, u}\n  2: {c, k, m, n, r, s, t}\n  3: {d*, k, l, o, s, t}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mile",
+      "structure_after": "mile"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     mild\nCurrent:    mile\nPositions:  0123\nMismatches:    ^\nPath: lode \u2192 bode \u2192 bide \u2192 bile \u2192 mile\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {f, p, r, t, v, w}\n  1: {a, o, u}\n  2: {c, k, m, n, r, s, t}\n  3: {d*, k, l, o, s, t}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mile",
+      "structure_after": "mile"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     mild\nCurrent:    mile\nPositions:  0123\nMismatches:    ^\nPath: lode \u2192 bode \u2192 bide \u2192 bile \u2192 mile\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {f, p, r, t, v, w}\n  1: {a, o, u}\n  2: {c, k, m, n, r, s, t}\n  3: {d*, k, l, o, s, t}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mile",
+      "structure_after": "mile"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     mild\nCurrent:    mile\nPositions:  0123\nMismatches:    ^\nPath: lode \u2192 bode \u2192 bide \u2192 bile \u2192 mile\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {f, p, r, t, v, w}\n  1: {a, o, u}\n  2: {c, k, m, n, r, s, t}\n  3: {d*, k, l, o, s, t}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mile",
+      "structure_after": "mile"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     mild\nCurrent:    mile\nPositions:  0123\nMismatches:    ^\nPath: lode \u2192 bode \u2192 bide \u2192 bile \u2192 mile\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {f, p, r, t, v, w}\n  1: {a, o, u}\n  2: {c, k, m, n, r, s, t}\n  3: {d*, k, l, o, s, t}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mile",
+      "structure_after": "mile"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     mild\nCurrent:    mile\nPositions:  0123\nMismatches:    ^\nPath: lode \u2192 bode \u2192 bide \u2192 bile \u2192 mile\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {f, p, r, t, v, w}\n  1: {a, o, u}\n  2: {c, k, m, n, r, s, t}\n  3: {d*, k, l, o, s, t}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mile",
+      "structure_after": "mile"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     mild\nCurrent:    mile\nPositions:  0123\nMismatches:    ^\nPath: lode \u2192 bode \u2192 bide \u2192 bile \u2192 mile\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {f, p, r, t, v, w}\n  1: {a, o, u}\n  2: {c, k, m, n, r, s, t}\n  3: {d*, k, l, o, s, t}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mile",
+      "structure_after": "mile"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     mild\nCurrent:    mile\nPositions:  0123\nMismatches:    ^\nPath: lode \u2192 bode \u2192 bide \u2192 bile \u2192 mile\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {f, p, r, t, v, w}\n  1: {a, o, u}\n  2: {c, k, m, n, r, s, t}\n  3: {d*, k, l, o, s, t}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mile",
+      "structure_after": "mile"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "PREMATURE_FINALIZE",
+  "failure_events": [
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "PREMATURE_FINALIZE",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "lode",
+    "target_word": "mild",
+    "final_word": "mile",
+    "path": [
+      "lode",
+      "bode",
+      "bide",
+      "bile",
+      "mile"
+    ],
+    "path_length": 4,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "PREMATURE_FINALIZE": 16,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 17,
+    "optimal_distance_at_end": 1,
+    "events": [
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "PREMATURE_FINALIZE",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 36074,
+    "completion_tokens": 68,
+    "total_tokens": 36142
+  },
+  "wall_time_s": 12.519361972808838
+}

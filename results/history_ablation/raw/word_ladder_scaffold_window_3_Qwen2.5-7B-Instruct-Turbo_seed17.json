@@ -1,0 +1,589 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "window_3",
+  "seed": 17,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     leak\nCurrent:    lall\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {c, f, g, h, m, p, s, t, w}\n  1: {o, u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ball",
+      "structure_after": "lall"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     leak\nCurrent:    lall\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {c, f, g, h, m, p, s, t, w}\n  1: {o, u}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lall",
+      "structure_after": "lall"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     leak\nCurrent:    lall\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {c, f, g, h, m, p, s, t, w}\n  1: {o, u}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lall",
+      "structure_after": "lall"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lall",
+      "structure_after": "loll"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     leak\nCurrent:    loll\nPositions:  0123\nMismatches:  ^^^\nPath: ball \u2192 lall \u2192 loll\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {b, d, m, p, r, t}\n  1: {u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "loll",
+      "structure_after": "loll"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "ball",
+    "target_word": "leak",
+    "final_word": "loll",
+    "path": [
+      "ball",
+      "lall",
+      "loll"
+    ],
+    "path_length": 2,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 2,
+      "ILLEGAL_EDIT": 21,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 24,
+    "optimal_distance_at_end": 5,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 120987,
+    "completion_tokens": 125,
+    "total_tokens": 121112
+  },
+  "wall_time_s": 16.676974058151245
+}

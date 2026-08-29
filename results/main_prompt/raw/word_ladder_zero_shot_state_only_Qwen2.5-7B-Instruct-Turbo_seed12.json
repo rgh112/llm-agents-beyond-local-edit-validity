@@ -1,0 +1,202 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 12,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     toot\nCurrent:    cots\nPositions:  0123\nMismatches: ^ ^^\nPath: cats \u2192 cots\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, d, h, j, l, m, o, p, r, s, t*, w}\n  1: {u}\n  2: {b, d, g, l, n, o*, p, s, w, y}\n  3: {e}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cats",
+      "structure_after": "cots"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     toot\nCurrent:    cobs\nPositions:  0123\nMismatches: ^ ^^\nPath: cats \u2192 cots \u2192 cobs\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, f, g, h, j, k, l, m, n, r, s, y}\n  1: {a, u}\n  2: {d, g, l, n, o*, p, s, w, y}\n  3: {b}",
+      "raw_action": "EDIT 2 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cots",
+      "structure_after": "cobs"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     toot\nCurrent:    cobs\nPositions:  0123\nMismatches: ^ ^^\nPath: cats \u2192 cots \u2192 cobs\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {b, f, g, h, j, k, l, m, n, r, s, y}\n  1: {a, u}\n  2: {d, g, l, n, o*, p, s, w, y}\n  3: {b}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cobs",
+      "structure_after": "cobs"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     toot\nCurrent:    cobs\nPositions:  0123\nMismatches: ^ ^^\nPath: cats \u2192 cots \u2192 cobs\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, f, g, h, j, k, l, m, n, r, s, y}\n  1: {a, u}\n  2: {d, g, l, n, o*, p, s, w, y}\n  3: {b}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cobs",
+      "structure_after": "cobs"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     toot\nCurrent:    cobs\nPositions:  0123\nMismatches: ^ ^^\nPath: cats \u2192 cots \u2192 cobs\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {b, f, g, h, j, k, l, m, n, r, s, y}\n  1: {a, u}\n  2: {d, g, l, n, o*, p, s, w, y}\n  3: {b}",
+      "raw_action": "EDIT 1 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cobs",
+      "structure_after": "cobs"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     toot\nCurrent:    coos\nPositions:  0123\nMismatches: ^  ^\nPath: cats \u2192 cots \u2192 cobs \u2192 coos\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {b, g, l, m, w, z}\n  2: {d, g, l, n, p, s, w, y}\n  3: {f, k, l, n, p, t*}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cobs",
+      "structure_after": "coos"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     toot\nCurrent:    coot\nPositions:  0123\nMismatches: ^   \nPath: cats \u2192 cots \u2192 cobs \u2192 coos \u2192 coot\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {b, f, h, l, m, r, s, t*}\n  1: {l}\n  2: {a, f, l, s}\n  3: {f, k, l, n, p}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "coos",
+      "structure_after": "coot"
+    },
+    {
+      "t": 8,
+      "observation": "",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 1.0,
+      "info": {
+        "valid": true,
+        "auto_success": true
+      },
+      "structure_before": "coot",
+      "structure_after": "toot"
+    }
+  ],
+  "success": true,
+  "terminal_failure": null,
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD"
+  ],
+  "final_metrics": {
+    "success": true,
+    "steps_taken": 8,
+    "max_steps": 20,
+    "start_word": "cats",
+    "target_word": "toot",
+    "final_word": "toot",
+    "path": [
+      "cats",
+      "cots",
+      "cobs",
+      "coos",
+      "coot",
+      "toot"
+    ],
+    "path_length": 5,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 3
+    },
+    "total_violations": 3,
+    "optimal_distance_at_end": 0,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 6683,
+    "completion_tokens": 40,
+    "total_tokens": 6723
+  },
+  "wall_time_s": 4.0017478466033936
+}

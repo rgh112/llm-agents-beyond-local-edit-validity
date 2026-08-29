@@ -1,0 +1,424 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check",
+  "memory_condition": "state_only",
+  "seed": 8,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     seed\nCurrent:    rani\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 rani\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b}\n  2: {g, k, m}\n  3: {d*, k, t}",
+      "raw_action": "EDIT 3 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rang",
+      "structure_after": "rani"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     seed\nCurrent:    bani\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 rani \u2192 bani\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  3: {d*, e, g, k, s}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rani",
+      "structure_after": "bani"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     seed\nCurrent:    bane\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 rani \u2192 bani \u2192 bane\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {c, f, g, j, k, l, m, p, s*, v, w}\n  1: {e*, i, o}\n  2: {b, d, k, l, r, s, t}\n  3: {d*, g, k, s}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bani",
+      "structure_after": "bane"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     seed\nCurrent:    bene\nPositions:  0123\nMismatches: ^ ^^\nPath: rang \u2192 rani \u2192 bani \u2192 bane \u2192 bene\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {d, g, n, s*}\n  1: {i, o}\n  3: {d*, s, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bane",
+      "structure_after": "bene"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     seed\nCurrent:    dene\nPositions:  0123\nMismatches: ^ ^^\nPath: rang \u2192 rani \u2192 bani \u2192 bane \u2192 bene \u2192 dene\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {g, n, s*}\n  1: {i, o, u, y}\n  2: {k, l, m, r}\n  3: {s, t, y}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bene",
+      "structure_after": "dene"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     seed\nCurrent:    sene\nPositions:  0123\nMismatches:   ^^\nPath: rang \u2192 rani \u2192 bani \u2192 ... \u2192 dene \u2192 sene\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {g, n}\n  1: {a, i, o, y}\n  2: {m, r}\n  3: {d*, t}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dene",
+      "structure_after": "sene"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     seed\nCurrent:    gene\nPositions:  0123\nMismatches: ^ ^^\nPath: rang \u2192 rani \u2192 bani \u2192 ... \u2192 sene \u2192 gene\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {n}\n  1: {a, o}\n  3: {s, t, u}",
+      "raw_action": "EDIT 0 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sene",
+      "structure_after": "gene"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     seed\nCurrent:    nene\nPositions:  0123\nMismatches: ^ ^^\nPath: rang \u2192 rani \u2192 bani \u2192 ... \u2192 gene \u2192 nene\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  1: {i, o}\n  2: {v}",
+      "raw_action": "EDIT 0 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gene",
+      "structure_after": "nene"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     seed\nCurrent:    nine\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 rani \u2192 bani \u2192 ... \u2192 nene \u2192 nine\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, k, l, m, p, s*, t, v, w}\n  1: {o}\n  2: {c, d, t, x}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "nene",
+      "structure_after": "nine"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     seed\nCurrent:    dine\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 rani \u2192 bani \u2192 ... \u2192 nine \u2192 dine\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {b, c, f, k, l, m, p, s*, t, v, w}\n  1: {o, u, y}\n  2: {c, k, m, r, t, v}\n  3: {g, k, s, t}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "nine",
+      "structure_after": "dine"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     seed\nCurrent:    sine\nPositions:  0123\nMismatches:  ^^^\nPath: rang \u2192 rani \u2192 bani \u2192 ... \u2192 dine \u2192 sine\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {b, c, f, k, l, m, p, t, v, w}\n  1: {a, o, y}\n  2: {c, d, k, p, r, t, z}\n  3: {g, h, k, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dine",
+      "structure_after": "sine"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     seed\nCurrent:    bine\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 rani \u2192 bani \u2192 ... \u2192 sine \u2192 bine\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {c, f, k, l, m, p, t, v, w}\n  1: {o}\n  2: {c, d, k, l, s, t, z}\n  3: {d*, s, t}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sine",
+      "structure_after": "bine"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     seed\nCurrent:    cine\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 rani \u2192 bani \u2192 ... \u2192 bine \u2192 cine\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {f, k, l, m, p, t, v, w}\n  1: {a, o}\n  2: {r, t}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bine",
+      "structure_after": "cine"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     seed\nCurrent:    fine\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 rani \u2192 bani \u2192 ... \u2192 cine \u2192 fine\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {k, l, m, p, t, v, w}\n  1: {a}\n  2: {c, f, l, r, v}\n  3: {d*, k, o, s}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cine",
+      "structure_after": "fine"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     seed\nCurrent:    kine\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 rani \u2192 bani \u2192 ... \u2192 fine \u2192 kine\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {l, m, p, t, v, w}\n  1: {a}\n  2: {b, k, t}\n  3: {a, d*, g, k, o, s}",
+      "raw_action": "EDIT 0 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "k"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fine",
+      "structure_after": "kine"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     seed\nCurrent:    line\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 rani \u2192 bani \u2192 ... \u2192 kine \u2192 line\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {m, p, t, v, w}\n  1: {a, o, u}\n  2: {c, f, k, m, r, t, v}\n  3: {g, k, n, o, s, t, y}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "kine",
+      "structure_after": "line"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     seed\nCurrent:    mine\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 rani \u2192 bani \u2192 ... \u2192 line \u2192 mine\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {p, t, v, w}\n  1: {a}\n  2: {c, k, l, m, r, s, t}\n  3: {a, d*, i, k, t, x}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "line",
+      "structure_after": "mine"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     seed\nCurrent:    pine\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 rani \u2192 bani \u2192 ... \u2192 mine \u2192 pine\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {t, v, w}\n  1: {a, o}\n  2: {c, k, l, p}\n  3: {a, g, k, s, t, y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mine",
+      "structure_after": "pine"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     seed\nCurrent:    tine\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 rani \u2192 bani \u2192 ... \u2192 pine \u2192 tine\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {v, w}\n  1: {o, u, y}\n  2: {d, k, l, m, r}\n  3: {g, s, t, y}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pine",
+      "structure_after": "tine"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     seed\nCurrent:    vine\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 rani \u2192 bani \u2192 ... \u2192 tine \u2192 vine\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {w}\n  1: {a}\n  2: {b, c, d, l, s, v}\n  3: {a, o, y}",
+      "raw_action": "EDIT 0 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "v"
+      },
+      "valid": true,
+      "events": [
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tine",
+      "structure_after": "vine"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "rang",
+    "target_word": "seed",
+    "final_word": "vine",
+    "path": [
+      "rang",
+      "rani",
+      "bani",
+      "bane",
+      "bene",
+      "dene",
+      "sene",
+      "gene",
+      "nene",
+      "nine",
+      "dine",
+      "sine",
+      "bine",
+      "cine",
+      "fine",
+      "kine",
+      "line",
+      "mine",
+      "pine",
+      "tine",
+      "vine"
+    ],
+    "path_length": 20,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 1,
+    "optimal_distance_at_end": 4,
+    "events": [
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 33551,
+    "completion_tokens": 100,
+    "total_tokens": 33651
+  },
+  "wall_time_s": 60.837913274765015
+}

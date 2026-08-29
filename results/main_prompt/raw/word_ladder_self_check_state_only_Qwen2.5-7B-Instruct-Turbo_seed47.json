@@ -1,0 +1,313 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check",
+  "memory_condition": "state_only",
+  "seed": 47,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     veil\nCurrent:    rebs\nPositions:  0123\nMismatches: ^ ^^\nPath: rubs \u2192 rebs\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {d, n, w}\n  1: {i, o}\n  2: {c, d, e, f, g, i*, m, p, t, v}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rubs",
+      "structure_after": "rebs"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     veil\nCurrent:    debs\nPositions:  0123\nMismatches: ^ ^^\nPath: rubs \u2192 rebs \u2192 debs\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {n, w}\n  1: {a, i, u}\n  2: {e, l, n, v, w, y}\n  3: {t}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rebs",
+      "structure_after": "debs"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     veil\nCurrent:    dels\nPositions:  0123\nMismatches: ^ ^^\nPath: rubs \u2192 rebs \u2192 debs \u2192 dels\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {b, c, e, g, m, s, t}\n  1: {a, o}\n  2: {e, n, v, w, y}\n  3: {e, f, i, l*}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "debs",
+      "structure_after": "dels"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     veil\nCurrent:    bels\nPositions:  0123\nMismatches: ^ ^^\nPath: rubs \u2192 rebs \u2192 debs \u2192 dels \u2192 bels\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {c, e, g, m, s, t}\n  1: {a}\n  2: {d, e, g, n, t, y}\n  3: {l*, t}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dels",
+      "structure_after": "bels"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     veil\nCurrent:    bals\nPositions:  0123\nMismatches: ^^^^\nPath: rubs \u2192 rebs \u2192 debs \u2192 dels \u2192 bels \u2192 bals\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {a, d, g, p, s}\n  2: {a, d, g, m, n, p, r, s, t, y}\n  3: {d, e, k, l*, m}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bels",
+      "structure_after": "bals"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     veil\nCurrent:    baas\nPositions:  0123\nMismatches: ^^^^\nPath: rubs \u2192 rebs \u2192 debs \u2192 ... \u2192 bals \u2192 baas\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {k}\n  1: {i, o, r}\n  2: {d, g, m, n, p, r, s, t, y}\n  3: {l*}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bals",
+      "structure_after": "baas"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     veil\nCurrent:    bias\nPositions:  0123\nMismatches: ^^^^\nPath: rubs \u2192 rebs \u2192 debs \u2192 ... \u2192 baas \u2192 bias\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {p, r}\n  1: {o, r}\n  2: {b, d, g, n, o, t}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "baas",
+      "structure_after": "bias"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     veil\nCurrent:    pias\nPositions:  0123\nMismatches: ^^^^\nPath: rubs \u2192 rebs \u2192 debs \u2192 ... \u2192 bias \u2192 pias\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {r}\n  1: {e*, y}\n  2: {c, e, g, n, p, s, t}\n  3: {l*, n}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bias",
+      "structure_after": "pias"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     veil\nCurrent:    peas\nPositions:  0123\nMismatches: ^ ^^\nPath: rubs \u2192 rebs \u2192 debs \u2192 ... \u2192 pias \u2192 peas\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {k, l, s, t, y}\n  1: {y}\n  2: {c, d, e, g, h, n, p, t, w}\n  3: {g, k, l*, n, r, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pias",
+      "structure_after": "peas"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     veil\nCurrent:    peas\nPositions:  0123\nMismatches: ^ ^^\nPath: rubs \u2192 rebs \u2192 debs \u2192 ... \u2192 pias \u2192 peas\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {k, l, s, t, y}\n  1: {y}\n  2: {c, d, e, g, h, n, p, t, w}\n  3: {g, k, l*, n, r, t}",
+      "raw_action": "EDIT 2 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "peas",
+      "structure_after": "peas"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     veil\nCurrent:    peas\nPositions:  0123\nMismatches: ^ ^^\nPath: rubs \u2192 rebs \u2192 debs \u2192 ... \u2192 pias \u2192 peas\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {k, l, s, t, y}\n  1: {y}\n  2: {c, d, e, g, h, n, p, t, w}\n  3: {g, k, l*, n, r, t}",
+      "raw_action": "EDIT 3 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "peas",
+      "structure_after": "peas"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     veil\nCurrent:    peal\nPositions:  0123\nMismatches: ^ ^ \nPath: rubs \u2192 rebs \u2192 debs \u2192 ... \u2192 peas \u2192 peal\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, r, s, t, v*, w, z}\n  1: {i}\n  2: {e}\n  3: {g, k, n, r, t}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "peas",
+      "structure_after": "peal"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     veil\nCurrent:    veal\nPositions:  0123\nMismatches:   ^ \nPath: rubs \u2192 rebs \u2192 debs \u2192 ... \u2192 peal \u2192 veal\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, r, s, t, w, z}\n  1: {i}\n  2: {i*}",
+      "raw_action": "EDIT 0 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "v"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "peal",
+      "structure_after": "veal"
+    },
+    {
+      "t": 14,
+      "observation": "",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 1.0,
+      "info": {
+        "valid": true,
+        "auto_success": true
+      },
+      "structure_before": "veal",
+      "structure_after": "veil"
+    }
+  ],
+  "success": true,
+  "terminal_failure": null,
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD"
+  ],
+  "final_metrics": {
+    "success": true,
+    "steps_taken": 14,
+    "max_steps": 25,
+    "start_word": "rubs",
+    "target_word": "veil",
+    "final_word": "veil",
+    "path": [
+      "rubs",
+      "rebs",
+      "debs",
+      "dels",
+      "bels",
+      "bals",
+      "baas",
+      "bias",
+      "pias",
+      "peas",
+      "peal",
+      "veal",
+      "veil"
+    ],
+    "path_length": 12,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 2
+    },
+    "total_violations": 2,
+    "optimal_distance_at_end": 0,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 18544,
+    "completion_tokens": 70,
+    "total_tokens": 18614
+  },
+  "wall_time_s": 7.7007060050964355
+}

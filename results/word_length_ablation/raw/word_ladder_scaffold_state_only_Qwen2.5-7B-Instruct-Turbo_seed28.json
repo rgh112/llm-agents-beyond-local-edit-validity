@@ -1,0 +1,170 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 28,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     wared\nCurrent:    hulks\nPositions:  01234\nMismatches: ^^^^^\nPath: hulas \u2192 hulks\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  0: {b, s}\n  1: {o}\n  2: {c, n, s}\n  3: {l}\n  4: {y}",
+      "raw_action": "EDIT 3 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "k"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hulas",
+      "structure_after": "hulks"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     wared\nCurrent:    bulks\nPositions:  01234\nMismatches: ^^^^^\nPath: hulas \u2192 hulks \u2192 bulks\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  0: {s}\n  1: {a*, i}\n  2: {c, n, s}\n  3: {b, l}\n  4: {y}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hulks",
+      "structure_after": "bulks"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     wared\nCurrent:    balks\nPositions:  01234\nMismatches: ^ ^^^\nPath: hulas \u2192 hulks \u2192 bulks \u2192 balks\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  0: {c, t, w*}\n  1: {i}\n  2: {c, n, r*, s}\n  3: {a, d, e*, l, m}\n  4: {y}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bulks",
+      "structure_after": "balks"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     wared\nCurrent:    walks\nPositions:  01234\nMismatches:   ^^^\nPath: hulas \u2192 hulks \u2192 bulks \u2192 balks \u2192 walks\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  0: {c, t}\n  2: {c, r*, u}\n  3: {e*, l}",
+      "raw_action": "EDIT 0 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "w"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "balks",
+      "structure_after": "walks"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     wared\nCurrent:    warks\nPositions:  01234\nMismatches:    ^^\nPath: hulas \u2192 hulks \u2192 bulks \u2192 balks \u2192 walks \u2192 warks\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, l, m, n, p, s}\n  1: {o}\n  2: {c, u}\n  3: {d, e*, m, n, p, t}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "walks",
+      "structure_after": "warks"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     wared\nCurrent:    wares\nPositions:  01234\nMismatches:     ^\nPath: hulas \u2192 hulks \u2192 bulks \u2192 ... \u2192 warks \u2192 wares\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, h, l, m, n, p, r, t}\n  1: {i}\n  2: {d, g, k, l, m, n, v, x}\n  3: {d, m, n, p, t}\n  4: {d*}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "warks",
+      "structure_after": "wares"
+    },
+    {
+      "t": 7,
+      "observation": "",
+      "raw_action": "EDIT 4 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 1.0,
+      "info": {
+        "valid": true,
+        "auto_success": true
+      },
+      "structure_before": "wares",
+      "structure_after": "wared"
+    }
+  ],
+  "success": true,
+  "terminal_failure": null,
+  "failure_events": [],
+  "final_metrics": {
+    "success": true,
+    "steps_taken": 7,
+    "max_steps": 30,
+    "start_word": "hulas",
+    "target_word": "wared",
+    "final_word": "wared",
+    "path": [
+      "hulas",
+      "hulks",
+      "bulks",
+      "balks",
+      "walks",
+      "warks",
+      "wares",
+      "wared"
+    ],
+    "path_length": 7,
+    "optimal_length": 6,
+    "violations_by_type": {},
+    "total_violations": 0,
+    "optimal_distance_at_end": 0,
+    "events": []
+  },
+  "token_usage": {
+    "prompt_tokens": 7730,
+    "completion_tokens": 35,
+    "total_tokens": 7765
+  },
+  "wall_time_s": 3.5410900115966797
+}

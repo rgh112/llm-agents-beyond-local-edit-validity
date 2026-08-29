@@ -1,0 +1,371 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "window_3",
+  "seed": 16,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     time\nCurrent:    tote\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote\nSteps used: 1/15  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {d, m, n, r, v}\n  1: {a}\n  2: {k, l, m*, n, p, r}\n  3: {s}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cote",
+      "structure_after": "tote"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     time\nCurrent:    tote\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote\nSteps used: 2/15  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {d, m, n, r, v}\n  1: {a}\n  2: {k, l, m*, n, p, r}\n  3: {s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tote",
+      "structure_after": "tote"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     time\nCurrent:    tote\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote\nSteps used: 3/15  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {d, m, n, r, v}\n  1: {a}\n  2: {k, l, m*, n, p, r}\n  3: {s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tote",
+      "structure_after": "tote"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     time\nCurrent:    tote\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote\nSteps used: 4/15  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {d, m, n, r, v}\n  1: {a}\n  2: {k, l, m*, n, p, r}\n  3: {s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tote",
+      "structure_after": "tote"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     time\nCurrent:    tote\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote\nSteps used: 5/15  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {d, m, n, r, v}\n  1: {a}\n  2: {k, l, m*, n, p, r}\n  3: {s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tote",
+      "structure_after": "tote"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     time\nCurrent:    tote\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote\nSteps used: 6/15  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {d, m, n, r, v}\n  1: {a}\n  2: {k, l, m*, n, p, r}\n  3: {s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tote",
+      "structure_after": "tote"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     time\nCurrent:    tote\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote\nSteps used: 7/15  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {d, m, n, r, v}\n  1: {a}\n  2: {k, l, m*, n, p, r}\n  3: {s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tote",
+      "structure_after": "tote"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     time\nCurrent:    tote\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote\nSteps used: 8/15  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {d, m, n, r, v}\n  1: {a}\n  2: {k, l, m*, n, p, r}\n  3: {s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tote",
+      "structure_after": "tote"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     time\nCurrent:    tote\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote\nSteps used: 9/15  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {d, m, n, r, v}\n  1: {a}\n  2: {k, l, m*, n, p, r}\n  3: {s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tote",
+      "structure_after": "tote"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     time\nCurrent:    tote\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote\nSteps used: 10/15  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {d, m, n, r, v}\n  1: {a}\n  2: {k, l, m*, n, p, r}\n  3: {s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tote",
+      "structure_after": "tote"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     time\nCurrent:    tote\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote\nSteps used: 11/15  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {d, m, n, r, v}\n  1: {a}\n  2: {k, l, m*, n, p, r}\n  3: {s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tote",
+      "structure_after": "tote"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     time\nCurrent:    tote\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote\nSteps used: 12/15  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {d, m, n, r, v}\n  1: {a}\n  2: {k, l, m*, n, p, r}\n  3: {s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tote",
+      "structure_after": "tote"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     time\nCurrent:    tote\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote\nSteps used: 13/15  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {d, m, n, r, v}\n  1: {a}\n  2: {k, l, m*, n, p, r}\n  3: {s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tote",
+      "structure_after": "tote"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     time\nCurrent:    tote\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote\nSteps used: 14/15  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {d, m, n, r, v}\n  1: {a}\n  2: {k, l, m*, n, p, r}\n  3: {s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tote",
+      "structure_after": "tote"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     time\nCurrent:    tote\nPositions:  0123\nMismatches:  ^^ \nPath: cote \u2192 tote\nSteps used: 15/15  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {d, m, n, r, v}\n  1: {a}\n  2: {k, l, m*, n, p, r}\n  3: {s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tote",
+      "structure_after": "tote"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 15,
+    "max_steps": 15,
+    "start_word": "cote",
+    "target_word": "time",
+    "final_word": "tote",
+    "path": [
+      "cote",
+      "tote"
+    ],
+    "path_length": 1,
+    "optimal_length": 3,
+    "violations_by_type": {
+      "INVALID_WORD": 14,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 15,
+    "optimal_distance_at_end": 2,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 44841,
+    "completion_tokens": 75,
+    "total_tokens": 44916
+  },
+  "wall_time_s": 9.068639993667603
+}

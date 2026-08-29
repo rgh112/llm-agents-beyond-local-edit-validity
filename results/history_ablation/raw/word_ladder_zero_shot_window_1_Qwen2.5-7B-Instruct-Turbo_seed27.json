@@ -1,0 +1,576 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "window_1",
+  "seed": 27,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     eath\nCurrent:    milk\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {s}\n  2: {c, n, r}\n  3: {d, e, l, o, s, t}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bilk",
+      "structure_after": "milk"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     eath\nCurrent:    mick\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {d, h, k, l, n, p, r, s, t, w}\n  1: {a*, o, u}\n  2: {n, r}\n  3: {a, e}",
+      "raw_action": "EDIT 2 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "milk",
+      "structure_after": "mick"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     eath\nCurrent:    dick\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick \u2192 dick\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {h, k, l, n, p, r, s, t, w}\n  1: {e, o, u}\n  2: {n, r, s}\n  3: {e}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mick",
+      "structure_after": "dick"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     eath\nCurrent:    deck\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick \u2192 dick \u2192 deck\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {b, f, g, h, k, n, p, r}\n  1: {o, u}\n  2: {s}\n  3: {o}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dick",
+      "structure_after": "deck"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     eath\nCurrent:    beck\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick \u2192 dick \u2192 deck \u2192 beck\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {f, g, h, k, n, p, r}\n  1: {a*, o, u}\n  2: {a}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "deck",
+      "structure_after": "beck"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     eath\nCurrent:    back\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 beck \u2192 back\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {h, j, l, m, p, r, s, t, w, y}\n  1: {o, u}\n  2: {l, n, r, s}\n  3: {h*}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "beck",
+      "structure_after": "back"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     eath\nCurrent:    back\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 beck \u2192 back\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {h, j, l, m, p, r, s, t, w, y}\n  1: {o, u}\n  2: {l, n, r, s}\n  3: {h*}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "back",
+      "structure_after": "back"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     eath\nCurrent:    back\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 beck \u2192 back\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {h, j, l, m, p, r, s, t, w, y}\n  1: {o, u}\n  2: {l, n, r, s}\n  3: {h*}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "back",
+      "structure_after": "back"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     eath\nCurrent:    back\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 beck \u2192 back\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {h, j, l, m, p, r, s, t, w, y}\n  1: {o, u}\n  2: {l, n, r, s}\n  3: {h*}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "back",
+      "structure_after": "back"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     eath\nCurrent:    back\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 beck \u2192 back\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {h, j, l, m, p, r, s, t, w, y}\n  1: {o, u}\n  2: {l, n, r, s}\n  3: {h*}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "back",
+      "structure_after": "back"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     eath\nCurrent:    back\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 beck \u2192 back\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {h, j, l, m, p, r, s, t, w, y}\n  1: {o, u}\n  2: {l, n, r, s}\n  3: {h*}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "back",
+      "structure_after": "back"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     eath\nCurrent:    back\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 beck \u2192 back\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {h, j, l, m, p, r, s, t, w, y}\n  1: {o, u}\n  2: {l, n, r, s}\n  3: {h*}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "back",
+      "structure_after": "back"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     eath\nCurrent:    back\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 beck \u2192 back\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {h, j, l, m, p, r, s, t, w, y}\n  1: {o, u}\n  2: {l, n, r, s}\n  3: {h*}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "back",
+      "structure_after": "back"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     eath\nCurrent:    back\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 beck \u2192 back\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {h, j, l, m, p, r, s, t, w, y}\n  1: {o, u}\n  2: {l, n, r, s}\n  3: {h*}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "back",
+      "structure_after": "back"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     eath\nCurrent:    back\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 beck \u2192 back\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {h, j, l, m, p, r, s, t, w, y}\n  1: {o, u}\n  2: {l, n, r, s}\n  3: {h*}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "back",
+      "structure_after": "back"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     eath\nCurrent:    back\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 beck \u2192 back\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {h, j, l, m, p, r, s, t, w, y}\n  1: {o, u}\n  2: {l, n, r, s}\n  3: {h*}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "back",
+      "structure_after": "back"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     eath\nCurrent:    back\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 beck \u2192 back\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {h, j, l, m, p, r, s, t, w, y}\n  1: {o, u}\n  2: {l, n, r, s}\n  3: {h*}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "back",
+      "structure_after": "back"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     eath\nCurrent:    back\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 beck \u2192 back\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {h, j, l, m, p, r, s, t, w, y}\n  1: {o, u}\n  2: {l, n, r, s}\n  3: {h*}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "back",
+      "structure_after": "back"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     eath\nCurrent:    back\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 beck \u2192 back\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {h, j, l, m, p, r, s, t, w, y}\n  1: {o, u}\n  2: {l, n, r, s}\n  3: {h*}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "back",
+      "structure_after": "back"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     eath\nCurrent:    back\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 beck \u2192 back\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {h, j, l, m, p, r, s, t, w, y}\n  1: {o, u}\n  2: {l, n, r, s}\n  3: {h*}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "back",
+      "structure_after": "back"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     eath\nCurrent:    back\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 beck \u2192 back\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {h, j, l, m, p, r, s, t, w, y}\n  1: {o, u}\n  2: {l, n, r, s}\n  3: {h*}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "back",
+      "structure_after": "back"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     eath\nCurrent:    back\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 beck \u2192 back\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {h, j, l, m, p, r, s, t, w, y}\n  1: {o, u}\n  2: {l, n, r, s}\n  3: {h*}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "back",
+      "structure_after": "back"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     eath\nCurrent:    back\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 beck \u2192 back\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {h, j, l, m, p, r, s, t, w, y}\n  1: {o, u}\n  2: {l, n, r, s}\n  3: {h*}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "back",
+      "structure_after": "back"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     eath\nCurrent:    back\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 beck \u2192 back\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {h, j, l, m, p, r, s, t, w, y}\n  1: {o, u}\n  2: {l, n, r, s}\n  3: {h*}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "back",
+      "structure_after": "back"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     eath\nCurrent:    back\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 beck \u2192 back\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {h, j, l, m, p, r, s, t, w, y}\n  1: {o, u}\n  2: {l, n, r, s}\n  3: {h*}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "back",
+      "structure_after": "back"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "bilk",
+    "target_word": "eath",
+    "final_word": "back",
+    "path": [
+      "bilk",
+      "milk",
+      "mick",
+      "dick",
+      "deck",
+      "beck",
+      "back"
+    ],
+    "path_length": 6,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 19,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 20,
+    "optimal_distance_at_end": 3,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 64219,
+    "completion_tokens": 125,
+    "total_tokens": 64344
+  },
+  "wall_time_s": 15.047861099243164
+}

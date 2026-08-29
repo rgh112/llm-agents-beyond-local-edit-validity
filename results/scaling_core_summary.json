@@ -1,0 +1,2147 @@
+{
+  "blocks": [
+    "tiny_plus_small_core",
+    "qmg_scaling_core",
+    "large_block_core",
+    "llama_scaling_core"
+  ],
+  "models": [
+    "gemma-3-12b-it",
+    "gemma-3-27b-it",
+    "gemma-3-4b-it",
+    "llama-3.1-8b-instruct",
+    "llama-3.2-3b-instruct",
+    "llama-3.3-70b-instruct",
+    "ministral-14b-2512",
+    "ministral-3b-2512",
+    "ministral-8b-2512",
+    "mistral-small-3.2-24b-instruct",
+    "qwen3-14b",
+    "qwen3-32b",
+    "qwen3-8b"
+  ],
+  "families": [
+    "Gemma3",
+    "Llama",
+    "Ministral",
+    "Mistral",
+    "Qwen3"
+  ],
+  "scale_bins": [
+    "large_24_32B",
+    "medium_12_15B",
+    "small_7_9B",
+    "tiny_3_4B",
+    "xl_70B"
+  ],
+  "n_rows": 117,
+  "n_episodes": 5850,
+  "rows": [
+    {
+      "table": "qmg_scaling_core",
+      "model": "gemma-3-4b-it",
+      "family": "Gemma3",
+      "size_b": 4,
+      "scale_bin": "tiny_3_4B",
+      "env": "Alloy",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 5,
+      "SR": 0.1,
+      "SR_ci95": [
+        0.02,
+        0.18
+      ],
+      "local_valid": 0.7520325203252033,
+      "surface_clean_success": 0.2
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "gemma-3-4b-it",
+      "family": "Gemma3",
+      "size_b": 4,
+      "scale_bin": "tiny_3_4B",
+      "env": "Alloy",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 4,
+      "SR": 0.08,
+      "SR_ci95": [
+        0.02,
+        0.16
+      ],
+      "local_valid": 0.6959706959706959,
+      "surface_clean_success": 0.3333333333333333
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "gemma-3-4b-it",
+      "family": "Gemma3",
+      "size_b": 4,
+      "scale_bin": "tiny_3_4B",
+      "env": "Alloy",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 4,
+      "SR": 0.08,
+      "SR_ci95": [
+        0.02,
+        0.16
+      ],
+      "local_valid": 0.6666666666666666,
+      "surface_clean_success": 0.09090909090909091
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "gemma-3-4b-it",
+      "family": "Gemma3",
+      "size_b": 4,
+      "scale_bin": "tiny_3_4B",
+      "env": "GB1",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 5,
+      "SR": 0.1,
+      "SR_ci95": [
+        0.02,
+        0.18
+      ],
+      "local_valid": 0.4675324675324675,
+      "surface_clean_success": 0.23076923076923078
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "gemma-3-4b-it",
+      "family": "Gemma3",
+      "size_b": 4,
+      "scale_bin": "tiny_3_4B",
+      "env": "GB1",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 5,
+      "SR": 0.1,
+      "SR_ci95": [
+        0.02,
+        0.18
+      ],
+      "local_valid": 0.3900709219858156,
+      "surface_clean_success": null
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "gemma-3-4b-it",
+      "family": "Gemma3",
+      "size_b": 4,
+      "scale_bin": "tiny_3_4B",
+      "env": "GB1",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 5,
+      "SR": 0.1,
+      "SR_ci95": [
+        0.02,
+        0.18
+      ],
+      "local_valid": 0.4106280193236715,
+      "surface_clean_success": 0.0
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "gemma-3-4b-it",
+      "family": "Gemma3",
+      "size_b": 4,
+      "scale_bin": "tiny_3_4B",
+      "env": "Word Ladder",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 4,
+      "SR": 0.08,
+      "SR_ci95": [
+        0.02,
+        0.16
+      ],
+      "local_valid": 0.6944444444444444,
+      "surface_clean_success": 0.15384615384615385
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "gemma-3-4b-it",
+      "family": "Gemma3",
+      "size_b": 4,
+      "scale_bin": "tiny_3_4B",
+      "env": "Word Ladder",
+      "prompt": "Scaffold",
+      "n": 50,
+      "n_success": 4,
+      "SR": 0.08,
+      "SR_ci95": [
+        0.02,
+        0.16
+      ],
+      "local_valid": 0.1603942652329749,
+      "surface_clean_success": null
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "gemma-3-4b-it",
+      "family": "Gemma3",
+      "size_b": 4,
+      "scale_bin": "tiny_3_4B",
+      "env": "Word Ladder",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 6,
+      "SR": 0.12,
+      "SR_ci95": [
+        0.04,
+        0.22
+      ],
+      "local_valid": 0.41779497098646035,
+      "surface_clean_success": 0.0
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "gemma-3-12b-it",
+      "family": "Gemma3",
+      "size_b": 12,
+      "scale_bin": "medium_12_15B",
+      "env": "Alloy",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 5,
+      "SR": 0.1,
+      "SR_ci95": [
+        0.02,
+        0.18
+      ],
+      "local_valid": 0.5813953488372093,
+      "surface_clean_success": 0.10204081632653061
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "gemma-3-12b-it",
+      "family": "Gemma3",
+      "size_b": 12,
+      "scale_bin": "medium_12_15B",
+      "env": "Alloy",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 9,
+      "SR": 0.18,
+      "SR_ci95": [
+        0.08,
+        0.3
+      ],
+      "local_valid": 0.6267806267806267,
+      "surface_clean_success": 0.17391304347826086
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "gemma-3-12b-it",
+      "family": "Gemma3",
+      "size_b": 12,
+      "scale_bin": "medium_12_15B",
+      "env": "Alloy",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 12,
+      "SR": 0.24,
+      "SR_ci95": [
+        0.12,
+        0.36
+      ],
+      "local_valid": 0.603399433427762,
+      "surface_clean_success": 0.2222222222222222
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "gemma-3-12b-it",
+      "family": "Gemma3",
+      "size_b": 12,
+      "scale_bin": "medium_12_15B",
+      "env": "GB1",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 15,
+      "SR": 0.3,
+      "SR_ci95": [
+        0.18,
+        0.44
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.3
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "gemma-3-12b-it",
+      "family": "Gemma3",
+      "size_b": 12,
+      "scale_bin": "medium_12_15B",
+      "env": "GB1",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 10,
+      "SR": 0.2,
+      "SR_ci95": [
+        0.1,
+        0.32
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.2
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "gemma-3-12b-it",
+      "family": "Gemma3",
+      "size_b": 12,
+      "scale_bin": "medium_12_15B",
+      "env": "GB1",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 11,
+      "SR": 0.22,
+      "SR_ci95": [
+        0.1,
+        0.34
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.22
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "gemma-3-12b-it",
+      "family": "Gemma3",
+      "size_b": 12,
+      "scale_bin": "medium_12_15B",
+      "env": "Word Ladder",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 7,
+      "SR": 0.14,
+      "SR_ci95": [
+        0.06,
+        0.24
+      ],
+      "local_valid": 0.205,
+      "surface_clean_success": 0.7142857142857143
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "gemma-3-12b-it",
+      "family": "Gemma3",
+      "size_b": 12,
+      "scale_bin": "medium_12_15B",
+      "env": "Word Ladder",
+      "prompt": "Scaffold",
+      "n": 50,
+      "n_success": 8,
+      "SR": 0.16,
+      "SR_ci95": [
+        0.06,
+        0.26
+      ],
+      "local_valid": 0.09873949579831932,
+      "surface_clean_success": 1.0
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "gemma-3-12b-it",
+      "family": "Gemma3",
+      "size_b": 12,
+      "scale_bin": "medium_12_15B",
+      "env": "Word Ladder",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 9,
+      "SR": 0.18,
+      "SR_ci95": [
+        0.08,
+        0.3
+      ],
+      "local_valid": 0.14420062695924765,
+      "surface_clean_success": 0.7142857142857143
+    },
+    {
+      "table": "large_block_core",
+      "model": "gemma-3-27b-it",
+      "family": "Gemma3",
+      "size_b": 27,
+      "scale_bin": "large_24_32B",
+      "env": "Alloy",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 6,
+      "SR": 0.12,
+      "SR_ci95": [
+        0.04,
+        0.22
+      ],
+      "local_valid": 0.7097701149425287,
+      "surface_clean_success": 0.0851063829787234
+    },
+    {
+      "table": "large_block_core",
+      "model": "gemma-3-27b-it",
+      "family": "Gemma3",
+      "size_b": 27,
+      "scale_bin": "large_24_32B",
+      "env": "Alloy",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 7,
+      "SR": 0.14,
+      "SR_ci95": [
+        0.06,
+        0.24
+      ],
+      "local_valid": 0.6501457725947521,
+      "surface_clean_success": 0.12244897959183673
+    },
+    {
+      "table": "large_block_core",
+      "model": "gemma-3-27b-it",
+      "family": "Gemma3",
+      "size_b": 27,
+      "scale_bin": "large_24_32B",
+      "env": "Alloy",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 11,
+      "SR": 0.22,
+      "SR_ci95": [
+        0.1,
+        0.34
+      ],
+      "local_valid": 0.5878962536023055,
+      "surface_clean_success": 0.2127659574468085
+    },
+    {
+      "table": "large_block_core",
+      "model": "gemma-3-27b-it",
+      "family": "Gemma3",
+      "size_b": 27,
+      "scale_bin": "large_24_32B",
+      "env": "GB1",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 2,
+      "SR": 0.04,
+      "SR_ci95": [
+        0.0,
+        0.1
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.04
+    },
+    {
+      "table": "large_block_core",
+      "model": "gemma-3-27b-it",
+      "family": "Gemma3",
+      "size_b": 27,
+      "scale_bin": "large_24_32B",
+      "env": "GB1",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 5,
+      "SR": 0.1,
+      "SR_ci95": [
+        0.02,
+        0.18
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.1
+    },
+    {
+      "table": "large_block_core",
+      "model": "gemma-3-27b-it",
+      "family": "Gemma3",
+      "size_b": 27,
+      "scale_bin": "large_24_32B",
+      "env": "GB1",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 2,
+      "SR": 0.04,
+      "SR_ci95": [
+        0.0,
+        0.1
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.04
+    },
+    {
+      "table": "large_block_core",
+      "model": "gemma-3-27b-it",
+      "family": "Gemma3",
+      "size_b": 27,
+      "scale_bin": "large_24_32B",
+      "env": "Word Ladder",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 15,
+      "SR": 0.3,
+      "SR_ci95": [
+        0.18,
+        0.44
+      ],
+      "local_valid": 0.20512820512820512,
+      "surface_clean_success": 0.8
+    },
+    {
+      "table": "large_block_core",
+      "model": "gemma-3-27b-it",
+      "family": "Gemma3",
+      "size_b": 27,
+      "scale_bin": "large_24_32B",
+      "env": "Word Ladder",
+      "prompt": "Scaffold",
+      "n": 50,
+      "n_success": 13,
+      "SR": 0.26,
+      "SR_ci95": [
+        0.14,
+        0.38
+      ],
+      "local_valid": 0.14563106796116504,
+      "surface_clean_success": 0.8333333333333334
+    },
+    {
+      "table": "large_block_core",
+      "model": "gemma-3-27b-it",
+      "family": "Gemma3",
+      "size_b": 27,
+      "scale_bin": "large_24_32B",
+      "env": "Word Ladder",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 14,
+      "SR": 0.28,
+      "SR_ci95": [
+        0.16,
+        0.4
+      ],
+      "local_valid": 0.2085889570552147,
+      "surface_clean_success": 1.0
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.2-3b-instruct",
+      "family": "Llama",
+      "size_b": 3,
+      "scale_bin": "tiny_3_4B",
+      "env": "Alloy",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 12,
+      "SR": 0.24,
+      "SR_ci95": [
+        0.12,
+        0.36
+      ],
+      "local_valid": 0.5035460992907801,
+      "surface_clean_success": 0.3333333333333333
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.2-3b-instruct",
+      "family": "Llama",
+      "size_b": 3,
+      "scale_bin": "tiny_3_4B",
+      "env": "Alloy",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 4,
+      "SR": 0.08,
+      "SR_ci95": [
+        0.02,
+        0.16
+      ],
+      "local_valid": 0.6077170418006431,
+      "surface_clean_success": 0.26666666666666666
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.2-3b-instruct",
+      "family": "Llama",
+      "size_b": 3,
+      "scale_bin": "tiny_3_4B",
+      "env": "Alloy",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 12,
+      "SR": 0.24,
+      "SR_ci95": [
+        0.12,
+        0.36
+      ],
+      "local_valid": 0.46735395189003437,
+      "surface_clean_success": 0.2926829268292683
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.2-3b-instruct",
+      "family": "Llama",
+      "size_b": 3,
+      "scale_bin": "tiny_3_4B",
+      "env": "GB1",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 1,
+      "SR": 0.02,
+      "SR_ci95": [
+        0.0,
+        0.06
+      ],
+      "local_valid": 0.5357142857142857,
+      "surface_clean_success": 0.0
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.2-3b-instruct",
+      "family": "Llama",
+      "size_b": 3,
+      "scale_bin": "tiny_3_4B",
+      "env": "GB1",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 2,
+      "SR": 0.04,
+      "SR_ci95": [
+        0.0,
+        0.1
+      ],
+      "local_valid": 0.4829059829059829,
+      "surface_clean_success": 0.0
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.2-3b-instruct",
+      "family": "Llama",
+      "size_b": 3,
+      "scale_bin": "tiny_3_4B",
+      "env": "GB1",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 4,
+      "SR": 0.08,
+      "SR_ci95": [
+        0.02,
+        0.16
+      ],
+      "local_valid": 0.7522123893805309,
+      "surface_clean_success": 0.0
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.2-3b-instruct",
+      "family": "Llama",
+      "size_b": 3,
+      "scale_bin": "tiny_3_4B",
+      "env": "Word Ladder",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 6,
+      "SR": 0.12,
+      "SR_ci95": [
+        0.04,
+        0.22
+      ],
+      "local_valid": 0.7863590772316951,
+      "surface_clean_success": 0.15384615384615385
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.2-3b-instruct",
+      "family": "Llama",
+      "size_b": 3,
+      "scale_bin": "tiny_3_4B",
+      "env": "Word Ladder",
+      "prompt": "Scaffold",
+      "n": 50,
+      "n_success": 5,
+      "SR": 0.1,
+      "SR_ci95": [
+        0.02,
+        0.18
+      ],
+      "local_valid": 0.3336594911937378,
+      "surface_clean_success": 0.3333333333333333
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.2-3b-instruct",
+      "family": "Llama",
+      "size_b": 3,
+      "scale_bin": "tiny_3_4B",
+      "env": "Word Ladder",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 5,
+      "SR": 0.1,
+      "SR_ci95": [
+        0.02,
+        0.18
+      ],
+      "local_valid": 0.741,
+      "surface_clean_success": 0.25
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.1-8b-instruct",
+      "family": "Llama",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "Alloy",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 4,
+      "SR": 0.08,
+      "SR_ci95": [
+        0.02,
+        0.16
+      ],
+      "local_valid": 0.6971428571428572,
+      "surface_clean_success": 0.08
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.1-8b-instruct",
+      "family": "Llama",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "Alloy",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 5,
+      "SR": 0.1,
+      "SR_ci95": [
+        0.02,
+        0.18
+      ],
+      "local_valid": 0.7257142857142858,
+      "surface_clean_success": 0.1
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.1-8b-instruct",
+      "family": "Llama",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "Alloy",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 3,
+      "SR": 0.06,
+      "SR_ci95": [
+        0.0,
+        0.14
+      ],
+      "local_valid": 0.6371428571428571,
+      "surface_clean_success": 0.06
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.1-8b-instruct",
+      "family": "Llama",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "GB1",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 11,
+      "SR": 0.22,
+      "SR_ci95": [
+        0.1,
+        0.34
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.22
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.1-8b-instruct",
+      "family": "Llama",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "GB1",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 9,
+      "SR": 0.18,
+      "SR_ci95": [
+        0.08,
+        0.3
+      ],
+      "local_valid": 0.9916317991631799,
+      "surface_clean_success": 0.1875
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.1-8b-instruct",
+      "family": "Llama",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "GB1",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 12,
+      "SR": 0.24,
+      "SR_ci95": [
+        0.12,
+        0.36
+      ],
+      "local_valid": 0.9958333333333333,
+      "surface_clean_success": 0.24489795918367346
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.1-8b-instruct",
+      "family": "Llama",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "Word Ladder",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 27,
+      "SR": 0.54,
+      "SR_ci95": [
+        0.4,
+        0.68
+      ],
+      "local_valid": 0.5947611710323575,
+      "surface_clean_success": 0.8181818181818182
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.1-8b-instruct",
+      "family": "Llama",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "Word Ladder",
+      "prompt": "Scaffold",
+      "n": 50,
+      "n_success": 23,
+      "SR": 0.46,
+      "SR_ci95": [
+        0.32,
+        0.6
+      ],
+      "local_valid": 0.38854296388542964,
+      "surface_clean_success": 0.7272727272727273
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.1-8b-instruct",
+      "family": "Llama",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "Word Ladder",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 24,
+      "SR": 0.48,
+      "SR_ci95": [
+        0.34,
+        0.62
+      ],
+      "local_valid": 0.5805194805194805,
+      "surface_clean_success": 0.8235294117647058
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.3-70b-instruct",
+      "family": "Llama",
+      "size_b": 70,
+      "scale_bin": "xl_70B",
+      "env": "Alloy",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 9,
+      "SR": 0.18,
+      "SR_ci95": [
+        0.08,
+        0.3
+      ],
+      "local_valid": 0.8034682080924855,
+      "surface_clean_success": 0.20930232558139536
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.3-70b-instruct",
+      "family": "Llama",
+      "size_b": 70,
+      "scale_bin": "xl_70B",
+      "env": "Alloy",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 13,
+      "SR": 0.26,
+      "SR_ci95": [
+        0.14,
+        0.38
+      ],
+      "local_valid": 0.7959770114942529,
+      "surface_clean_success": 0.20930232558139536
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.3-70b-instruct",
+      "family": "Llama",
+      "size_b": 70,
+      "scale_bin": "xl_70B",
+      "env": "Alloy",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 5,
+      "SR": 0.1,
+      "SR_ci95": [
+        0.02,
+        0.18
+      ],
+      "local_valid": 0.7296511627906976,
+      "surface_clean_success": 0.05
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.3-70b-instruct",
+      "family": "Llama",
+      "size_b": 70,
+      "scale_bin": "xl_70B",
+      "env": "GB1",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 2,
+      "SR": 0.04,
+      "SR_ci95": [
+        0.0,
+        0.1
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.04081632653061224
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.3-70b-instruct",
+      "family": "Llama",
+      "size_b": 70,
+      "scale_bin": "xl_70B",
+      "env": "GB1",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 1,
+      "SR": 0.02,
+      "SR_ci95": [
+        0.0,
+        0.06
+      ],
+      "local_valid": 0.9956521739130435,
+      "surface_clean_success": 0.024390243902439025
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.3-70b-instruct",
+      "family": "Llama",
+      "size_b": 70,
+      "scale_bin": "xl_70B",
+      "env": "GB1",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 4,
+      "SR": 0.08,
+      "SR_ci95": [
+        0.02,
+        0.16
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.09090909090909091
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.3-70b-instruct",
+      "family": "Llama",
+      "size_b": 70,
+      "scale_bin": "xl_70B",
+      "env": "Word Ladder",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 19,
+      "SR": 0.38,
+      "SR_ci95": [
+        0.24,
+        0.52
+      ],
+      "local_valid": 0.19588875453446192,
+      "surface_clean_success": 0.7777777777777778
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.3-70b-instruct",
+      "family": "Llama",
+      "size_b": 70,
+      "scale_bin": "xl_70B",
+      "env": "Word Ladder",
+      "prompt": "Scaffold",
+      "n": 50,
+      "n_success": 16,
+      "SR": 0.32,
+      "SR_ci95": [
+        0.2,
+        0.46
+      ],
+      "local_valid": 0.1867881548974943,
+      "surface_clean_success": 0.8461538461538461
+    },
+    {
+      "table": "llama_scaling_core",
+      "model": "llama-3.3-70b-instruct",
+      "family": "Llama",
+      "size_b": 70,
+      "scale_bin": "xl_70B",
+      "env": "Word Ladder",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 17,
+      "SR": 0.34,
+      "SR_ci95": [
+        0.2,
+        0.48
+      ],
+      "local_valid": 0.19754601226993865,
+      "surface_clean_success": 1.0
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-3b-2512",
+      "family": "Ministral",
+      "size_b": 3,
+      "scale_bin": "tiny_3_4B",
+      "env": "Alloy",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 2,
+      "SR": 0.04,
+      "SR_ci95": [
+        0.0,
+        0.1
+      ],
+      "local_valid": 0.6655737704918033,
+      "surface_clean_success": 0.09090909090909091
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-3b-2512",
+      "family": "Ministral",
+      "size_b": 3,
+      "scale_bin": "tiny_3_4B",
+      "env": "Alloy",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 3,
+      "SR": 0.06,
+      "SR_ci95": [
+        0.0,
+        0.14
+      ],
+      "local_valid": 0.6546762589928058,
+      "surface_clean_success": 0.2
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-3b-2512",
+      "family": "Ministral",
+      "size_b": 3,
+      "scale_bin": "tiny_3_4B",
+      "env": "Alloy",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 3,
+      "SR": 0.06,
+      "SR_ci95": [
+        0.0,
+        0.14
+      ],
+      "local_valid": 0.6006191950464397,
+      "surface_clean_success": 0.125
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-3b-2512",
+      "family": "Ministral",
+      "size_b": 3,
+      "scale_bin": "tiny_3_4B",
+      "env": "GB1",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 4,
+      "SR": 0.08,
+      "SR_ci95": [
+        0.02,
+        0.16
+      ],
+      "local_valid": 0.9640718562874252,
+      "surface_clean_success": 0.08695652173913043
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-3b-2512",
+      "family": "Ministral",
+      "size_b": 3,
+      "scale_bin": "tiny_3_4B",
+      "env": "GB1",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 10,
+      "SR": 0.2,
+      "SR_ci95": [
+        0.1,
+        0.32
+      ],
+      "local_valid": 0.9542857142857143,
+      "surface_clean_success": 0.21739130434782608
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-3b-2512",
+      "family": "Ministral",
+      "size_b": 3,
+      "scale_bin": "tiny_3_4B",
+      "env": "GB1",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 3,
+      "SR": 0.06,
+      "SR_ci95": [
+        0.0,
+        0.14
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.06
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-3b-2512",
+      "family": "Ministral",
+      "size_b": 3,
+      "scale_bin": "tiny_3_4B",
+      "env": "Word Ladder",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 17,
+      "SR": 0.34,
+      "SR_ci95": [
+        0.2,
+        0.48
+      ],
+      "local_valid": 0.8643578643578643,
+      "surface_clean_success": 0.6111111111111112
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-3b-2512",
+      "family": "Ministral",
+      "size_b": 3,
+      "scale_bin": "tiny_3_4B",
+      "env": "Word Ladder",
+      "prompt": "Scaffold",
+      "n": 50,
+      "n_success": 16,
+      "SR": 0.32,
+      "SR_ci95": [
+        0.2,
+        0.46
+      ],
+      "local_valid": 0.8195050946142649,
+      "surface_clean_success": 0.6428571428571429
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-3b-2512",
+      "family": "Ministral",
+      "size_b": 3,
+      "scale_bin": "tiny_3_4B",
+      "env": "Word Ladder",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 7,
+      "SR": 0.14,
+      "SR_ci95": [
+        0.06,
+        0.24
+      ],
+      "local_valid": 0.9458563535911603,
+      "surface_clean_success": 0.20689655172413793
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-8b-2512",
+      "family": "Ministral",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "Alloy",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 2,
+      "SR": 0.04,
+      "SR_ci95": [
+        0.0,
+        0.1
+      ],
+      "local_valid": 0.7914572864321608,
+      "surface_clean_success": 0.04
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-8b-2512",
+      "family": "Ministral",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "Alloy",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 3,
+      "SR": 0.06,
+      "SR_ci95": [
+        0.0,
+        0.14
+      ],
+      "local_valid": 0.6476683937823834,
+      "surface_clean_success": 0.07142857142857142
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-8b-2512",
+      "family": "Ministral",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "Alloy",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 3,
+      "SR": 0.06,
+      "SR_ci95": [
+        0.0,
+        0.14
+      ],
+      "local_valid": 0.6649874055415617,
+      "surface_clean_success": 0.061224489795918366
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-8b-2512",
+      "family": "Ministral",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "GB1",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 5,
+      "SR": 0.1,
+      "SR_ci95": [
+        0.02,
+        0.18
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.1
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-8b-2512",
+      "family": "Ministral",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "GB1",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 11,
+      "SR": 0.22,
+      "SR_ci95": [
+        0.1,
+        0.34
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.22
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-8b-2512",
+      "family": "Ministral",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "GB1",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 2,
+      "SR": 0.04,
+      "SR_ci95": [
+        0.0,
+        0.1
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.04
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-8b-2512",
+      "family": "Ministral",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "Word Ladder",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 25,
+      "SR": 0.5,
+      "SR_ci95": [
+        0.36,
+        0.64
+      ],
+      "local_valid": 0.4990892531876138,
+      "surface_clean_success": 0.7647058823529411
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-8b-2512",
+      "family": "Ministral",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "Word Ladder",
+      "prompt": "Scaffold",
+      "n": 50,
+      "n_success": 21,
+      "SR": 0.42,
+      "SR_ci95": [
+        0.28,
+        0.56
+      ],
+      "local_valid": 0.5102880658436214,
+      "surface_clean_success": 1.0
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-8b-2512",
+      "family": "Ministral",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "Word Ladder",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 22,
+      "SR": 0.44,
+      "SR_ci95": [
+        0.3,
+        0.58
+      ],
+      "local_valid": 0.5050675675675675,
+      "surface_clean_success": 0.9090909090909091
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-14b-2512",
+      "family": "Ministral",
+      "size_b": 14,
+      "scale_bin": "medium_12_15B",
+      "env": "Alloy",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 15,
+      "SR": 0.3,
+      "SR_ci95": [
+        0.18,
+        0.44
+      ],
+      "local_valid": 0.8900523560209425,
+      "surface_clean_success": 0.3
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-14b-2512",
+      "family": "Ministral",
+      "size_b": 14,
+      "scale_bin": "medium_12_15B",
+      "env": "Alloy",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 8,
+      "SR": 0.16,
+      "SR_ci95": [
+        0.06,
+        0.26
+      ],
+      "local_valid": 0.7442455242966752,
+      "surface_clean_success": 0.16
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-14b-2512",
+      "family": "Ministral",
+      "size_b": 14,
+      "scale_bin": "medium_12_15B",
+      "env": "Alloy",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 8,
+      "SR": 0.16,
+      "SR_ci95": [
+        0.06,
+        0.26
+      ],
+      "local_valid": 0.6994818652849741,
+      "surface_clean_success": 0.14583333333333334
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-14b-2512",
+      "family": "Ministral",
+      "size_b": 14,
+      "scale_bin": "medium_12_15B",
+      "env": "GB1",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 2,
+      "SR": 0.04,
+      "SR_ci95": [
+        0.0,
+        0.1
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.04
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-14b-2512",
+      "family": "Ministral",
+      "size_b": 14,
+      "scale_bin": "medium_12_15B",
+      "env": "GB1",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 0,
+      "SR": 0.0,
+      "SR_ci95": [
+        0.0,
+        0.0
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.0
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-14b-2512",
+      "family": "Ministral",
+      "size_b": 14,
+      "scale_bin": "medium_12_15B",
+      "env": "GB1",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 2,
+      "SR": 0.04,
+      "SR_ci95": [
+        0.0,
+        0.1
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.04
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-14b-2512",
+      "family": "Ministral",
+      "size_b": 14,
+      "scale_bin": "medium_12_15B",
+      "env": "Word Ladder",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 19,
+      "SR": 0.38,
+      "SR_ci95": [
+        0.24,
+        0.52
+      ],
+      "local_valid": 0.2584541062801932,
+      "surface_clean_success": 0.9090909090909091
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-14b-2512",
+      "family": "Ministral",
+      "size_b": 14,
+      "scale_bin": "medium_12_15B",
+      "env": "Word Ladder",
+      "prompt": "Scaffold",
+      "n": 50,
+      "n_success": 16,
+      "SR": 0.32,
+      "SR_ci95": [
+        0.2,
+        0.46
+      ],
+      "local_valid": 0.23589164785553046,
+      "surface_clean_success": 1.0
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "ministral-14b-2512",
+      "family": "Ministral",
+      "size_b": 14,
+      "scale_bin": "medium_12_15B",
+      "env": "Word Ladder",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 19,
+      "SR": 0.38,
+      "SR_ci95": [
+        0.24,
+        0.52
+      ],
+      "local_valid": 0.27522935779816515,
+      "surface_clean_success": 1.0
+    },
+    {
+      "table": "large_block_core",
+      "model": "mistral-small-3.2-24b-instruct",
+      "family": "Mistral",
+      "size_b": 24,
+      "scale_bin": "large_24_32B",
+      "env": "Alloy",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 8,
+      "SR": 0.16,
+      "SR_ci95": [
+        0.06,
+        0.26
+      ],
+      "local_valid": 0.8621621621621621,
+      "surface_clean_success": 0.15555555555555556
+    },
+    {
+      "table": "large_block_core",
+      "model": "mistral-small-3.2-24b-instruct",
+      "family": "Mistral",
+      "size_b": 24,
+      "scale_bin": "large_24_32B",
+      "env": "Alloy",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 10,
+      "SR": 0.2,
+      "SR_ci95": [
+        0.1,
+        0.32
+      ],
+      "local_valid": 0.7753424657534247,
+      "surface_clean_success": 0.20930232558139536
+    },
+    {
+      "table": "large_block_core",
+      "model": "mistral-small-3.2-24b-instruct",
+      "family": "Mistral",
+      "size_b": 24,
+      "scale_bin": "large_24_32B",
+      "env": "Alloy",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 8,
+      "SR": 0.16,
+      "SR_ci95": [
+        0.06,
+        0.26
+      ],
+      "local_valid": 0.807909604519774,
+      "surface_clean_success": 0.15555555555555556
+    },
+    {
+      "table": "large_block_core",
+      "model": "mistral-small-3.2-24b-instruct",
+      "family": "Mistral",
+      "size_b": 24,
+      "scale_bin": "large_24_32B",
+      "env": "GB1",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 3,
+      "SR": 0.06,
+      "SR_ci95": [
+        0.0,
+        0.14
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.06
+    },
+    {
+      "table": "large_block_core",
+      "model": "mistral-small-3.2-24b-instruct",
+      "family": "Mistral",
+      "size_b": 24,
+      "scale_bin": "large_24_32B",
+      "env": "GB1",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 0,
+      "SR": 0.0,
+      "SR_ci95": [
+        0.0,
+        0.0
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.0
+    },
+    {
+      "table": "large_block_core",
+      "model": "mistral-small-3.2-24b-instruct",
+      "family": "Mistral",
+      "size_b": 24,
+      "scale_bin": "large_24_32B",
+      "env": "GB1",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 0,
+      "SR": 0.0,
+      "SR_ci95": [
+        0.0,
+        0.0
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.0
+    },
+    {
+      "table": "large_block_core",
+      "model": "mistral-small-3.2-24b-instruct",
+      "family": "Mistral",
+      "size_b": 24,
+      "scale_bin": "large_24_32B",
+      "env": "Word Ladder",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 18,
+      "SR": 0.36,
+      "SR_ci95": [
+        0.22,
+        0.5
+      ],
+      "local_valid": 0.2335195530726257,
+      "surface_clean_success": 1.0
+    },
+    {
+      "table": "large_block_core",
+      "model": "mistral-small-3.2-24b-instruct",
+      "family": "Mistral",
+      "size_b": 24,
+      "scale_bin": "large_24_32B",
+      "env": "Word Ladder",
+      "prompt": "Scaffold",
+      "n": 50,
+      "n_success": 13,
+      "SR": 0.26,
+      "SR_ci95": [
+        0.14,
+        0.38
+      ],
+      "local_valid": 0.1678832116788321,
+      "surface_clean_success": 1.0
+    },
+    {
+      "table": "large_block_core",
+      "model": "mistral-small-3.2-24b-instruct",
+      "family": "Mistral",
+      "size_b": 24,
+      "scale_bin": "large_24_32B",
+      "env": "Word Ladder",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 17,
+      "SR": 0.34,
+      "SR_ci95": [
+        0.2,
+        0.48
+      ],
+      "local_valid": 0.21460176991150443,
+      "surface_clean_success": 0.8888888888888888
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "qwen3-8b",
+      "family": "Qwen3",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "Alloy",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 2,
+      "SR": 0.04,
+      "SR_ci95": [
+        0.0,
+        0.1
+      ],
+      "local_valid": 0.6418338108882522,
+      "surface_clean_success": 0.02631578947368421
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "qwen3-8b",
+      "family": "Qwen3",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "Alloy",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 3,
+      "SR": 0.06,
+      "SR_ci95": [
+        0.0,
+        0.14
+      ],
+      "local_valid": 0.6206896551724138,
+      "surface_clean_success": 0.0425531914893617
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "qwen3-8b",
+      "family": "Qwen3",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "Alloy",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 1,
+      "SR": 0.02,
+      "SR_ci95": [
+        0.0,
+        0.06
+      ],
+      "local_valid": 0.5942857142857143,
+      "surface_clean_success": 0.0
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "qwen3-8b",
+      "family": "Qwen3",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "GB1",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 1,
+      "SR": 0.02,
+      "SR_ci95": [
+        0.0,
+        0.06
+      ],
+      "local_valid": 0.9951219512195122,
+      "surface_clean_success": 0.02040816326530612
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "qwen3-8b",
+      "family": "Qwen3",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "GB1",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 6,
+      "SR": 0.12,
+      "SR_ci95": [
+        0.04,
+        0.22
+      ],
+      "local_valid": 0.9953703703703703,
+      "surface_clean_success": 0.10204081632653061
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "qwen3-8b",
+      "family": "Qwen3",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "GB1",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 7,
+      "SR": 0.14,
+      "SR_ci95": [
+        0.06,
+        0.24
+      ],
+      "local_valid": 0.9950738916256158,
+      "surface_clean_success": 0.14285714285714285
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "qwen3-8b",
+      "family": "Qwen3",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "Word Ladder",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 20,
+      "SR": 0.4,
+      "SR_ci95": [
+        0.26,
+        0.54
+      ],
+      "local_valid": 0.8618181818181818,
+      "surface_clean_success": 0.5294117647058824
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "qwen3-8b",
+      "family": "Qwen3",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "Word Ladder",
+      "prompt": "Scaffold",
+      "n": 50,
+      "n_success": 18,
+      "SR": 0.36,
+      "SR_ci95": [
+        0.22,
+        0.5
+      ],
+      "local_valid": 0.5550351288056206,
+      "surface_clean_success": 0.6666666666666666
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "qwen3-8b",
+      "family": "Qwen3",
+      "size_b": 8,
+      "scale_bin": "small_7_9B",
+      "env": "Word Ladder",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 18,
+      "SR": 0.36,
+      "SR_ci95": [
+        0.22,
+        0.5
+      ],
+      "local_valid": 0.8166465621230398,
+      "surface_clean_success": 0.42857142857142855
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "qwen3-14b",
+      "family": "Qwen3",
+      "size_b": 14,
+      "scale_bin": "medium_12_15B",
+      "env": "Alloy",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 0,
+      "SR": 0.0,
+      "SR_ci95": [
+        0.0,
+        0.0
+      ],
+      "local_valid": 0.4005681818181818,
+      "surface_clean_success": 0.0
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "qwen3-14b",
+      "family": "Qwen3",
+      "size_b": 14,
+      "scale_bin": "medium_12_15B",
+      "env": "Alloy",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 1,
+      "SR": 0.02,
+      "SR_ci95": [
+        0.0,
+        0.06
+      ],
+      "local_valid": 0.4363143631436314,
+      "surface_clean_success": 0.0
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "qwen3-14b",
+      "family": "Qwen3",
+      "size_b": 14,
+      "scale_bin": "medium_12_15B",
+      "env": "Alloy",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 1,
+      "SR": 0.02,
+      "SR_ci95": [
+        0.0,
+        0.06
+      ],
+      "local_valid": 0.43626062322946174,
+      "surface_clean_success": 0.0
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "qwen3-14b",
+      "family": "Qwen3",
+      "size_b": 14,
+      "scale_bin": "medium_12_15B",
+      "env": "GB1",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 6,
+      "SR": 0.12,
+      "SR_ci95": [
+        0.04,
+        0.22
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.12244897959183673
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "qwen3-14b",
+      "family": "Qwen3",
+      "size_b": 14,
+      "scale_bin": "medium_12_15B",
+      "env": "GB1",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 6,
+      "SR": 0.12,
+      "SR_ci95": [
+        0.04,
+        0.22
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.12
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "qwen3-14b",
+      "family": "Qwen3",
+      "size_b": 14,
+      "scale_bin": "medium_12_15B",
+      "env": "GB1",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 8,
+      "SR": 0.16,
+      "SR_ci95": [
+        0.06,
+        0.26
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.16
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "qwen3-14b",
+      "family": "Qwen3",
+      "size_b": 14,
+      "scale_bin": "medium_12_15B",
+      "env": "Word Ladder",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 30,
+      "SR": 0.6,
+      "SR_ci95": [
+        0.46,
+        0.74
+      ],
+      "local_valid": 0.5792079207920792,
+      "surface_clean_success": 0.76
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "qwen3-14b",
+      "family": "Qwen3",
+      "size_b": 14,
+      "scale_bin": "medium_12_15B",
+      "env": "Word Ladder",
+      "prompt": "Scaffold",
+      "n": 50,
+      "n_success": 23,
+      "SR": 0.46,
+      "SR_ci95": [
+        0.32,
+        0.6
+      ],
+      "local_valid": 0.24623803009575923,
+      "surface_clean_success": 0.8333333333333334
+    },
+    {
+      "table": "qmg_scaling_core",
+      "model": "qwen3-14b",
+      "family": "Qwen3",
+      "size_b": 14,
+      "scale_bin": "medium_12_15B",
+      "env": "Word Ladder",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 30,
+      "SR": 0.6,
+      "SR_ci95": [
+        0.46,
+        0.74
+      ],
+      "local_valid": 0.5454545454545454,
+      "surface_clean_success": 0.8
+    },
+    {
+      "table": "large_block_core",
+      "model": "qwen3-32b",
+      "family": "Qwen3",
+      "size_b": 32,
+      "scale_bin": "large_24_32B",
+      "env": "Alloy",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 8,
+      "SR": 0.16,
+      "SR_ci95": [
+        0.06,
+        0.26
+      ],
+      "local_valid": 0.5373563218390804,
+      "surface_clean_success": 0.1282051282051282
+    },
+    {
+      "table": "large_block_core",
+      "model": "qwen3-32b",
+      "family": "Qwen3",
+      "size_b": 32,
+      "scale_bin": "large_24_32B",
+      "env": "Alloy",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 9,
+      "SR": 0.18,
+      "SR_ci95": [
+        0.08,
+        0.3
+      ],
+      "local_valid": 0.6257309941520468,
+      "surface_clean_success": 0.14285714285714285
+    },
+    {
+      "table": "large_block_core",
+      "model": "qwen3-32b",
+      "family": "Qwen3",
+      "size_b": 32,
+      "scale_bin": "large_24_32B",
+      "env": "Alloy",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 12,
+      "SR": 0.24,
+      "SR_ci95": [
+        0.12,
+        0.36
+      ],
+      "local_valid": 0.5389221556886228,
+      "surface_clean_success": 0.2222222222222222
+    },
+    {
+      "table": "large_block_core",
+      "model": "qwen3-32b",
+      "family": "Qwen3",
+      "size_b": 32,
+      "scale_bin": "large_24_32B",
+      "env": "GB1",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 0,
+      "SR": 0.0,
+      "SR_ci95": [
+        0.0,
+        0.0
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.0
+    },
+    {
+      "table": "large_block_core",
+      "model": "qwen3-32b",
+      "family": "Qwen3",
+      "size_b": 32,
+      "scale_bin": "large_24_32B",
+      "env": "GB1",
+      "prompt": "Self-check",
+      "n": 50,
+      "n_success": 0,
+      "SR": 0.0,
+      "SR_ci95": [
+        0.0,
+        0.0
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.0
+    },
+    {
+      "table": "large_block_core",
+      "model": "qwen3-32b",
+      "family": "Qwen3",
+      "size_b": 32,
+      "scale_bin": "large_24_32B",
+      "env": "GB1",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 1,
+      "SR": 0.02,
+      "SR_ci95": [
+        0.0,
+        0.06
+      ],
+      "local_valid": 1.0,
+      "surface_clean_success": 0.02
+    },
+    {
+      "table": "large_block_core",
+      "model": "qwen3-32b",
+      "family": "Qwen3",
+      "size_b": 32,
+      "scale_bin": "large_24_32B",
+      "env": "Word Ladder",
+      "prompt": "Few-shot",
+      "n": 50,
+      "n_success": 30,
+      "SR": 0.6,
+      "SR_ci95": [
+        0.46,
+        0.74
+      ],
+      "local_valid": 0.5293333333333333,
+      "surface_clean_success": 0.9375
+    },
+    {
+      "table": "large_block_core",
+      "model": "qwen3-32b",
+      "family": "Qwen3",
+      "size_b": 32,
+      "scale_bin": "large_24_32B",
+      "env": "Word Ladder",
+      "prompt": "Scaffold",
+      "n": 50,
+      "n_success": 17,
+      "SR": 0.34,
+      "SR_ci95": [
+        0.2,
+        0.48
+      ],
+      "local_valid": 0.32375,
+      "surface_clean_success": 0.6923076923076923
+    },
+    {
+      "table": "large_block_core",
+      "model": "qwen3-32b",
+      "family": "Qwen3",
+      "size_b": 32,
+      "scale_bin": "large_24_32B",
+      "env": "Word Ladder",
+      "prompt": "Zero-shot",
+      "n": 50,
+      "n_success": 25,
+      "SR": 0.5,
+      "SR_ci95": [
+        0.36,
+        0.64
+      ],
+      "local_valid": 0.5654135338345865,
+      "surface_clean_success": 0.7391304347826086
+    }
+  ]
+}

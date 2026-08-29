@@ -1,0 +1,104 @@
+{
+  "config": {
+    "n_episodes": 100,
+    "gb1_fitness_target": 5.0
+  },
+  "results": [
+    {
+      "env": "word_ladder",
+      "strategy": "random",
+      "SR": 0.0,
+      "n": 100
+    },
+    {
+      "env": "word_ladder",
+      "strategy": "obs_mismatch_greedy",
+      "SR": 0.82,
+      "n": 100
+    },
+    {
+      "env": "word_ladder",
+      "strategy": "bfs_oracle",
+      "SR": 1.0,
+      "n": 100,
+      "avg_path_length": 4.9
+    },
+    {
+      "env": "alloy",
+      "strategy": "random",
+      "SR": 0.04,
+      "n": 100,
+      "avg_uts": 1462.9,
+      "avg_density": 8.308,
+      "avg_rc": 3.245
+    },
+    {
+      "env": "alloy",
+      "strategy": "privileged_greedy_uts",
+      "SR": 0.15,
+      "n": 100,
+      "avg_uts": 3813.2,
+      "avg_density": 8.316,
+      "avg_rc": 2.103
+    },
+    {
+      "env": "alloy",
+      "strategy": "privileged_greedy_balanced",
+      "SR": 0.86,
+      "n": 100,
+      "avg_uts": 3438.4,
+      "avg_density": 8.125,
+      "avg_rc": 1.872
+    },
+    {
+      "env": "alloy",
+      "strategy": "privileged_sequence_aware",
+      "SR": 0.93,
+      "n": 100,
+      "avg_uts": 3083.2,
+      "avg_density": 8.1,
+      "avg_rc": 1.949
+    },
+    {
+      "env": "alloy",
+      "strategy": "obs_uts_greedy",
+      "SR": 0.22,
+      "n": 100
+    },
+    {
+      "env": "gb1_sequence",
+      "strategy": "random",
+      "SR": 0.04,
+      "n": 100,
+      "avg_fitness": 1.648
+    },
+    {
+      "env": "gb1_sequence",
+      "strategy": "additive_greedy",
+      "SR": 0.0,
+      "n": 100,
+      "avg_fitness": 3.504
+    },
+    {
+      "env": "gb1_sequence",
+      "strategy": "privileged_noisy_oracle",
+      "SR": 0.57,
+      "n": 100,
+      "avg_fitness": 5.261
+    },
+    {
+      "env": "gb1_sequence",
+      "strategy": "privileged_epistasis",
+      "SR": 1.0,
+      "n": 100,
+      "avg_fitness": 6.2
+    },
+    {
+      "env": "gb1_sequence",
+      "strategy": "obs_additive_greedy",
+      "SR": 0.0,
+      "n": 100
+    }
+  ],
+  "wall_time_s": 1392.7718620300293
+}

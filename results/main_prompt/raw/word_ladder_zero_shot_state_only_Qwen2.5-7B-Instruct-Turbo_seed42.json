@@ -1,0 +1,577 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 42,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     soja\nCurrent:    does\nPositions:  0123\nMismatches: ^ ^^\nPath: dees \u2192 does\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {f, g, h, j, n, r, t, v, w}\n  1: {i, u, y}\n  2: {c, g, l, m, n, r, s, t, w}\n  3: {r}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dees",
+      "structure_after": "does"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     soja\nCurrent:    foes\nPositions:  0123\nMismatches: ^ ^^\nPath: dees \u2192 does \u2192 foes\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {g, h, j, n, r, t, v, w}\n  1: {e}\n  2: {b, g, n, p, s, y}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "does",
+      "structure_after": "foes"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     soja\nCurrent:    fees\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 fees\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {b, c, g, j, l, p, r, s*, t, v, w, z}\n  2: {d, h, m, n, s, t, u}\n  3: {d, l, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "foes",
+      "structure_after": "fees"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     soja\nCurrent:    sees\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 fees \u2192 sees\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {b, c, g, j, l, p, r, t, v, w, z}\n  1: {h, u}\n  2: {a, c, g, i, l, r, t, w}\n  3: {d, k, l, m, n, p, r}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fees",
+      "structure_after": "sees"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     soja\nCurrent:    seas\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 fees \u2192 sees \u2192 seas\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {k, l, p, t, y}\n  1: {k, p}\n  2: {c, g, i, l, r, t, w}\n  3: {l, m, r, t}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sees",
+      "structure_after": "seas"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     soja\nCurrent:    seal\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 seas \u2192 seal\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, p, r, t, v, w, z}\n  1: {i}\n  2: {e, l}\n  3: {m, r, t}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "seas",
+      "structure_after": "seal"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     soja\nCurrent:    seal\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 seas \u2192 seal\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, p, r, t, v, w, z}\n  1: {i}\n  2: {e, l}\n  3: {m, r, t}",
+      "raw_action": "EDIT 1 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "j"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seal",
+      "structure_after": "seal"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     soja\nCurrent:    seal\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 seas \u2192 seal\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, p, r, t, v, w, z}\n  1: {i}\n  2: {e, l}\n  3: {m, r, t}",
+      "raw_action": "EDIT 1 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "j"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seal",
+      "structure_after": "seal"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     soja\nCurrent:    seal\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 seas \u2192 seal\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, p, r, t, v, w, z}\n  1: {i}\n  2: {e, l}\n  3: {m, r, t}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seal",
+      "structure_after": "seal"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     soja\nCurrent:    seal\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 seas \u2192 seal\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, p, r, t, v, w, z}\n  1: {i}\n  2: {e, l}\n  3: {m, r, t}",
+      "raw_action": "EDIT 3 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "j"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seal",
+      "structure_after": "seal"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     soja\nCurrent:    seal\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 seas \u2192 seal\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, p, r, t, v, w, z}\n  1: {i}\n  2: {e, l}\n  3: {m, r, t}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seal",
+      "structure_after": "seal"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     soja\nCurrent:    seal\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 seas \u2192 seal\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, p, r, t, v, w, z}\n  1: {i}\n  2: {e, l}\n  3: {m, r, t}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seal",
+      "structure_after": "seal"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     soja\nCurrent:    seal\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 seas \u2192 seal\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, p, r, t, v, w, z}\n  1: {i}\n  2: {e, l}\n  3: {m, r, t}",
+      "raw_action": "EDIT 2 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "j"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seal",
+      "structure_after": "seal"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     soja\nCurrent:    seal\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 seas \u2192 seal\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, p, r, t, v, w, z}\n  1: {i}\n  2: {e, l}\n  3: {m, r, t}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seal",
+      "structure_after": "seal"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     soja\nCurrent:    seal\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 seas \u2192 seal\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, p, r, t, v, w, z}\n  1: {i}\n  2: {e, l}\n  3: {m, r, t}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seal",
+      "structure_after": "seal"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     soja\nCurrent:    seal\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 seas \u2192 seal\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, p, r, t, v, w, z}\n  1: {i}\n  2: {e, l}\n  3: {m, r, t}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seal",
+      "structure_after": "seal"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     soja\nCurrent:    seal\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 seas \u2192 seal\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, p, r, t, v, w, z}\n  1: {i}\n  2: {e, l}\n  3: {m, r, t}",
+      "raw_action": "EDIT 2 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "j"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seal",
+      "structure_after": "seal"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     soja\nCurrent:    seal\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 seas \u2192 seal\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, p, r, t, v, w, z}\n  1: {i}\n  2: {e, l}\n  3: {m, r, t}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seal",
+      "structure_after": "seal"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     soja\nCurrent:    seal\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 seas \u2192 seal\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, p, r, t, v, w, z}\n  1: {i}\n  2: {e, l}\n  3: {m, r, t}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seal",
+      "structure_after": "seal"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     soja\nCurrent:    seal\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 seas \u2192 seal\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, p, r, t, v, w, z}\n  1: {i}\n  2: {e, l}\n  3: {m, r, t}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seal",
+      "structure_after": "seal"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     soja\nCurrent:    seal\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 seas \u2192 seal\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, p, r, t, v, w, z}\n  1: {i}\n  2: {e, l}\n  3: {m, r, t}",
+      "raw_action": "EDIT 2 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "j"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seal",
+      "structure_after": "seal"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     soja\nCurrent:    seal\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 seas \u2192 seal\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, p, r, t, v, w, z}\n  1: {i}\n  2: {e, l}\n  3: {m, r, t}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seal",
+      "structure_after": "seal"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     soja\nCurrent:    seal\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 seas \u2192 seal\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, p, r, t, v, w, z}\n  1: {i}\n  2: {e, l}\n  3: {m, r, t}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seal",
+      "structure_after": "seal"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     soja\nCurrent:    seal\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 seas \u2192 seal\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, p, r, t, v, w, z}\n  1: {i}\n  2: {e, l}\n  3: {m, r, t}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seal",
+      "structure_after": "seal"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     soja\nCurrent:    seal\nPositions:  0123\nMismatches:  ^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 seas \u2192 seal\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {d, f, h, l, m, p, r, t, v, w, z}\n  1: {i}\n  2: {e, l}\n  3: {m, r, t}",
+      "raw_action": "EDIT 2 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "j"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seal",
+      "structure_after": "seal"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "dees",
+    "target_word": "soja",
+    "final_word": "seal",
+    "path": [
+      "dees",
+      "does",
+      "foes",
+      "fees",
+      "sees",
+      "seas",
+      "seal"
+    ],
+    "path_length": 6,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 14,
+      "ILLEGAL_EDIT": 5,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 20,
+    "optimal_distance_at_end": 5,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 51124,
+    "completion_tokens": 125,
+    "total_tokens": 51249
+  },
+  "wall_time_s": 50.117377042770386
+}

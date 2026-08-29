@@ -1,0 +1,369 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 20,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     pome\nCurrent:    pons\nPositions:  0123\nMismatches:   ^^\nPath: mons \u2192 pons\nSteps used: 1/15  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {c, d, e, f, h, i, s, t, w}\n  1: {a, e, i, u}\n  2: {d, i, l, m*, p, t, w}\n  3: {d, e*, g, y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mons",
+      "structure_after": "pons"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     pome\nCurrent:    pons\nPositions:  0123\nMismatches:   ^^\nPath: mons \u2192 pons\nSteps used: 2/15  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {c, d, e, f, h, i, s, t, w}\n  1: {a, e, i, u}\n  2: {d, i, l, m*, p, t, w}\n  3: {d, e*, g, y}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pons",
+      "structure_after": "pons"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     pome\nCurrent:    pone\nPositions:  0123\nMismatches:   ^ \nPath: mons \u2192 pons \u2192 pone\nSteps used: 3/15  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {b, c, d, g, h, l, n, s, t, z}\n  1: {a, i}\n  2: {k, l, m*, p, r, s}\n  3: {d, g, y}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pons",
+      "structure_after": "pone"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     pome\nCurrent:    pone\nPositions:  0123\nMismatches:   ^ \nPath: mons \u2192 pons \u2192 pone\nSteps used: 4/15  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {b, c, d, g, h, l, n, s, t, z}\n  1: {a, i}\n  2: {k, l, m*, p, r, s}\n  3: {d, g, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pone",
+      "structure_after": "pone"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     pome\nCurrent:    pone\nPositions:  0123\nMismatches:   ^ \nPath: mons \u2192 pons \u2192 pone\nSteps used: 5/15  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {b, c, d, g, h, l, n, s, t, z}\n  1: {a, i}\n  2: {k, l, m*, p, r, s}\n  3: {d, g, y}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pone",
+      "structure_after": "pone"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     pome\nCurrent:    pone\nPositions:  0123\nMismatches:   ^ \nPath: mons \u2192 pons \u2192 pone\nSteps used: 6/15  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {b, c, d, g, h, l, n, s, t, z}\n  1: {a, i}\n  2: {k, l, m*, p, r, s}\n  3: {d, g, y}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pone",
+      "structure_after": "pone"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     pome\nCurrent:    pone\nPositions:  0123\nMismatches:   ^ \nPath: mons \u2192 pons \u2192 pone\nSteps used: 7/15  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {b, c, d, g, h, l, n, s, t, z}\n  1: {a, i}\n  2: {k, l, m*, p, r, s}\n  3: {d, g, y}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pone",
+      "structure_after": "pone"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     pome\nCurrent:    pone\nPositions:  0123\nMismatches:   ^ \nPath: mons \u2192 pons \u2192 pone\nSteps used: 8/15  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {b, c, d, g, h, l, n, s, t, z}\n  1: {a, i}\n  2: {k, l, m*, p, r, s}\n  3: {d, g, y}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pone",
+      "structure_after": "pone"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     pome\nCurrent:    pone\nPositions:  0123\nMismatches:   ^ \nPath: mons \u2192 pons \u2192 pone\nSteps used: 9/15  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {b, c, d, g, h, l, n, s, t, z}\n  1: {a, i}\n  2: {k, l, m*, p, r, s}\n  3: {d, g, y}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pone",
+      "structure_after": "pone"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     pome\nCurrent:    pone\nPositions:  0123\nMismatches:   ^ \nPath: mons \u2192 pons \u2192 pone\nSteps used: 10/15  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {b, c, d, g, h, l, n, s, t, z}\n  1: {a, i}\n  2: {k, l, m*, p, r, s}\n  3: {d, g, y}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pone",
+      "structure_after": "pone"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     pome\nCurrent:    pone\nPositions:  0123\nMismatches:   ^ \nPath: mons \u2192 pons \u2192 pone\nSteps used: 11/15  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {b, c, d, g, h, l, n, s, t, z}\n  1: {a, i}\n  2: {k, l, m*, p, r, s}\n  3: {d, g, y}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pone",
+      "structure_after": "pone"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     pome\nCurrent:    pone\nPositions:  0123\nMismatches:   ^ \nPath: mons \u2192 pons \u2192 pone\nSteps used: 12/15  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {b, c, d, g, h, l, n, s, t, z}\n  1: {a, i}\n  2: {k, l, m*, p, r, s}\n  3: {d, g, y}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pone",
+      "structure_after": "pone"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     pome\nCurrent:    pone\nPositions:  0123\nMismatches:   ^ \nPath: mons \u2192 pons \u2192 pone\nSteps used: 13/15  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {b, c, d, g, h, l, n, s, t, z}\n  1: {a, i}\n  2: {k, l, m*, p, r, s}\n  3: {d, g, y}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pone",
+      "structure_after": "pone"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     pome\nCurrent:    pone\nPositions:  0123\nMismatches:   ^ \nPath: mons \u2192 pons \u2192 pone\nSteps used: 14/15  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {b, c, d, g, h, l, n, s, t, z}\n  1: {a, i}\n  2: {k, l, m*, p, r, s}\n  3: {d, g, y}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pone",
+      "structure_after": "pone"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     pome\nCurrent:    pone\nPositions:  0123\nMismatches:   ^ \nPath: mons \u2192 pons \u2192 pone\nSteps used: 15/15  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {b, c, d, g, h, l, n, s, t, z}\n  1: {a, i}\n  2: {k, l, m*, p, r, s}\n  3: {d, g, y}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pone",
+      "structure_after": "pone"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 15,
+    "max_steps": 15,
+    "start_word": "mons",
+    "target_word": "pome",
+    "final_word": "pone",
+    "path": [
+      "mons",
+      "pons",
+      "pone"
+    ],
+    "path_length": 2,
+    "optimal_length": 3,
+    "violations_by_type": {
+      "INVALID_WORD": 12,
+      "ILLEGAL_EDIT": 1,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 14,
+    "optimal_distance_at_end": 1,
+    "events": [
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 33627,
+    "completion_tokens": 75,
+    "total_tokens": 33702
+  },
+  "wall_time_s": 33.82437205314636
+}

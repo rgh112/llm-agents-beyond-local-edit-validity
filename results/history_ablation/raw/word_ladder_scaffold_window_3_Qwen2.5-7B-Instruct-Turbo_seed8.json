@@ -1,0 +1,462 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "window_3",
+  "seed": 8,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     seed\nCurrent:    rand\nPositions:  0123\nMismatches: ^^^ \nPath: rang \u2192 rand\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, h, l, s*, w}\n  1: {e*, i, y}\n  2: {i}\n  3: {i, k, t}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rang",
+      "structure_after": "rand"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     seed\nCurrent:    rend\nPositions:  0123\nMismatches: ^ ^ \nPath: rang \u2192 rand \u2192 rend\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, f, l, m, p, s*, t, v, w}\n  1: {i, y}\n  2: {a, d, e*}\n  3: {t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rand",
+      "structure_after": "rend"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     seed\nCurrent:    send\nPositions:  0123\nMismatches:   ^ \nPath: rang \u2192 rand \u2192 rend \u2192 send\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {b, f, l, m, p, t, v, w}\n  1: {a}\n  2: {e*}\n  3: {e, t}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rend",
+      "structure_after": "send"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     seed\nCurrent:    send\nPositions:  0123\nMismatches:   ^ \nPath: rang \u2192 rand \u2192 rend \u2192 send\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, f, l, m, p, t, v, w}\n  1: {a}\n  2: {e*}\n  3: {e, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "send",
+      "structure_after": "send"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     seed\nCurrent:    sand\nPositions:  0123\nMismatches:  ^^ \nPath: rang \u2192 rand \u2192 rend \u2192 send \u2192 sand\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {b, h, l, w}\n  2: {i, r}\n  3: {e, g, k, s}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "send",
+      "structure_after": "sand"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     seed\nCurrent:    band\nPositions:  0123\nMismatches: ^^^ \nPath: rang \u2192 rand \u2192 rend \u2192 send \u2192 sand \u2192 band\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {h, l, w}\n  1: {e*, i, o, u}\n  2: {l, r, u, w}\n  3: {e, g, i, k, s}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sand",
+      "structure_after": "band"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     seed\nCurrent:    band\nPositions:  0123\nMismatches: ^^^ \nPath: rang \u2192 rand \u2192 rend \u2192 send \u2192 sand \u2192 band\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {h, l, w}\n  1: {e*, i, o, u}\n  2: {l, r, u, w}\n  3: {e, g, i, k, s}",
+      "raw_action": "EDIT 1 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "band",
+      "structure_after": "band"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     seed\nCurrent:    bend\nPositions:  0123\nMismatches: ^ ^ \nPath: rang \u2192 rand \u2192 rend \u2192 ... \u2192 band \u2192 bend\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {f, l, m, p, t, v, w}\n  1: {i, o, u}\n  2: {a}\n  3: {e, s, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "band",
+      "structure_after": "bend"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     seed\nCurrent:    bend\nPositions:  0123\nMismatches: ^ ^ \nPath: rang \u2192 rand \u2192 rend \u2192 ... \u2192 band \u2192 bend\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {f, l, m, p, t, v, w}\n  1: {i, o, u}\n  2: {a}\n  3: {e, s, t}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bend",
+      "structure_after": "bend"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     seed\nCurrent:    bene\nPositions:  0123\nMismatches: ^ ^^\nPath: rang \u2192 rand \u2192 rend \u2192 ... \u2192 bend \u2192 bene\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {d, g, n, s*}\n  1: {a, i, o}\n  3: {s, t}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bend",
+      "structure_after": "bene"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     seed\nCurrent:    sene\nPositions:  0123\nMismatches:   ^^\nPath: rang \u2192 rand \u2192 rend \u2192 ... \u2192 bene \u2192 sene\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {d, g, n}\n  1: {a, i, o, y}\n  2: {m, r}\n  3: {t}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bene",
+      "structure_after": "sene"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     seed\nCurrent:    sene\nPositions:  0123\nMismatches:   ^^\nPath: rang \u2192 rand \u2192 rend \u2192 ... \u2192 bene \u2192 sene\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {d, g, n}\n  1: {a, i, o, y}\n  2: {m, r}\n  3: {t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sene",
+      "structure_after": "sene"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     seed\nCurrent:    sene\nPositions:  0123\nMismatches:   ^^\nPath: rang \u2192 rand \u2192 rend \u2192 ... \u2192 bene \u2192 sene\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {d, g, n}\n  1: {a, i, o, y}\n  2: {m, r}\n  3: {t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sene",
+      "structure_after": "sene"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     seed\nCurrent:    sene\nPositions:  0123\nMismatches:   ^^\nPath: rang \u2192 rand \u2192 rend \u2192 ... \u2192 bene \u2192 sene\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {d, g, n}\n  1: {a, i, o, y}\n  2: {m, r}\n  3: {t}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sene",
+      "structure_after": "sene"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     seed\nCurrent:    sene\nPositions:  0123\nMismatches:   ^^\nPath: rang \u2192 rand \u2192 rend \u2192 ... \u2192 bene \u2192 sene\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {d, g, n}\n  1: {a, i, o, y}\n  2: {m, r}\n  3: {t}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sene",
+      "structure_after": "sene"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     seed\nCurrent:    sene\nPositions:  0123\nMismatches:   ^^\nPath: rang \u2192 rand \u2192 rend \u2192 ... \u2192 bene \u2192 sene\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {d, g, n}\n  1: {a, i, o, y}\n  2: {m, r}\n  3: {t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sene",
+      "structure_after": "sene"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     seed\nCurrent:    sene\nPositions:  0123\nMismatches:   ^^\nPath: rang \u2192 rand \u2192 rend \u2192 ... \u2192 bene \u2192 sene\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {d, g, n}\n  1: {a, i, o, y}\n  2: {m, r}\n  3: {t}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sene",
+      "structure_after": "sene"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     seed\nCurrent:    sene\nPositions:  0123\nMismatches:   ^^\nPath: rang \u2192 rand \u2192 rend \u2192 ... \u2192 bene \u2192 sene\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {d, g, n}\n  1: {a, i, o, y}\n  2: {m, r}\n  3: {t}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sene",
+      "structure_after": "sene"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     seed\nCurrent:    sene\nPositions:  0123\nMismatches:   ^^\nPath: rang \u2192 rand \u2192 rend \u2192 ... \u2192 bene \u2192 sene\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {d, g, n}\n  1: {a, i, o, y}\n  2: {m, r}\n  3: {t}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sene",
+      "structure_after": "sene"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     seed\nCurrent:    sene\nPositions:  0123\nMismatches:   ^^\nPath: rang \u2192 rand \u2192 rend \u2192 ... \u2192 bene \u2192 sene\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {d, g, n}\n  1: {a, i, o, y}\n  2: {m, r}\n  3: {t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sene",
+      "structure_after": "sene"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "OSCILLATION",
+  "failure_events": [
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "OSCILLATION",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "OSCILLATION",
+    "ILLEGAL_EDIT",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "rang",
+    "target_word": "seed",
+    "final_word": "sene",
+    "path": [
+      "rang",
+      "rand",
+      "rend",
+      "send",
+      "sand",
+      "band",
+      "bend",
+      "bene",
+      "sene"
+    ],
+    "path_length": 8,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "ILLEGAL_EDIT": 6,
+      "INVALID_WORD": 4,
+      "OSCILLATION": 2,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 13,
+    "optimal_distance_at_end": 2,
+    "events": [
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "OSCILLATION",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "OSCILLATION",
+      "ILLEGAL_EDIT",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 78798,
+    "completion_tokens": 100,
+    "total_tokens": 78898
+  },
+  "wall_time_s": 13.914244890213013
+}

@@ -1,0 +1,569 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "window_1",
+  "seed": 7,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     pood\nCurrent:    pawl\nPositions:  0123\nMismatches:  ^^^\nPath: bawl \u2192 pawl\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {w, y}\n  2: {i, l}\n  3: {n, s}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bawl",
+      "structure_after": "pawl"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     pood\nCurrent:    pail\nPositions:  0123\nMismatches:  ^^^\nPath: bawl \u2192 pawl \u2192 pail\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {b, f, h, j, k, m, n, r, s, t, v, w}\n  2: {l}\n  3: {d*, k, n, r}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pawl",
+      "structure_after": "pail"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     pood\nCurrent:    paid\nPositions:  0123\nMismatches:  ^^ \nPath: bawl \u2192 pawl \u2192 pail \u2192 paid\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {c, l, m, q, r, s}\n  2: {r}\n  3: {k, n, r}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pail",
+      "structure_after": "paid"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     pood\nCurrent:    caid\nPositions:  0123\nMismatches: ^^^ \nPath: bawl \u2192 pawl \u2192 pail \u2192 paid \u2192 caid\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {l, m, q, r, s}\n  1: {h}\n  2: {r}\n  3: {n}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "paid",
+      "structure_after": "caid"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     pood\nCurrent:    chid\nPositions:  0123\nMismatches: ^^^ \nPath: bawl \u2192 pawl \u2192 pail \u2192 paid \u2192 caid \u2192 chid\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {w}\n  2: {a}\n  3: {a, c, n, p, s, t}",
+      "raw_action": "EDIT 1 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "caid",
+      "structure_after": "chid"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     pood\nCurrent:    chid\nPositions:  0123\nMismatches: ^^^ \nPath: bawl \u2192 pawl \u2192 pail \u2192 paid \u2192 caid \u2192 chid\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {w}\n  2: {a}\n  3: {a, c, n, p, s, t}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "chid",
+      "structure_after": "chid"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     pood\nCurrent:    chid\nPositions:  0123\nMismatches: ^^^ \nPath: bawl \u2192 pawl \u2192 pail \u2192 paid \u2192 caid \u2192 chid\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {w}\n  2: {a}\n  3: {a, c, n, p, s, t}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "chid",
+      "structure_after": "chid"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     pood\nCurrent:    chad\nPositions:  0123\nMismatches: ^^^ \nPath: bawl \u2192 pawl \u2192 pail \u2192 ... \u2192 chid \u2192 chad\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {s}\n  1: {l}\n  3: {m, o, p, r, t, w, y}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "chid",
+      "structure_after": "chad"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     pood\nCurrent:    shad\nPositions:  0123\nMismatches: ^^^ \nPath: bawl \u2192 pawl \u2192 pail \u2192 ... \u2192 chad \u2192 shad\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  1: {c}\n  2: {e, o*}\n  3: {g, h, m, t, w, y}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "chad",
+      "structure_after": "shad"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     pood\nCurrent:    shod\nPositions:  0123\nMismatches: ^^  \nPath: bawl \u2192 pawl \u2192 pail \u2192 ... \u2192 shad \u2192 shod\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  2: {e}\n  3: {e, g, o, p, t, w}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "shad",
+      "structure_after": "shod"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     pood\nCurrent:    shoo\nPositions:  0123\nMismatches: ^^ ^\nPath: bawl \u2192 pawl \u2192 pail \u2192 ... \u2192 shod \u2192 shoo\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  2: {m}\n  3: {e, g, p, t, w}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "shod",
+      "structure_after": "shoo"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     pood\nCurrent:    shoo\nPositions:  0123\nMismatches: ^^ ^\nPath: bawl \u2192 pawl \u2192 pail \u2192 ... \u2192 shod \u2192 shoo\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  2: {m}\n  3: {e, g, p, t, w}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "shoo",
+      "structure_after": "shoo"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     pood\nCurrent:    shoo\nPositions:  0123\nMismatches: ^^ ^\nPath: bawl \u2192 pawl \u2192 pail \u2192 ... \u2192 shod \u2192 shoo\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  2: {m}\n  3: {e, g, p, t, w}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "shoo",
+      "structure_after": "shoo"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     pood\nCurrent:    shoo\nPositions:  0123\nMismatches: ^^ ^\nPath: bawl \u2192 pawl \u2192 pail \u2192 ... \u2192 shod \u2192 shoo\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  2: {m}\n  3: {e, g, p, t, w}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "shoo",
+      "structure_after": "shoo"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     pood\nCurrent:    shoo\nPositions:  0123\nMismatches: ^^ ^\nPath: bawl \u2192 pawl \u2192 pail \u2192 ... \u2192 shod \u2192 shoo\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  2: {m}\n  3: {e, g, p, t, w}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "shoo",
+      "structure_after": "shoo"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     pood\nCurrent:    shoo\nPositions:  0123\nMismatches: ^^ ^\nPath: bawl \u2192 pawl \u2192 pail \u2192 ... \u2192 shod \u2192 shoo\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  2: {m}\n  3: {e, g, p, t, w}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "shoo",
+      "structure_after": "shoo"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     pood\nCurrent:    shoo\nPositions:  0123\nMismatches: ^^ ^\nPath: bawl \u2192 pawl \u2192 pail \u2192 ... \u2192 shod \u2192 shoo\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  2: {m}\n  3: {e, g, p, t, w}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "shoo",
+      "structure_after": "shoo"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     pood\nCurrent:    shoo\nPositions:  0123\nMismatches: ^^ ^\nPath: bawl \u2192 pawl \u2192 pail \u2192 ... \u2192 shod \u2192 shoo\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  2: {m}\n  3: {e, g, p, t, w}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "shoo",
+      "structure_after": "shoo"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     pood\nCurrent:    shoo\nPositions:  0123\nMismatches: ^^ ^\nPath: bawl \u2192 pawl \u2192 pail \u2192 ... \u2192 shod \u2192 shoo\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  2: {m}\n  3: {e, g, p, t, w}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "shoo",
+      "structure_after": "shoo"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     pood\nCurrent:    shoo\nPositions:  0123\nMismatches: ^^ ^\nPath: bawl \u2192 pawl \u2192 pail \u2192 ... \u2192 shod \u2192 shoo\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  2: {m}\n  3: {e, g, p, t, w}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "shoo",
+      "structure_after": "shoo"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     pood\nCurrent:    shoo\nPositions:  0123\nMismatches: ^^ ^\nPath: bawl \u2192 pawl \u2192 pail \u2192 ... \u2192 shod \u2192 shoo\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  2: {m}\n  3: {e, g, p, t, w}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "shoo",
+      "structure_after": "shoo"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     pood\nCurrent:    shoo\nPositions:  0123\nMismatches: ^^ ^\nPath: bawl \u2192 pawl \u2192 pail \u2192 ... \u2192 shod \u2192 shoo\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  2: {m}\n  3: {e, g, p, t, w}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "shoo",
+      "structure_after": "shoo"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     pood\nCurrent:    shoo\nPositions:  0123\nMismatches: ^^ ^\nPath: bawl \u2192 pawl \u2192 pail \u2192 ... \u2192 shod \u2192 shoo\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  2: {m}\n  3: {e, g, p, t, w}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "shoo",
+      "structure_after": "shoo"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     pood\nCurrent:    shoo\nPositions:  0123\nMismatches: ^^ ^\nPath: bawl \u2192 pawl \u2192 pail \u2192 ... \u2192 shod \u2192 shoo\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  2: {m}\n  3: {e, g, p, t, w}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "shoo",
+      "structure_after": "shoo"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     pood\nCurrent:    shoo\nPositions:  0123\nMismatches: ^^ ^\nPath: bawl \u2192 pawl \u2192 pail \u2192 ... \u2192 shod \u2192 shoo\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  2: {m}\n  3: {e, g, p, t, w}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "shoo",
+      "structure_after": "shoo"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "OSCILLATION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "OSCILLATION",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "bawl",
+    "target_word": "pood",
+    "final_word": "shoo",
+    "path": [
+      "bawl",
+      "pawl",
+      "pail",
+      "paid",
+      "caid",
+      "chid",
+      "chad",
+      "shad",
+      "shod",
+      "shoo"
+    ],
+    "path_length": 9,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 2,
+      "ILLEGAL_EDIT": 13,
+      "OSCILLATION": 1,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 17,
+    "optimal_distance_at_end": 5,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "OSCILLATION",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 58949,
+    "completion_tokens": 125,
+    "total_tokens": 59074
+  },
+  "wall_time_s": 15.555698871612549
+}

@@ -1,0 +1,424 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 24,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     mids\nCurrent:    roti\nPositions:  0123\nMismatches: ^^^^\nPath: loti \u2192 roti\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  3: {a, e, l, o, s*}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "loti",
+      "structure_after": "roti"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     mids\nCurrent:    rots\nPositions:  0123\nMismatches: ^^^ \nPath: loti \u2192 roti \u2192 rots\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, l, m*, o, p, s, t, w}\n  1: {a, e, u}\n  2: {b, c, d*, e, m, w}\n  3: {a, e, l, o}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "roti",
+      "structure_after": "rots"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     mids\nCurrent:    mots\nPositions:  0123\nMismatches:  ^^ \nPath: loti \u2192 roti \u2192 rots \u2192 mots\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, l, o, p, s, t, w}\n  1: {a, u}\n  2: {a, b, c, d*, g, l, m, n, o, p, r, s, w}\n  3: {e, h, t}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rots",
+      "structure_after": "mots"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     mids\nCurrent:    mats\nPositions:  0123\nMismatches:  ^^ \nPath: loti \u2192 roti \u2192 rots \u2192 mots \u2192 mats\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, c, e, f, g, h, k, l, o, p, q, r, t, v, w}\n  1: {u}\n  2: {c, d*, e, g, n, p, r, s, w, y}\n  3: {e, h, t}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mots",
+      "structure_after": "mats"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     mids\nCurrent:    muts\nPositions:  0123\nMismatches:  ^^ \nPath: loti \u2192 roti \u2192 rots \u2192 mots \u2192 mats \u2192 muts\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {b, c, g, h, j, n, o, p, r, t}\n  2: {d*, g, m, n, s}\n  3: {e, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mats",
+      "structure_after": "muts"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     mids\nCurrent:    buts\nPositions:  0123\nMismatches: ^^^ \nPath: loti \u2192 roti \u2192 rots \u2192 ... \u2192 muts \u2192 buts\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {c, g, h, j, n, o, p, r, t}\n  1: {a, e, i*, o}\n  2: {b, d*, g, m, n, r, s, y}\n  3: {e, t}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "muts",
+      "structure_after": "buts"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     mids\nCurrent:    bits\nPositions:  0123\nMismatches: ^ ^ \nPath: loti \u2192 roti \u2192 rots \u2192 ... \u2192 buts \u2192 bits\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {a, d, f, g, h, k, l, n, p, s, t, w, z}\n  1: {a, e, o}\n  2: {a, b, d*, g, n, o}\n  3: {e, t}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "buts",
+      "structure_after": "bits"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     mids\nCurrent:    bats\nPositions:  0123\nMismatches: ^^^ \nPath: loti \u2192 roti \u2192 rots \u2192 ... \u2192 bits \u2192 bats\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {c, e, f, g, h, k, l, o, p, q, r, t, v, w}\n  1: {e, o}\n  2: {a, d*, g, l, m, n, p, r, s, y}\n  3: {e, h, t}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bits",
+      "structure_after": "bats"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     mids\nCurrent:    bets\nPositions:  0123\nMismatches: ^^^ \nPath: loti \u2192 roti \u2192 rots \u2192 ... \u2192 bats \u2192 bets\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {f, g, h, j, l, n, p, r, s, t, v, w}\n  1: {o}\n  2: {d*, e, g, l, n, y}\n  3: {a, h}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bats",
+      "structure_after": "bets"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     mids\nCurrent:    bots\nPositions:  0123\nMismatches: ^^^ \nPath: loti \u2192 roti \u2192 rots \u2192 ... \u2192 bets \u2192 bots\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, l, o, p, s, t, w}\n  2: {a, b, d*, g, o, p, s, w, y}\n  3: {a, h, t}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bets",
+      "structure_after": "bots"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     mids\nCurrent:    cots\nPositions:  0123\nMismatches: ^^^ \nPath: loti \u2192 roti \u2192 rots \u2192 ... \u2192 bots \u2192 cots\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {d, h, j, l, o, p, s, t, w}\n  1: {a, u}\n  2: {b, d*, g, l, n, o, p, s, w, y}\n  3: {e}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bots",
+      "structure_after": "cots"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     mids\nCurrent:    cats\nPositions:  0123\nMismatches: ^^^ \nPath: loti \u2192 roti \u2192 rots \u2192 ... \u2192 cots \u2192 cats\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {e, f, g, h, k, l, o, p, q, r, t, v, w}\n  1: {u}\n  2: {b, d*, m, n, p, r, w, y}\n  3: {e}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cots",
+      "structure_after": "cats"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     mids\nCurrent:    cuts\nPositions:  0123\nMismatches: ^^^ \nPath: loti \u2192 roti \u2192 rots \u2192 ... \u2192 cats \u2192 cuts\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {g, h, j, n, o, p, r, t}\n  2: {b, d*, e, p, r, s}\n  3: {e}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cats",
+      "structure_after": "cuts"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     mids\nCurrent:    guts\nPositions:  0123\nMismatches: ^^^ \nPath: loti \u2192 roti \u2192 rots \u2192 ... \u2192 cuts \u2192 guts\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {h, j, n, o, p, r, t}\n  1: {a, e, i*}\n  2: {l, m, n, v, y}",
+      "raw_action": "EDIT 0 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cuts",
+      "structure_after": "guts"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     mids\nCurrent:    gats\nPositions:  0123\nMismatches: ^^^ \nPath: loti \u2192 roti \u2192 rots \u2192 ... \u2192 guts \u2192 gats\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {e, f, h, k, l, o, p, q, r, t, v, w}\n  1: {e, i*}\n  2: {b, d*, e, g, l, m, p, r, y}\n  3: {e}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "guts",
+      "structure_after": "gats"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     mids\nCurrent:    gets\nPositions:  0123\nMismatches: ^^^ \nPath: loti \u2192 roti \u2192 rots \u2192 ... \u2192 gats \u2192 gets\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {f, h, j, l, n, p, r, s, t, v, w}\n  1: {i*}\n  2: {d*, e, l, m, n}\n  3: {a}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gats",
+      "structure_after": "gets"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     mids\nCurrent:    gits\nPositions:  0123\nMismatches: ^ ^ \nPath: loti \u2192 roti \u2192 rots \u2192 ... \u2192 gets \u2192 gits\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {a, d, f, h, k, l, n, p, s, t, w, z}\n  2: {b, d*, e, g, n, p}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gets",
+      "structure_after": "gits"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     mids\nCurrent:    aits\nPositions:  0123\nMismatches: ^ ^ \nPath: loti \u2192 roti \u2192 rots \u2192 ... \u2192 gits \u2192 aits\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {d, f, h, k, l, n, p, s, t, w, z}\n  1: {c, l, n, r}\n  2: {d*, l, m, n, r}",
+      "raw_action": "EDIT 0 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gits",
+      "structure_after": "aits"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     mids\nCurrent:    dits\nPositions:  0123\nMismatches: ^ ^ \nPath: loti \u2192 roti \u2192 rots \u2192 ... \u2192 aits \u2192 dits\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {f, h, k, l, n, p, s, t, w, z}\n  1: {o}\n  2: {b, e, g, m, n, p, s}\n  3: {a, e, z}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "aits",
+      "structure_after": "dits"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     mids\nCurrent:    fits\nPositions:  0123\nMismatches: ^ ^ \nPath: loti \u2192 roti \u2192 rots \u2192 ... \u2192 dits \u2192 fits\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {h, k, l, n, p, s, t, w, z}\n  1: {a, e}\n  2: {b, d*, g, l, n, r}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dits",
+      "structure_after": "fits"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "loti",
+    "target_word": "mids",
+    "final_word": "fits",
+    "path": [
+      "loti",
+      "roti",
+      "rots",
+      "mots",
+      "mats",
+      "muts",
+      "buts",
+      "bits",
+      "bats",
+      "bets",
+      "bots",
+      "cots",
+      "cats",
+      "cuts",
+      "guts",
+      "gats",
+      "gets",
+      "gits",
+      "aits",
+      "dits",
+      "fits"
+    ],
+    "path_length": 20,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 1,
+    "optimal_distance_at_end": 2,
+    "events": [
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 33900,
+    "completion_tokens": 100,
+    "total_tokens": 34000
+  },
+  "wall_time_s": 42.03434205055237
+}

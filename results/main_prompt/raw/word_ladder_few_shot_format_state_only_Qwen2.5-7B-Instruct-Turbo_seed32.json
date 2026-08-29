@@ -1,0 +1,618 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "few_shot_format",
+  "memory_condition": "state_only",
+  "seed": 32,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     lost\nCurrent:    anta\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  2: {g, n, o, s*}\n  3: {e, i, s}",
+      "raw_action": "EDIT 1 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "acta",
+      "structure_after": "anta"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     lost\nCurrent:    ants\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 ants\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  1: {c, i, l, r}\n  2: {a, d, e, i, u}\n  3: {e, i}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "anta",
+      "structure_after": "ants"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     lost\nCurrent:    ants\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 ants\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  1: {c, i, l, r}\n  2: {a, d, e, i, u}\n  3: {e, i}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "ants",
+      "structure_after": "ants"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     lost\nCurrent:    acts\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 ants \u2192 acts\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  1: {i, l, r}\n  2: {e}",
+      "raw_action": "EDIT 1 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ants",
+      "structure_after": "acts"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     lost\nCurrent:    aces\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 ants \u2192 acts \u2192 aces\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {i}\n  1: {g, l, n, p, r, t, v, w, x, y}\n  3: {d}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "acts",
+      "structure_after": "aces"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     lost\nCurrent:    ices\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 ants \u2192 acts \u2192 aces \u2192 ices\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  1: {d, r}\n  2: {h}\n  3: {d}",
+      "raw_action": "EDIT 0 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "aces",
+      "structure_after": "ices"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     lost\nCurrent:    ides\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 ices \u2192 ides\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {o}\n  1: {r}\n  3: {a, m}",
+      "raw_action": "EDIT 1 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ices",
+      "structure_after": "ides"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     lost\nCurrent:    odes\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 ides \u2192 odes\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  1: {b, k, l, n, p, r, s, w, x, y}\n  2: {d}\n  3: {a}",
+      "raw_action": "EDIT 0 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ides",
+      "structure_after": "odes"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     lost\nCurrent:    obes\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 odes \u2192 obes\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  1: {k, l, n, p, r, s, w, x, y}\n  2: {i}\n  3: {y}",
+      "raw_action": "EDIT 1 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "odes",
+      "structure_after": "obes"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     lost\nCurrent:    obis\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 obes \u2192 obis\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {i}\n  3: {a, t*}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "obes",
+      "structure_after": "obis"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     lost\nCurrent:    ibis\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 obis \u2192 ibis\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  1: {r, w}",
+      "raw_action": "EDIT 0 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "obis",
+      "structure_after": "ibis"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     lost\nCurrent:    iris\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 ibis \u2192 iris\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, c, k, s}\n  1: {w}\n  2: {e, k}\n  3: {d}",
+      "raw_action": "EDIT 1 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ibis",
+      "structure_after": "iris"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     lost\nCurrent:    bris\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 iris \u2192 bris\nSteps used: 13/30  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {c, k, s}\n  2: {a, o}\n  3: {e, g, m, n, o, t*}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "iris",
+      "structure_after": "bris"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     lost\nCurrent:    brit\nPositions:  0123\nMismatches: ^^^ \nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 bris \u2192 brit\nSteps used: 14/30  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {f, g, w}\n  1: {a}\n  2: {a, u}\n  3: {e, g, m, n, o}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bris",
+      "structure_after": "brit"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     lost\nCurrent:    bait\nPositions:  0123\nMismatches: ^^^ \nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 brit \u2192 bait\nSteps used: 15/30  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {g, w}\n  2: {h, s*, t}\n  3: {l}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "brit",
+      "structure_after": "bait"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     lost\nCurrent:    gait\nPositions:  0123\nMismatches: ^^^ \nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 bait \u2192 gait\nSteps used: 16/30  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {w}\n  1: {r}\n  2: {s*}\n  3: {n}",
+      "raw_action": "EDIT 0 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bait",
+      "structure_after": "gait"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     lost\nCurrent:    gain\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 gait \u2192 gain\nSteps used: 17/30  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {c, f, k, l*, m, p, r, s, t, v, w}\n  1: {r}\n  2: {e, u}",
+      "raw_action": "EDIT 3 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gait",
+      "structure_after": "gain"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     lost\nCurrent:    cain\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 gain \u2192 cain\nSteps used: 18/30  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {f, k, l*, m, p, r, s, t, v, w}\n  1: {h, o*}\n  2: {r}\n  3: {d}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gain",
+      "structure_after": "cain"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     lost\nCurrent:    chin\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 cain \u2192 chin\nSteps used: 19/30  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {s, t, w}\n  1: {o*}\n  2: {o}\n  3: {a, c, d, p, s, t*}",
+      "raw_action": "EDIT 1 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cain",
+      "structure_after": "chin"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     lost\nCurrent:    shin\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 chin \u2192 shin\nSteps used: 20/30  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {t, w}\n  1: {a, k, p}\n  2: {u}\n  3: {m, p, t*, v}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "chin",
+      "structure_after": "shin"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     lost\nCurrent:    thin\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 shin \u2192 thin\nSteps used: 21/30  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {w}\n  1: {a, w}\n  2: {a, e}\n  3: {o, r, s}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "shin",
+      "structure_after": "thin"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     lost\nCurrent:    tain\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 thin \u2192 tain\nSteps used: 22/30  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {f, k, l*, m, p, r, s, v, w}\n  1: {w}\n  2: {r}\n  3: {l}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "thin",
+      "structure_after": "tain"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     lost\nCurrent:    fain\nPositions:  0123\nMismatches: ^^^^\nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 tain \u2192 fain\nSteps used: 23/30  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {k, l*, m, p, r, s, v, w}\n  1: {o*}\n  2: {u, w}\n  3: {l, r}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tain",
+      "structure_after": "fain"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     lost\nCurrent:    foin\nPositions:  0123\nMismatches: ^ ^^\nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 fain \u2192 foin\nSteps used: 24/30  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {c, j, l*}\n  2: {h}\n  3: {l}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fain",
+      "structure_after": "foin"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     lost\nCurrent:    coin\nPositions:  0123\nMismatches: ^ ^^\nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 foin \u2192 coin\nSteps used: 25/30  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {j, l*}\n  2: {n, o, r}\n  3: {f, l, r}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "foin",
+      "structure_after": "coin"
+    },
+    {
+      "t": 26,
+      "observation": "Target:     lost\nCurrent:    conn\nPositions:  0123\nMismatches: ^ ^^\nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 coin \u2192 conn\nSteps used: 26/30  (remaining: 4)\n\nEditable positions and valid replacements:\n  2: {o, r}\n  3: {e, i, k, s, y}",
+      "raw_action": "EDIT 2 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "coin",
+      "structure_after": "conn"
+    },
+    {
+      "t": 27,
+      "observation": "Target:     lost\nCurrent:    coon\nPositions:  0123\nMismatches: ^ ^^\nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 conn \u2192 coon\nSteps used: 27/30  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {b, g, l*, m, n, p, s, t, z}\n  1: {h, i, l}\n  2: {r}\n  3: {f, k, l, p, s, t*}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "conn",
+      "structure_after": "coon"
+    },
+    {
+      "t": 28,
+      "observation": "Target:     lost\nCurrent:    boon\nPositions:  0123\nMismatches: ^ ^^\nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 coon \u2192 boon\nSteps used: 28/30  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {g, l*, m, n, p, s, t, z}\n  2: {r}\n  3: {b, k, m, r, s, t*}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "coon",
+      "structure_after": "boon"
+    },
+    {
+      "t": 29,
+      "observation": "Target:     lost\nCurrent:    boot\nPositions:  0123\nMismatches: ^ ^ \nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 boon \u2192 boot\nSteps used: 29/30  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {c, f, h, l*, m, r, s, t}\n  1: {l}\n  2: {a, l, r, t, u}\n  3: {b, k, m, r, s}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "boon",
+      "structure_after": "boot"
+    },
+    {
+      "t": 30,
+      "observation": "Target:     lost\nCurrent:    coot\nPositions:  0123\nMismatches: ^ ^ \nPath: acta \u2192 anta \u2192 ants \u2192 ... \u2192 boot \u2192 coot\nSteps used: 30/30  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {f, h, l*, m, r, s, t}\n  1: {l}\n  2: {a, f, l, s*}\n  3: {f, k, l, p, s}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "boot",
+      "structure_after": "coot"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 30,
+    "max_steps": 30,
+    "start_word": "acta",
+    "target_word": "lost",
+    "final_word": "coot",
+    "path": [
+      "acta",
+      "anta",
+      "ants",
+      "acts",
+      "aces",
+      "ices",
+      "ides",
+      "odes",
+      "obes",
+      "obis",
+      "ibis",
+      "iris",
+      "bris",
+      "brit",
+      "bait",
+      "gait",
+      "gain",
+      "cain",
+      "chin",
+      "shin",
+      "thin",
+      "tain",
+      "fain",
+      "foin",
+      "coin",
+      "conn",
+      "coon",
+      "boon",
+      "boot",
+      "coot"
+    ],
+    "path_length": 29,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "INVALID_WORD": 1,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 2,
+    "optimal_distance_at_end": 2,
+    "events": [
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 63909,
+    "completion_tokens": 150,
+    "total_tokens": 64059
+  },
+  "wall_time_s": 102.63936424255371
+}

@@ -1,0 +1,132 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 44,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     tzar\nCurrent:    beet\nPositions:  0123\nMismatches: ^^^^\nPath: feet \u2192 beet\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {d, k, l, m, w}\n  1: {l}\n  2: {a*, l, n, s}\n  3: {f, n, p, r*, s}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "feet",
+      "structure_after": "beet"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     tzar\nCurrent:    beat\nPositions:  0123\nMismatches: ^^ ^\nPath: feet \u2192 beet \u2192 beat\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {f, h, m, n, p, s, t*}\n  1: {l, o, r}\n  2: {l, n, s}\n  3: {d, k, m, n, r*, u}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "beet",
+      "structure_after": "beat"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     tzar\nCurrent:    bear\nPositions:  0123\nMismatches: ^^  \nPath: feet \u2192 beet \u2192 beat \u2192 bear\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, l, n, p, r, s, t*, w, y}\n  1: {o}\n  2: {e}\n  3: {d, k, m, n, u}",
+      "raw_action": "EDIT 3 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "beat",
+      "structure_after": "bear"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     tzar\nCurrent:    tear\nPositions:  0123\nMismatches:  ^  \nPath: feet \u2192 beet \u2192 beat \u2192 bear \u2192 tear\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, l, n, p, r, s, w, y}\n  1: {s, z*}\n  3: {k, l, m, s, t}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bear",
+      "structure_after": "tear"
+    },
+    {
+      "t": 5,
+      "observation": "",
+      "raw_action": "EDIT 1 z",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "z"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 1.0,
+      "info": {
+        "valid": true,
+        "auto_success": true
+      },
+      "structure_before": "tear",
+      "structure_after": "tzar"
+    }
+  ],
+  "success": true,
+  "terminal_failure": null,
+  "failure_events": [],
+  "final_metrics": {
+    "success": true,
+    "steps_taken": 5,
+    "max_steps": 20,
+    "start_word": "feet",
+    "target_word": "tzar",
+    "final_word": "tzar",
+    "path": [
+      "feet",
+      "beet",
+      "beat",
+      "bear",
+      "tear",
+      "tzar"
+    ],
+    "path_length": 5,
+    "optimal_length": 4,
+    "violations_by_type": {},
+    "total_violations": 0,
+    "optimal_distance_at_end": 0,
+    "events": []
+  },
+  "token_usage": {
+    "prompt_tokens": 4429,
+    "completion_tokens": 25,
+    "total_tokens": 4454
+  },
+  "wall_time_s": 2.8981378078460693
+}

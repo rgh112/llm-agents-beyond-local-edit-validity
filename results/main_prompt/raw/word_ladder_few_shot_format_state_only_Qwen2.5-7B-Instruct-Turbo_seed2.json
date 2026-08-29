@@ -1,0 +1,705 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "few_shot_format",
+  "memory_condition": "state_only",
+  "seed": 2,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 0 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 2 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 1 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 0 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 1 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 2 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 0 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 13/30  (remaining: 17)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 1 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 14/30  (remaining: 16)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 2 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 15/30  (remaining: 15)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 16/30  (remaining: 14)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 0 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 17/30  (remaining: 13)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 1 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 18/30  (remaining: 12)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 2 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 19/30  (remaining: 11)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 20/30  (remaining: 10)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 0 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 21/30  (remaining: 9)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 1 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 22/30  (remaining: 8)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 2 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 23/30  (remaining: 7)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 24/30  (remaining: 6)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 0 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 25/30  (remaining: 5)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 1 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 26,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 26/30  (remaining: 4)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 2 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 27,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 27/30  (remaining: 3)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 28,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 28/30  (remaining: 2)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 0 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 29,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 29/30  (remaining: 1)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 1 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    },
+    {
+      "t": 30,
+      "observation": "Target:     vive\nCurrent:    inns\nPositions:  0123\nMismatches: ^^^^\nPath: inns\nSteps used: 30/30  (remaining: 0)\n\nEditable positions and valid replacements:\n  1: {o}\n  2: {k}",
+      "raw_action": "EDIT 2 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "v"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "inns",
+      "structure_after": "inns"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 30,
+    "max_steps": 30,
+    "start_word": "inns",
+    "target_word": "vive",
+    "final_word": "inns",
+    "path": [
+      "inns"
+    ],
+    "path_length": 0,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "INVALID_WORD": 24,
+      "ILLEGAL_EDIT": 6,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 31,
+    "optimal_distance_at_end": 6,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 51771,
+    "completion_tokens": 150,
+    "total_tokens": 51921
+  },
+  "wall_time_s": 43.57751202583313
+}

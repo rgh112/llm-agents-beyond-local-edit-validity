@@ -1,0 +1,144 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "few_shot_strategy",
+  "memory_condition": "state_only",
+  "seed": 0,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     weer\nCurrent:    olds\nPositions:  0123\nMismatches: ^^^^\nPath: elds \u2192 olds\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  1: {d, u}\n  2: {e*}\n  3: {y}",
+      "raw_action": "EDIT 0 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "elds",
+      "structure_after": "olds"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     weer\nCurrent:    oles\nPositions:  0123\nMismatches: ^^ ^\nPath: elds \u2192 olds \u2192 oles\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  0: {a}\n  1: {b, d, k, n, p, r, s, w, x, y}\n  3: {a, o}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "olds",
+      "structure_after": "oles"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     weer\nCurrent:    oles\nPositions:  0123\nMismatches: ^^ ^\nPath: elds \u2192 olds \u2192 oles\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  0: {a}\n  1: {b, d, k, n, p, r, s, w, x, y}\n  3: {a, o}",
+      "raw_action": "EDIT 0 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "oles",
+      "structure_after": "oles"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     weer\nCurrent:    obes\nPositions:  0123\nMismatches: ^^ ^\nPath: elds \u2192 olds \u2192 oles \u2192 obes\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  1: {d, k, n, p, r, s, w, x, y}\n  2: {i}\n  3: {y}",
+      "raw_action": "EDIT 1 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "oles",
+      "structure_after": "obes"
+    },
+    {
+      "t": 5,
+      "observation": "",
+      "raw_action": "EDIT 3 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "y"
+      },
+      "valid": true,
+      "events": [
+        "LOCAL_OPTIMUM_TRAP"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true,
+        "dead_end": true
+      },
+      "structure_before": "obes",
+      "structure_after": "obey"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "LOCAL_OPTIMUM_TRAP",
+  "failure_events": [
+    "INVALID_WORD",
+    "LOCAL_OPTIMUM_TRAP"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 5,
+    "max_steps": 30,
+    "start_word": "elds",
+    "target_word": "weer",
+    "final_word": "obey",
+    "path": [
+      "elds",
+      "olds",
+      "oles",
+      "obes",
+      "obey"
+    ],
+    "path_length": 4,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "INVALID_WORD": 1,
+      "LOCAL_OPTIMUM_TRAP": 1
+    },
+    "total_violations": 2,
+    "optimal_distance_at_end": 5,
+    "events": [
+      "INVALID_WORD",
+      "LOCAL_OPTIMUM_TRAP"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 3588,
+    "completion_tokens": 25,
+    "total_tokens": 3613
+  },
+  "wall_time_s": 3.994246006011963
+}

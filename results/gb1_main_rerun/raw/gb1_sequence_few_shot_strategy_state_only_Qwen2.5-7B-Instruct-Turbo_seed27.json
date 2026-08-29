@@ -1,0 +1,103 @@
+{
+  "env_name": "gb1_sequence",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "few_shot_strategy",
+  "memory_condition": "state_only",
+  "seed": 27,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Step 2/6  |  Budget remaining: 5\n\nCurrent sequence: V39=V  D40=W  G41=G  V54=F\nWild-type:        V39=V D40=D G41=G V54=V\n\nEstimated fitness: 3.81  (target: >= 5.0)\n  [Based on single-site measurements \u2014 may not reflect true combinatorial fitness]\nStability: stable\n\nAvailable mutations (est. single-site effect, stability):\n  Position 0 (V39, current=V): {L(+0.73, neutral), I(+0.55, neutral), F(-0.75, mild risk), W(-1.22, mild risk)}\n  Position 1 (D40, current=W): {Y(+2.74, mild risk), H(+2.06, neutral), A(+1.33, neutral), D(+0.02, neutral)}\n  Position 2 (G41, current=G): {A(-0.75, destabilizing), L(-0.91, destabilizing), C(-0.93, destabilizing), F(-1.04, destabilizing)}\n  Position 3 (V54, current=F): {A(+0.52, stabilizing), C(+0.34, mild risk), V(+0.05, neutral), G(-0.67, stabilizing)}\n\nEdit history:\n  Step 1: pos 1: D->W  stability: stable",
+      "raw_action": "EDIT 1 W",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "amino_acid": "W"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "VDGF",
+      "structure_after": "VWGF"
+    },
+    {
+      "t": 2,
+      "observation": "Step 3/6  |  Budget remaining: 4\n\nCurrent sequence: V39=L  D40=W  G41=G  V54=F\nWild-type:        V39=V D40=D G41=G V54=V\n\nEstimated fitness: 4.24  (target: >= 5.0)\n  [Based on single-site measurements \u2014 may not reflect true combinatorial fitness]\nStability: stable\n\nAvailable mutations (est. single-site effect, stability):\n  Position 0 (V39, current=L): {I(+0.48, neutral), V(-0.04, neutral), F(-0.49, mild risk), W(-1.05, mild risk)}\n  Position 1 (D40, current=W): {Y(+3.03, mild risk), H(+2.13, neutral), A(+1.21, neutral), D(-0.06, neutral)}\n  Position 2 (G41, current=G): {A(-0.83, destabilizing), L(-1.00, destabilizing), C(-1.03, destabilizing), F(-1.09, destabilizing)}\n  Position 3 (V54, current=F): {A(+0.30, stabilizing), C(+0.29, mild risk), V(-0.03, neutral), G(-0.64, stabilizing)}\n\nEdit history:\n  Step 1: pos 1: D->W  stability: stable\n  Step 2: pos 0: V->L  stability: stable",
+      "raw_action": "EDIT 0 L",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "amino_acid": "L"
+      },
+      "valid": true,
+      "events": [
+        "LOCAL_OPTIMUM_TRAP"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "VWGF",
+      "structure_after": "LWGF"
+    },
+    {
+      "t": 3,
+      "observation": "",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true,
+        "success": false,
+        "true_fitness": 2.8263,
+        "estimated_fitness": 4.4125,
+        "estimation_error": 1.5862,
+        "stability": 0.88,
+        "fitness_ok": false,
+        "stability_ok": true,
+        "variant": "LWGF",
+        "edits_made": 2,
+        "positions_edited": 2
+      },
+      "structure_before": "LWGF",
+      "structure_after": "LWGF"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "LOCAL_OPTIMUM_TRAP",
+  "failure_events": [
+    "LOCAL_OPTIMUM_TRAP"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 3,
+    "max_steps": 6,
+    "true_fitness": 2.8263,
+    "estimated_fitness": 4.4125,
+    "stability": 0.88,
+    "variant": "LWGF",
+    "edits_made": 2,
+    "positions_edited": 2,
+    "violations_by_type": {
+      "LOCAL_OPTIMUM_TRAP": 1
+    },
+    "total_violations": 1,
+    "events": [
+      "LOCAL_OPTIMUM_TRAP"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 4314,
+    "completion_tokens": 13,
+    "total_tokens": 4327
+  },
+  "wall_time_s": 1.4645628929138184
+}

@@ -1,0 +1,568 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 26,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     mouse\nCurrent:    doses\nPositions:  01234\nMismatches: ^ ^^^\nPath: coses \u2192 doses\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {h, l, n, p, r}\n  2: {g, l, m, p, t, v, z}\n  4: {d, r}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "coses",
+      "structure_after": "doses"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     mouse\nCurrent:    doges\nPositions:  01234\nMismatches: ^ ^^^\nPath: coses \u2192 doses \u2192 doges\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {l}\n  2: {l, m, p, t, v, z}\n  4: {y}",
+      "raw_action": "EDIT 2 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "doses",
+      "structure_after": "doges"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     mouse\nCurrent:    loges\nPositions:  01234\nMismatches: ^ ^^^\nPath: coses \u2192 doses \u2192 doges \u2192 loges\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  1: {e, u}\n  2: {b, d, p, r, s, v, w, x}\n  3: {o}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "doges",
+      "structure_after": "loges"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     mouse\nCurrent:    luges\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 loges \u2192 luges\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  1: {e}\n  2: {b, c, d, n, r, t, x}\n  4: {d, r}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "loges",
+      "structure_after": "luges"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     mouse\nCurrent:    leges\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 loges \u2192 luges \u2192 leges\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {r}\n  2: {n, x}\n  4: {r}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "luges",
+      "structure_after": "leges"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     mouse\nCurrent:    reges\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 leges \u2192 reges\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  1: {a}\n  2: {d, x}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "leges",
+      "structure_after": "reges"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     mouse\nCurrent:    rages\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 reges \u2192 rages\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {c, g, m*, p, s, w}\n  2: {c, j, k, l, p, r, s, t, v, x, z}\n  3: {a, i}\n  4: {d, e*}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "reges",
+      "structure_after": "rages"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     mouse\nCurrent:    rages\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 reges \u2192 rages\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {c, g, m*, p, s, w}\n  2: {c, j, k, l, p, r, s, t, v, x, z}\n  3: {a, i}\n  4: {d, e*}",
+      "raw_action": "EDIT 3 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "rages",
+      "structure_after": "rages"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     mouse\nCurrent:    rages\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 reges \u2192 rages\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {c, g, m*, p, s, w}\n  2: {c, j, k, l, p, r, s, t, v, x, z}\n  3: {a, i}\n  4: {d, e*}",
+      "raw_action": "EDIT 4 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "rages",
+      "structure_after": "rages"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     mouse\nCurrent:    mages\nPositions:  01234\nMismatches:  ^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 rages \u2192 mages\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {c, g, p, s, w}\n  2: {b, c, k, l, n, r, t, x, z}\n  3: {u}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rages",
+      "structure_after": "mages"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     mouse\nCurrent:    mages\nPositions:  01234\nMismatches:  ^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 rages \u2192 mages\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {c, g, p, s, w}\n  2: {b, c, k, l, n, r, t, x, z}\n  3: {u}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mages",
+      "structure_after": "mages"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     mouse\nCurrent:    mages\nPositions:  01234\nMismatches:  ^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 rages \u2192 mages\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {c, g, p, s, w}\n  2: {b, c, k, l, n, r, t, x, z}\n  3: {u}",
+      "raw_action": "EDIT 2 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mages",
+      "structure_after": "mages"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     mouse\nCurrent:    mages\nPositions:  01234\nMismatches:  ^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 rages \u2192 mages\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {c, g, p, s, w}\n  2: {b, c, k, l, n, r, t, x, z}\n  3: {u}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mages",
+      "structure_after": "mages"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     mouse\nCurrent:    mages\nPositions:  01234\nMismatches:  ^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 rages \u2192 mages\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {c, g, p, s, w}\n  2: {b, c, k, l, n, r, t, x, z}\n  3: {u}",
+      "raw_action": "EDIT 4 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mages",
+      "structure_after": "mages"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     mouse\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 mages \u2192 cages\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {g, p, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     mouse\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 mages \u2192 cages\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {g, p, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     mouse\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 mages \u2192 cages\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {g, p, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     mouse\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 mages \u2192 cages\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {g, p, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     mouse\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 mages \u2192 cages\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {g, p, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 4 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     mouse\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 mages \u2192 cages\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {g, p, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 0 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     mouse\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 mages \u2192 cages\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {g, p, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     mouse\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 mages \u2192 cages\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {g, p, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     mouse\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 mages \u2192 cages\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {g, p, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 4 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     mouse\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 mages \u2192 cages\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {g, p, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 0 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     mouse\nCurrent:    cages\nPositions:  01234\nMismatches: ^^^^^\nPath: coses \u2192 doses \u2192 doges \u2192 ... \u2192 mages \u2192 cages\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {g, p, s, w}\n  2: {d, f, k, m, n, p, r, s, t, v}\n  4: {d, r, y}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cages",
+      "structure_after": "cages"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "coses",
+    "target_word": "mouse",
+    "final_word": "cages",
+    "path": [
+      "coses",
+      "doses",
+      "doges",
+      "loges",
+      "luges",
+      "leges",
+      "reges",
+      "rages",
+      "mages",
+      "cages"
+    ],
+    "path_length": 9,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 14,
+      "ILLEGAL_EDIT": 2,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 17,
+    "optimal_distance_at_end": 7,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 47887,
+    "completion_tokens": 125,
+    "total_tokens": 48012
+  },
+  "wall_time_s": 14.568826913833618
+}

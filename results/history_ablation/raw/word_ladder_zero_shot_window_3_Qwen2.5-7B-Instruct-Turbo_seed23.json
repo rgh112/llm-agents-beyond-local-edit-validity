@@ -1,0 +1,582 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "window_3",
+  "seed": 23,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     full\nCurrent:    loca\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  2: {t}\n  3: {h, i, k, o}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "coca",
+      "structure_after": "loca"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     full\nCurrent:    lota\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {b, i, j, n, r}\n  3: {h, i, s}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "loca",
+      "structure_after": "lota"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     full\nCurrent:    lota\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {b, i, j, n, r}\n  3: {h, i, s}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lota",
+      "structure_after": "lota"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     full\nCurrent:    loth\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {b, d, m, s}\n  1: {a}\n  2: {c}\n  3: {i, s}",
+      "raw_action": "EDIT 3 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lota",
+      "structure_after": "loth"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "loth",
+      "structure_after": "both"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "both",
+      "structure_after": "both"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "both",
+      "structure_after": "both"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 1 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "f"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "both",
+      "structure_after": "both"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "both",
+      "structure_after": "both"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "both",
+      "structure_after": "both"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "both",
+      "structure_after": "both"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "both",
+      "structure_after": "both"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "both",
+      "structure_after": "both"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "both",
+      "structure_after": "both"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "both",
+      "structure_after": "both"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "both",
+      "structure_after": "both"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "both",
+      "structure_after": "both"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "both",
+      "structure_after": "both"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "both",
+      "structure_after": "both"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "both",
+      "structure_after": "both"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "both",
+      "structure_after": "both"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "both",
+      "structure_after": "both"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "both",
+      "structure_after": "both"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "both",
+      "structure_after": "both"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "both",
+      "structure_after": "both"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "coca",
+    "target_word": "full",
+    "final_word": "both",
+    "path": [
+      "coca",
+      "loca",
+      "lota",
+      "loth",
+      "both"
+    ],
+    "path_length": 4,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 21,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 22,
+    "optimal_distance_at_end": 5,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 85807,
+    "completion_tokens": 125,
+    "total_tokens": 85932
+  },
+  "wall_time_s": 13.898627042770386
+}

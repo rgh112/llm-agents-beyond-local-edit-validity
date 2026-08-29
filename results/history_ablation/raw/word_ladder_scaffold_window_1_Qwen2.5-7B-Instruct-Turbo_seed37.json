@@ -1,0 +1,583 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "window_1",
+  "seed": 37,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     site\nCurrent:    belt\nPositions:  0123\nMismatches: ^^^^\nPath: felt \u2192 belt\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {c, g, m, p, w}\n  1: {o}\n  2: {a, e, n, s}\n  3: {l, s}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "felt",
+      "structure_after": "belt"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     site\nCurrent:    beat\nPositions:  0123\nMismatches: ^^^^\nPath: felt \u2192 belt \u2192 beat\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {f, h, m, n, p, s*, t}\n  1: {l, o, r}\n  2: {e, n, s}\n  3: {d, k, m, n, r, u}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "belt",
+      "structure_after": "beat"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     site\nCurrent:    beat\nPositions:  0123\nMismatches: ^^^^\nPath: felt \u2192 belt \u2192 beat\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {f, h, m, n, p, s*, t}\n  1: {l, o, r}\n  2: {e, n, s}\n  3: {d, k, m, n, r, u}",
+      "raw_action": "EDIT 3 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "beat",
+      "structure_after": "beat"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     site\nCurrent:    beat\nPositions:  0123\nMismatches: ^^^^\nPath: felt \u2192 belt \u2192 beat\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {f, h, m, n, p, s*, t}\n  1: {l, o, r}\n  2: {e, n, s}\n  3: {d, k, m, n, r, u}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "beat",
+      "structure_after": "beat"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     site\nCurrent:    seat\nPositions:  0123\nMismatches:  ^^^\nPath: felt \u2192 belt \u2192 beat \u2192 seat\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {f, h, m, n, p, t}\n  1: {c, h, k, l, p, t, w}\n  2: {c, n, p, t*, x}\n  3: {l, m, r, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "beat",
+      "structure_after": "seat"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     site\nCurrent:    seat\nPositions:  0123\nMismatches:  ^^^\nPath: felt \u2192 belt \u2192 beat \u2192 seat\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {f, h, m, n, p, t}\n  1: {c, h, k, l, p, t, w}\n  2: {c, n, p, t*, x}\n  3: {l, m, r, s}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seat",
+      "structure_after": "seat"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     site\nCurrent:    seat\nPositions:  0123\nMismatches:  ^^^\nPath: felt \u2192 belt \u2192 beat \u2192 seat\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {f, h, m, n, p, t}\n  1: {c, h, k, l, p, t, w}\n  2: {c, n, p, t*, x}\n  3: {l, m, r, s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seat",
+      "structure_after": "seat"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     site\nCurrent:    seat\nPositions:  0123\nMismatches:  ^^^\nPath: felt \u2192 belt \u2192 beat \u2192 seat\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {f, h, m, n, p, t}\n  1: {c, h, k, l, p, t, w}\n  2: {c, n, p, t*, x}\n  3: {l, m, r, s}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "seat",
+      "structure_after": "seat"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     site\nCurrent:    sett\nPositions:  0123\nMismatches:  ^ ^\nPath: felt \u2192 belt \u2192 beat \u2192 seat \u2192 sett\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {n, y}\n  2: {c, n, p, x}\n  3: {a, s}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "seat",
+      "structure_after": "sett"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     site\nCurrent:    sett\nPositions:  0123\nMismatches:  ^ ^\nPath: felt \u2192 belt \u2192 beat \u2192 seat \u2192 sett\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {n, y}\n  2: {c, n, p, x}\n  3: {a, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sett",
+      "structure_after": "sett"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     site\nCurrent:    sett\nPositions:  0123\nMismatches:  ^ ^\nPath: felt \u2192 belt \u2192 beat \u2192 seat \u2192 sett\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {n, y}\n  2: {c, n, p, x}\n  3: {a, s}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sett",
+      "structure_after": "sett"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     site\nCurrent:    sett\nPositions:  0123\nMismatches:  ^ ^\nPath: felt \u2192 belt \u2192 beat \u2192 seat \u2192 sett\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {n, y}\n  2: {c, n, p, x}\n  3: {a, s}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sett",
+      "structure_after": "sett"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     site\nCurrent:    sett\nPositions:  0123\nMismatches:  ^ ^\nPath: felt \u2192 belt \u2192 beat \u2192 seat \u2192 sett\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {n, y}\n  2: {c, n, p, x}\n  3: {a, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sett",
+      "structure_after": "sett"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     site\nCurrent:    sett\nPositions:  0123\nMismatches:  ^ ^\nPath: felt \u2192 belt \u2192 beat \u2192 seat \u2192 sett\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {n, y}\n  2: {c, n, p, x}\n  3: {a, s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sett",
+      "structure_after": "sett"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     site\nCurrent:    sett\nPositions:  0123\nMismatches:  ^ ^\nPath: felt \u2192 belt \u2192 beat \u2192 seat \u2192 sett\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {n, y}\n  2: {c, n, p, x}\n  3: {a, s}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sett",
+      "structure_after": "sett"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     site\nCurrent:    sett\nPositions:  0123\nMismatches:  ^ ^\nPath: felt \u2192 belt \u2192 beat \u2192 seat \u2192 sett\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {n, y}\n  2: {c, n, p, x}\n  3: {a, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sett",
+      "structure_after": "sett"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     site\nCurrent:    sett\nPositions:  0123\nMismatches:  ^ ^\nPath: felt \u2192 belt \u2192 beat \u2192 seat \u2192 sett\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {n, y}\n  2: {c, n, p, x}\n  3: {a, s}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sett",
+      "structure_after": "sett"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     site\nCurrent:    sett\nPositions:  0123\nMismatches:  ^ ^\nPath: felt \u2192 belt \u2192 beat \u2192 seat \u2192 sett\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {n, y}\n  2: {c, n, p, x}\n  3: {a, s}",
+      "raw_action": "EDIT 1 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sett",
+      "structure_after": "sett"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     site\nCurrent:    sett\nPositions:  0123\nMismatches:  ^ ^\nPath: felt \u2192 belt \u2192 beat \u2192 seat \u2192 sett\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {n, y}\n  2: {c, n, p, x}\n  3: {a, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sett",
+      "structure_after": "sett"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     site\nCurrent:    sett\nPositions:  0123\nMismatches:  ^ ^\nPath: felt \u2192 belt \u2192 beat \u2192 seat \u2192 sett\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {n, y}\n  2: {c, n, p, x}\n  3: {a, s}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sett",
+      "structure_after": "sett"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     site\nCurrent:    sett\nPositions:  0123\nMismatches:  ^ ^\nPath: felt \u2192 belt \u2192 beat \u2192 seat \u2192 sett\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {n, y}\n  2: {c, n, p, x}\n  3: {a, s}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sett",
+      "structure_after": "sett"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     site\nCurrent:    sett\nPositions:  0123\nMismatches:  ^ ^\nPath: felt \u2192 belt \u2192 beat \u2192 seat \u2192 sett\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {n, y}\n  2: {c, n, p, x}\n  3: {a, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sett",
+      "structure_after": "sett"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     site\nCurrent:    sett\nPositions:  0123\nMismatches:  ^ ^\nPath: felt \u2192 belt \u2192 beat \u2192 seat \u2192 sett\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {n, y}\n  2: {c, n, p, x}\n  3: {a, s}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sett",
+      "structure_after": "sett"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     site\nCurrent:    sett\nPositions:  0123\nMismatches:  ^ ^\nPath: felt \u2192 belt \u2192 beat \u2192 seat \u2192 sett\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {n, y}\n  2: {c, n, p, x}\n  3: {a, s}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sett",
+      "structure_after": "sett"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     site\nCurrent:    sett\nPositions:  0123\nMismatches:  ^ ^\nPath: felt \u2192 belt \u2192 beat \u2192 seat \u2192 sett\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {n, y}\n  2: {c, n, p, x}\n  3: {a, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sett",
+      "structure_after": "sett"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "felt",
+    "target_word": "site",
+    "final_word": "sett",
+    "path": [
+      "felt",
+      "belt",
+      "beat",
+      "seat",
+      "sett"
+    ],
+    "path_length": 4,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 15,
+      "ILLEGAL_EDIT": 6,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 22,
+    "optimal_distance_at_end": 3,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 97580,
+    "completion_tokens": 125,
+    "total_tokens": 97705
+  },
+  "wall_time_s": 15.683019638061523
+}

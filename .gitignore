@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+.env
+.env.*
+key.txt
+*.key
+*.pem
+
+# Local source datasets and large development outputs
+wordladder_data/
+alloy_data/
+results_v4/
+four_mutations_full_data.csv
+SingleSub.txt
+MutLandscapes.txt
+
+# Generated local outputs
+build/
+dist/
+*.egg-info/
+.DS_Store

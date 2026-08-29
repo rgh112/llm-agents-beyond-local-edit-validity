@@ -1,0 +1,215 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "few_shot_strategy",
+  "memory_condition": "state_only",
+  "seed": 21,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     lord\nCurrent:    trio\nPositions:  0123\nMismatches: ^^^^\nPath: brio \u2192 trio\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  1: {h}\n  3: {g, m, p}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "brio",
+      "structure_after": "trio"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     lord\nCurrent:    thio\nPositions:  0123\nMismatches: ^^^^\nPath: brio \u2192 trio \u2192 thio\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  2: {r*}\n  3: {n, r, s}",
+      "raw_action": "EDIT 1 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "trio",
+      "structure_after": "thio"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     lord\nCurrent:    thin\nPositions:  0123\nMismatches: ^^^^\nPath: brio \u2192 trio \u2192 thio \u2192 thin\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  0: {c, s, w}\n  1: {a, w}\n  2: {a, e}\n  3: {r, s}",
+      "raw_action": "EDIT 3 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "thio",
+      "structure_after": "thin"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     lord\nCurrent:    chin\nPositions:  0123\nMismatches: ^^^^\nPath: brio \u2192 trio \u2192 thio \u2192 thin \u2192 chin\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  0: {s, w}\n  1: {a, o*}\n  2: {o}\n  3: {a, c, d*, p, s, t}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "thin",
+      "structure_after": "chin"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     lord\nCurrent:    coin\nPositions:  0123\nMismatches: ^ ^^\nPath: brio \u2192 trio \u2192 thio \u2192 thin \u2192 chin \u2192 coin\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {f, j, l*}\n  1: {a}\n  2: {n, o, r*}\n  3: {f, l, r}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "chin",
+      "structure_after": "coin"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     lord\nCurrent:    corn\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 ... \u2192 coin \u2192 corn\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {b, h, l*, m, p, s, t, w}\n  1: {a, u}\n  2: {n, o}\n  3: {d*, e, f, k, m, y}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "coin",
+      "structure_after": "corn"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     lord\nCurrent:    lorn\nPositions:  0123\nMismatches:    ^\nPath: brio \u2192 trio \u2192 thio \u2192 ... \u2192 corn \u2192 lorn\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {b, h, m, p, s, t, w}\n  2: {a, i, o, w}\n  3: {d*, e, y}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "corn",
+      "structure_after": "lorn"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     lord\nCurrent:    lorn\nPositions:  0123\nMismatches:    ^\nPath: brio \u2192 trio \u2192 thio \u2192 ... \u2192 corn \u2192 lorn\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {b, h, m, p, s, t, w}\n  2: {a, i, o, w}\n  3: {d*, e, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lorn",
+      "structure_after": "lorn"
+    },
+    {
+      "t": 9,
+      "observation": "",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 1.0,
+      "info": {
+        "valid": true,
+        "auto_success": true
+      },
+      "structure_before": "lorn",
+      "structure_after": "lord"
+    }
+  ],
+  "success": true,
+  "terminal_failure": null,
+  "failure_events": [
+    "ILLEGAL_EDIT"
+  ],
+  "final_metrics": {
+    "success": true,
+    "steps_taken": 9,
+    "max_steps": 30,
+    "start_word": "brio",
+    "target_word": "lord",
+    "final_word": "lord",
+    "path": [
+      "brio",
+      "trio",
+      "thio",
+      "thin",
+      "chin",
+      "coin",
+      "corn",
+      "lorn",
+      "lord"
+    ],
+    "path_length": 8,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "ILLEGAL_EDIT": 1
+    },
+    "total_violations": 1,
+    "optimal_distance_at_end": 0,
+    "events": [
+      "ILLEGAL_EDIT"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 8678,
+    "completion_tokens": 45,
+    "total_tokens": 8723
+  },
+  "wall_time_s": 12.109254121780396
+}

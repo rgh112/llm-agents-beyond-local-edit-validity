@@ -1,0 +1,468 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "few_shot_format",
+  "memory_condition": "state_only",
+  "seed": 49,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     town\nCurrent:    bees\nPositions:  0123\nMismatches: ^^^^\nPath: lees \u2192 bees\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {c, d, f, g, j, p, r, s, t*, v, w, z}\n  1: {y}\n  2: {d, g, l, n, t, y}\n  3: {f, n*, p, r, t}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lees",
+      "structure_after": "bees"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     town\nCurrent:    tees\nPositions:  0123\nMismatches:  ^^^\nPath: lees \u2192 bees \u2192 tees\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {c, d, f, g, j, p, r, s, v, w, z}\n  1: {i, o*, y}\n  2: {a, d, g, l, n, t, w*}\n  3: {d, l, m, n*}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bees",
+      "structure_after": "tees"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     town\nCurrent:    wees\nPositions:  0123\nMismatches: ^^^^\nPath: lees \u2192 bees \u2192 tees \u2192 wees\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {c, d, f, g, j, p, r, s, v, z}\n  1: {a, o*, y}\n  2: {b, d, n, t}\n  3: {d, k, l, n*, p, r, t}",
+      "raw_action": "EDIT 0 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "w"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tees",
+      "structure_after": "wees"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     town\nCurrent:    wees\nPositions:  0123\nMismatches: ^^^^\nPath: lees \u2192 bees \u2192 tees \u2192 wees\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {c, d, f, g, j, p, r, s, v, z}\n  1: {a, o*, y}\n  2: {b, d, n, t}\n  3: {d, k, l, n*, p, r, t}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "wees",
+      "structure_after": "wees"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     town\nCurrent:    woes\nPositions:  0123\nMismatches: ^ ^^\nPath: lees \u2192 bees \u2192 tees \u2192 wees \u2192 woes\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, j, n, r, t*, v}\n  1: {a, y}\n  2: {g, k, n, o, p, t, w*}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "wees",
+      "structure_after": "woes"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     town\nCurrent:    woes\nPositions:  0123\nMismatches: ^ ^^\nPath: lees \u2192 bees \u2192 tees \u2192 wees \u2192 woes\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, j, n, r, t*, v}\n  1: {a, y}\n  2: {g, k, n, o, p, t, w*}",
+      "raw_action": "EDIT 0 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "woes",
+      "structure_after": "woes"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     town\nCurrent:    toes\nPositions:  0123\nMismatches:   ^^\nPath: lees \u2192 bees \u2192 tees \u2192 wees \u2192 woes \u2192 toes\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, j, n, r, v}\n  1: {i, y}\n  2: {d, g, m, n, p, r, s, t, w*, y}\n  3: {a, d}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "woes",
+      "structure_after": "toes"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     town\nCurrent:    toes\nPositions:  0123\nMismatches:   ^^\nPath: lees \u2192 bees \u2192 tees \u2192 wees \u2192 woes \u2192 toes\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, j, n, r, v}\n  1: {i, y}\n  2: {d, g, m, n, p, r, s, t, w*, y}\n  3: {a, d}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toes",
+      "structure_after": "toes"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     town\nCurrent:    tons\nPositions:  0123\nMismatches:   ^^\nPath: lees \u2192 bees \u2192 tees \u2192 ... \u2192 toes \u2192 tons\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {c, d, e, f, h, i, m, p, s, w}\n  1: {a, e, i, u}\n  2: {d, g, m, p, r, s, t, w*, y}\n  3: {e, g, y}",
+      "raw_action": "EDIT 2 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "toes",
+      "structure_after": "tons"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     town\nCurrent:    tons\nPositions:  0123\nMismatches:   ^^\nPath: lees \u2192 bees \u2192 tees \u2192 ... \u2192 toes \u2192 tons\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {c, d, e, f, h, i, m, p, s, w}\n  1: {a, e, i, u}\n  2: {d, g, m, p, r, s, t, w*, y}\n  3: {e, g, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tons",
+      "structure_after": "tons"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     town\nCurrent:    tons\nPositions:  0123\nMismatches:   ^^\nPath: lees \u2192 bees \u2192 tees \u2192 ... \u2192 toes \u2192 tons\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {c, d, e, f, h, i, m, p, s, w}\n  1: {a, e, i, u}\n  2: {d, g, m, p, r, s, t, w*, y}\n  3: {e, g, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tons",
+      "structure_after": "tons"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     town\nCurrent:    tons\nPositions:  0123\nMismatches:   ^^\nPath: lees \u2192 bees \u2192 tees \u2192 ... \u2192 toes \u2192 tons\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {c, d, e, f, h, i, m, p, s, w}\n  1: {a, e, i, u}\n  2: {d, g, m, p, r, s, t, w*, y}\n  3: {e, g, y}",
+      "raw_action": "EDIT 1 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tons",
+      "structure_after": "tons"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     town\nCurrent:    tons\nPositions:  0123\nMismatches:   ^^\nPath: lees \u2192 bees \u2192 tees \u2192 ... \u2192 toes \u2192 tons\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {c, d, e, f, h, i, m, p, s, w}\n  1: {a, e, i, u}\n  2: {d, g, m, p, r, s, t, w*, y}\n  3: {e, g, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tons",
+      "structure_after": "tons"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     town\nCurrent:    tons\nPositions:  0123\nMismatches:   ^^\nPath: lees \u2192 bees \u2192 tees \u2192 ... \u2192 toes \u2192 tons\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {c, d, e, f, h, i, m, p, s, w}\n  1: {a, e, i, u}\n  2: {d, g, m, p, r, s, t, w*, y}\n  3: {e, g, y}",
+      "raw_action": "EDIT 1 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "n"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tons",
+      "structure_after": "tons"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     town\nCurrent:    tons\nPositions:  0123\nMismatches:   ^^\nPath: lees \u2192 bees \u2192 tees \u2192 ... \u2192 toes \u2192 tons\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {c, d, e, f, h, i, m, p, s, w}\n  1: {a, e, i, u}\n  2: {d, g, m, p, r, s, t, w*, y}\n  3: {e, g, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tons",
+      "structure_after": "tons"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     town\nCurrent:    tons\nPositions:  0123\nMismatches:   ^^\nPath: lees \u2192 bees \u2192 tees \u2192 ... \u2192 toes \u2192 tons\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {c, d, e, f, h, i, m, p, s, w}\n  1: {a, e, i, u}\n  2: {d, g, m, p, r, s, t, w*, y}\n  3: {e, g, y}",
+      "raw_action": "EDIT 1 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tons",
+      "structure_after": "tons"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     town\nCurrent:    tons\nPositions:  0123\nMismatches:   ^^\nPath: lees \u2192 bees \u2192 tees \u2192 ... \u2192 toes \u2192 tons\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {c, d, e, f, h, i, m, p, s, w}\n  1: {a, e, i, u}\n  2: {d, g, m, p, r, s, t, w*, y}\n  3: {e, g, y}",
+      "raw_action": "EDIT 1 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "n"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tons",
+      "structure_after": "tons"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     town\nCurrent:    tons\nPositions:  0123\nMismatches:   ^^\nPath: lees \u2192 bees \u2192 tees \u2192 ... \u2192 toes \u2192 tons\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {c, d, e, f, h, i, m, p, s, w}\n  1: {a, e, i, u}\n  2: {d, g, m, p, r, s, t, w*, y}\n  3: {e, g, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tons",
+      "structure_after": "tons"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     town\nCurrent:    tons\nPositions:  0123\nMismatches:   ^^\nPath: lees \u2192 bees \u2192 tees \u2192 ... \u2192 toes \u2192 tons\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {c, d, e, f, h, i, m, p, s, w}\n  1: {a, e, i, u}\n  2: {d, g, m, p, r, s, t, w*, y}\n  3: {e, g, y}",
+      "raw_action": "EDIT 1 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tons",
+      "structure_after": "tons"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     town\nCurrent:    tons\nPositions:  0123\nMismatches:   ^^\nPath: lees \u2192 bees \u2192 tees \u2192 ... \u2192 toes \u2192 tons\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {c, d, e, f, h, i, m, p, s, w}\n  1: {a, e, i, u}\n  2: {d, g, m, p, r, s, t, w*, y}\n  3: {e, g, y}",
+      "raw_action": "EDIT 1 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "n"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tons",
+      "structure_after": "tons"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "OSCILLATION",
+  "failure_events": [
+    "OSCILLATION",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "lees",
+    "target_word": "town",
+    "final_word": "tons",
+    "path": [
+      "lees",
+      "bees",
+      "tees",
+      "wees",
+      "woes",
+      "toes",
+      "tons"
+    ],
+    "path_length": 6,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "OSCILLATION": 1,
+      "ILLEGAL_EDIT": 7,
+      "INVALID_WORD": 6,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 15,
+    "optimal_distance_at_end": 2,
+    "events": [
+      "OSCILLATION",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 37707,
+    "completion_tokens": 100,
+    "total_tokens": 37807
+  },
+  "wall_time_s": 25.17239022254944
+}

@@ -1,0 +1,366 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 6,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     sifts\nCurrent:    tirls\nPositions:  01234\nMismatches: ^ ^^ \nPath: girls \u2192 tirls\nSteps used: 1/15  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {b, d, v}\n  2: {l}\n  3: {e, o}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "girls",
+      "structure_after": "tirls"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     sifts\nCurrent:    tires\nPositions:  01234\nMismatches: ^ ^^ \nPath: girls \u2192 tirls \u2192 tires\nSteps used: 2/15  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {c, f, h, m, s*, v, w}\n  1: {a, o, y}\n  2: {d, k, l, m, n}\n  3: {o}\n  4: {d}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tirls",
+      "structure_after": "tires"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     sifts\nCurrent:    sires\nPositions:  01234\nMismatches:   ^^ \nPath: girls \u2192 tirls \u2192 tires \u2192 sires\nSteps used: 3/15  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {c, f, h, m, v, w}\n  1: {e, o}\n  2: {c, d, k, n, p, s, t, x, z}\n  4: {d, e, n}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tires",
+      "structure_after": "sires"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     sifts\nCurrent:    sires\nPositions:  01234\nMismatches:   ^^ \nPath: girls \u2192 tirls \u2192 tires \u2192 sires\nSteps used: 4/15  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {c, f, h, m, v, w}\n  1: {e, o}\n  2: {c, d, k, n, p, s, t, x, z}\n  4: {d, e, n}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sires",
+      "structure_after": "sires"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     sifts\nCurrent:    sires\nPositions:  01234\nMismatches:   ^^ \nPath: girls \u2192 tirls \u2192 tires \u2192 sires\nSteps used: 5/15  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {c, f, h, m, v, w}\n  1: {e, o}\n  2: {c, d, k, n, p, s, t, x, z}\n  4: {d, e, n}",
+      "raw_action": "EDIT 2 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "f"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sires",
+      "structure_after": "sires"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     sifts\nCurrent:    sires\nPositions:  01234\nMismatches:   ^^ \nPath: girls \u2192 tirls \u2192 tires \u2192 sires\nSteps used: 6/15  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {c, f, h, m, v, w}\n  1: {e, o}\n  2: {c, d, k, n, p, s, t, x, z}\n  4: {d, e, n}",
+      "raw_action": "EDIT 4 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sires",
+      "structure_after": "sires"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     sifts\nCurrent:    sires\nPositions:  01234\nMismatches:   ^^ \nPath: girls \u2192 tirls \u2192 tires \u2192 sires\nSteps used: 7/15  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {c, f, h, m, v, w}\n  1: {e, o}\n  2: {c, d, k, n, p, s, t, x, z}\n  4: {d, e, n}",
+      "raw_action": "EDIT 1 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sires",
+      "structure_after": "sires"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     sifts\nCurrent:    sires\nPositions:  01234\nMismatches:   ^^ \nPath: girls \u2192 tirls \u2192 tires \u2192 sires\nSteps used: 8/15  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {c, f, h, m, v, w}\n  1: {e, o}\n  2: {c, d, k, n, p, s, t, x, z}\n  4: {d, e, n}",
+      "raw_action": "EDIT 1 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "f"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sires",
+      "structure_after": "sires"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     sifts\nCurrent:    sires\nPositions:  01234\nMismatches:   ^^ \nPath: girls \u2192 tirls \u2192 tires \u2192 sires\nSteps used: 9/15  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {c, f, h, m, v, w}\n  1: {e, o}\n  2: {c, d, k, n, p, s, t, x, z}\n  4: {d, e, n}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sires",
+      "structure_after": "sires"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     sifts\nCurrent:    sires\nPositions:  01234\nMismatches:   ^^ \nPath: girls \u2192 tirls \u2192 tires \u2192 sires\nSteps used: 10/15  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {c, f, h, m, v, w}\n  1: {e, o}\n  2: {c, d, k, n, p, s, t, x, z}\n  4: {d, e, n}",
+      "raw_action": "EDIT 1 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "f"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sires",
+      "structure_after": "sires"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     sifts\nCurrent:    sires\nPositions:  01234\nMismatches:   ^^ \nPath: girls \u2192 tirls \u2192 tires \u2192 sires\nSteps used: 11/15  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {c, f, h, m, v, w}\n  1: {e, o}\n  2: {c, d, k, n, p, s, t, x, z}\n  4: {d, e, n}",
+      "raw_action": "EDIT 1 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sires",
+      "structure_after": "sires"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     sifts\nCurrent:    sires\nPositions:  01234\nMismatches:   ^^ \nPath: girls \u2192 tirls \u2192 tires \u2192 sires\nSteps used: 12/15  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {c, f, h, m, v, w}\n  1: {e, o}\n  2: {c, d, k, n, p, s, t, x, z}\n  4: {d, e, n}",
+      "raw_action": "EDIT 1 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sires",
+      "structure_after": "sires"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     sifts\nCurrent:    sires\nPositions:  01234\nMismatches:   ^^ \nPath: girls \u2192 tirls \u2192 tires \u2192 sires\nSteps used: 13/15  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {c, f, h, m, v, w}\n  1: {e, o}\n  2: {c, d, k, n, p, s, t, x, z}\n  4: {d, e, n}",
+      "raw_action": "EDIT 1 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "f"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sires",
+      "structure_after": "sires"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     sifts\nCurrent:    sires\nPositions:  01234\nMismatches:   ^^ \nPath: girls \u2192 tirls \u2192 tires \u2192 sires\nSteps used: 14/15  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {c, f, h, m, v, w}\n  1: {e, o}\n  2: {c, d, k, n, p, s, t, x, z}\n  4: {d, e, n}",
+      "raw_action": "EDIT 1 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sires",
+      "structure_after": "sires"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     sifts\nCurrent:    sires\nPositions:  01234\nMismatches:   ^^ \nPath: girls \u2192 tirls \u2192 tires \u2192 sires\nSteps used: 15/15  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {c, f, h, m, v, w}\n  1: {e, o}\n  2: {c, d, k, n, p, s, t, x, z}\n  4: {d, e, n}",
+      "raw_action": "EDIT 1 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "sires",
+      "structure_after": "sires"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 15,
+    "max_steps": 15,
+    "start_word": "girls",
+    "target_word": "sifts",
+    "final_word": "sires",
+    "path": [
+      "girls",
+      "tirls",
+      "tires",
+      "sires"
+    ],
+    "path_length": 3,
+    "optimal_length": 3,
+    "violations_by_type": {
+      "ILLEGAL_EDIT": 2,
+      "INVALID_WORD": 10,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 13,
+    "optimal_distance_at_end": 4,
+    "events": [
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 32528,
+    "completion_tokens": 75,
+    "total_tokens": 32603
+  },
+  "wall_time_s": 9.755722999572754
+}

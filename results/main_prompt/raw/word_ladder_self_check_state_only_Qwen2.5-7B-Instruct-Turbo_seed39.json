@@ -1,0 +1,692 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check",
+  "memory_condition": "state_only",
+  "seed": 39,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     paid\nCurrent:    bute\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  0: {c, l, m}\n  1: {a*, i, y}\n  3: {s, t}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "jute",
+      "structure_after": "bute"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     paid\nCurrent:    bate\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  0: {c, d, f, g, h, l, m, p*, r, s, t}\n  1: {i, y}\n  2: {b, d, k, l, n, r, s}\n  3: {h, s, t}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bute",
+      "structure_after": "bate"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     paid\nCurrent:    bate\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  0: {c, d, f, g, h, l, m, p*, r, s, t}\n  1: {i, y}\n  2: {b, d, k, l, n, r, s}\n  3: {h, s, t}",
+      "raw_action": "EDIT 2 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bate",
+      "structure_after": "bate"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     paid\nCurrent:    bate\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  0: {c, d, f, g, h, l, m, p*, r, s, t}\n  1: {i, y}\n  2: {b, d, k, l, n, r, s}\n  3: {h, s, t}",
+      "raw_action": "EDIT 3 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bate",
+      "structure_after": "bate"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     paid\nCurrent:    cate\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, l, m, p*, r, s, t}\n  1: {e, i, o, u}\n  2: {d, f, g, k, m, n, p, r, s, v}\n  3: {s}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bate",
+      "structure_after": "cate"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     paid\nCurrent:    cate\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, l, m, p*, r, s, t}\n  1: {e, i, o, u}\n  2: {d, f, g, k, m, n, p, r, s, v}\n  3: {s}",
+      "raw_action": "EDIT 1 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cate",
+      "structure_after": "cate"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cate",
+      "structure_after": "cite"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 13/30  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 14/30  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 15/30  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 16/30  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 17/30  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 18/30  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 19/30  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 20/30  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 21/30  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 22/30  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 23/30  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 24/30  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 25/30  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 26,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 26/30  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 27,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 27/30  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 28,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 28/30  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 29,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 29/30  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    },
+    {
+      "t": 30,
+      "observation": "Target:     paid\nCurrent:    cite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 cate \u2192 cite\nSteps used: 30/30  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {b, d, k, l, m, n, r, s, w}\n  1: {e, o, u}\n  2: {n, r}\n  3: {y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "cite",
+      "structure_after": "cite"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 30,
+    "max_steps": 30,
+    "start_word": "jute",
+    "target_word": "paid",
+    "final_word": "cite",
+    "path": [
+      "jute",
+      "bute",
+      "bate",
+      "cate",
+      "cite"
+    ],
+    "path_length": 4,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "INVALID_WORD": 26,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 27,
+    "optimal_distance_at_end": 5,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 75066,
+    "completion_tokens": 150,
+    "total_tokens": 75216
+  },
+  "wall_time_s": 60.88789772987366
+}

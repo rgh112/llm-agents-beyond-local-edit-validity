@@ -1,0 +1,576 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 38,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     pump\nCurrent:    kayo\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {m}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "kays",
+      "structure_after": "kayo"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     pump\nCurrent:    mayo\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  2: {k, n}\n  3: {a, s}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "kayo",
+      "structure_after": "mayo"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     pump\nCurrent:    mano\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 mano\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {f}\n  1: {e, o}\n  2: {k}\n  3: {a, e, s, y}",
+      "raw_action": "EDIT 2 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mayo",
+      "structure_after": "mano"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     pump\nCurrent:    mano\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 mano\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {f}\n  1: {e, o}\n  2: {k}\n  3: {a, e, s, y}",
+      "raw_action": "EDIT 1 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "mano",
+      "structure_after": "mano"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     pump\nCurrent:    fano\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 mano \u2192 fano\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  1: {i}\n  2: {d, r}\n  3: {e, g, s}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mano",
+      "structure_after": "fano"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     pump\nCurrent:    fino\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 mano \u2192 fano \u2192 fino\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {k, l, v, w}\n  2: {c, d, l}\n  3: {d, e, k, s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fano",
+      "structure_after": "fino"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     pump\nCurrent:    kino\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 ... \u2192 fino \u2192 kino\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {l, v, w}\n  1: {e}\n  2: {l}\n  3: {a, d, e, g, k, s}",
+      "raw_action": "EDIT 0 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "k"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fino",
+      "structure_after": "kino"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     pump\nCurrent:    kino\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 ... \u2192 fino \u2192 kino\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {l, v, w}\n  1: {e}\n  2: {l}\n  3: {a, d, e, g, k, s}",
+      "raw_action": "EDIT 1 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "kino",
+      "structure_after": "kino"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     pump\nCurrent:    kino\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 ... \u2192 fino \u2192 kino\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {l, v, w}\n  1: {e}\n  2: {l}\n  3: {a, d, e, g, k, s}",
+      "raw_action": "EDIT 3 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "kino",
+      "structure_after": "kino"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     pump\nCurrent:    kino\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 ... \u2192 fino \u2192 kino\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {l, v, w}\n  1: {e}\n  2: {l}\n  3: {a, d, e, g, k, s}",
+      "raw_action": "EDIT 2 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "kino",
+      "structure_after": "kino"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     pump\nCurrent:    kino\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 ... \u2192 fino \u2192 kino\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {l, v, w}\n  1: {e}\n  2: {l}\n  3: {a, d, e, g, k, s}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "kino",
+      "structure_after": "kino"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     pump\nCurrent:    kino\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 ... \u2192 fino \u2192 kino\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {l, v, w}\n  1: {e}\n  2: {l}\n  3: {a, d, e, g, k, s}",
+      "raw_action": "EDIT 3 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "kino",
+      "structure_after": "kino"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     pump\nCurrent:    kino\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 ... \u2192 fino \u2192 kino\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {l, v, w}\n  1: {e}\n  2: {l}\n  3: {a, d, e, g, k, s}",
+      "raw_action": "EDIT 1 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "kino",
+      "structure_after": "kino"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     pump\nCurrent:    kino\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 ... \u2192 fino \u2192 kino\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {l, v, w}\n  1: {e}\n  2: {l}\n  3: {a, d, e, g, k, s}",
+      "raw_action": "EDIT 3 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "kino",
+      "structure_after": "kino"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     pump\nCurrent:    kino\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 ... \u2192 fino \u2192 kino\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {l, v, w}\n  1: {e}\n  2: {l}\n  3: {a, d, e, g, k, s}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "kino",
+      "structure_after": "kino"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     pump\nCurrent:    kino\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 ... \u2192 fino \u2192 kino\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {l, v, w}\n  1: {e}\n  2: {l}\n  3: {a, d, e, g, k, s}",
+      "raw_action": "EDIT 3 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "kino",
+      "structure_after": "kino"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     pump\nCurrent:    kino\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 ... \u2192 fino \u2192 kino\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {l, v, w}\n  1: {e}\n  2: {l}\n  3: {a, d, e, g, k, s}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "kino",
+      "structure_after": "kino"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     pump\nCurrent:    kino\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 ... \u2192 fino \u2192 kino\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {l, v, w}\n  1: {e}\n  2: {l}\n  3: {a, d, e, g, k, s}",
+      "raw_action": "EDIT 3 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "kino",
+      "structure_after": "kino"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     pump\nCurrent:    kino\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 ... \u2192 fino \u2192 kino\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {l, v, w}\n  1: {e}\n  2: {l}\n  3: {a, d, e, g, k, s}",
+      "raw_action": "EDIT 1 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "kino",
+      "structure_after": "kino"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     pump\nCurrent:    kino\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 ... \u2192 fino \u2192 kino\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {l, v, w}\n  1: {e}\n  2: {l}\n  3: {a, d, e, g, k, s}",
+      "raw_action": "EDIT 3 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "kino",
+      "structure_after": "kino"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     pump\nCurrent:    kino\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 ... \u2192 fino \u2192 kino\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {l, v, w}\n  1: {e}\n  2: {l}\n  3: {a, d, e, g, k, s}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "kino",
+      "structure_after": "kino"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     pump\nCurrent:    kino\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 ... \u2192 fino \u2192 kino\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {l, v, w}\n  1: {e}\n  2: {l}\n  3: {a, d, e, g, k, s}",
+      "raw_action": "EDIT 3 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "kino",
+      "structure_after": "kino"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     pump\nCurrent:    kino\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 ... \u2192 fino \u2192 kino\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {l, v, w}\n  1: {e}\n  2: {l}\n  3: {a, d, e, g, k, s}",
+      "raw_action": "EDIT 1 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "kino",
+      "structure_after": "kino"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     pump\nCurrent:    kino\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 ... \u2192 fino \u2192 kino\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {l, v, w}\n  1: {e}\n  2: {l}\n  3: {a, d, e, g, k, s}",
+      "raw_action": "EDIT 3 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "kino",
+      "structure_after": "kino"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     pump\nCurrent:    kino\nPositions:  0123\nMismatches: ^^^^\nPath: kays \u2192 kayo \u2192 mayo \u2192 ... \u2192 fino \u2192 kino\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {l, v, w}\n  1: {e}\n  2: {l}\n  3: {a, d, e, g, k, s}",
+      "raw_action": "EDIT 1 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "kino",
+      "structure_after": "kino"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "kays",
+    "target_word": "pump",
+    "final_word": "kino",
+    "path": [
+      "kays",
+      "kayo",
+      "mayo",
+      "mano",
+      "fano",
+      "fino",
+      "kino"
+    ],
+    "path_length": 6,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 19,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 20,
+    "optimal_distance_at_end": 5,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 80907,
+    "completion_tokens": 125,
+    "total_tokens": 81032
+  },
+  "wall_time_s": 14.430481910705566
+}

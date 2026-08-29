@@ -1,0 +1,140 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 2,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     vive\nCurrent:    inks\nPositions:  0123\nMismatches: ^^^^\nPath: inns \u2192 inks\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  1: {l, r}\n  3: {y}",
+      "raw_action": "EDIT 2 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "k"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "inns",
+      "structure_after": "inks"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     vive\nCurrent:    irks\nPositions:  0123\nMismatches: ^^^^\nPath: inns \u2192 inks \u2192 irks\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  0: {a}\n  1: {l}\n  2: {e, i}",
+      "raw_action": "EDIT 1 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "inks",
+      "structure_after": "irks"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     vive\nCurrent:    arks\nPositions:  0123\nMismatches: ^^^^\nPath: inns \u2192 inks \u2192 irks \u2192 arks\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  1: {s, u}\n  2: {b, c, e, f, m, t}",
+      "raw_action": "EDIT 0 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "irks",
+      "structure_after": "arks"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     vive\nCurrent:    asks\nPositions:  0123\nMismatches: ^^^^\nPath: inns \u2192 inks \u2192 irks \u2192 arks \u2192 asks\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  0: {t}\n  1: {u}\n  2: {p}",
+      "raw_action": "EDIT 1 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "arks",
+      "structure_after": "asks"
+    },
+    {
+      "t": 5,
+      "observation": "",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [
+        "LOCAL_OPTIMUM_TRAP"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true,
+        "dead_end": true
+      },
+      "structure_before": "asks",
+      "structure_after": "tsks"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "LOCAL_OPTIMUM_TRAP",
+  "failure_events": [
+    "LOCAL_OPTIMUM_TRAP"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 5,
+    "max_steps": 30,
+    "start_word": "inns",
+    "target_word": "vive",
+    "final_word": "tsks",
+    "path": [
+      "inns",
+      "inks",
+      "irks",
+      "arks",
+      "asks",
+      "tsks"
+    ],
+    "path_length": 5,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "LOCAL_OPTIMUM_TRAP": 1
+    },
+    "total_violations": 1,
+    "optimal_distance_at_end": 8,
+    "events": [
+      "LOCAL_OPTIMUM_TRAP"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 2314,
+    "completion_tokens": 25,
+    "total_tokens": 2339
+  },
+  "wall_time_s": 2.2923007011413574
+}

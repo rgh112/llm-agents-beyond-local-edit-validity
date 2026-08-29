@@ -1,0 +1,476 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "window_1",
+  "seed": 22,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     mild\nCurrent:    bode\nPositions:  0123\nMismatches: ^^^^\nPath: lode \u2192 bode\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {c, m*, n, r}\n  1: {a, i*}\n  2: {l*, n, r}\n  3: {s, y}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lode",
+      "structure_after": "bode"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     mild\nCurrent:    bide\nPositions:  0123\nMismatches: ^ ^^\nPath: lode \u2192 bode \u2192 bide\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {a, e, h, n, r, s, t, v, w}\n  1: {a}\n  2: {c, k, l*, n, s, t, z}\n  3: {s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bode",
+      "structure_after": "bide"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     mild\nCurrent:    aide\nPositions:  0123\nMismatches: ^ ^^\nPath: lode \u2192 bode \u2192 bide \u2192 aide\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {e, h, n, r, s, t, v, w}\n  3: {s}",
+      "raw_action": "EDIT 0 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bide",
+      "structure_after": "aide"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     mild\nCurrent:    aide\nPositions:  0123\nMismatches: ^ ^^\nPath: lode \u2192 bode \u2192 bide \u2192 aide\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {e, h, n, r, s, t, v, w}\n  3: {s}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "aide",
+      "structure_after": "aide"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     mild\nCurrent:    aide\nPositions:  0123\nMismatches: ^ ^^\nPath: lode \u2192 bode \u2192 bide \u2192 aide\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {e, h, n, r, s, t, v, w}\n  3: {s}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "aide",
+      "structure_after": "aide"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     mild\nCurrent:    aide\nPositions:  0123\nMismatches: ^ ^^\nPath: lode \u2192 bode \u2192 bide \u2192 aide\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {e, h, n, r, s, t, v, w}\n  3: {s}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "aide",
+      "structure_after": "aide"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     mild\nCurrent:    aide\nPositions:  0123\nMismatches: ^ ^^\nPath: lode \u2192 bode \u2192 bide \u2192 aide\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {e, h, n, r, s, t, v, w}\n  3: {s}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "aide",
+      "structure_after": "aide"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     mild\nCurrent:    aide\nPositions:  0123\nMismatches: ^ ^^\nPath: lode \u2192 bode \u2192 bide \u2192 aide\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {e, h, n, r, s, t, v, w}\n  3: {s}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "aide",
+      "structure_after": "aide"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     mild\nCurrent:    aide\nPositions:  0123\nMismatches: ^ ^^\nPath: lode \u2192 bode \u2192 bide \u2192 aide\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {e, h, n, r, s, t, v, w}\n  3: {s}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "aide",
+      "structure_after": "aide"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     mild\nCurrent:    aide\nPositions:  0123\nMismatches: ^ ^^\nPath: lode \u2192 bode \u2192 bide \u2192 aide\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {e, h, n, r, s, t, v, w}\n  3: {s}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "aide",
+      "structure_after": "aide"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     mild\nCurrent:    aide\nPositions:  0123\nMismatches: ^ ^^\nPath: lode \u2192 bode \u2192 bide \u2192 aide\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {e, h, n, r, s, t, v, w}\n  3: {s}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "aide",
+      "structure_after": "aide"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     mild\nCurrent:    aide\nPositions:  0123\nMismatches: ^ ^^\nPath: lode \u2192 bode \u2192 bide \u2192 aide\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {e, h, n, r, s, t, v, w}\n  3: {s}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "aide",
+      "structure_after": "aide"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     mild\nCurrent:    aide\nPositions:  0123\nMismatches: ^ ^^\nPath: lode \u2192 bode \u2192 bide \u2192 aide\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {e, h, n, r, s, t, v, w}\n  3: {s}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "aide",
+      "structure_after": "aide"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     mild\nCurrent:    aide\nPositions:  0123\nMismatches: ^ ^^\nPath: lode \u2192 bode \u2192 bide \u2192 aide\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {e, h, n, r, s, t, v, w}\n  3: {s}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "aide",
+      "structure_after": "aide"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     mild\nCurrent:    aide\nPositions:  0123\nMismatches: ^ ^^\nPath: lode \u2192 bode \u2192 bide \u2192 aide\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {e, h, n, r, s, t, v, w}\n  3: {s}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "aide",
+      "structure_after": "aide"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     mild\nCurrent:    aide\nPositions:  0123\nMismatches: ^ ^^\nPath: lode \u2192 bode \u2192 bide \u2192 aide\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {e, h, n, r, s, t, v, w}\n  3: {s}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "aide",
+      "structure_after": "aide"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     mild\nCurrent:    aide\nPositions:  0123\nMismatches: ^ ^^\nPath: lode \u2192 bode \u2192 bide \u2192 aide\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {e, h, n, r, s, t, v, w}\n  3: {s}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "aide",
+      "structure_after": "aide"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     mild\nCurrent:    aide\nPositions:  0123\nMismatches: ^ ^^\nPath: lode \u2192 bode \u2192 bide \u2192 aide\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {e, h, n, r, s, t, v, w}\n  3: {s}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "aide",
+      "structure_after": "aide"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     mild\nCurrent:    aide\nPositions:  0123\nMismatches: ^ ^^\nPath: lode \u2192 bode \u2192 bide \u2192 aide\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {e, h, n, r, s, t, v, w}\n  3: {s}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "aide",
+      "structure_after": "aide"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     mild\nCurrent:    aide\nPositions:  0123\nMismatches: ^ ^^\nPath: lode \u2192 bode \u2192 bide \u2192 aide\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {e, h, n, r, s, t, v, w}\n  3: {s}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "aide",
+      "structure_after": "aide"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "lode",
+    "target_word": "mild",
+    "final_word": "aide",
+    "path": [
+      "lode",
+      "bode",
+      "bide",
+      "aide"
+    ],
+    "path_length": 3,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 16,
+      "ILLEGAL_EDIT": 1,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 18,
+    "optimal_distance_at_end": 4,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 37879,
+    "completion_tokens": 100,
+    "total_tokens": 37979
+  },
+  "wall_time_s": 9.527540922164917
+}

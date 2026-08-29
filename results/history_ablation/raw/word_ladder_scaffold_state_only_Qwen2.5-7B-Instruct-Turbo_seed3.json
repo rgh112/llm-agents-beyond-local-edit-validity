@@ -1,0 +1,583 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 3,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     woes\nCurrent:    mora\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {b, f, h, s, t}\n  2: {l, x}\n  3: {e, n, s*, t}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mura",
+      "structure_after": "mora"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     woes\nCurrent:    bora\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {f, h, s, t}\n  1: {u}\n  2: {l, t}\n  3: {e, n, t}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mora",
+      "structure_after": "bora"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     woes\nCurrent:    bola\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {c, k, m, s, t}\n  2: {t}\n  3: {d, e, l, o, t}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bora",
+      "structure_after": "bola"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bola",
+      "structure_after": "bole"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 0 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bole",
+      "structure_after": "bole"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bole",
+      "structure_after": "bole"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bole",
+      "structure_after": "bole"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bole",
+      "structure_after": "bole"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 1 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bole",
+      "structure_after": "bole"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bole",
+      "structure_after": "bole"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bole",
+      "structure_after": "bole"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bole",
+      "structure_after": "bole"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bole",
+      "structure_after": "bole"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bole",
+      "structure_after": "bole"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 1 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bole",
+      "structure_after": "bole"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bole",
+      "structure_after": "bole"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bole",
+      "structure_after": "bole"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 1 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bole",
+      "structure_after": "bole"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bole",
+      "structure_after": "bole"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bole",
+      "structure_after": "bole"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 1 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bole",
+      "structure_after": "bole"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bole",
+      "structure_after": "bole"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bole",
+      "structure_after": "bole"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 1 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "w"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bole",
+      "structure_after": "bole"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     woes\nCurrent:    bole\nPositions:  0123\nMismatches: ^ ^^\nPath: mura \u2192 mora \u2192 bora \u2192 bola \u2192 bole\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {c, d, h, j, m, p, r, s, t, v}\n  1: {a, i}\n  2: {d, n, r}\n  3: {d, l, o, t}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bole",
+      "structure_after": "bole"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "mura",
+    "target_word": "woes",
+    "final_word": "bole",
+    "path": [
+      "mura",
+      "mora",
+      "bora",
+      "bola",
+      "bole"
+    ],
+    "path_length": 4,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 17,
+      "ILLEGAL_EDIT": 4,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 22,
+    "optimal_distance_at_end": 4,
+    "events": [
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 85686,
+    "completion_tokens": 125,
+    "total_tokens": 85811
+  },
+  "wall_time_s": 15.503392934799194
+}

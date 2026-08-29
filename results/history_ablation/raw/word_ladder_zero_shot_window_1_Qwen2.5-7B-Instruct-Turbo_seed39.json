@@ -1,0 +1,690 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "window_1",
+  "seed": 39,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     paid\nCurrent:    jute\nPositions:  0123\nMismatches: ^^^^\nPath: jute\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  0: {b, c, l, m}\n  1: {e}\n  2: {b, k, p}\n  3: {s}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "jute",
+      "structure_after": "jute"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     paid\nCurrent:    bute\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  0: {c, l, m}\n  1: {a*, i, y}\n  3: {s, t}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "jute",
+      "structure_after": "bute"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     paid\nCurrent:    bate\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  0: {c, d, f, g, h, l, m, p*, r, s, t}\n  1: {i, y}\n  2: {b, d, k, l, n, r, s}\n  3: {h, s, t}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bute",
+      "structure_after": "bate"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     paid\nCurrent:    bate\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  0: {c, d, f, g, h, l, m, p*, r, s, t}\n  1: {i, y}\n  2: {b, d, k, l, n, r, s}\n  3: {h, s, t}",
+      "raw_action": "EDIT 2 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bate",
+      "structure_after": "bate"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     paid\nCurrent:    bate\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {c, d, f, g, h, l, m, p*, r, s, t}\n  1: {i, y}\n  2: {b, d, k, l, n, r, s}\n  3: {h, s, t}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bate",
+      "structure_after": "bate"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     paid\nCurrent:    bate\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {c, d, f, g, h, l, m, p*, r, s, t}\n  1: {i, y}\n  2: {b, d, k, l, n, r, s}\n  3: {h, s, t}",
+      "raw_action": "EDIT 3 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bate",
+      "structure_after": "bate"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     paid\nCurrent:    bite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {c, d, k, l, m, n, r, s, w}\n  1: {y}\n  2: {c, d, k, l, n, s, z}\n  3: {s, t}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bate",
+      "structure_after": "bite"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     paid\nCurrent:    bite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {c, d, k, l, m, n, r, s, w}\n  1: {y}\n  2: {c, d, k, l, n, s, z}\n  3: {s, t}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bite",
+      "structure_after": "bite"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     paid\nCurrent:    bite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {c, d, k, l, m, n, r, s, w}\n  1: {y}\n  2: {c, d, k, l, n, s, z}\n  3: {s, t}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bite",
+      "structure_after": "bite"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     paid\nCurrent:    bite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {c, d, k, l, m, n, r, s, w}\n  1: {y}\n  2: {c, d, k, l, n, s, z}\n  3: {s, t}",
+      "raw_action": "EDIT 0 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bite",
+      "structure_after": "bite"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     paid\nCurrent:    bite\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {c, d, k, l, m, n, r, s, w}\n  1: {y}\n  2: {c, d, k, l, n, s, z}\n  3: {s, t}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bite",
+      "structure_after": "bite"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     paid\nCurrent:    bide\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite \u2192 bide\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {a, e, h, n, r, s, t, v, w}\n  1: {a*, o}\n  2: {c, k, l, n, s, z}\n  3: {s}",
+      "raw_action": "EDIT 2 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bite",
+      "structure_after": "bide"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     paid\nCurrent:    bide\nPositions:  0123\nMismatches: ^^^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite \u2192 bide\nSteps used: 13/30  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {a, e, h, n, r, s, t, v, w}\n  1: {a*, o}\n  2: {c, k, l, n, s, z}\n  3: {s}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bide",
+      "structure_after": "bide"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     paid\nCurrent:    bade\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite \u2192 bide \u2192 bade\nSteps used: 14/30  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, l, m, s, w}\n  1: {o}\n  2: {b, k, l, n, r, s}\n  3: {s}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bide",
+      "structure_after": "bade"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     paid\nCurrent:    bade\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite \u2192 bide \u2192 bade\nSteps used: 15/30  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, l, m, s, w}\n  1: {o}\n  2: {b, k, l, n, r, s}\n  3: {s}",
+      "raw_action": "EDIT 2 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bade",
+      "structure_after": "bade"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     paid\nCurrent:    bade\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite \u2192 bide \u2192 bade\nSteps used: 16/30  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, l, m, s, w}\n  1: {o}\n  2: {b, k, l, n, r, s}\n  3: {s}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bade",
+      "structure_after": "bade"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     paid\nCurrent:    bade\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite \u2192 bide \u2192 bade\nSteps used: 17/30  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, l, m, s, w}\n  1: {o}\n  2: {b, k, l, n, r, s}\n  3: {s}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bade",
+      "structure_after": "bade"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     paid\nCurrent:    bade\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite \u2192 bide \u2192 bade\nSteps used: 18/30  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, l, m, s, w}\n  1: {o}\n  2: {b, k, l, n, r, s}\n  3: {s}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bade",
+      "structure_after": "bade"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     paid\nCurrent:    bade\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite \u2192 bide \u2192 bade\nSteps used: 19/30  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, l, m, s, w}\n  1: {o}\n  2: {b, k, l, n, r, s}\n  3: {s}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bade",
+      "structure_after": "bade"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     paid\nCurrent:    bade\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite \u2192 bide \u2192 bade\nSteps used: 20/30  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, l, m, s, w}\n  1: {o}\n  2: {b, k, l, n, r, s}\n  3: {s}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bade",
+      "structure_after": "bade"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     paid\nCurrent:    bade\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite \u2192 bide \u2192 bade\nSteps used: 21/30  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, l, m, s, w}\n  1: {o}\n  2: {b, k, l, n, r, s}\n  3: {s}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bade",
+      "structure_after": "bade"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     paid\nCurrent:    bade\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite \u2192 bide \u2192 bade\nSteps used: 22/30  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, l, m, s, w}\n  1: {o}\n  2: {b, k, l, n, r, s}\n  3: {s}",
+      "raw_action": "EDIT 2 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bade",
+      "structure_after": "bade"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     paid\nCurrent:    bade\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite \u2192 bide \u2192 bade\nSteps used: 23/30  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, l, m, s, w}\n  1: {o}\n  2: {b, k, l, n, r, s}\n  3: {s}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bade",
+      "structure_after": "bade"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     paid\nCurrent:    bade\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite \u2192 bide \u2192 bade\nSteps used: 24/30  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, l, m, s, w}\n  1: {o}\n  2: {b, k, l, n, r, s}\n  3: {s}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bade",
+      "structure_after": "bade"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     paid\nCurrent:    bade\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite \u2192 bide \u2192 bade\nSteps used: 25/30  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, l, m, s, w}\n  1: {o}\n  2: {b, k, l, n, r, s}\n  3: {s}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bade",
+      "structure_after": "bade"
+    },
+    {
+      "t": 26,
+      "observation": "Target:     paid\nCurrent:    bade\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite \u2192 bide \u2192 bade\nSteps used: 26/30  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, l, m, s, w}\n  1: {o}\n  2: {b, k, l, n, r, s}\n  3: {s}",
+      "raw_action": "EDIT 2 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bade",
+      "structure_after": "bade"
+    },
+    {
+      "t": 27,
+      "observation": "Target:     paid\nCurrent:    bade\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite \u2192 bide \u2192 bade\nSteps used: 27/30  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, l, m, s, w}\n  1: {o}\n  2: {b, k, l, n, r, s}\n  3: {s}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bade",
+      "structure_after": "bade"
+    },
+    {
+      "t": 28,
+      "observation": "Target:     paid\nCurrent:    bade\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite \u2192 bide \u2192 bade\nSteps used: 28/30  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, l, m, s, w}\n  1: {o}\n  2: {b, k, l, n, r, s}\n  3: {s}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bade",
+      "structure_after": "bade"
+    },
+    {
+      "t": 29,
+      "observation": "Target:     paid\nCurrent:    bade\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite \u2192 bide \u2192 bade\nSteps used: 29/30  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, l, m, s, w}\n  1: {o}\n  2: {b, k, l, n, r, s}\n  3: {s}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bade",
+      "structure_after": "bade"
+    },
+    {
+      "t": 30,
+      "observation": "Target:     paid\nCurrent:    bade\nPositions:  0123\nMismatches: ^ ^^\nPath: jute \u2192 bute \u2192 bate \u2192 bite \u2192 bide \u2192 bade\nSteps used: 30/30  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, l, m, s, w}\n  1: {o}\n  2: {b, k, l, n, r, s}\n  3: {s}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bade",
+      "structure_after": "bade"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 30,
+    "max_steps": 30,
+    "start_word": "jute",
+    "target_word": "paid",
+    "final_word": "bade",
+    "path": [
+      "jute",
+      "bute",
+      "bate",
+      "bite",
+      "bide",
+      "bade"
+    ],
+    "path_length": 5,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "INVALID_WORD": 19,
+      "ILLEGAL_EDIT": 6,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 26,
+    "optimal_distance_at_end": 4,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 93756,
+    "completion_tokens": 150,
+    "total_tokens": 93906
+  },
+  "wall_time_s": 17.342813968658447
+}

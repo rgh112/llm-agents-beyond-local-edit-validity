@@ -1,0 +1,424 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "few_shot_strategy",
+  "memory_condition": "state_only",
+  "seed": 8,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     seed\nCurrent:    sang\nPositions:  0123\nMismatches:  ^^^\nPath: rang \u2192 sang\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, d, f, g, h, l, p, t, v, y}\n  1: {i, o, u}\n  3: {d*, e, k, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rang",
+      "structure_after": "sang"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     seed\nCurrent:    sane\nPositions:  0123\nMismatches:  ^^^\nPath: rang \u2192 sang \u2192 sane\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g, j, k, l, m, p, v, w}\n  1: {e*, i, o, y}\n  2: {b, d, f, g, k, l, m, t, v}\n  3: {d*, k, s}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sang",
+      "structure_after": "sane"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     seed\nCurrent:    cane\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 sang \u2192 sane \u2192 cane\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {b, f, g, j, k, l, m, p, v, w}\n  1: {i, o}\n  2: {d, f, g, k, m, p, r, s, t, v}\n  3: {s, t}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sane",
+      "structure_after": "cane"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     seed\nCurrent:    cine\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 sang \u2192 sane \u2192 cane \u2192 cine\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, d, f, k, l, m, n, p, s*, t, v, w}\n  1: {o}\n  2: {r, t}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cane",
+      "structure_after": "cine"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     seed\nCurrent:    dine\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 sang \u2192 sane \u2192 cane \u2192 cine \u2192 dine\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {b, f, k, l, m, n, p, s*, t, v, w}\n  1: {e*, o, u, y}\n  2: {c, k, m, r, t, v}\n  3: {g, k, s, t}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "cine",
+      "structure_after": "dine"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     seed\nCurrent:    sine\nPositions:  0123\nMismatches:  ^^^\nPath: rang \u2192 sang \u2192 sane \u2192 ... \u2192 dine \u2192 sine\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {b, f, k, l, m, n, p, t, v, w}\n  1: {e*, o, y}\n  2: {c, d, k, p, r, t, z}\n  3: {g, h, k, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dine",
+      "structure_after": "sine"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     seed\nCurrent:    sene\nPositions:  0123\nMismatches:   ^^\nPath: rang \u2192 sang \u2192 sane \u2192 ... \u2192 sine \u2192 sene\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {b, d, g, n}\n  1: {o, y}\n  2: {m, r}\n  3: {d*, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sine",
+      "structure_after": "sene"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     seed\nCurrent:    bene\nPositions:  0123\nMismatches: ^ ^^\nPath: rang \u2192 sang \u2192 sane \u2192 ... \u2192 sene \u2192 bene\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {d, g, n}\n  1: {a, i, o}\n  3: {d*, s, t}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "sene",
+      "structure_after": "bene"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     seed\nCurrent:    bane\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 sang \u2192 sane \u2192 ... \u2192 bene \u2192 bane\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {f, g, j, k, l, m, p, v, w}\n  1: {i, o}\n  2: {b, d, k, l, r, s, t}\n  3: {d*, g, i, k, s}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bene",
+      "structure_after": "bane"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     seed\nCurrent:    fane\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 sang \u2192 sane \u2192 ... \u2192 bane \u2192 fane\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {g, j, k, l, m, p, v, w}\n  1: {i}\n  2: {c, d, k, m, r, t, v, z}\n  3: {g, o, s}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bane",
+      "structure_after": "fane"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     seed\nCurrent:    gane\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 sang \u2192 sane \u2192 ... \u2192 fane \u2192 gane\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {j, k, l, m, p, v, w}\n  1: {e*, o}\n  2: {g, l, m, p, t, v, z}\n  3: {g}",
+      "raw_action": "EDIT 0 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fane",
+      "structure_after": "gane"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     seed\nCurrent:    jane\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 sang \u2192 sane \u2192 ... \u2192 gane \u2192 jane\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {k, l, m, p, v, w}\n  2: {d, k, p}",
+      "raw_action": "EDIT 0 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "j"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gane",
+      "structure_after": "jane"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     seed\nCurrent:    kane\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 sang \u2192 sane \u2192 ... \u2192 jane \u2192 kane\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {l, m, p, v, w}\n  1: {i}\n  2: {l, m}\n  3: {a}",
+      "raw_action": "EDIT 0 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "k"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "jane",
+      "structure_after": "kane"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     seed\nCurrent:    lane\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 sang \u2192 sane \u2192 ... \u2192 kane \u2192 lane\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {m, p, v, w}\n  1: {i, o, u}\n  2: {c, d, k, m, s, t, v, z}\n  3: {d*, g, k}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "kane",
+      "structure_after": "lane"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     seed\nCurrent:    mane\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 sang \u2192 sane \u2192 ... \u2192 lane \u2192 mane\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {p, v, w}\n  1: {i}\n  2: {b, c, d, g, k, l, r, t, z}\n  3: {a, o, s, y}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lane",
+      "structure_after": "mane"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     seed\nCurrent:    pane\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 sang \u2192 sane \u2192 ... \u2192 mane \u2192 pane\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {v, w}\n  1: {i, o}\n  2: {c, g, l, r, s, t, v}\n  3: {g, s, t}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mane",
+      "structure_after": "pane"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     seed\nCurrent:    vane\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 sang \u2192 sane \u2192 ... \u2192 pane \u2192 vane\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {w}\n  1: {i}\n  2: {l, s}\n  3: {g, s}",
+      "raw_action": "EDIT 0 v",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "v"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pane",
+      "structure_after": "vane"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     seed\nCurrent:    wane\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 sang \u2192 sane \u2192 ... \u2192 vane \u2192 wane\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  1: {i}\n  2: {d, g, k, l, m, r, v}\n  3: {d*, s, t, y}",
+      "raw_action": "EDIT 0 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "w"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "vane",
+      "structure_after": "wane"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     seed\nCurrent:    wine\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 sang \u2192 sane \u2192 ... \u2192 wane \u2192 wine\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {b, f, k, l, m, n, p, t, v}\n  2: {d, f, l, p, r, s, t, v}\n  3: {d*, g, k, o, s, y}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "wane",
+      "structure_after": "wine"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     seed\nCurrent:    bine\nPositions:  0123\nMismatches: ^^^^\nPath: rang \u2192 sang \u2192 sane \u2192 ... \u2192 wine \u2192 bine\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {f, k, l, m, n, p, t, v}\n  1: {o}\n  2: {c, d, k, l, s, t, z}\n  3: {d*, s, t}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "wine",
+      "structure_after": "bine"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "rang",
+    "target_word": "seed",
+    "final_word": "bine",
+    "path": [
+      "rang",
+      "sang",
+      "sane",
+      "cane",
+      "cine",
+      "dine",
+      "sine",
+      "sene",
+      "bene",
+      "bane",
+      "fane",
+      "gane",
+      "jane",
+      "kane",
+      "lane",
+      "mane",
+      "pane",
+      "vane",
+      "wane",
+      "wine",
+      "bine"
+    ],
+    "path_length": 20,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 1,
+    "optimal_distance_at_end": 4,
+    "events": [
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 36951,
+    "completion_tokens": 100,
+    "total_tokens": 37051
+  },
+  "wall_time_s": 12.695197820663452
+}

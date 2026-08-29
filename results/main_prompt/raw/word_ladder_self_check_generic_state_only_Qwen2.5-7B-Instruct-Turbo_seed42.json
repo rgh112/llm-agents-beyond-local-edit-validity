@@ -1,0 +1,570 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check_generic",
+  "memory_condition": "state_only",
+  "seed": 42,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     soja\nCurrent:    does\nPositions:  0123\nMismatches: ^ ^^\nPath: dees \u2192 does\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {f, g, h, j, n, r, t, v, w}\n  1: {i, u, y}\n  2: {c, g, l, m, n, r, s, t, w}\n  3: {r}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dees",
+      "structure_after": "does"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     soja\nCurrent:    foes\nPositions:  0123\nMismatches: ^ ^^\nPath: dees \u2192 does \u2192 foes\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {g, h, j, n, r, t, v, w}\n  1: {e}\n  2: {b, g, n, p, s, y}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "does",
+      "structure_after": "foes"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     soja\nCurrent:    fees\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 fees\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {b, c, g, j, l, p, r, s*, t, v, w, z}\n  2: {d, h, m, n, s, t, u}\n  3: {d, l, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "foes",
+      "structure_after": "fees"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     soja\nCurrent:    bees\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 fees \u2192 bees\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {c, g, j, l, p, r, s*, t, v, w, z}\n  1: {y}\n  2: {d, g, l, n, t, y}\n  3: {f, n, p, r, t}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fees",
+      "structure_after": "bees"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     soja\nCurrent:    byes\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 fees \u2192 bees \u2192 byes\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {a, d, e, l, o, p, r, t, w}",
+      "raw_action": "EDIT 1 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "y"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bees",
+      "structure_after": "byes"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     soja\nCurrent:    ayes\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 byes \u2192 ayes\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {d, e, l, o, p, r, t, w}\n  1: {c, g, l, n, p, r, t, v, w, x}",
+      "raw_action": "EDIT 0 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "byes",
+      "structure_after": "ayes"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     soja\nCurrent:    dyes\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 ayes \u2192 dyes\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {e, l, o, p, r, t, w}\n  1: {i, u}\n  3: {d, r}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ayes",
+      "structure_after": "dyes"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     soja\nCurrent:    dyes\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 ayes \u2192 dyes\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {e, l, o, p, r, t, w}\n  1: {i, u}\n  3: {d, r}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dyes",
+      "structure_after": "dyes"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     soja\nCurrent:    dyes\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 ayes \u2192 dyes\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {e, l, o, p, r, t, w}\n  1: {i, u}\n  3: {d, r}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dyes",
+      "structure_after": "dyes"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     soja\nCurrent:    oyes\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 dyes \u2192 oyes\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {e, l, p, r, t, w}\n  1: {b, d, k, l, n, p, r, s, w, x}\n  3: {r, z}",
+      "raw_action": "EDIT 0 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dyes",
+      "structure_after": "oyes"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     soja\nCurrent:    oyes\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 dyes \u2192 oyes\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {e, l, p, r, t, w}\n  1: {b, d, k, l, n, p, r, s, w, x}\n  3: {r, z}",
+      "raw_action": "EDIT 0 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "j"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "oyes",
+      "structure_after": "oyes"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     soja\nCurrent:    oyes\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 dyes \u2192 oyes\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {e, l, p, r, t, w}\n  1: {b, d, k, l, n, p, r, s, w, x}\n  3: {r, z}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "oyes",
+      "structure_after": "oyes"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     soja\nCurrent:    oyes\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 dyes \u2192 oyes\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {e, l, p, r, t, w}\n  1: {b, d, k, l, n, p, r, s, w, x}\n  3: {r, z}",
+      "raw_action": "EDIT 0 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "j"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "oyes",
+      "structure_after": "oyes"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     soja\nCurrent:    oyes\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 dyes \u2192 oyes\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {e, l, p, r, t, w}\n  1: {b, d, k, l, n, p, r, s, w, x}\n  3: {r, z}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "oyes",
+      "structure_after": "oyes"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     soja\nCurrent:    oyes\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 dyes \u2192 oyes\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {e, l, p, r, t, w}\n  1: {b, d, k, l, n, p, r, s, w, x}\n  3: {r, z}",
+      "raw_action": "EDIT 0 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "j"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "oyes",
+      "structure_after": "oyes"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     soja\nCurrent:    oyes\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 dyes \u2192 oyes\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {e, l, p, r, t, w}\n  1: {b, d, k, l, n, p, r, s, w, x}\n  3: {r, z}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "oyes",
+      "structure_after": "oyes"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     soja\nCurrent:    oyes\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 dyes \u2192 oyes\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {e, l, p, r, t, w}\n  1: {b, d, k, l, n, p, r, s, w, x}\n  3: {r, z}",
+      "raw_action": "EDIT 0 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "j"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "oyes",
+      "structure_after": "oyes"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     soja\nCurrent:    oyes\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 dyes \u2192 oyes\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {e, l, p, r, t, w}\n  1: {b, d, k, l, n, p, r, s, w, x}\n  3: {r, z}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "oyes",
+      "structure_after": "oyes"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     soja\nCurrent:    oyes\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 dyes \u2192 oyes\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {e, l, p, r, t, w}\n  1: {b, d, k, l, n, p, r, s, w, x}\n  3: {r, z}",
+      "raw_action": "EDIT 0 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "j"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "oyes",
+      "structure_after": "oyes"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     soja\nCurrent:    oyes\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 dyes \u2192 oyes\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {e, l, p, r, t, w}\n  1: {b, d, k, l, n, p, r, s, w, x}\n  3: {r, z}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "oyes",
+      "structure_after": "oyes"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     soja\nCurrent:    oyes\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 dyes \u2192 oyes\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {e, l, p, r, t, w}\n  1: {b, d, k, l, n, p, r, s, w, x}\n  3: {r, z}",
+      "raw_action": "EDIT 0 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "j"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "oyes",
+      "structure_after": "oyes"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     soja\nCurrent:    oyes\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 dyes \u2192 oyes\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {e, l, p, r, t, w}\n  1: {b, d, k, l, n, p, r, s, w, x}\n  3: {r, z}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "oyes",
+      "structure_after": "oyes"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     soja\nCurrent:    oyes\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 dyes \u2192 oyes\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {e, l, p, r, t, w}\n  1: {b, d, k, l, n, p, r, s, w, x}\n  3: {r, z}",
+      "raw_action": "EDIT 0 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "j"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "oyes",
+      "structure_after": "oyes"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     soja\nCurrent:    oyes\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 dyes \u2192 oyes\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {e, l, p, r, t, w}\n  1: {b, d, k, l, n, p, r, s, w, x}\n  3: {r, z}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "oyes",
+      "structure_after": "oyes"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     soja\nCurrent:    oyes\nPositions:  0123\nMismatches: ^^^^\nPath: dees \u2192 does \u2192 foes \u2192 ... \u2192 dyes \u2192 oyes\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {e, l, p, r, t, w}\n  1: {b, d, k, l, n, p, r, s, w, x}\n  3: {r, z}",
+      "raw_action": "EDIT 0 j",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "j"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "oyes",
+      "structure_after": "oyes"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "dees",
+    "target_word": "soja",
+    "final_word": "oyes",
+    "path": [
+      "dees",
+      "does",
+      "foes",
+      "fees",
+      "bees",
+      "byes",
+      "ayes",
+      "dyes",
+      "oyes"
+    ],
+    "path_length": 8,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 17,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 18,
+    "optimal_distance_at_end": 6,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 52560,
+    "completion_tokens": 125,
+    "total_tokens": 52685
+  },
+  "wall_time_s": 143.24643731117249
+}

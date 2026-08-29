@@ -1,0 +1,113 @@
+{
+  "env_name": "gb1_sequence",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 16,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Step 2/6  |  Budget remaining: 5\n\nCurrent sequence: V39=V  D40=W  G41=G  V54=V\nWild-type:        V39=V D40=D G41=G V54=V\n\nEstimated fitness: 3.94  (target: >= 5.0)\n  [Based on single-site measurements \u2014 may not reflect true combinatorial fitness]\nStability: stable\n\nAvailable mutations (est. single-site effect, stability):\n  Position 0 (V39, current=V): {L(+0.70, neutral), I(+0.47, neutral), F(-0.63, mild risk), W(-1.02, mild risk)}\n  Position 1 (D40, current=W): {Y(+2.76, mild risk), H(+2.16, neutral), A(+1.23, neutral), D(+0.09, neutral)}\n  Position 2 (G41, current=G): {A(-0.76, destabilizing), F(-0.78, destabilizing), L(-0.95, destabilizing), C(-0.99, destabilizing)}\n  Position 3 (V54, current=V): {C(+0.38, mild risk), A(+0.16, stabilizing), F(-0.09, mild risk), G(-0.68, stabilizing)}\n\nEdit history:\n  Step 1: pos 1: Y->W  stability: stable",
+      "raw_action": "EDIT 1 W",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "amino_acid": "W"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "VYGV",
+      "structure_after": "VWGV"
+    },
+    {
+      "t": 2,
+      "observation": "Step 3/6  |  Budget remaining: 4\n\nCurrent sequence: V39=V  D40=W  G41=A  V54=V\nWild-type:        V39=V D40=D G41=G V54=V\n\nEstimated fitness: 2.95  (target: >= 5.0)\n  [Based on single-site measurements \u2014 may not reflect true combinatorial fitness]\nStability: moderate\n\nAvailable mutations (est. single-site effect, stability):\n  Position 0 (V39, current=V): {I(+0.67, neutral), L(+0.58, neutral), F(-0.55, mild risk), W(-0.99, mild risk)}\n  Position 1 (D40, current=W): {Y(+3.10, mild risk), H(+1.97, neutral), A(+1.35, neutral), D(-0.03, neutral)}\n  Position 2 (G41, current=A): {G(-0.01, neutral), F(-0.88, destabilizing), L(-1.02, destabilizing), C(-1.03, destabilizing)}\n  Position 3 (V54, current=V): {C(+0.41, mild risk), A(+0.39, stabilizing), F(+0.01, mild risk), G(-0.64, stabilizing)}\n\nEdit history:\n  Step 1: pos 1: Y->W  stability: stable\n  Step 2: pos 2: G->A  stability: moderate",
+      "raw_action": "EDIT 2 A",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "amino_acid": "A"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "VWGV",
+      "structure_after": "VWAV"
+    },
+    {
+      "t": 3,
+      "observation": "Step 4/6  |  Budget remaining: 3\n\nCurrent sequence: V39=V  D40=W  G41=A  V54=G\nWild-type:        V39=V D40=D G41=G V54=V\n\nEstimated fitness: 2.68  (target: >= 5.0)\n  [Based on single-site measurements \u2014 may not reflect true combinatorial fitness]\nStability: moderate\n\nAvailable mutations (est. single-site effect, stability):\n  Position 0 (V39, current=V): {L(+0.72, neutral), I(+0.45, neutral), F(-0.82, mild risk), W(-1.24, mild risk)}\n  Position 1 (D40, current=W): {Y(+2.77, mild risk), H(+1.94, neutral), A(+1.33, neutral), D(-0.07, neutral)}\n  Position 2 (G41, current=A): {G(-0.12, neutral), F(-0.91, destabilizing), C(-0.91, destabilizing), L(-0.94, destabilizing)}\n  Position 3 (V54, current=G): {C(+0.58, mild risk), A(+0.33, stabilizing), V(-0.08, neutral), F(-0.21, mild risk)}\n\nEdit history:\n  Step 1: pos 1: Y->W  stability: stable\n  Step 2: pos 2: G->A  stability: moderate\n  Step 3: pos 3: V->G  stability: moderate",
+      "raw_action": "EDIT 3 G",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "amino_acid": "G"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "VWAV",
+      "structure_after": "VWAG"
+    },
+    {
+      "t": 4,
+      "observation": "",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true,
+        "success": false,
+        "true_fitness": 4.8443,
+        "estimated_fitness": 2.2879,
+        "estimation_error": -2.5564,
+        "stability": 0.77,
+        "fitness_ok": false,
+        "stability_ok": true,
+        "variant": "VWAG",
+        "edits_made": 3,
+        "positions_edited": 3
+      },
+      "structure_before": "VWAG",
+      "structure_after": "VWAG"
+    }
+  ],
+  "success": false,
+  "terminal_failure": null,
+  "failure_events": [],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 4,
+    "max_steps": 6,
+    "true_fitness": 4.8443,
+    "estimated_fitness": 2.2879,
+    "stability": 0.77,
+    "variant": "VWAG",
+    "edits_made": 3,
+    "positions_edited": 3,
+    "violations_by_type": {},
+    "total_violations": 0,
+    "events": []
+  },
+  "token_usage": {
+    "prompt_tokens": 5936,
+    "completion_tokens": 18,
+    "total_tokens": 5954
+  },
+  "wall_time_s": 2.026563882827759
+}

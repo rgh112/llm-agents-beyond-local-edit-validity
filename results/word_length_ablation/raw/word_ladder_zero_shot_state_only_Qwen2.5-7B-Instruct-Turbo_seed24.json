@@ -1,0 +1,578 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 24,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     lodes\nCurrent:    fends\nPositions:  01234\nMismatches: ^^^^ \nPath: funds \u2192 fends\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {b, l*, m, p, r, s, t, v, w}\n  1: {i, o*}\n  2: {e, o, u}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "funds",
+      "structure_after": "fends"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     lodes\nCurrent:    lends\nPositions:  01234\nMismatches:  ^^^ \nPath: funds \u2192 fends \u2192 lends\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {b, m, p, r, s, t, v, w}\n  1: {a}\n  2: {a, u}\n  3: {e*, i, o}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fends",
+      "structure_after": "lends"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     lodes\nCurrent:    lands\nPositions:  01234\nMismatches:  ^^^ \nPath: funds \u2192 fends \u2192 lends \u2192 lands\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {b, h, r, s, w}\n  2: {r, u}\n  3: {e*}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lends",
+      "structure_after": "lands"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     lodes\nCurrent:    bands\nPositions:  01234\nMismatches: ^^^^ \nPath: funds \u2192 fends \u2192 lends \u2192 lands \u2192 bands\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {h, r, s, w}\n  1: {e, i, o*, u}\n  2: {l, r, u, w}\n  3: {e*, g, k, n}\n  4: {y}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lands",
+      "structure_after": "bands"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     lodes\nCurrent:    bands\nPositions:  01234\nMismatches: ^^^^ \nPath: funds \u2192 fends \u2192 lends \u2192 lands \u2192 bands\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {h, r, s, w}\n  1: {e, i, o*, u}\n  2: {l, r, u, w}\n  3: {e*, g, k, n}\n  4: {y}",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bands",
+      "structure_after": "bands"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     lodes\nCurrent:    bonds\nPositions:  01234\nMismatches: ^ ^^ \nPath: funds \u2192 fends \u2192 lends \u2192 lands \u2192 bands \u2192 bonds\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {f, p}\n  1: {e, i, u}\n  2: {l}\n  3: {e*, g, k, u}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bands",
+      "structure_after": "bonds"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     lodes\nCurrent:    bonds\nPositions:  01234\nMismatches: ^ ^^ \nPath: funds \u2192 fends \u2192 lends \u2192 lands \u2192 bands \u2192 bonds\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {f, p}\n  1: {e, i, u}\n  2: {l}\n  3: {e*, g, k, u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bonds",
+      "structure_after": "bonds"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     lodes\nCurrent:    bonds\nPositions:  01234\nMismatches: ^ ^^ \nPath: funds \u2192 fends \u2192 lends \u2192 lands \u2192 bands \u2192 bonds\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {f, p}\n  1: {e, i, u}\n  2: {l}\n  3: {e*, g, k, u}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bonds",
+      "structure_after": "bonds"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     lodes\nCurrent:    bonds\nPositions:  01234\nMismatches: ^ ^^ \nPath: funds \u2192 fends \u2192 lends \u2192 lands \u2192 bands \u2192 bonds\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {f, p}\n  1: {e, i, u}\n  2: {l}\n  3: {e*, g, k, u}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bonds",
+      "structure_after": "bonds"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     lodes\nCurrent:    bonds\nPositions:  01234\nMismatches: ^ ^^ \nPath: funds \u2192 fends \u2192 lends \u2192 lands \u2192 bands \u2192 bonds\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {f, p}\n  1: {e, i, u}\n  2: {l}\n  3: {e*, g, k, u}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bonds",
+      "structure_after": "bonds"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     lodes\nCurrent:    bends\nPositions:  01234\nMismatches: ^^^^ \nPath: funds \u2192 fends \u2192 lends \u2192 ... \u2192 bonds \u2192 bends\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {m, p, r, s, t, v, w}\n  1: {i, u}\n  2: {a}\n  3: {e*, t}\n  4: {y}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bonds",
+      "structure_after": "bends"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     lodes\nCurrent:    bends\nPositions:  01234\nMismatches: ^^^^ \nPath: funds \u2192 fends \u2192 lends \u2192 ... \u2192 bonds \u2192 bends\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {m, p, r, s, t, v, w}\n  1: {i, u}\n  2: {a}\n  3: {e*, t}\n  4: {y}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bends",
+      "structure_after": "bends"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     lodes\nCurrent:    bends\nPositions:  01234\nMismatches: ^^^^ \nPath: funds \u2192 fends \u2192 lends \u2192 ... \u2192 bonds \u2192 bends\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {m, p, r, s, t, v, w}\n  1: {i, u}\n  2: {a}\n  3: {e*, t}\n  4: {y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bends",
+      "structure_after": "bends"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     lodes\nCurrent:    bends\nPositions:  01234\nMismatches: ^^^^ \nPath: funds \u2192 fends \u2192 lends \u2192 ... \u2192 bonds \u2192 bends\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {m, p, r, s, t, v, w}\n  1: {i, u}\n  2: {a}\n  3: {e*, t}\n  4: {y}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bends",
+      "structure_after": "bends"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     lodes\nCurrent:    bends\nPositions:  01234\nMismatches: ^^^^ \nPath: funds \u2192 fends \u2192 lends \u2192 ... \u2192 bonds \u2192 bends\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {m, p, r, s, t, v, w}\n  1: {i, u}\n  2: {a}\n  3: {e*, t}\n  4: {y}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bends",
+      "structure_after": "bends"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     lodes\nCurrent:    bends\nPositions:  01234\nMismatches: ^^^^ \nPath: funds \u2192 fends \u2192 lends \u2192 ... \u2192 bonds \u2192 bends\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {m, p, r, s, t, v, w}\n  1: {i, u}\n  2: {a}\n  3: {e*, t}\n  4: {y}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bends",
+      "structure_after": "bends"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     lodes\nCurrent:    bends\nPositions:  01234\nMismatches: ^^^^ \nPath: funds \u2192 fends \u2192 lends \u2192 ... \u2192 bonds \u2192 bends\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {m, p, r, s, t, v, w}\n  1: {i, u}\n  2: {a}\n  3: {e*, t}\n  4: {y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bends",
+      "structure_after": "bends"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     lodes\nCurrent:    bends\nPositions:  01234\nMismatches: ^^^^ \nPath: funds \u2192 fends \u2192 lends \u2192 ... \u2192 bonds \u2192 bends\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {m, p, r, s, t, v, w}\n  1: {i, u}\n  2: {a}\n  3: {e*, t}\n  4: {y}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bends",
+      "structure_after": "bends"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     lodes\nCurrent:    bends\nPositions:  01234\nMismatches: ^^^^ \nPath: funds \u2192 fends \u2192 lends \u2192 ... \u2192 bonds \u2192 bends\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {m, p, r, s, t, v, w}\n  1: {i, u}\n  2: {a}\n  3: {e*, t}\n  4: {y}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bends",
+      "structure_after": "bends"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     lodes\nCurrent:    bends\nPositions:  01234\nMismatches: ^^^^ \nPath: funds \u2192 fends \u2192 lends \u2192 ... \u2192 bonds \u2192 bends\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {m, p, r, s, t, v, w}\n  1: {i, u}\n  2: {a}\n  3: {e*, t}\n  4: {y}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bends",
+      "structure_after": "bends"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     lodes\nCurrent:    bends\nPositions:  01234\nMismatches: ^^^^ \nPath: funds \u2192 fends \u2192 lends \u2192 ... \u2192 bonds \u2192 bends\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {m, p, r, s, t, v, w}\n  1: {i, u}\n  2: {a}\n  3: {e*, t}\n  4: {y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bends",
+      "structure_after": "bends"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     lodes\nCurrent:    bends\nPositions:  01234\nMismatches: ^^^^ \nPath: funds \u2192 fends \u2192 lends \u2192 ... \u2192 bonds \u2192 bends\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {m, p, r, s, t, v, w}\n  1: {i, u}\n  2: {a}\n  3: {e*, t}\n  4: {y}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bends",
+      "structure_after": "bends"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     lodes\nCurrent:    bends\nPositions:  01234\nMismatches: ^^^^ \nPath: funds \u2192 fends \u2192 lends \u2192 ... \u2192 bonds \u2192 bends\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {m, p, r, s, t, v, w}\n  1: {i, u}\n  2: {a}\n  3: {e*, t}\n  4: {y}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bends",
+      "structure_after": "bends"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     lodes\nCurrent:    bends\nPositions:  01234\nMismatches: ^^^^ \nPath: funds \u2192 fends \u2192 lends \u2192 ... \u2192 bonds \u2192 bends\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {m, p, r, s, t, v, w}\n  1: {i, u}\n  2: {a}\n  3: {e*, t}\n  4: {y}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bends",
+      "structure_after": "bends"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     lodes\nCurrent:    bends\nPositions:  01234\nMismatches: ^^^^ \nPath: funds \u2192 fends \u2192 lends \u2192 ... \u2192 bonds \u2192 bends\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {m, p, r, s, t, v, w}\n  1: {i, u}\n  2: {a}\n  3: {e*, t}\n  4: {y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bends",
+      "structure_after": "bends"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "OSCILLATION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "OSCILLATION",
+    "OSCILLATION",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "OSCILLATION",
+    "OSCILLATION",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "OSCILLATION",
+    "OSCILLATION",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "OSCILLATION",
+    "OSCILLATION",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "funds",
+    "target_word": "lodes",
+    "final_word": "bends",
+    "path": [
+      "funds",
+      "fends",
+      "lends",
+      "lands",
+      "bands",
+      "bonds",
+      "bends"
+    ],
+    "path_length": 6,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 3,
+      "ILLEGAL_EDIT": 8,
+      "OSCILLATION": 8,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 20,
+    "optimal_distance_at_end": 4,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "OSCILLATION",
+      "OSCILLATION",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "OSCILLATION",
+      "OSCILLATION",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "OSCILLATION",
+      "OSCILLATION",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "OSCILLATION",
+      "OSCILLATION",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 47463,
+    "completion_tokens": 125,
+    "total_tokens": 47588
+  },
+  "wall_time_s": 12.239080905914307
+}

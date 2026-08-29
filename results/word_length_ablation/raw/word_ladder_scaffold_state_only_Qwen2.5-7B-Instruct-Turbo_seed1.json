@@ -1,0 +1,473 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 1,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     leads\nCurrent:    fecks\nPositions:  01234\nMismatches: ^ ^^ \nPath: fecks\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, d, g, h, k, n, p, r}\n  1: {u}\n  3: {e}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "fecks",
+      "structure_after": "fecks"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     leads\nCurrent:    feces\nPositions:  01234\nMismatches: ^ ^^ \nPath: fecks \u2192 feces\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {m, r, t, z}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fecks",
+      "structure_after": "feces"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     leads\nCurrent:    feces\nPositions:  01234\nMismatches: ^ ^^ \nPath: fecks \u2192 feces\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {m, r, t, z}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "feces",
+      "structure_after": "feces"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     leads\nCurrent:    feces\nPositions:  01234\nMismatches: ^ ^^ \nPath: fecks \u2192 feces\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {m, r, t, z}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "feces",
+      "structure_after": "feces"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     leads\nCurrent:    feces\nPositions:  01234\nMismatches: ^ ^^ \nPath: fecks \u2192 feces\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {m, r, t, z}",
+      "raw_action": "EDIT 3 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "feces",
+      "structure_after": "feces"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     leads\nCurrent:    feces\nPositions:  01234\nMismatches: ^ ^^ \nPath: fecks \u2192 feces\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {m, r, t, z}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "feces",
+      "structure_after": "feces"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     leads\nCurrent:    faces\nPositions:  01234\nMismatches: ^^^^ \nPath: fecks \u2192 feces \u2192 faces\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {d, l*, m, p, r, t}\n  1: {i, y}\n  2: {d, k, m, n, r, t, v, x, z}\n  3: {t}\n  4: {d, r, t}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "feces",
+      "structure_after": "faces"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     leads\nCurrent:    laces\nPositions:  01234\nMismatches:  ^^^ \nPath: fecks \u2192 feces \u2192 faces \u2192 laces\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {d, m, p, r, t}\n  1: {u}\n  2: {d, k, m, n, r, s, v, z}\n  3: {k}\n  4: {d, r, y}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "faces",
+      "structure_after": "laces"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     leads\nCurrent:    laces\nPositions:  01234\nMismatches:  ^^^ \nPath: fecks \u2192 feces \u2192 faces \u2192 laces\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {d, m, p, r, t}\n  1: {u}\n  2: {d, k, m, n, r, s, v, z}\n  3: {k}\n  4: {d, r, y}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laces",
+      "structure_after": "laces"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     leads\nCurrent:    laces\nPositions:  01234\nMismatches:  ^^^ \nPath: fecks \u2192 feces \u2192 faces \u2192 laces\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {d, m, p, r, t}\n  1: {u}\n  2: {d, k, m, n, r, s, v, z}\n  3: {k}\n  4: {d, r, y}",
+      "raw_action": "EDIT 0 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laces",
+      "structure_after": "laces"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     leads\nCurrent:    laces\nPositions:  01234\nMismatches:  ^^^ \nPath: fecks \u2192 feces \u2192 faces \u2192 laces\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {d, m, p, r, t}\n  1: {u}\n  2: {d, k, m, n, r, s, v, z}\n  3: {k}\n  4: {d, r, y}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laces",
+      "structure_after": "laces"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     leads\nCurrent:    lades\nPositions:  01234\nMismatches:  ^^^ \nPath: fecks \u2192 feces \u2192 faces \u2192 laces \u2192 lades\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, s, w}\n  1: {o, u}\n  2: {k, m, n, r, s, v, z}\n  4: {d, n, r}",
+      "raw_action": "EDIT 2 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "laces",
+      "structure_after": "lades"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     leads\nCurrent:    lades\nPositions:  01234\nMismatches:  ^^^ \nPath: fecks \u2192 feces \u2192 faces \u2192 laces \u2192 lades\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, s, w}\n  1: {o, u}\n  2: {k, m, n, r, s, v, z}\n  4: {d, n, r}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lades",
+      "structure_after": "lades"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     leads\nCurrent:    lades\nPositions:  01234\nMismatches:  ^^^ \nPath: fecks \u2192 feces \u2192 faces \u2192 laces \u2192 lades\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, s, w}\n  1: {o, u}\n  2: {k, m, n, r, s, v, z}\n  4: {d, n, r}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lades",
+      "structure_after": "lades"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     leads\nCurrent:    lades\nPositions:  01234\nMismatches:  ^^^ \nPath: fecks \u2192 feces \u2192 faces \u2192 laces \u2192 lades\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, s, w}\n  1: {o, u}\n  2: {k, m, n, r, s, v, z}\n  4: {d, n, r}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lades",
+      "structure_after": "lades"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     leads\nCurrent:    lades\nPositions:  01234\nMismatches:  ^^^ \nPath: fecks \u2192 feces \u2192 faces \u2192 laces \u2192 lades\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, s, w}\n  1: {o, u}\n  2: {k, m, n, r, s, v, z}\n  4: {d, n, r}",
+      "raw_action": "EDIT 4 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lades",
+      "structure_after": "lades"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     leads\nCurrent:    lades\nPositions:  01234\nMismatches:  ^^^ \nPath: fecks \u2192 feces \u2192 faces \u2192 laces \u2192 lades\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, s, w}\n  1: {o, u}\n  2: {k, m, n, r, s, v, z}\n  4: {d, n, r}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lades",
+      "structure_after": "lades"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     leads\nCurrent:    lades\nPositions:  01234\nMismatches:  ^^^ \nPath: fecks \u2192 feces \u2192 faces \u2192 laces \u2192 lades\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, s, w}\n  1: {o, u}\n  2: {k, m, n, r, s, v, z}\n  4: {d, n, r}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lades",
+      "structure_after": "lades"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     leads\nCurrent:    lades\nPositions:  01234\nMismatches:  ^^^ \nPath: fecks \u2192 feces \u2192 faces \u2192 laces \u2192 lades\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, s, w}\n  1: {o, u}\n  2: {k, m, n, r, s, v, z}\n  4: {d, n, r}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lades",
+      "structure_after": "lades"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     leads\nCurrent:    lades\nPositions:  01234\nMismatches:  ^^^ \nPath: fecks \u2192 feces \u2192 faces \u2192 laces \u2192 lades\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {c, f, h, j, s, w}\n  1: {o, u}\n  2: {k, m, n, r, s, v, z}\n  4: {d, n, r}",
+      "raw_action": "EDIT 4 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "lades",
+      "structure_after": "lades"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "fecks",
+    "target_word": "leads",
+    "final_word": "lades",
+    "path": [
+      "fecks",
+      "feces",
+      "faces",
+      "laces",
+      "lades"
+    ],
+    "path_length": 4,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 8,
+      "ILLEGAL_EDIT": 8,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 17,
+    "optimal_distance_at_end": 4,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 53175,
+    "completion_tokens": 100,
+    "total_tokens": 53275
+  },
+  "wall_time_s": 13.382752895355225
+}

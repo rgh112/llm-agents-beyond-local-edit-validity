@@ -1,0 +1,151 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 17,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     rotos\nCurrent:    gudes\nPositions:  01234\nMismatches: ^^^^ \nPath: dudes \u2192 gudes\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {l, n}\n  2: {l}",
+      "raw_action": "EDIT 0 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dudes",
+      "structure_after": "gudes"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     rotos\nCurrent:    gules\nPositions:  01234\nMismatches: ^^^^ \nPath: dudes \u2192 gudes \u2192 gules\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {m, p, r*, t, y}\n  1: {a}\n  3: {f, l, p}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gudes",
+      "structure_after": "gules"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     rotos\nCurrent:    rules\nPositions:  01234\nMismatches:  ^^^ \nPath: dudes \u2192 gudes \u2192 gules \u2192 rules\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {m, p, t, y}\n  1: {a, i, o*}\n  2: {b, n, s}\n  4: {d, r}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gules",
+      "structure_after": "rules"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     rotos\nCurrent:    roles\nPositions:  01234\nMismatches:   ^^ \nPath: dudes \u2192 gudes \u2192 gules \u2192 rules \u2192 roles\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {b, c, d, h, j, m, p, s, t, v}\n  1: {a, i}\n  2: {b, p, s, t*, u, v}\n  3: {f, l}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rules",
+      "structure_after": "roles"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     rotos\nCurrent:    rotes\nPositions:  01234\nMismatches:    ^ \nPath: dudes \u2192 gudes \u2192 gules \u2192 rules \u2192 roles \u2192 rotes\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {c, d, m, n, t, v}\n  1: {a, i}\n  2: {b, p, s, u, v}\n  3: {a, i, l, o*}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "roles",
+      "structure_after": "rotes"
+    },
+    {
+      "t": 6,
+      "observation": "",
+      "raw_action": "EDIT 3 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 1.0,
+      "info": {
+        "valid": true,
+        "auto_success": true
+      },
+      "structure_before": "rotes",
+      "structure_after": "rotos"
+    }
+  ],
+  "success": true,
+  "terminal_failure": null,
+  "failure_events": [],
+  "final_metrics": {
+    "success": true,
+    "steps_taken": 6,
+    "max_steps": 25,
+    "start_word": "dudes",
+    "target_word": "rotos",
+    "final_word": "rotos",
+    "path": [
+      "dudes",
+      "gudes",
+      "gules",
+      "rules",
+      "roles",
+      "rotes",
+      "rotos"
+    ],
+    "path_length": 6,
+    "optimal_length": 5,
+    "violations_by_type": {},
+    "total_violations": 0,
+    "optimal_distance_at_end": 0,
+    "events": []
+  },
+  "token_usage": {
+    "prompt_tokens": 3436,
+    "completion_tokens": 30,
+    "total_tokens": 3466
+  },
+  "wall_time_s": 3.5371551513671875
+}

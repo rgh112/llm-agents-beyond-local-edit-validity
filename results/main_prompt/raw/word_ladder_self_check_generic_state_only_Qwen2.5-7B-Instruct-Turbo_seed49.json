@@ -1,0 +1,424 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check_generic",
+  "memory_condition": "state_only",
+  "seed": 49,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     town\nCurrent:    tees\nPositions:  0123\nMismatches:  ^^^\nPath: lees \u2192 tees\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, p, r, s, v, w, z}\n  1: {i, o*, y}\n  2: {a, d, g, l, n, t, w*}\n  3: {d, l, m, n*}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lees",
+      "structure_after": "tees"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     town\nCurrent:    toes\nPositions:  0123\nMismatches:   ^^\nPath: lees \u2192 tees \u2192 toes\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, j, n, r, v, w}\n  1: {i, y}\n  2: {d, g, m, n, p, r, s, t, w*, y}\n  3: {a, d}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tees",
+      "structure_after": "toes"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     town\nCurrent:    does\nPositions:  0123\nMismatches: ^ ^^\nPath: lees \u2192 tees \u2192 toes \u2192 does\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {f, g, h, j, n, r, v, w}\n  1: {e, i, u, y}\n  2: {c, g, l, m, n, r, s, t, w*}\n  3: {r}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "toes",
+      "structure_after": "does"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     town\nCurrent:    dees\nPositions:  0123\nMismatches: ^^^^\nPath: lees \u2192 tees \u2192 toes \u2192 does \u2192 dees\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g, j, p, r, s, v, w, z}\n  1: {i, u, y}\n  2: {b, l, n, v, w*, y}\n  3: {d, m, p, r, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "does",
+      "structure_after": "dees"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     town\nCurrent:    bees\nPositions:  0123\nMismatches: ^^^^\nPath: lees \u2192 tees \u2192 toes \u2192 does \u2192 dees \u2192 bees\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {c, f, g, j, p, r, s, v, w, z}\n  1: {y}\n  2: {d, g, l, n, t, y}\n  3: {f, n*, p, r, t}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dees",
+      "structure_after": "bees"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     town\nCurrent:    byes\nPositions:  0123\nMismatches: ^^^^\nPath: lees \u2192 tees \u2192 toes \u2192 ... \u2192 bees \u2192 byes\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {a, d, e, l, o, p, r, t*, w}",
+      "raw_action": "EDIT 1 y",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "y"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bees",
+      "structure_after": "byes"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     town\nCurrent:    ayes\nPositions:  0123\nMismatches: ^^^^\nPath: lees \u2192 tees \u2192 toes \u2192 ... \u2192 byes \u2192 ayes\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {d, e, l, o, p, r, t*, w}\n  1: {c, g, l, n, p, r, t, v, w, x}",
+      "raw_action": "EDIT 0 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "byes",
+      "structure_after": "ayes"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     town\nCurrent:    dyes\nPositions:  0123\nMismatches: ^^^^\nPath: lees \u2192 tees \u2192 toes \u2192 ... \u2192 ayes \u2192 dyes\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {e, l, o, p, r, t*, w}\n  1: {i, u}\n  3: {d, r}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ayes",
+      "structure_after": "dyes"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     town\nCurrent:    eyes\nPositions:  0123\nMismatches: ^^^^\nPath: lees \u2192 tees \u2192 toes \u2192 ... \u2192 dyes \u2192 eyes\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {l, o, p, r, t*, w}\n  1: {k, m, s, v, w, x}\n  2: {a}\n  3: {d, n*, r}",
+      "raw_action": "EDIT 0 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dyes",
+      "structure_after": "eyes"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     town\nCurrent:    lyes\nPositions:  0123\nMismatches: ^^^^\nPath: lees \u2192 tees \u2192 toes \u2192 ... \u2192 eyes \u2192 lyes\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {o, p, r, t*, w}\n  1: {i, u}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "eyes",
+      "structure_after": "lyes"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     town\nCurrent:    oyes\nPositions:  0123\nMismatches: ^^^^\nPath: lees \u2192 tees \u2192 toes \u2192 ... \u2192 lyes \u2192 oyes\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {p, r, t*, w}\n  1: {b, d, k, l, n, p, r, s, w, x}\n  3: {r, z}",
+      "raw_action": "EDIT 0 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lyes",
+      "structure_after": "oyes"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     town\nCurrent:    pyes\nPositions:  0123\nMismatches: ^^^^\nPath: lees \u2192 tees \u2192 toes \u2192 ... \u2192 oyes \u2192 pyes\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {r, t*, w}\n  1: {e, i}\n  2: {a}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "oyes",
+      "structure_after": "pyes"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     town\nCurrent:    ryes\nPositions:  0123\nMismatches: ^^^^\nPath: lees \u2192 tees \u2192 toes \u2192 ... \u2192 pyes \u2192 ryes\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {t*, w}\n  1: {e, o*, u}\n  2: {a}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pyes",
+      "structure_after": "ryes"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     town\nCurrent:    tyes\nPositions:  0123\nMismatches:  ^^^\nPath: lees \u2192 tees \u2192 toes \u2192 ... \u2192 ryes \u2192 tyes\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {w}\n  1: {i}\n  3: {e, r}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ryes",
+      "structure_after": "tyes"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     town\nCurrent:    wyes\nPositions:  0123\nMismatches: ^^^^\nPath: lees \u2192 tees \u2192 toes \u2192 ... \u2192 tyes \u2192 wyes\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  1: {a, e, o*}\n  2: {n}",
+      "raw_action": "EDIT 0 w",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "w"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tyes",
+      "structure_after": "wyes"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     town\nCurrent:    waes\nPositions:  0123\nMismatches: ^^^^\nPath: lees \u2192 tees \u2192 toes \u2192 ... \u2192 wyes \u2192 waes\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {g, h, k, m}\n  1: {e, o*}\n  2: {b, d, g, n, p, r, t, w*, y}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "wyes",
+      "structure_after": "waes"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     town\nCurrent:    gaes\nPositions:  0123\nMismatches: ^^^^\nPath: lees \u2192 tees \u2192 toes \u2192 ... \u2192 waes \u2192 gaes\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {h, k, m}\n  1: {e, i, o*}\n  2: {b, d, g, l, m, p, r, t, y}\n  3: {d, n*}",
+      "raw_action": "EDIT 0 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "waes",
+      "structure_after": "gaes"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     town\nCurrent:    haes\nPositions:  0123\nMismatches: ^^^^\nPath: lees \u2192 tees \u2192 toes \u2192 ... \u2192 gaes \u2192 haes\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {k, m}\n  1: {i, o*, u}\n  2: {g, h, m, p, t, w*, y}\n  3: {d, m, n*, t}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gaes",
+      "structure_after": "haes"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     town\nCurrent:    kaes\nPositions:  0123\nMismatches: ^^^^\nPath: lees \u2192 tees \u2192 toes \u2192 ... \u2192 haes \u2192 kaes\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {m}\n  1: {u}\n  2: {a, b, f, t, y}",
+      "raw_action": "EDIT 0 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "k"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "haes",
+      "structure_after": "kaes"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     town\nCurrent:    maes\nPositions:  0123\nMismatches: ^^^^\nPath: lees \u2192 tees \u2192 toes \u2192 ... \u2192 kaes \u2192 maes\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  2: {c, d, g, n, p, r, s, t, w*, y}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "kaes",
+      "structure_after": "maes"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "lees",
+    "target_word": "town",
+    "final_word": "maes",
+    "path": [
+      "lees",
+      "tees",
+      "toes",
+      "does",
+      "dees",
+      "bees",
+      "byes",
+      "ayes",
+      "dyes",
+      "eyes",
+      "lyes",
+      "oyes",
+      "pyes",
+      "ryes",
+      "tyes",
+      "wyes",
+      "waes",
+      "gaes",
+      "haes",
+      "kaes",
+      "maes"
+    ],
+    "path_length": 20,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 1,
+    "optimal_distance_at_end": 4,
+    "events": [
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 34827,
+    "completion_tokens": 100,
+    "total_tokens": 34927
+  },
+  "wall_time_s": 67.2065920829773
+}

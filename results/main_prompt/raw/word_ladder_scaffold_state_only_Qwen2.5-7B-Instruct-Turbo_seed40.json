@@ -1,0 +1,472 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 40,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     teds\nCurrent:    fend\nPositions:  0123\nMismatches: ^ ^^\nPath: fond \u2192 fend\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, l, m, p, r, s, t*, v, w}\n  1: {i, u}\n  2: {e, o, u}\n  3: {s*}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fond",
+      "structure_after": "fend"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     teds\nCurrent:    tend\nPositions:  0123\nMismatches:   ^^\nPath: fond \u2192 fend \u2192 tend\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {b, l, m, p, r, s, v, w}\n  2: {e}\n  3: {s*, t}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fend",
+      "structure_after": "tend"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     teds\nCurrent:    teed\nPositions:  0123\nMismatches:   ^^\nPath: fond \u2192 fend \u2192 tend \u2192 teed\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {d, f, g, h, j, m, n, p, r, s, w}\n  1: {i, o}\n  3: {l, m, n, s*}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "tend",
+      "structure_after": "teed"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     teds\nCurrent:    tees\nPositions:  0123\nMismatches:   ^ \nPath: fond \u2192 fend \u2192 tend \u2192 teed \u2192 tees\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, y}\n  2: {a, d*, g, l, n, t, w}\n  3: {l, m, n}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "teed",
+      "structure_after": "tees"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     teds\nCurrent:    tees\nPositions:  0123\nMismatches:   ^ \nPath: fond \u2192 fend \u2192 tend \u2192 teed \u2192 tees\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, y}\n  2: {a, d*, g, l, n, t, w}\n  3: {l, m, n}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tees",
+      "structure_after": "tees"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     teds\nCurrent:    tees\nPositions:  0123\nMismatches:   ^ \nPath: fond \u2192 fend \u2192 tend \u2192 teed \u2192 tees\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, y}\n  2: {a, d*, g, l, n, t, w}\n  3: {l, m, n}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tees",
+      "structure_after": "tees"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     teds\nCurrent:    tees\nPositions:  0123\nMismatches:   ^ \nPath: fond \u2192 fend \u2192 tend \u2192 teed \u2192 tees\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, y}\n  2: {a, d*, g, l, n, t, w}\n  3: {l, m, n}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tees",
+      "structure_after": "tees"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     teds\nCurrent:    tees\nPositions:  0123\nMismatches:   ^ \nPath: fond \u2192 fend \u2192 tend \u2192 teed \u2192 tees\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, y}\n  2: {a, d*, g, l, n, t, w}\n  3: {l, m, n}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tees",
+      "structure_after": "tees"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     teds\nCurrent:    tees\nPositions:  0123\nMismatches:   ^ \nPath: fond \u2192 fend \u2192 tend \u2192 teed \u2192 tees\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, y}\n  2: {a, d*, g, l, n, t, w}\n  3: {l, m, n}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tees",
+      "structure_after": "tees"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     teds\nCurrent:    tees\nPositions:  0123\nMismatches:   ^ \nPath: fond \u2192 fend \u2192 tend \u2192 teed \u2192 tees\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, y}\n  2: {a, d*, g, l, n, t, w}\n  3: {l, m, n}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tees",
+      "structure_after": "tees"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     teds\nCurrent:    tees\nPositions:  0123\nMismatches:   ^ \nPath: fond \u2192 fend \u2192 tend \u2192 teed \u2192 tees\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, y}\n  2: {a, d*, g, l, n, t, w}\n  3: {l, m, n}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tees",
+      "structure_after": "tees"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     teds\nCurrent:    tees\nPositions:  0123\nMismatches:   ^ \nPath: fond \u2192 fend \u2192 tend \u2192 teed \u2192 tees\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, y}\n  2: {a, d*, g, l, n, t, w}\n  3: {l, m, n}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tees",
+      "structure_after": "tees"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     teds\nCurrent:    tees\nPositions:  0123\nMismatches:   ^ \nPath: fond \u2192 fend \u2192 tend \u2192 teed \u2192 tees\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, y}\n  2: {a, d*, g, l, n, t, w}\n  3: {l, m, n}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tees",
+      "structure_after": "tees"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     teds\nCurrent:    tees\nPositions:  0123\nMismatches:   ^ \nPath: fond \u2192 fend \u2192 tend \u2192 teed \u2192 tees\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, y}\n  2: {a, d*, g, l, n, t, w}\n  3: {l, m, n}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tees",
+      "structure_after": "tees"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     teds\nCurrent:    tees\nPositions:  0123\nMismatches:   ^ \nPath: fond \u2192 fend \u2192 tend \u2192 teed \u2192 tees\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, y}\n  2: {a, d*, g, l, n, t, w}\n  3: {l, m, n}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tees",
+      "structure_after": "tees"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     teds\nCurrent:    tees\nPositions:  0123\nMismatches:   ^ \nPath: fond \u2192 fend \u2192 tend \u2192 teed \u2192 tees\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, y}\n  2: {a, d*, g, l, n, t, w}\n  3: {l, m, n}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tees",
+      "structure_after": "tees"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     teds\nCurrent:    tees\nPositions:  0123\nMismatches:   ^ \nPath: fond \u2192 fend \u2192 tend \u2192 teed \u2192 tees\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, y}\n  2: {a, d*, g, l, n, t, w}\n  3: {l, m, n}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tees",
+      "structure_after": "tees"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     teds\nCurrent:    tees\nPositions:  0123\nMismatches:   ^ \nPath: fond \u2192 fend \u2192 tend \u2192 teed \u2192 tees\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, y}\n  2: {a, d*, g, l, n, t, w}\n  3: {l, m, n}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tees",
+      "structure_after": "tees"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     teds\nCurrent:    tees\nPositions:  0123\nMismatches:   ^ \nPath: fond \u2192 fend \u2192 tend \u2192 teed \u2192 tees\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, y}\n  2: {a, d*, g, l, n, t, w}\n  3: {l, m, n}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tees",
+      "structure_after": "tees"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     teds\nCurrent:    tees\nPositions:  0123\nMismatches:   ^ \nPath: fond \u2192 fend \u2192 tend \u2192 teed \u2192 tees\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {b, c, d, f, g, j, l, p, r, s, v, w, z}\n  1: {i, o, y}\n  2: {a, d*, g, l, n, t, w}\n  3: {l, m, n}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "tees",
+      "structure_after": "tees"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "fond",
+    "target_word": "teds",
+    "final_word": "tees",
+    "path": [
+      "fond",
+      "fend",
+      "tend",
+      "teed",
+      "tees"
+    ],
+    "path_length": 4,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "ILLEGAL_EDIT": 16,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 17,
+    "optimal_distance_at_end": 1,
+    "events": [
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 57785,
+    "completion_tokens": 100,
+    "total_tokens": 57885
+  },
+  "wall_time_s": 54.875383138656616
+}

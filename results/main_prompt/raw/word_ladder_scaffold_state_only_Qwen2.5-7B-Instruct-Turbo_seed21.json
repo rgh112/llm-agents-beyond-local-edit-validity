@@ -1,0 +1,693 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 21,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     lord\nCurrent:    trio\nPositions:  0123\nMismatches: ^^^^\nPath: brio \u2192 trio\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  1: {h}\n  3: {g, m, p}",
+      "raw_action": "EDIT 0 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "brio",
+      "structure_after": "trio"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     lord\nCurrent:    thio\nPositions:  0123\nMismatches: ^^^^\nPath: brio \u2192 trio \u2192 thio\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  2: {r*}\n  3: {n, r, s}",
+      "raw_action": "EDIT 1 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "trio",
+      "structure_after": "thio"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     lord\nCurrent:    thro\nPositions:  0123\nMismatches: ^^ ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  1: {a, i, o*, y}\n  3: {u}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "thio",
+      "structure_after": "thro"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "thro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 13/30  (remaining: 17)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 14/30  (remaining: 16)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 15/30  (remaining: 15)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 16/30  (remaining: 14)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 17/30  (remaining: 13)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 18/30  (remaining: 12)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 19/30  (remaining: 11)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 20/30  (remaining: 10)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 21/30  (remaining: 9)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 22/30  (remaining: 8)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 23/30  (remaining: 7)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 24/30  (remaining: 6)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 25/30  (remaining: 5)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 26,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 26/30  (remaining: 4)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 27,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 27/30  (remaining: 3)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 28,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 28/30  (remaining: 2)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 29,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 29/30  (remaining: 1)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    },
+    {
+      "t": 30,
+      "observation": "Target:     lord\nCurrent:    toro\nPositions:  0123\nMismatches: ^  ^\nPath: brio \u2192 trio \u2192 thio \u2192 thro \u2192 toro\nSteps used: 30/30  (remaining: 0)\n\nEditable positions and valid replacements:\n  1: {a, i, y}\n  2: {y}\n  3: {a, c, e, i, n, r, s, t, y}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "toro",
+      "structure_after": "toro"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 30,
+    "max_steps": 30,
+    "start_word": "brio",
+    "target_word": "lord",
+    "final_word": "toro",
+    "path": [
+      "brio",
+      "trio",
+      "thio",
+      "thro",
+      "toro"
+    ],
+    "path_length": 4,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "INVALID_WORD": 10,
+      "ILLEGAL_EDIT": 16,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 27,
+    "optimal_distance_at_end": 3,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 114272,
+    "completion_tokens": 150,
+    "total_tokens": 114422
+  },
+  "wall_time_s": 73.4140522480011
+}

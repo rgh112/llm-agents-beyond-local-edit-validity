@@ -1,0 +1,298 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 0,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     pinta\nCurrent:    lungi\nPositions:  01234\nMismatches: ^^ ^^\nPath: lunge \u2192 lungi\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {f}\n  4: {s}",
+      "raw_action": "EDIT 4 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lunge",
+      "structure_after": "lungi"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     pinta\nCurrent:    fungi\nPositions:  01234\nMismatches: ^^ ^^\nPath: lunge \u2192 lungi \u2192 fungi\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  3: {d}\n  4: {o}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lungi",
+      "structure_after": "fungi"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     pinta\nCurrent:    fundi\nPositions:  01234\nMismatches: ^^ ^^\nPath: lunge \u2192 lungi \u2192 fungi \u2192 fundi\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  4: {s}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fungi",
+      "structure_after": "fundi"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     pinta\nCurrent:    funds\nPositions:  01234\nMismatches: ^^ ^^\nPath: lunge \u2192 lungi \u2192 fungi \u2192 fundi \u2192 funds\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {b}\n  1: {e, i*, o}\n  3: {k}",
+      "raw_action": "EDIT 4 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fundi",
+      "structure_after": "funds"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     pinta\nCurrent:    bunds\nPositions:  01234\nMismatches: ^^ ^^\nPath: lunge \u2192 lungi \u2192 fungi \u2192 fundi \u2192 funds \u2192 bunds\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  1: {a, e, i*, o}\n  2: {r}\n  3: {g, k, n, t*}\n  4: {t}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "funds",
+      "structure_after": "bunds"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     pinta\nCurrent:    bunts\nPositions:  01234\nMismatches: ^^  ^\nPath: lunge \u2192 lungi \u2192 fungi \u2192 ... \u2192 bunds \u2192 bunts\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {a, c, d, h, l, p*, r}\n  1: {e, i*}\n  2: {s, t}\n  3: {g, k, n}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bunds",
+      "structure_after": "bunts"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     pinta\nCurrent:    punts\nPositions:  01234\nMismatches:  ^  ^\nPath: lunge \u2192 lungi \u2192 fungi \u2192 ... \u2192 bunts \u2192 punts\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {a, c, d, h, l, r}\n  1: {a, i*}\n  2: {t}\n  3: {a, g, k}\n  4: {o, y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bunts",
+      "structure_after": "punts"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     pinta\nCurrent:    pants\nPositions:  01234\nMismatches:  ^  ^\nPath: lunge \u2192 lungi \u2192 fungi \u2192 ... \u2192 punts \u2192 pants\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {c, h, r, w}\n  1: {i*}\n  2: {c, r, s}\n  3: {e, g}\n  4: {o, y}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "punts",
+      "structure_after": "pants"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     pinta\nCurrent:    pants\nPositions:  01234\nMismatches:  ^  ^\nPath: lunge \u2192 lungi \u2192 fungi \u2192 ... \u2192 punts \u2192 pants\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {c, h, r, w}\n  1: {i*}\n  2: {c, r, s}\n  3: {e, g}\n  4: {o, y}",
+      "raw_action": "EDIT 3 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pants",
+      "structure_after": "pants"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     pinta\nCurrent:    pants\nPositions:  01234\nMismatches:  ^  ^\nPath: lunge \u2192 lungi \u2192 fungi \u2192 ... \u2192 punts \u2192 pants\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {c, h, r, w}\n  1: {i*}\n  2: {c, r, s}\n  3: {e, g}\n  4: {o, y}",
+      "raw_action": "EDIT 4 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "n"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pants",
+      "structure_after": "pants"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     pinta\nCurrent:    pants\nPositions:  01234\nMismatches:  ^  ^\nPath: lunge \u2192 lungi \u2192 fungi \u2192 ... \u2192 punts \u2192 pants\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {c, h, r, w}\n  1: {i*}\n  2: {c, r, s}\n  3: {e, g}\n  4: {o, y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "pants",
+      "structure_after": "pants"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     pinta\nCurrent:    pints\nPositions:  01234\nMismatches:     ^\nPath: lunge \u2192 lungi \u2192 fungi \u2192 ... \u2192 pants \u2192 pints\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {b, d, h, l, m, t}\n  3: {a, e, g, k}\n  4: {a*, o}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pants",
+      "structure_after": "pints"
+    },
+    {
+      "t": 13,
+      "observation": "",
+      "raw_action": "EDIT 4 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 1.0,
+      "info": {
+        "valid": true,
+        "auto_success": true
+      },
+      "structure_before": "pints",
+      "structure_after": "pinta"
+    }
+  ],
+  "success": true,
+  "terminal_failure": null,
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT"
+  ],
+  "final_metrics": {
+    "success": true,
+    "steps_taken": 13,
+    "max_steps": 25,
+    "start_word": "lunge",
+    "target_word": "pinta",
+    "final_word": "pinta",
+    "path": [
+      "lunge",
+      "lungi",
+      "fungi",
+      "fundi",
+      "funds",
+      "bunds",
+      "bunts",
+      "punts",
+      "pants",
+      "pints",
+      "pinta"
+    ],
+    "path_length": 10,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 2,
+      "ILLEGAL_EDIT": 1
+    },
+    "total_violations": 3,
+    "optimal_distance_at_end": 0,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 22787,
+    "completion_tokens": 65,
+    "total_tokens": 22852
+  },
+  "wall_time_s": 7.451053857803345
+}

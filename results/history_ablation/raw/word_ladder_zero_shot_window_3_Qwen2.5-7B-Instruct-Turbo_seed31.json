@@ -1,0 +1,468 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "window_3",
+  "seed": 31,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     sade\nCurrent:    simp\nPositions:  0123\nMismatches:  ^^^\nPath: pimp \u2192 simp\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {g, j, l, w}\n  1: {a*, u}\n  3: {a, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pimp",
+      "structure_after": "simp"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     sade\nCurrent:    samp\nPositions:  0123\nMismatches:   ^^\nPath: pimp \u2192 simp \u2192 samp\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {c, d, g, l, r, t, v}\n  1: {u}\n  2: {l}\n  3: {e*}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "simp",
+      "structure_after": "samp"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     sade\nCurrent:    same\nPositions:  0123\nMismatches:   ^ \nPath: pimp \u2192 simp \u2192 samp \u2192 same\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {c, d, f, g, h, k, l, n, t, w}\n  1: {e, o}\n  2: {b, d*, f, g, k, l, n, t, v}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "samp",
+      "structure_after": "same"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     sade\nCurrent:    seme\nPositions:  0123\nMismatches:  ^^ \nPath: pimp \u2192 simp \u2192 samp \u2192 same \u2192 seme\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {d, f, h}\n  1: {o}\n  2: {n, r}\n  3: {i}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "same",
+      "structure_after": "seme"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     sade\nCurrent:    deme\nPositions:  0123\nMismatches: ^^^ \nPath: pimp \u2192 simp \u2192 samp \u2192 same \u2192 seme \u2192 deme\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {f, h}\n  1: {a*, i, o}\n  2: {k, l, n, r}\n  3: {o, y}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "seme",
+      "structure_after": "deme"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     sade\nCurrent:    dame\nPositions:  0123\nMismatches: ^ ^ \nPath: pimp \u2192 simp \u2192 samp \u2192 ... \u2192 deme \u2192 dame\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {c, f, g, h, k, l, n, t, w}\n  1: {i, o}\n  2: {c, l, r, t, z}\n  3: {n, p, s}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "deme",
+      "structure_after": "dame"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     sade\nCurrent:    dame\nPositions:  0123\nMismatches: ^ ^ \nPath: pimp \u2192 simp \u2192 samp \u2192 ... \u2192 deme \u2192 dame\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {c, f, g, h, k, l, n, t, w}\n  1: {i, o}\n  2: {c, l, r, t, z}\n  3: {n, p, s}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dame",
+      "structure_after": "dame"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     sade\nCurrent:    dame\nPositions:  0123\nMismatches: ^ ^ \nPath: pimp \u2192 simp \u2192 samp \u2192 ... \u2192 deme \u2192 dame\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {c, f, g, h, k, l, n, t, w}\n  1: {i, o}\n  2: {c, l, r, t, z}\n  3: {n, p, s}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dame",
+      "structure_after": "dame"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     sade\nCurrent:    dame\nPositions:  0123\nMismatches: ^ ^ \nPath: pimp \u2192 simp \u2192 samp \u2192 ... \u2192 deme \u2192 dame\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {c, f, g, h, k, l, n, t, w}\n  1: {i, o}\n  2: {c, l, r, t, z}\n  3: {n, p, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dame",
+      "structure_after": "dame"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     sade\nCurrent:    dame\nPositions:  0123\nMismatches: ^ ^ \nPath: pimp \u2192 simp \u2192 samp \u2192 ... \u2192 deme \u2192 dame\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {c, f, g, h, k, l, n, t, w}\n  1: {i, o}\n  2: {c, l, r, t, z}\n  3: {n, p, s}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dame",
+      "structure_after": "dame"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     sade\nCurrent:    dame\nPositions:  0123\nMismatches: ^ ^ \nPath: pimp \u2192 simp \u2192 samp \u2192 ... \u2192 deme \u2192 dame\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {c, f, g, h, k, l, n, t, w}\n  1: {i, o}\n  2: {c, l, r, t, z}\n  3: {n, p, s}",
+      "raw_action": "EDIT 2 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dame",
+      "structure_after": "dame"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     sade\nCurrent:    dame\nPositions:  0123\nMismatches: ^ ^ \nPath: pimp \u2192 simp \u2192 samp \u2192 ... \u2192 deme \u2192 dame\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {c, f, g, h, k, l, n, t, w}\n  1: {i, o}\n  2: {c, l, r, t, z}\n  3: {n, p, s}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dame",
+      "structure_after": "dame"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     sade\nCurrent:    dame\nPositions:  0123\nMismatches: ^ ^ \nPath: pimp \u2192 simp \u2192 samp \u2192 ... \u2192 deme \u2192 dame\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {c, f, g, h, k, l, n, t, w}\n  1: {i, o}\n  2: {c, l, r, t, z}\n  3: {n, p, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dame",
+      "structure_after": "dame"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     sade\nCurrent:    dame\nPositions:  0123\nMismatches: ^ ^ \nPath: pimp \u2192 simp \u2192 samp \u2192 ... \u2192 deme \u2192 dame\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {c, f, g, h, k, l, n, t, w}\n  1: {i, o}\n  2: {c, l, r, t, z}\n  3: {n, p, s}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dame",
+      "structure_after": "dame"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     sade\nCurrent:    dame\nPositions:  0123\nMismatches: ^ ^ \nPath: pimp \u2192 simp \u2192 samp \u2192 ... \u2192 deme \u2192 dame\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {c, f, g, h, k, l, n, t, w}\n  1: {i, o}\n  2: {c, l, r, t, z}\n  3: {n, p, s}",
+      "raw_action": "EDIT 2 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dame",
+      "structure_after": "dame"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     sade\nCurrent:    dame\nPositions:  0123\nMismatches: ^ ^ \nPath: pimp \u2192 simp \u2192 samp \u2192 ... \u2192 deme \u2192 dame\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {c, f, g, h, k, l, n, t, w}\n  1: {i, o}\n  2: {c, l, r, t, z}\n  3: {n, p, s}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dame",
+      "structure_after": "dame"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     sade\nCurrent:    dame\nPositions:  0123\nMismatches: ^ ^ \nPath: pimp \u2192 simp \u2192 samp \u2192 ... \u2192 deme \u2192 dame\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {c, f, g, h, k, l, n, t, w}\n  1: {i, o}\n  2: {c, l, r, t, z}\n  3: {n, p, s}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "OSCILLATION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dame",
+      "structure_after": "dame"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     sade\nCurrent:    dame\nPositions:  0123\nMismatches: ^ ^ \nPath: pimp \u2192 simp \u2192 samp \u2192 ... \u2192 deme \u2192 dame\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {c, f, g, h, k, l, n, t, w}\n  1: {i, o}\n  2: {c, l, r, t, z}\n  3: {n, p, s}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dame",
+      "structure_after": "dame"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     sade\nCurrent:    dame\nPositions:  0123\nMismatches: ^ ^ \nPath: pimp \u2192 simp \u2192 samp \u2192 ... \u2192 deme \u2192 dame\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {c, f, g, h, k, l, n, t, w}\n  1: {i, o}\n  2: {c, l, r, t, z}\n  3: {n, p, s}",
+      "raw_action": "EDIT 2 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dame",
+      "structure_after": "dame"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     sade\nCurrent:    dame\nPositions:  0123\nMismatches: ^ ^ \nPath: pimp \u2192 simp \u2192 samp \u2192 ... \u2192 deme \u2192 dame\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {c, f, g, h, k, l, n, t, w}\n  1: {i, o}\n  2: {c, l, r, t, z}\n  3: {n, p, s}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "dame",
+      "structure_after": "dame"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "OSCILLATION",
+  "failure_events": [
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "OSCILLATION",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "OSCILLATION",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "OSCILLATION",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "pimp",
+    "target_word": "sade",
+    "final_word": "dame",
+    "path": [
+      "pimp",
+      "simp",
+      "samp",
+      "same",
+      "seme",
+      "deme",
+      "dame"
+    ],
+    "path_length": 6,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 4,
+      "ILLEGAL_EDIT": 7,
+      "OSCILLATION": 3,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 15,
+    "optimal_distance_at_end": 2,
+    "events": [
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "OSCILLATION",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "OSCILLATION",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "OSCILLATION",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 56708,
+    "completion_tokens": 100,
+    "total_tokens": 56808
+  },
+  "wall_time_s": 13.06838083267212
+}

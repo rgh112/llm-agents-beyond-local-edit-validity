@@ -1,0 +1,377 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check",
+  "memory_condition": "state_only",
+  "seed": 30,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     holp\nCurrent:    belt\nPositions:  0123\nMismatches: ^^ ^\nPath: felt \u2192 belt\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {c, g, m, p, w}\n  1: {o*}\n  2: {a, e, n, s}\n  3: {l, s}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "felt",
+      "structure_after": "belt"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     holp\nCurrent:    belt\nPositions:  0123\nMismatches: ^^ ^\nPath: felt \u2192 belt\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {c, g, m, p, w}\n  1: {o*}\n  2: {a, e, n, s}\n  3: {l, s}",
+      "raw_action": "EDIT 1 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "h"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "belt",
+      "structure_after": "belt"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     holp\nCurrent:    belt\nPositions:  0123\nMismatches: ^^ ^\nPath: felt \u2192 belt\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {c, g, m, p, w}\n  1: {o*}\n  2: {a, e, n, s}\n  3: {l, s}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "belt",
+      "structure_after": "belt"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     holp\nCurrent:    belt\nPositions:  0123\nMismatches: ^^ ^\nPath: felt \u2192 belt\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {c, g, m, p, w}\n  1: {o*}\n  2: {a, e, n, s}\n  3: {l, s}",
+      "raw_action": "EDIT 3 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "belt",
+      "structure_after": "belt"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     holp\nCurrent:    belt\nPositions:  0123\nMismatches: ^^ ^\nPath: felt \u2192 belt\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {c, g, m, p, w}\n  1: {o*}\n  2: {a, e, n, s}\n  3: {l, s}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "belt",
+      "structure_after": "belt"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     holp\nCurrent:    bolt\nPositions:  0123\nMismatches: ^  ^\nPath: felt \u2192 belt \u2192 bolt\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {c, d, h*, j, m, v}\n  2: {a, o, r, t, u}\n  3: {a, d, e, l, o}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "belt",
+      "structure_after": "bolt"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     holp\nCurrent:    bolt\nPositions:  0123\nMismatches: ^  ^\nPath: felt \u2192 belt \u2192 bolt\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {c, d, h*, j, m, v}\n  2: {a, o, r, t, u}\n  3: {a, d, e, l, o}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bolt",
+      "structure_after": "bolt"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     holp\nCurrent:    bolt\nPositions:  0123\nMismatches: ^  ^\nPath: felt \u2192 belt \u2192 bolt\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {c, d, h*, j, m, v}\n  2: {a, o, r, t, u}\n  3: {a, d, e, l, o}",
+      "raw_action": "EDIT 3 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bolt",
+      "structure_after": "bolt"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     holp\nCurrent:    bolt\nPositions:  0123\nMismatches: ^  ^\nPath: felt \u2192 belt \u2192 bolt\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {c, d, h*, j, m, v}\n  2: {a, o, r, t, u}\n  3: {a, d, e, l, o}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bolt",
+      "structure_after": "bolt"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     holp\nCurrent:    bolt\nPositions:  0123\nMismatches: ^  ^\nPath: felt \u2192 belt \u2192 bolt\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {c, d, h*, j, m, v}\n  2: {a, o, r, t, u}\n  3: {a, d, e, l, o}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bolt",
+      "structure_after": "bolt"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     holp\nCurrent:    bolt\nPositions:  0123\nMismatches: ^  ^\nPath: felt \u2192 belt \u2192 bolt\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {c, d, h*, j, m, v}\n  2: {a, o, r, t, u}\n  3: {a, d, e, l, o}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bolt",
+      "structure_after": "bolt"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     holp\nCurrent:    bolt\nPositions:  0123\nMismatches: ^  ^\nPath: felt \u2192 belt \u2192 bolt\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {c, d, h*, j, m, v}\n  2: {a, o, r, t, u}\n  3: {a, d, e, l, o}",
+      "raw_action": "EDIT 3 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "p"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bolt",
+      "structure_after": "bolt"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     holp\nCurrent:    bolt\nPositions:  0123\nMismatches: ^  ^\nPath: felt \u2192 belt \u2192 bolt\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {c, d, h*, j, m, v}\n  2: {a, o, r, t, u}\n  3: {a, d, e, l, o}",
+      "raw_action": "FINALIZE",
+      "parsed_action": {
+        "type": "finalize"
+      },
+      "valid": false,
+      "events": [
+        "PREMATURE_FINALIZE"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "bolt",
+      "structure_after": "bolt"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     holp\nCurrent:    holt\nPositions:  0123\nMismatches:    ^\nPath: felt \u2192 belt \u2192 bolt \u2192 holt\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {c, d, j, m, v}\n  1: {a, i}\n  2: {o, s}\n  3: {d, e, k, m, p*, s, y}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bolt",
+      "structure_after": "holt"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     holp\nCurrent:    holt\nPositions:  0123\nMismatches:    ^\nPath: felt \u2192 belt \u2192 bolt \u2192 holt\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {c, d, j, m, v}\n  1: {a, i}\n  2: {o, s}\n  3: {d, e, k, m, p*, s, y}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "holt",
+      "structure_after": "holt"
+    },
+    {
+      "t": 16,
+      "observation": "",
+      "raw_action": "EDIT 3 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 1.0,
+      "info": {
+        "valid": true,
+        "auto_success": true
+      },
+      "structure_before": "holt",
+      "structure_after": "holp"
+    }
+  ],
+  "success": true,
+  "terminal_failure": null,
+  "failure_events": [
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "PREMATURE_FINALIZE",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "PREMATURE_FINALIZE",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "PREMATURE_FINALIZE",
+    "ILLEGAL_EDIT"
+  ],
+  "final_metrics": {
+    "success": true,
+    "steps_taken": 16,
+    "max_steps": 20,
+    "start_word": "felt",
+    "target_word": "holp",
+    "final_word": "holp",
+    "path": [
+      "felt",
+      "belt",
+      "bolt",
+      "holt",
+      "holp"
+    ],
+    "path_length": 4,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 5,
+      "ILLEGAL_EDIT": 4,
+      "PREMATURE_FINALIZE": 3
+    },
+    "total_violations": 12,
+    "optimal_distance_at_end": 0,
+    "events": [
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "PREMATURE_FINALIZE",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "PREMATURE_FINALIZE",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "PREMATURE_FINALIZE",
+      "ILLEGAL_EDIT"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 21483,
+    "completion_tokens": 74,
+    "total_tokens": 21557
+  },
+  "wall_time_s": 9.042686223983765
+}

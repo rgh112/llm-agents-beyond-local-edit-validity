@@ -1,0 +1,519 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 23,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     full\nCurrent:    loca\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  2: {t}\n  3: {h, i, k, o}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "coca",
+      "structure_after": "loca"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     full\nCurrent:    lota\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {b, i, j, n, r}\n  3: {h, i, s}",
+      "raw_action": "EDIT 2 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "loca",
+      "structure_after": "lota"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     full\nCurrent:    loth\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {b, d, m, s}\n  1: {a}\n  2: {c}\n  3: {i, s}",
+      "raw_action": "EDIT 3 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "lota",
+      "structure_after": "loth"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     full\nCurrent:    both\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {d, m, s}\n  1: {a, e}\n  2: {s}\n  3: {a, s, t}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "loth",
+      "structure_after": "both"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     full\nCurrent:    beth\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 loth \u2192 both \u2192 beth\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {h, m, t}\n  1: {a}\n  3: {a, s}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "both",
+      "structure_after": "beth"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     full\nCurrent:    heth\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 ... \u2192 beth \u2192 heth\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {m, t}\n  1: {a}\n  3: {s}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "beth",
+      "structure_after": "heth"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     full\nCurrent:    meth\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 ... \u2192 heth \u2192 meth\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {t}\n  1: {a, o, y}\n  2: {s}\n  3: {a, e}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "heth",
+      "structure_after": "meth"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     full\nCurrent:    moth\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 ... \u2192 meth \u2192 moth\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {d, s}\n  1: {a, y}\n  3: {e, s, t}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "meth",
+      "structure_after": "moth"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     full\nCurrent:    mott\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 ... \u2192 moth \u2192 mott\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b}\n  1: {a, i, u*}\n  2: {a, l*, o, r, s}\n  3: {e, s}",
+      "raw_action": "EDIT 3 t",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "t"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "moth",
+      "structure_after": "mott"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     full\nCurrent:    mitt\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 ... \u2192 mott \u2192 mitt\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {b}\n  1: {a, u*}\n  2: {l*, n, s, x}\n  3: {e, y}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mott",
+      "structure_after": "mitt"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     full\nCurrent:    mint\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 ... \u2192 mitt \u2192 mint\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {b, d, h, l, p, t}\n  2: {l*, s, x}\n  3: {a, d, e, i, k, x}",
+      "raw_action": "EDIT 2 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mitt",
+      "structure_after": "mint"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     full\nCurrent:    bint\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 ... \u2192 mint \u2192 bint\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {d, h, l, p, t}\n  1: {e, u*}\n  2: {t}\n  3: {d, e, s}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mint",
+      "structure_after": "bint"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     full\nCurrent:    bent\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 ... \u2192 bint \u2192 bent\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {c, d, g, h, k, l, p, r, s, t, v, w}\n  1: {u*}\n  2: {a, e, l*, s}\n  3: {d, e, s}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bint",
+      "structure_after": "bent"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     full\nCurrent:    beat\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 ... \u2192 bent \u2192 beat\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {f*, h, m, n, p, s, t}\n  1: {l, o, r}\n  2: {e, l*, s}\n  3: {d, k, m, n, r, u}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bent",
+      "structure_after": "beat"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     full\nCurrent:    feat\nPositions:  0123\nMismatches:  ^^^\nPath: coca \u2192 loca \u2192 lota \u2192 ... \u2192 beat \u2192 feat\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {h, m, n, p, s, t}\n  1: {i, l, r}\n  2: {e, l*}\n  3: {l*, r}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "beat",
+      "structure_after": "feat"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     full\nCurrent:    fiat\nPositions:  0123\nMismatches:  ^^^\nPath: coca \u2192 loca \u2192 lota \u2192 ... \u2192 feat \u2192 fiat\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  1: {l, r}\n  2: {s, x}\n  3: {r}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "feat",
+      "structure_after": "fiat"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     full\nCurrent:    flat\nPositions:  0123\nMismatches:  ^^^\nPath: coca \u2192 loca \u2192 lota \u2192 ... \u2192 fiat \u2192 flat\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {b, p, s}\n  1: {r}\n  2: {i}\n  3: {b, g, k, m, n, p, w, x, y}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fiat",
+      "structure_after": "flat"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     full\nCurrent:    blat\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 ... \u2192 flat \u2192 blat\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {p, s}\n  1: {o, r}\n  2: {e, o}\n  3: {b, e, h, m, w}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "flat",
+      "structure_after": "blat"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     full\nCurrent:    boat\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 ... \u2192 blat \u2192 boat\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {c, d, g, m}\n  1: {r}\n  2: {l*, o, r, t, u}\n  3: {r, s}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "blat",
+      "structure_after": "boat"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     full\nCurrent:    coat\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 ... \u2192 boat \u2192 coat\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {d, g, m}\n  1: {h}\n  2: {f, l*, o, s}\n  3: {l*, x}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "boat",
+      "structure_after": "coat"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     full\nCurrent:    chat\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 ... \u2192 coat \u2192 chat\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {g, k, p, s, t, w}\n  2: {i}\n  3: {d, m, o, p, r, w, y}",
+      "raw_action": "EDIT 1 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "coat",
+      "structure_after": "chat"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     full\nCurrent:    ghat\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 ... \u2192 chat \u2192 ghat\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {k, p, s, t, w}\n  1: {n, o, r}",
+      "raw_action": "EDIT 0 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "chat",
+      "structure_after": "ghat"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     full\nCurrent:    gnat\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 ... \u2192 ghat \u2192 gnat\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  1: {o, r}\n  3: {r, w}",
+      "raw_action": "EDIT 1 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "n"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ghat",
+      "structure_after": "gnat"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     full\nCurrent:    goat\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 ... \u2192 gnat \u2192 goat\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {d, m}\n  1: {r}\n  2: {u}\n  3: {d, l*, s}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gnat",
+      "structure_after": "goat"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     full\nCurrent:    doat\nPositions:  0123\nMismatches: ^^^^\nPath: coca \u2192 loca \u2192 lota \u2192 ... \u2192 goat \u2192 doat\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {m}\n  1: {r}\n  2: {i, l*, s}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "goat",
+      "structure_after": "doat"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "coca",
+    "target_word": "full",
+    "final_word": "doat",
+    "path": [
+      "coca",
+      "loca",
+      "lota",
+      "loth",
+      "both",
+      "beth",
+      "heth",
+      "meth",
+      "moth",
+      "mott",
+      "mitt",
+      "mint",
+      "bint",
+      "bent",
+      "beat",
+      "feat",
+      "fiat",
+      "flat",
+      "blat",
+      "boat",
+      "coat",
+      "chat",
+      "ghat",
+      "gnat",
+      "goat",
+      "doat"
+    ],
+    "path_length": 25,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 1,
+    "optimal_distance_at_end": 4,
+    "events": [
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 44711,
+    "completion_tokens": 125,
+    "total_tokens": 44836
+  },
+  "wall_time_s": 13.45573616027832
+}

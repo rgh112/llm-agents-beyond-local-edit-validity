@@ -1,0 +1,353 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 21,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     chick\nCurrent:    chirr\nPositions:  01234\nMismatches:    ^^\nPath: charr \u2192 chirr\nSteps used: 1/15  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {s, w}\n  2: {u}\n  4: {k*, m, o, p}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "charr",
+      "structure_after": "chirr"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     chick\nCurrent:    shirr\nPositions:  01234\nMismatches: ^  ^^\nPath: charr \u2192 chirr \u2192 shirr\nSteps used: 2/15  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {w}\n  1: {k}\n  3: {e}\n  4: {e, k*, t}",
+      "raw_action": "EDIT 0 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "chirr",
+      "structure_after": "shirr"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     chick\nCurrent:    skirr\nPositions:  01234\nMismatches: ^^ ^^\nPath: charr \u2192 chirr \u2192 shirr \u2192 skirr\nSteps used: 3/15  (remaining: 12)\n\nEditable positions and valid replacements:\n  3: {e}\n  4: {l, t}",
+      "raw_action": "EDIT 1 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "k"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "shirr",
+      "structure_after": "skirr"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     chick\nCurrent:    skier\nPositions:  01234\nMismatches: ^^ ^^\nPath: charr \u2192 chirr \u2192 shirr \u2192 skirr \u2192 skier\nSteps used: 4/15  (remaining: 11)\n\nEditable positions and valid replacements:\n  1: {h*, l, p}\n  4: {d, s, y}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "skirr",
+      "structure_after": "skier"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     chick\nCurrent:    shier\nPositions:  01234\nMismatches: ^  ^^\nPath: charr \u2192 chirr \u2192 shirr \u2192 skirr \u2192 skier \u2192 shier\nSteps used: 5/15  (remaining: 10)\n\nEditable positions and valid replacements:\n  1: {l, p}\n  2: {e, o, y}\n  4: {d, l, s}",
+      "raw_action": "EDIT 1 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "skier",
+      "structure_after": "shier"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     chick\nCurrent:    shiel\nPositions:  01234\nMismatches: ^  ^^\nPath: charr \u2192 chirr \u2192 shirr \u2192 ... \u2192 shier \u2192 shiel\nSteps used: 6/15  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {c*}\n  1: {p}\n  3: {l}\n  4: {d, s}",
+      "raw_action": "EDIT 4 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "shier",
+      "structure_after": "shiel"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     chick\nCurrent:    chiel\nPositions:  01234\nMismatches:    ^^\nPath: charr \u2192 chirr \u2192 shirr \u2192 ... \u2192 shiel \u2192 chiel\nSteps used: 7/15  (remaining: 8)\n\nEditable positions and valid replacements:\n  3: {l}\n  4: {f}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "shiel",
+      "structure_after": "chiel"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     chick\nCurrent:    chiel\nPositions:  01234\nMismatches:    ^^\nPath: charr \u2192 chirr \u2192 shirr \u2192 ... \u2192 shiel \u2192 chiel\nSteps used: 8/15  (remaining: 7)\n\nEditable positions and valid replacements:\n  3: {l}\n  4: {f}",
+      "raw_action": "EDIT 3 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "k"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "chiel",
+      "structure_after": "chiel"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     chick\nCurrent:    chiel\nPositions:  01234\nMismatches:    ^^\nPath: charr \u2192 chirr \u2192 shirr \u2192 ... \u2192 shiel \u2192 chiel\nSteps used: 9/15  (remaining: 6)\n\nEditable positions and valid replacements:\n  3: {l}\n  4: {f}",
+      "raw_action": "EDIT 4 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "k"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "chiel",
+      "structure_after": "chiel"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     chick\nCurrent:    chiel\nPositions:  01234\nMismatches:    ^^\nPath: charr \u2192 chirr \u2192 shirr \u2192 ... \u2192 shiel \u2192 chiel\nSteps used: 10/15  (remaining: 5)\n\nEditable positions and valid replacements:\n  3: {l}\n  4: {f}",
+      "raw_action": "EDIT 3 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "k"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "chiel",
+      "structure_after": "chiel"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     chick\nCurrent:    chiel\nPositions:  01234\nMismatches:    ^^\nPath: charr \u2192 chirr \u2192 shirr \u2192 ... \u2192 shiel \u2192 chiel\nSteps used: 11/15  (remaining: 4)\n\nEditable positions and valid replacements:\n  3: {l}\n  4: {f}",
+      "raw_action": "EDIT 4 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "k"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "chiel",
+      "structure_after": "chiel"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     chick\nCurrent:    chiel\nPositions:  01234\nMismatches:    ^^\nPath: charr \u2192 chirr \u2192 shirr \u2192 ... \u2192 shiel \u2192 chiel\nSteps used: 12/15  (remaining: 3)\n\nEditable positions and valid replacements:\n  3: {l}\n  4: {f}",
+      "raw_action": "EDIT 3 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "k"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "chiel",
+      "structure_after": "chiel"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     chick\nCurrent:    chiel\nPositions:  01234\nMismatches:    ^^\nPath: charr \u2192 chirr \u2192 shirr \u2192 ... \u2192 shiel \u2192 chiel\nSteps used: 13/15  (remaining: 2)\n\nEditable positions and valid replacements:\n  3: {l}\n  4: {f}",
+      "raw_action": "EDIT 4 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "k"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "chiel",
+      "structure_after": "chiel"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     chick\nCurrent:    chiel\nPositions:  01234\nMismatches:    ^^\nPath: charr \u2192 chirr \u2192 shirr \u2192 ... \u2192 shiel \u2192 chiel\nSteps used: 14/15  (remaining: 1)\n\nEditable positions and valid replacements:\n  3: {l}\n  4: {f}",
+      "raw_action": "EDIT 3 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "k"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "chiel",
+      "structure_after": "chiel"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     chick\nCurrent:    chiel\nPositions:  01234\nMismatches:    ^^\nPath: charr \u2192 chirr \u2192 shirr \u2192 ... \u2192 shiel \u2192 chiel\nSteps used: 15/15  (remaining: 0)\n\nEditable positions and valid replacements:\n  3: {l}\n  4: {f}",
+      "raw_action": "EDIT 4 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "k"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "chiel",
+      "structure_after": "chiel"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 15,
+    "max_steps": 15,
+    "start_word": "charr",
+    "target_word": "chick",
+    "final_word": "chiel",
+    "path": [
+      "charr",
+      "chirr",
+      "shirr",
+      "skirr",
+      "skier",
+      "shier",
+      "shiel",
+      "chiel"
+    ],
+    "path_length": 7,
+    "optimal_length": 3,
+    "violations_by_type": {
+      "INVALID_WORD": 8,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 9,
+    "optimal_distance_at_end": 5,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 16066,
+    "completion_tokens": 75,
+    "total_tokens": 16141
+  },
+  "wall_time_s": 8.414013862609863
+}

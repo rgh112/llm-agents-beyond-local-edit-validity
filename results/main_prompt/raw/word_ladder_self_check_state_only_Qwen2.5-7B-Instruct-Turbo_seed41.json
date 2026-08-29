@@ -1,0 +1,583 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "self_check",
+  "memory_condition": "state_only",
+  "seed": 41,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     deli\nCurrent:    curd\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {n, s, t}\n  1: {a, o}\n  2: {e}\n  3: {b, e, f, l, n, r, s, t}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "burd",
+      "structure_after": "curd"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     deli\nCurrent:    card\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {b, f, h, l, n, p, s, w, y}\n  1: {o}\n  2: {i}\n  3: {b, e, k, l, n, p, r, s, t}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "curd",
+      "structure_after": "card"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     deli\nCurrent:    caid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {l, m, p, q, r, s}\n  1: {h}\n  3: {n}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "card",
+      "structure_after": "caid"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     deli\nCurrent:    caid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {l, m, p, q, r, s}\n  1: {h}\n  3: {n}",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "caid",
+      "structure_after": "caid"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     deli\nCurrent:    laid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid \u2192 laid\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {m, p, q, r, s}\n  2: {n, r, u}\n  3: {c, n, r}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "caid",
+      "structure_after": "laid"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     deli\nCurrent:    laid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid \u2192 laid\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {m, p, q, r, s}\n  2: {n, r, u}\n  3: {c, n, r}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laid",
+      "structure_after": "laid"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     deli\nCurrent:    laid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid \u2192 laid\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {m, p, q, r, s}\n  2: {n, r, u}\n  3: {c, n, r}",
+      "raw_action": "EDIT 2 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laid",
+      "structure_after": "laid"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     deli\nCurrent:    laid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid \u2192 laid\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {m, p, q, r, s}\n  2: {n, r, u}\n  3: {c, n, r}",
+      "raw_action": "EDIT 3 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laid",
+      "structure_after": "laid"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     deli\nCurrent:    laid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid \u2192 laid\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {m, p, q, r, s}\n  2: {n, r, u}\n  3: {c, n, r}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laid",
+      "structure_after": "laid"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     deli\nCurrent:    laid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid \u2192 laid\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {m, p, q, r, s}\n  2: {n, r, u}\n  3: {c, n, r}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laid",
+      "structure_after": "laid"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     deli\nCurrent:    laid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid \u2192 laid\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {m, p, q, r, s}\n  2: {n, r, u}\n  3: {c, n, r}",
+      "raw_action": "EDIT 3 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laid",
+      "structure_after": "laid"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     deli\nCurrent:    laid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid \u2192 laid\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {m, p, q, r, s}\n  2: {n, r, u}\n  3: {c, n, r}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laid",
+      "structure_after": "laid"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     deli\nCurrent:    laid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid \u2192 laid\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {m, p, q, r, s}\n  2: {n, r, u}\n  3: {c, n, r}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laid",
+      "structure_after": "laid"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     deli\nCurrent:    laid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid \u2192 laid\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {m, p, q, r, s}\n  2: {n, r, u}\n  3: {c, n, r}",
+      "raw_action": "EDIT 3 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laid",
+      "structure_after": "laid"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     deli\nCurrent:    laid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid \u2192 laid\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {m, p, q, r, s}\n  2: {n, r, u}\n  3: {c, n, r}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laid",
+      "structure_after": "laid"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     deli\nCurrent:    laid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid \u2192 laid\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {m, p, q, r, s}\n  2: {n, r, u}\n  3: {c, n, r}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laid",
+      "structure_after": "laid"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     deli\nCurrent:    laid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid \u2192 laid\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {m, p, q, r, s}\n  2: {n, r, u}\n  3: {c, n, r}",
+      "raw_action": "EDIT 3 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laid",
+      "structure_after": "laid"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     deli\nCurrent:    laid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid \u2192 laid\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {m, p, q, r, s}\n  2: {n, r, u}\n  3: {c, n, r}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laid",
+      "structure_after": "laid"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     deli\nCurrent:    laid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid \u2192 laid\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {m, p, q, r, s}\n  2: {n, r, u}\n  3: {c, n, r}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laid",
+      "structure_after": "laid"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     deli\nCurrent:    laid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid \u2192 laid\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {m, p, q, r, s}\n  2: {n, r, u}\n  3: {c, n, r}",
+      "raw_action": "EDIT 3 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laid",
+      "structure_after": "laid"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     deli\nCurrent:    laid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid \u2192 laid\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {m, p, q, r, s}\n  2: {n, r, u}\n  3: {c, n, r}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laid",
+      "structure_after": "laid"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     deli\nCurrent:    laid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid \u2192 laid\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {m, p, q, r, s}\n  2: {n, r, u}\n  3: {c, n, r}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laid",
+      "structure_after": "laid"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     deli\nCurrent:    laid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid \u2192 laid\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {m, p, q, r, s}\n  2: {n, r, u}\n  3: {c, n, r}",
+      "raw_action": "EDIT 3 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "i"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laid",
+      "structure_after": "laid"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     deli\nCurrent:    laid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid \u2192 laid\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {m, p, q, r, s}\n  2: {n, r, u}\n  3: {c, n, r}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laid",
+      "structure_after": "laid"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     deli\nCurrent:    laid\nPositions:  0123\nMismatches: ^^^^\nPath: burd \u2192 curd \u2192 card \u2192 caid \u2192 laid\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {m, p, q, r, s}\n  2: {n, r, u}\n  3: {c, n, r}",
+      "raw_action": "EDIT 2 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "laid",
+      "structure_after": "laid"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "burd",
+    "target_word": "deli",
+    "final_word": "laid",
+    "path": [
+      "burd",
+      "curd",
+      "card",
+      "caid",
+      "laid"
+    ],
+    "path_length": 4,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "ILLEGAL_EDIT": 1,
+      "INVALID_WORD": 20,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 22,
+    "optimal_distance_at_end": 6,
+    "events": [
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 49494,
+    "completion_tokens": 125,
+    "total_tokens": 49619
+  },
+  "wall_time_s": 37.1785249710083
+}

@@ -1,0 +1,317 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "window_1",
+  "seed": 35,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     rued\nCurrent:    buys\nPositions:  0123\nMismatches: ^ ^^\nPath: bays \u2192 buys\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {g}\n  1: {e, o}\n  2: {b, d, g, m, n, r, s, t}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bays",
+      "structure_after": "buys"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     rued\nCurrent:    guys\nPositions:  0123\nMismatches: ^ ^^\nPath: bays \u2192 buys \u2192 guys\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  1: {a, o}\n  2: {l, m, n, t, v}",
+      "raw_action": "EDIT 0 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "buys",
+      "structure_after": "guys"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     rued\nCurrent:    gays\nPositions:  0123\nMismatches: ^^^^\nPath: bays \u2192 buys \u2192 guys \u2192 gays\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {c, d, f, h, j, k, l, m, n, p, r*, s, w, y}\n  1: {o}\n  2: {b, d, e*, g, l, m, p, r, t}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "guys",
+      "structure_after": "gays"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     rued\nCurrent:    gaes\nPositions:  0123\nMismatches: ^^ ^\nPath: bays \u2192 buys \u2192 guys \u2192 gays \u2192 gaes\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {h, k, m, w}\n  1: {e, i, o}\n  2: {b, d, g, l, m, p, r, t}\n  3: {d*, n}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gays",
+      "structure_after": "gaes"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     rued\nCurrent:    haes\nPositions:  0123\nMismatches: ^^ ^\nPath: bays \u2192 buys \u2192 guys \u2192 gays \u2192 gaes \u2192 haes\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {k, m, w}\n  1: {i, o, u*}\n  2: {g, h, m, p, t, w, y}\n  3: {d*, m, n, t}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "gaes",
+      "structure_after": "haes"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     rued\nCurrent:    hies\nPositions:  0123\nMismatches: ^^ ^\nPath: bays \u2192 buys \u2192 guys \u2192 ... \u2192 haes \u2192 hies\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {d, g, l, p, t, v}\n  1: {o, u*}\n  2: {n, p, s, t}\n  3: {d*}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "haes",
+      "structure_after": "hies"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     rued\nCurrent:    dies\nPositions:  0123\nMismatches: ^^ ^\nPath: bays \u2192 buys \u2192 guys \u2192 ... \u2192 hies \u2192 dies\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {g, l, p, t, v}\n  1: {e, o, u*, y}\n  2: {b, g, m, n, p, s, t}\n  3: {d*, l, t}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hies",
+      "structure_after": "dies"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     rued\nCurrent:    dees\nPositions:  0123\nMismatches: ^^ ^\nPath: bays \u2192 buys \u2192 guys \u2192 ... \u2192 dies \u2192 dees\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g, j, l, p, r*, s, t, v, w, z}\n  1: {o, u*, y}\n  2: {b, l, n, v, w, y}\n  3: {d*, m, p, r, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dies",
+      "structure_after": "dees"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     rued\nCurrent:    rees\nPositions:  0123\nMismatches:  ^ ^\nPath: bays \u2192 buys \u2192 guys \u2192 ... \u2192 dees \u2192 rees\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {b, c, f, g, j, l, p, s, t, v, w, z}\n  1: {o, u*, y}\n  2: {b, c, d, f, g, i, m, p, t, v}\n  3: {d*, f, k, l}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dees",
+      "structure_after": "rees"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     rued\nCurrent:    rues\nPositions:  0123\nMismatches:    ^\nPath: bays \u2192 buys \u2192 guys \u2192 ... \u2192 rees \u2192 rues\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {c, d, h, k, l, s}\n  1: {o, y}\n  2: {b, g, m, n, t}\n  3: {d*, r}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "rees",
+      "structure_after": "rues"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     rued\nCurrent:    rues\nPositions:  0123\nMismatches:    ^\nPath: bays \u2192 buys \u2192 guys \u2192 ... \u2192 rees \u2192 rues\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {c, d, h, k, l, s}\n  1: {o, y}\n  2: {b, g, m, n, t}\n  3: {d*, r}",
+      "raw_action": "EDIT 2 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "rues",
+      "structure_after": "rues"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     rued\nCurrent:    rues\nPositions:  0123\nMismatches:    ^\nPath: bays \u2192 buys \u2192 guys \u2192 ... \u2192 rees \u2192 rues\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {c, d, h, k, l, s}\n  1: {o, y}\n  2: {b, g, m, n, t}\n  3: {d*, r}",
+      "raw_action": "EDIT 2 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "rues",
+      "structure_after": "rues"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     rued\nCurrent:    rues\nPositions:  0123\nMismatches:    ^\nPath: bays \u2192 buys \u2192 guys \u2192 ... \u2192 rees \u2192 rues\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {c, d, h, k, l, s}\n  1: {o, y}\n  2: {b, g, m, n, t}\n  3: {d*, r}",
+      "raw_action": "EDIT 2 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "rues",
+      "structure_after": "rues"
+    },
+    {
+      "t": 14,
+      "observation": "",
+      "raw_action": "EDIT 3 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 1.0,
+      "info": {
+        "valid": true,
+        "auto_success": true
+      },
+      "structure_before": "rues",
+      "structure_after": "rued"
+    }
+  ],
+  "success": true,
+  "terminal_failure": null,
+  "failure_events": [
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD"
+  ],
+  "final_metrics": {
+    "success": true,
+    "steps_taken": 14,
+    "max_steps": 25,
+    "start_word": "bays",
+    "target_word": "rued",
+    "final_word": "rued",
+    "path": [
+      "bays",
+      "buys",
+      "guys",
+      "gays",
+      "gaes",
+      "haes",
+      "hies",
+      "dies",
+      "dees",
+      "rees",
+      "rues",
+      "rued"
+    ],
+    "path_length": 11,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "INVALID_WORD": 2,
+      "ILLEGAL_EDIT": 1
+    },
+    "total_violations": 3,
+    "optimal_distance_at_end": 0,
+    "events": [
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 21374,
+    "completion_tokens": 70,
+    "total_tokens": 21444
+  },
+  "wall_time_s": 7.256253004074097
+}

@@ -1,0 +1,519 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "zero_shot",
+  "memory_condition": "state_only",
+  "seed": 27,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     eath\nCurrent:    milk\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk\nSteps used: 1/25  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {s}\n  2: {c, n, r}\n  3: {d, e, l, o, s, t}",
+      "raw_action": "EDIT 0 m",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "m"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bilk",
+      "structure_after": "milk"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     eath\nCurrent:    mick\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick\nSteps used: 2/25  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {d, h, k, l, n, p, r, s, t, w}\n  1: {a*, o, u}\n  2: {n, r}\n  3: {a, e}",
+      "raw_action": "EDIT 2 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "milk",
+      "structure_after": "mick"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     eath\nCurrent:    hick\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick \u2192 hick\nSteps used: 3/25  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {d, k, l, n, p, r, s, t, w}\n  1: {a*, e, o, u}",
+      "raw_action": "EDIT 0 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "mick",
+      "structure_after": "hick"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     eath\nCurrent:    hack\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 hick \u2192 hack\nSteps used: 4/25  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {b, j, l, m, p, r, s, t, w, y}\n  1: {e, o, u}\n  2: {i, n, r, w}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hick",
+      "structure_after": "hack"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     eath\nCurrent:    haik\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 hick \u2192 hack \u2192 haik\nSteps used: 5/25  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {p}\n  2: {n, r, w}\n  3: {l, r}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hack",
+      "structure_after": "haik"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     eath\nCurrent:    hail\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 haik \u2192 hail\nSteps used: 6/25  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {b, f, j, k, m, n, p, r, s, t, v, w}\n  1: {e}\n  2: {l, r, u}\n  3: {r}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "haik",
+      "structure_after": "hail"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     eath\nCurrent:    heil\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 hail \u2192 heil\nSteps used: 7/25  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {c, d, v}\n  2: {a, e, l, r}\n  3: {r}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "hail",
+      "structure_after": "heil"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     eath\nCurrent:    ceil\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 heil \u2192 ceil\nSteps used: 8/25  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {d, v}\n  1: {o}\n  2: {l}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "heil",
+      "structure_after": "ceil"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     eath\nCurrent:    deil\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 ceil \u2192 deil\nSteps used: 9/25  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {v}\n  2: {a, l}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "ceil",
+      "structure_after": "deil"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     eath\nCurrent:    deal\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 deil \u2192 deal\nSteps used: 10/25  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {f, h, l, m, p, r, s, t, v, w, z}\n  1: {h, i, u}\n  2: {l}\n  3: {d, f, n, r}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "deil",
+      "structure_after": "deal"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     eath\nCurrent:    dhal\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 deal \u2192 dhal\nSteps used: 11/25  (remaining: 14)\n\nEditable positions and valid replacements:\n  1: {i, u}\n  3: {k}",
+      "raw_action": "EDIT 1 h",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "h"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "deal",
+      "structure_after": "dhal"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     eath\nCurrent:    dial\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 dhal \u2192 dial\nSteps used: 12/25  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {p, r, s, v}\n  1: {u}\n  2: {e, l, o, r}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dhal",
+      "structure_after": "dial"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     eath\nCurrent:    pial\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 dial \u2192 pial\nSteps used: 13/25  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {r, s, v}\n  1: {e}\n  2: {l}\n  3: {n, s}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dial",
+      "structure_after": "pial"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     eath\nCurrent:    peal\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 pial \u2192 peal\nSteps used: 14/25  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {f, h, l, m, r, s, t, v, w, z}\n  2: {e}\n  3: {g, k, n, r, s, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pial",
+      "structure_after": "peal"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     eath\nCurrent:    feal\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 peal \u2192 feal\nSteps used: 15/25  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {h, l, m, r, s, t, v, w, z}\n  1: {o}\n  2: {e, l}\n  3: {r, t}",
+      "raw_action": "EDIT 0 f",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "f"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "peal",
+      "structure_after": "feal"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     eath\nCurrent:    foal\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 feal \u2192 foal\nSteps used: 16/25  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {i, o, u, w}\n  3: {m}",
+      "raw_action": "EDIT 1 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "feal",
+      "structure_after": "foal"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     eath\nCurrent:    coal\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 foal \u2192 coal\nSteps used: 17/25  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {g}\n  2: {i, o, w}\n  3: {t, x}",
+      "raw_action": "EDIT 0 c",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "c"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "foal",
+      "structure_after": "coal"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     eath\nCurrent:    coil\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 coal \u2192 coil\nSteps used: 18/25  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {b, f, m, n, r, s, t}\n  2: {o, w}\n  3: {f, n, r}",
+      "raw_action": "EDIT 2 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "coal",
+      "structure_after": "coil"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     eath\nCurrent:    boil\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 coil \u2192 boil\nSteps used: 19/25  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {f, m, n, r, s, t}\n  1: {a*}\n  2: {l, w}",
+      "raw_action": "EDIT 0 b",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "b"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "coil",
+      "structure_after": "boil"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     eath\nCurrent:    bail\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 boil \u2192 bail\nSteps used: 20/25  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {f, j, k, m, n, p, r, s, t, v, w}\n  2: {a, l, w}\n  3: {t}",
+      "raw_action": "EDIT 1 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "boil",
+      "structure_after": "bail"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     eath\nCurrent:    baal\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 bail \u2192 baal\nSteps used: 21/25  (remaining: 4)\n\nEditable positions and valid replacements:\n  2: {l, w}\n  3: {s}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bail",
+      "structure_after": "baal"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     eath\nCurrent:    baas\nPositions:  0123\nMismatches: ^ ^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 baal \u2192 baas\nSteps used: 22/25  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {k}\n  1: {i, o, r}\n  2: {d, g, l, m, n, p, r, s, t*, y}",
+      "raw_action": "EDIT 3 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "s"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "baal",
+      "structure_after": "baas"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     eath\nCurrent:    bias\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 baas \u2192 bias\nSteps used: 23/25  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {p, r}\n  1: {o, r}\n  2: {b, d, g, n, o, t*}",
+      "raw_action": "EDIT 1 i",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "i"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "baas",
+      "structure_after": "bias"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     eath\nCurrent:    pias\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 bias \u2192 pias\nSteps used: 24/25  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {r}\n  1: {e, y}\n  2: {c, e, g, n, p, s, t*}\n  3: {n}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "bias",
+      "structure_after": "pias"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     eath\nCurrent:    rias\nPositions:  0123\nMismatches: ^^^^\nPath: bilk \u2192 milk \u2192 mick \u2192 ... \u2192 pias \u2192 rias\nSteps used: 25/25  (remaining: 0)\n\nEditable positions and valid replacements:\n  1: {y}\n  2: {b, d, f, g, m, n, p}\n  3: {l}",
+      "raw_action": "EDIT 0 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "pias",
+      "structure_after": "rias"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 25,
+    "max_steps": 25,
+    "start_word": "bilk",
+    "target_word": "eath",
+    "final_word": "rias",
+    "path": [
+      "bilk",
+      "milk",
+      "mick",
+      "hick",
+      "hack",
+      "haik",
+      "hail",
+      "heil",
+      "ceil",
+      "deil",
+      "deal",
+      "dhal",
+      "dial",
+      "pial",
+      "peal",
+      "feal",
+      "foal",
+      "coal",
+      "coil",
+      "boil",
+      "bail",
+      "baal",
+      "baas",
+      "bias",
+      "pias",
+      "rias"
+    ],
+    "path_length": 25,
+    "optimal_length": 5,
+    "violations_by_type": {
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 1,
+    "optimal_distance_at_end": 5,
+    "events": [
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 45092,
+    "completion_tokens": 125,
+    "total_tokens": 45217
+  },
+  "wall_time_s": 13.606860876083374
+}

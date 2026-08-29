@@ -1,0 +1,461 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 2,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     dukes\nCurrent:    doums\nPositions:  01234\nMismatches:  ^^^ \nPath: dorms \u2192 doums\nSteps used: 1/20  (remaining: 19)\n\nEditable positions and valid replacements:\n  1: {r}\n  2: {o}\n  4: {a}",
+      "raw_action": "EDIT 2 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "u"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "dorms",
+      "structure_after": "doums"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     dukes\nCurrent:    drums\nPositions:  01234\nMismatches:  ^^^ \nPath: dorms \u2192 doums \u2192 drums\nSteps used: 2/20  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {a}\n  2: {a}\n  3: {b, g}",
+      "raw_action": "EDIT 1 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "r"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "doums",
+      "structure_after": "drums"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     dukes\nCurrent:    arums\nPositions:  01234\nMismatches: ^^^^ \nPath: dorms \u2192 doums \u2192 drums \u2192 arums\nSteps used: 3/20  (remaining: 17)\n\nEditable positions and valid replacements:\n  1: {l}",
+      "raw_action": "EDIT 0 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "drums",
+      "structure_after": "arums"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     dukes\nCurrent:    alums\nPositions:  01234\nMismatches: ^^^^ \nPath: dorms \u2192 doums \u2192 drums \u2192 arums \u2192 alums\nSteps used: 4/20  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {p, s}",
+      "raw_action": "EDIT 1 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "l"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "arums",
+      "structure_after": "alums"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     dukes\nCurrent:    plums\nPositions:  01234\nMismatches: ^^^^ \nPath: dorms \u2192 doums \u2192 drums \u2192 arums \u2192 alums \u2192 plums\nSteps used: 5/20  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {s}\n  3: {g}\n  4: {b, e, p, y}",
+      "raw_action": "EDIT 0 p",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "p"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "alums",
+      "structure_after": "plums"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     dukes\nCurrent:    plugs\nPositions:  01234\nMismatches: ^^^^ \nPath: dorms \u2192 doums \u2192 drums \u2192 ... \u2192 plums \u2192 plugs\nSteps used: 6/20  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {g, s}",
+      "raw_action": "EDIT 3 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "plums",
+      "structure_after": "plugs"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     dukes\nCurrent:    glugs\nPositions:  01234\nMismatches: ^^^^ \nPath: dorms \u2192 doums \u2192 drums \u2192 ... \u2192 plugs \u2192 glugs\nSteps used: 7/20  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {s}\n  3: {e*, t}",
+      "raw_action": "EDIT 0 g",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "g"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "plugs",
+      "structure_after": "glugs"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     dukes\nCurrent:    glues\nPositions:  01234\nMismatches: ^^^  \nPath: dorms \u2192 doums \u2192 drums \u2192 ... \u2192 glugs \u2192 glues\nSteps used: 8/20  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {b, c, f, s}\n  1: {r}\n  2: {e}\n  3: {t}\n  4: {d, r, y}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "glugs",
+      "structure_after": "glues"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     dukes\nCurrent:    glues\nPositions:  01234\nMismatches: ^^^  \nPath: dorms \u2192 doums \u2192 drums \u2192 ... \u2192 glugs \u2192 glues\nSteps used: 9/20  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {b, c, f, s}\n  1: {r}\n  2: {e}\n  3: {t}\n  4: {d, r, y}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glues",
+      "structure_after": "glues"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     dukes\nCurrent:    glues\nPositions:  01234\nMismatches: ^^^  \nPath: dorms \u2192 doums \u2192 drums \u2192 ... \u2192 glugs \u2192 glues\nSteps used: 10/20  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {b, c, f, s}\n  1: {r}\n  2: {e}\n  3: {t}\n  4: {d, r, y}",
+      "raw_action": "EDIT 4 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "k"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glues",
+      "structure_after": "glues"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     dukes\nCurrent:    glues\nPositions:  01234\nMismatches: ^^^  \nPath: dorms \u2192 doums \u2192 drums \u2192 ... \u2192 glugs \u2192 glues\nSteps used: 11/20  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {b, c, f, s}\n  1: {r}\n  2: {e}\n  3: {t}\n  4: {d, r, y}",
+      "raw_action": "EDIT 3 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glues",
+      "structure_after": "glues"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     dukes\nCurrent:    glues\nPositions:  01234\nMismatches: ^^^  \nPath: dorms \u2192 doums \u2192 drums \u2192 ... \u2192 glugs \u2192 glues\nSteps used: 12/20  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {b, c, f, s}\n  1: {r}\n  2: {e}\n  3: {t}\n  4: {d, r, y}",
+      "raw_action": "EDIT 4 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glues",
+      "structure_after": "glues"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     dukes\nCurrent:    glues\nPositions:  01234\nMismatches: ^^^  \nPath: dorms \u2192 doums \u2192 drums \u2192 ... \u2192 glugs \u2192 glues\nSteps used: 13/20  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {b, c, f, s}\n  1: {r}\n  2: {e}\n  3: {t}\n  4: {d, r, y}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glues",
+      "structure_after": "glues"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     dukes\nCurrent:    glues\nPositions:  01234\nMismatches: ^^^  \nPath: dorms \u2192 doums \u2192 drums \u2192 ... \u2192 glugs \u2192 glues\nSteps used: 14/20  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {b, c, f, s}\n  1: {r}\n  2: {e}\n  3: {t}\n  4: {d, r, y}",
+      "raw_action": "EDIT 4 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glues",
+      "structure_after": "glues"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     dukes\nCurrent:    glues\nPositions:  01234\nMismatches: ^^^  \nPath: dorms \u2192 doums \u2192 drums \u2192 ... \u2192 glugs \u2192 glues\nSteps used: 15/20  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {b, c, f, s}\n  1: {r}\n  2: {e}\n  3: {t}\n  4: {d, r, y}",
+      "raw_action": "EDIT 3 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "k"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glues",
+      "structure_after": "glues"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     dukes\nCurrent:    glues\nPositions:  01234\nMismatches: ^^^  \nPath: dorms \u2192 doums \u2192 drums \u2192 ... \u2192 glugs \u2192 glues\nSteps used: 16/20  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {b, c, f, s}\n  1: {r}\n  2: {e}\n  3: {t}\n  4: {d, r, y}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glues",
+      "structure_after": "glues"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     dukes\nCurrent:    glues\nPositions:  01234\nMismatches: ^^^  \nPath: dorms \u2192 doums \u2192 drums \u2192 ... \u2192 glugs \u2192 glues\nSteps used: 17/20  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {b, c, f, s}\n  1: {r}\n  2: {e}\n  3: {t}\n  4: {d, r, y}",
+      "raw_action": "EDIT 0 d",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "d"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glues",
+      "structure_after": "glues"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     dukes\nCurrent:    glues\nPositions:  01234\nMismatches: ^^^  \nPath: dorms \u2192 doums \u2192 drums \u2192 ... \u2192 glugs \u2192 glues\nSteps used: 18/20  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {b, c, f, s}\n  1: {r}\n  2: {e}\n  3: {t}\n  4: {d, r, y}",
+      "raw_action": "EDIT 4 s",
+      "parsed_action": {
+        "type": "edit",
+        "position": 4,
+        "letter": "s"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glues",
+      "structure_after": "glues"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     dukes\nCurrent:    glues\nPositions:  01234\nMismatches: ^^^  \nPath: dorms \u2192 doums \u2192 drums \u2192 ... \u2192 glugs \u2192 glues\nSteps used: 19/20  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {b, c, f, s}\n  1: {r}\n  2: {e}\n  3: {t}\n  4: {d, r, y}",
+      "raw_action": "EDIT 1 u",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "u"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glues",
+      "structure_after": "glues"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     dukes\nCurrent:    glues\nPositions:  01234\nMismatches: ^^^  \nPath: dorms \u2192 doums \u2192 drums \u2192 ... \u2192 glugs \u2192 glues\nSteps used: 20/20  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {b, c, f, s}\n  1: {r}\n  2: {e}\n  3: {t}\n  4: {d, r, y}",
+      "raw_action": "EDIT 3 k",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "k"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "glues",
+      "structure_after": "glues"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 20,
+    "max_steps": 20,
+    "start_word": "dorms",
+    "target_word": "dukes",
+    "final_word": "glues",
+    "path": [
+      "dorms",
+      "doums",
+      "drums",
+      "arums",
+      "alums",
+      "plums",
+      "plugs",
+      "glugs",
+      "glues"
+    ],
+    "path_length": 8,
+    "optimal_length": 4,
+    "violations_by_type": {
+      "INVALID_WORD": 11,
+      "ILLEGAL_EDIT": 1,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 13,
+    "optimal_distance_at_end": 7,
+    "events": [
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 51908,
+    "completion_tokens": 100,
+    "total_tokens": 52008
+  },
+  "wall_time_s": 11.519593954086304
+}

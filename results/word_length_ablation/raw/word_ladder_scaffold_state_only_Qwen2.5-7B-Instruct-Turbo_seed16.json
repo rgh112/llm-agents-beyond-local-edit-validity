@@ -1,0 +1,699 @@
+{
+  "env_name": "word_ladder",
+  "regime": "constructive_editing",
+  "model": "Qwen2.5-7B-Instruct-Turbo",
+  "prompt_condition": "scaffold",
+  "memory_condition": "state_only",
+  "seed": 16,
+  "steps": [
+    {
+      "t": 1,
+      "observation": "Target:     learn\nCurrent:    foils\nPositions:  01234\nMismatches: ^^^^^\nPath: foils\nSteps used: 1/30  (remaining: 29)\n\nEditable positions and valid replacements:\n  0: {b, c, m, n, r, s, t}\n  1: {a}\n  2: {a*, o, u, w}\n  3: {n}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foils",
+      "structure_after": "foils"
+    },
+    {
+      "t": 2,
+      "observation": "Target:     learn\nCurrent:    fools\nPositions:  01234\nMismatches: ^^^^^\nPath: foils \u2192 fools\nSteps used: 2/30  (remaining: 28)\n\nEditable positions and valid replacements:\n  0: {c, m, p, t, w}\n  2: {a*, u, w}\n  3: {d, t}",
+      "raw_action": "EDIT 2 o",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "o"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "foils",
+      "structure_after": "fools"
+    },
+    {
+      "t": 3,
+      "observation": "Target:     learn\nCurrent:    fools\nPositions:  01234\nMismatches: ^^^^^\nPath: foils \u2192 fools\nSteps used: 3/30  (remaining: 27)\n\nEditable positions and valid replacements:\n  0: {c, m, p, t, w}\n  2: {a*, u, w}\n  3: {d, t}",
+      "raw_action": "EDIT 3 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "ILLEGAL_EDIT"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "fools",
+      "structure_after": "fools"
+    },
+    {
+      "t": 4,
+      "observation": "Target:     learn\nCurrent:    fools\nPositions:  01234\nMismatches: ^^^^^\nPath: foils \u2192 fools\nSteps used: 4/30  (remaining: 26)\n\nEditable positions and valid replacements:\n  0: {c, m, p, t, w}\n  2: {a*, u, w}\n  3: {d, t}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "fools",
+      "structure_after": "fools"
+    },
+    {
+      "t": 5,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 5/30  (remaining: 25)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 2 a",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "a"
+      },
+      "valid": true,
+      "events": [],
+      "reward": 0.0,
+      "info": {
+        "valid": true
+      },
+      "structure_before": "fools",
+      "structure_after": "foals"
+    },
+    {
+      "t": 6,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 6/30  (remaining: 24)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 7,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 7/30  (remaining: 23)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 8,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 8/30  (remaining: 22)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 9,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 9/30  (remaining: 21)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 1 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "n"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 10,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 10/30  (remaining: 20)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 3 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 11,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 11/30  (remaining: 19)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 2 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 12,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 12/30  (remaining: 18)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 13,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 13/30  (remaining: 17)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 14,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 14/30  (remaining: 16)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 3 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 15,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 15/30  (remaining: 15)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 2 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "n"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 16,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 16/30  (remaining: 14)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 17,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 17/30  (remaining: 13)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 18,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 18/30  (remaining: 12)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 3 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 19,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 19/30  (remaining: 11)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 2 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "n"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 20,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 20/30  (remaining: 10)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 21,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 21/30  (remaining: 9)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 22,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 22/30  (remaining: 8)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 3 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 23,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 23/30  (remaining: 7)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 2 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "n"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 24,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 24/30  (remaining: 6)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 25,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 25/30  (remaining: 5)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 26,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 26/30  (remaining: 4)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 3 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 27,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 27/30  (remaining: 3)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 2 n",
+      "parsed_action": {
+        "type": "edit",
+        "position": 2,
+        "letter": "n"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 28,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 28/30  (remaining: 2)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 0 l",
+      "parsed_action": {
+        "type": "edit",
+        "position": 0,
+        "letter": "l"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 29,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 29/30  (remaining: 1)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 1 e",
+      "parsed_action": {
+        "type": "edit",
+        "position": 1,
+        "letter": "e"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    },
+    {
+      "t": 30,
+      "observation": "Target:     learn\nCurrent:    foals\nPositions:  01234\nMismatches: ^^ ^^\nPath: foils \u2192 fools \u2192 foals\nSteps used: 30/30  (remaining: 0)\n\nEditable positions and valid replacements:\n  0: {c, g}\n  2: {u, w}\n  3: {m}",
+      "raw_action": "EDIT 3 r",
+      "parsed_action": {
+        "type": "edit",
+        "position": 3,
+        "letter": "r"
+      },
+      "valid": false,
+      "events": [
+        "INVALID_WORD",
+        "BUDGET_UNAWARE_ACTION"
+      ],
+      "reward": -0.1,
+      "info": {
+        "valid": false
+      },
+      "structure_before": "foals",
+      "structure_after": "foals"
+    }
+  ],
+  "success": false,
+  "terminal_failure": "BUDGET_UNAWARE_ACTION",
+  "failure_events": [
+    "INVALID_WORD",
+    "ILLEGAL_EDIT",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "INVALID_WORD",
+    "BUDGET_UNAWARE_ACTION"
+  ],
+  "final_metrics": {
+    "success": false,
+    "steps_taken": 30,
+    "max_steps": 30,
+    "start_word": "foils",
+    "target_word": "learn",
+    "final_word": "foals",
+    "path": [
+      "foils",
+      "fools",
+      "foals"
+    ],
+    "path_length": 2,
+    "optimal_length": 6,
+    "violations_by_type": {
+      "INVALID_WORD": 27,
+      "ILLEGAL_EDIT": 1,
+      "BUDGET_UNAWARE_ACTION": 1
+    },
+    "total_violations": 29,
+    "optimal_distance_at_end": 6,
+    "events": [
+      "INVALID_WORD",
+      "ILLEGAL_EDIT",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "INVALID_WORD",
+      "BUDGET_UNAWARE_ACTION"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 109301,
+    "completion_tokens": 150,
+    "total_tokens": 109451
+  },
+  "wall_time_s": 18.00566005706787
+}

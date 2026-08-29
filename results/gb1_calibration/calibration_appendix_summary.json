@@ -1,0 +1,110 @@
+{
+  "results": [
+    {
+      "type": "baseline",
+      "fitness_target": 4.7,
+      "policy": "additive_greedy",
+      "SR": 0.0,
+      "n": 20
+    },
+    {
+      "type": "baseline",
+      "fitness_target": 4.7,
+      "policy": "privileged_noisy_oracle",
+      "SR": 0.55,
+      "n": 20
+    },
+    {
+      "type": "obs_heuristic",
+      "fitness_target": 4.7,
+      "policy": "obs_additive_greedy",
+      "SR": 0.0,
+      "n": 20
+    },
+    {
+      "type": "llm",
+      "fitness_target": 4.7,
+      "policy": "zero_shot",
+      "SR": 0.3,
+      "n": 20
+    },
+    {
+      "type": "llm",
+      "fitness_target": 4.7,
+      "policy": "few_shot_strategy",
+      "SR": 0.2,
+      "n": 20
+    },
+    {
+      "type": "baseline",
+      "fitness_target": 4.8,
+      "policy": "additive_greedy",
+      "SR": 0.0,
+      "n": 20
+    },
+    {
+      "type": "baseline",
+      "fitness_target": 4.8,
+      "policy": "privileged_noisy_oracle",
+      "SR": 0.55,
+      "n": 20
+    },
+    {
+      "type": "obs_heuristic",
+      "fitness_target": 4.8,
+      "policy": "obs_additive_greedy",
+      "SR": 0.0,
+      "n": 20
+    },
+    {
+      "type": "llm",
+      "fitness_target": 4.8,
+      "policy": "zero_shot",
+      "SR": 0.45,
+      "n": 20
+    },
+    {
+      "type": "llm",
+      "fitness_target": 4.8,
+      "policy": "few_shot_strategy",
+      "SR": 0.2,
+      "n": 20
+    },
+    {
+      "type": "baseline",
+      "fitness_target": 5.0,
+      "policy": "additive_greedy",
+      "SR": 0.0,
+      "n": 20
+    },
+    {
+      "type": "baseline",
+      "fitness_target": 5.0,
+      "policy": "privileged_noisy_oracle",
+      "SR": 0.55,
+      "n": 20
+    },
+    {
+      "type": "obs_heuristic",
+      "fitness_target": 5.0,
+      "policy": "obs_additive_greedy",
+      "SR": 0.0,
+      "n": 20
+    },
+    {
+      "type": "llm",
+      "fitness_target": 5.0,
+      "policy": "zero_shot",
+      "SR": 0.4,
+      "n": 20
+    },
+    {
+      "type": "llm",
+      "fitness_target": 5.0,
+      "policy": "few_shot_strategy",
+      "SR": 0.2,
+      "n": 20
+    }
+  ],
+  "wall_time_s": 247.56395483016968
+}
